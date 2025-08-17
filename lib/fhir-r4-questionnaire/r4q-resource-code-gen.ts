@@ -13,6 +13,7 @@ import {
     FhirQuestionnaire,
     FieldMeta,
     flattenItems,
+    toCamelCase,
     toKebabCase,
     toPascalCase,
 } from "./r4q-runtime.ts";
@@ -151,10 +152,11 @@ export function coerceExprByType(f: FieldMeta, rawExpr: string): string {
 
 /** Emit the LHC adapter function. */
 export function renderLhcAdapter(
+    titleCamel: string,
     titlePascal: string,
     fields: FieldMeta[],
 ): string {
-    const funcName = `${titlePascal}LhcFormResponseAdapter`;
+    const funcName = `${titleCamel}LhcFormResponseAdapter`;
     const body = fields.map((f) => {
         const raw = `findLhcValueByLinkId(input, ${JSON.stringify(f.linkId)})`;
         const coerced = coerceExprByType(f, raw);
@@ -172,10 +174,11 @@ ${body}
 
 /** Emit the QuestionnaireResponse adapter function. */
 export function renderQrAdapter(
+    titleCamel: string,
     titlePascal: string,
     fields: FieldMeta[],
 ): string {
-    const funcName = `${titlePascal}FhirQuestionnaireResponseAdapter`;
+    const funcName = `${titleCamel}FhirQuestionnaireResponseAdapter`;
     const body = fields.map((f) => {
         const raw = `findQrAnswerByLinkId(qr, ${JSON.stringify(f.linkId)})`;
         const coerced = coerceExprByType(f, raw);
@@ -193,6 +196,7 @@ ${body}
 
 /** Emit the Interpreter class with factories and validation. */
 export function renderInterpreter(
+    titleCamel: string,
     titlePascal: string,
     formTitle: string,
     fields: FieldMeta[],
@@ -202,8 +206,8 @@ export function renderInterpreter(
     ).join(", ");
     const allKeys = fields.map((f) => JSON.stringify(f.propName)).join(", ");
     const className = `${titlePascal}Interpreter`;
-    const lhcFn = `${titlePascal}LhcFormResponseAdapter`;
-    const qrFn = `${titlePascal}FhirQuestionnaireResponseAdapter`;
+    const lhcFn = `${titleCamel}LhcFormResponseAdapter`;
+    const qrFn = `${titleCamel}FhirQuestionnaireResponseAdapter`;
 
     return `/** High-level interpreter with factories, validation, and readiness scoring. */
 export class ${className} {
@@ -231,7 +235,9 @@ export class ${className} {
   }
 
   /**
-   * Assess readiness with a simple completeness score.
+   * Assess readiness with a simple completeness score. This is meant to be
+   * used to help understand how complete the types are and serves as an
+   * example of how to use the generated code.
    * - requiredCovered: percentage of required fields that are non-blank
    * - overallFilled: count of non-blank fields among all known properties
    */
@@ -314,6 +320,7 @@ function assembleFile(
 ): string {
     const formTitle = q.title ?? q.name ?? "(untitled Questionnaire)";
     const titlePascal = toPascalCase(formTitle);
+    const titleCamel = toCamelCase(formTitle);
     const header = renderHeaderBanner(
         path.basename(outFileName),
         q,
@@ -323,9 +330,14 @@ function assembleFile(
     const helps = renderFormHelpsBlock(formHelps); // placed after import to satisfy "import immediately after banner"
     const linkIds = renderLinkIdMap(titlePascal, fields);
     const iface = renderInterface(titlePascal, formTitle, fields);
-    const lhc = renderLhcAdapter(titlePascal, fields);
-    const qr = renderQrAdapter(titlePascal, fields);
-    const interp = renderInterpreter(titlePascal, formTitle, fields);
+    const lhc = renderLhcAdapter(titleCamel, titlePascal, fields);
+    const qr = renderQrAdapter(titleCamel, titlePascal, fields);
+    const interp = renderInterpreter(
+        titleCamel,
+        titlePascal,
+        formTitle,
+        fields,
+    );
 
     return [
         header,
