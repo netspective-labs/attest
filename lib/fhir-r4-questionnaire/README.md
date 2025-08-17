@@ -654,7 +654,7 @@ don’t need Deno, JSR, or an import map at runtime—the bundle is self-contain
 A simple script to regenerate everything and bundle a barrel, useful locally and
 in CI.
 
-```bash
+```ts
 #!/usr/bin/env -S deno run --allow-read --allow-write
 // scripts/transform-r4q-to-esm.ts
 
@@ -667,8 +667,18 @@ for await (const e of Deno.readDir("questionnaires")) {
 }
 if (questionnaires.length) {
   const gen = new Deno.Command(Deno.execPath(), {
-    args: ["run", "-A", "./r4qctl.ts", ...questionnaires, "--outDir", "./src/generated", "--force"],
-    stdin: "inherit", stdout: "inherit", stderr: "inherit",
+    args: [
+      "run",
+      "-A",
+      "./r4qctl.ts",
+      ...questionnaires,
+      "--outDir",
+      "./src/generated",
+      "--force",
+    ],
+    stdin: "inherit",
+    stdout: "inherit",
+    stderr: "inherit",
   });
   const { code } = await gen.output();
   if (code !== 0) Deno.exit(code);
@@ -676,8 +686,16 @@ if (questionnaires.length) {
 
 // 2) bundle the barrel
 const bundle = new Deno.Command(Deno.execPath(), {
-  args: ["bundle", "--quiet", "--map=inline", "./src/generated/index.ts", "./dist/forms.esm.js"],
-  stdin: "inherit", stdout: "inherit", stderr: "inherit",
+  args: [
+    "bundle",
+    "--quiet",
+    "--map=inline",
+    "./src/generated/index.ts",
+    "./dist/forms.esm.js",
+  ],
+  stdin: "inherit",
+  stdout: "inherit",
+  stderr: "inherit",
 });
 const { code } = await bundle.output();
 Deno.exit(code);

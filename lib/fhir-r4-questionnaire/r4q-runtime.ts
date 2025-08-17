@@ -10,6 +10,48 @@
  * - Provide small, composable primitives that are easy to unit-test.
  */
 
+// this shape is written in the generated code
+export interface ModuleSignature {
+    title: string;
+    filename: string;
+    titleCamel: string;
+    titlePascal: string;
+    titleKebab: string;
+    lhcFormResponseAdapterFnName: string;
+    fhirQuestionnaireResponseAdapterFnName: string;
+}
+
+/**
+ * Searches through the top-level variables of an imported Deno module
+ * to find and return the value of a variable whose name ends with 'ModuleSignature'.
+ *
+ * This function assumes that the 'ModuleSignature' variable is a top-level
+ * 'export const' within the module, making it accessible as a property
+ * of the imported module object.
+ *
+ * @param module The module object obtained from an `await import("./module.ts")` call.
+ * @returns The value of the first variable found ending with 'ModuleSignature',
+ * or `undefined` if no such variable is found.
+ */
+export function moduleSignature(
+    module: Record<string, unknown>,
+): ModuleSignature | undefined {
+    // Iterate over all enumerable properties (which include exported variables)
+    // of the imported module object.
+    for (const key in module) {
+        // Check if the current property key (variable name) ends with the
+        // desired suffix 'ModuleSignature'.
+        if (key.endsWith("ModuleSignature")) {
+            // If a match is found, return the value associated with that key.
+            // We return the first match found, as the requirement is to find "any variable".
+            return module[key] as ModuleSignature;
+        }
+    }
+
+    // If the loop completes and no matching variable is found, return undefined.
+    return undefined;
+}
+
 /* ========================================================================== *
  * Types
  * ========================================================================== */

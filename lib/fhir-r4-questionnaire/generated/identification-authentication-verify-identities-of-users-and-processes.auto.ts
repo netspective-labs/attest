@@ -1,3 +1,4 @@
+import * as rt from "../r4q-runtime.ts";
 /**
  * @file identification-authentication-verify-identities-of-users-and-processes.auto.ts
  * @generated This file was auto-generated from the FHIR R4 Questionnaire "Identification & Authentication (Verify identities of users and processes)".
@@ -7,9 +8,20 @@
  * Normalizes LHC JSON and FHIR QuestionnaireResponse into the type-safe `IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses` interface.
  */
 
+// this is the module signature, used by importers to identify the module
+// using r4q-runtime.ts `moduleSignature` function
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesModuleSignature: rt.ModuleSignature = { 
+    title: "Identification & Authentication (Verify identities of users and processes)",
+    filename: "identification-authentication-verify-identities-of-users-and-processes.auto.ts",
+    titleCamel: "`identificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
+    titlePascal: "`IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
+    titleKebab: "`identification-authentication-verify-identities-of-users-and-processes`",
+    lhcFormResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter"
+}
+
 // deno-lint-ignore no-explicit-any
 type Any = any;
-import * as rt from "../r4q-runtime.ts";
 /**
  * Form Help (from display/help controls):
  * - Identify information system users, processes acting on behalf of users, or devices.
@@ -20,35 +32,34 @@ import * as rt from "../r4q-runtime.ts";
  * - Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds =
-  {
-    implementationStatus: "362061549890",
-    userIdentificationStandards: "139461602895",
-    numberOfServiceAccounts: "179545641231",
-    checkAllThatApply: "753553198622",
-    doYouHaveADeviceInventorySpreadsheet: "926744954268",
-    deviceIdentification: "359160217347",
-    workstationsLaptops: "878410531769",
-    servers: "361034048943",
-    mobileDevices: "424090205463",
-    networkDevices: "764441913827",
-    identityVerificationProcess: "297397401977",
-    supportingDocumentation: "210356958517",
-    additionalNotes: "268793244463",
-    implementationStatus2: "676336695824",
-    userAuthenticationMethods: "901079756471",
-    minimumLengthCharacters: "444552965098",
-    passwordExpirationDays: "499668919305",
-    passwordHistoryPasswordsRemembered: "190124104069",
-    clickAllThatApply: "404025003688",
-    multiFactorAuthentication: "928879235030",
-    defaultCredentialManagement: "830887074055",
-    numberOfFailedAttemptsBeforeLockout: "647413778355",
-    accountLockoutDurationMinutes: "552155632772",
-    clickAllThatApply2: "947716241721",
-    supportingDocumentation2: "230111377333",
-    additionalNotes2: "939036015644",
-  } as const;
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds = {
+  implementationStatus: "362061549890",
+  userIdentificationStandards: "139461602895",
+  numberOfServiceAccounts: "179545641231",
+  checkAllThatApply: "753553198622",
+  doYouHaveADeviceInventorySpreadsheet: "926744954268",
+  deviceIdentification: "359160217347",
+  workstationsLaptops: "878410531769",
+  servers: "361034048943",
+  mobileDevices: "424090205463",
+  networkDevices: "764441913827",
+  identityVerificationProcess: "297397401977",
+  supportingDocumentation: "210356958517",
+  additionalNotes: "268793244463",
+  implementationStatus2: "676336695824",
+  userAuthenticationMethods: "901079756471",
+  minimumLengthCharacters: "444552965098",
+  passwordExpirationDays: "499668919305",
+  passwordHistoryPasswordsRemembered: "190124104069",
+  clickAllThatApply: "404025003688",
+  multiFactorAuthentication: "928879235030",
+  defaultCredentialManagement: "830887074055",
+  numberOfFailedAttemptsBeforeLockout: "647413778355",
+  accountLockoutDurationMinutes: "552155632772",
+  clickAllThatApply2: "947716241721",
+  supportingDocumentation2: "230111377333",
+  additionalNotes2: "939036015644"
+} as const;
 
 /** Normalized view of "Identification & Authentication (Verify identities of users and processes)" answers. */
 export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
@@ -59,10 +70,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * User Identification Standards
@@ -71,11 +79,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: " First name + last name (john.smith)", " First initial + last name (jsmith)", " Employee ID numbers (EMP001234)", " Department codes + names (IT-jsmith)"
    * Required: no
    */
-  userIdentificationStandards?:
-    | " First name + last name (john.smith)"
-    | " First initial + last name (jsmith)"
-    | " Employee ID numbers (EMP001234)"
-    | " Department codes + names (IT-jsmith)";
+  userIdentificationStandards?: " First name + last name (john.smith)" | " First initial + last name (jsmith)" | " Employee ID numbers (EMP001234)" | " Department codes + names (IT-jsmith)";
 
   /**
    * Number of service accounts:
@@ -95,12 +99,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: " Database services", " Web applications", " Backup processes", " Monitoring/logging services", "Security scanning tools"
    * Required: no
    */
-  checkAllThatApply?:
-    | " Database services"
-    | " Web applications"
-    | " Backup processes"
-    | " Monitoring/logging services"
-    | "Security scanning tools";
+  checkAllThatApply?: " Database services" | " Web applications" | " Backup processes" | " Monitoring/logging services" | "Security scanning tools";
 
   /**
    * Do you have a device inventory spreadsheet?
@@ -119,13 +118,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "MAC addresses", "IP addresses (static)", "Computer/device names", "Asset tag numbers", "Serial numbers", "Certificates/digital signatures"
    * Required: no
    */
-  deviceIdentification?:
-    | "MAC addresses"
-    | "IP addresses (static)"
-    | "Computer/device names"
-    | "Asset tag numbers"
-    | "Serial numbers"
-    | "Certificates/digital signatures";
+  deviceIdentification?: "MAC addresses" | "IP addresses (static)" | "Computer/device names" | "Asset tag numbers" | "Serial numbers" | "Certificates/digital signatures";
 
   /**
    * Workstations/laptops:
@@ -170,11 +163,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "HR verification with employee records", "Manager approval with written authorization", "Background check completion", "Photo identification verification"
    * Required: no
    */
-  identityVerificationProcess?:
-    | "HR verification with employee records"
-    | "Manager approval with written authorization"
-    | "Background check completion"
-    | "Photo identification verification";
+  identityVerificationProcess?: "HR verification with employee records" | "Manager approval with written authorization" | "Background check completion" | "Photo identification verification";
 
   /**
    * Supporting Documentation
@@ -201,10 +190,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus2?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus2?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * User Authentication Methods
@@ -213,13 +199,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Username and password", "Multi-factor authentication (MFA)", "Smart cards/PIV cards", "Biometric authentication", " Digital certificates", "Single sign-on (SSO)"
    * Required: no
    */
-  userAuthenticationMethods?:
-    | "Username and password"
-    | "Multi-factor authentication (MFA)"
-    | "Smart cards/PIV cards"
-    | "Biometric authentication"
-    | " Digital certificates"
-    | "Single sign-on (SSO)";
+  userAuthenticationMethods?: "Username and password" | "Multi-factor authentication (MFA)" | "Smart cards/PIV cards" | "Biometric authentication" | " Digital certificates" | "Single sign-on (SSO)";
 
   /**
    * Minimum length (characters):
@@ -259,11 +239,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Uppercase letters required", "Lowercase letters required", "Numbers required", "Special characters required"
    * Required: no
    */
-  clickAllThatApply?:
-    | "Uppercase letters required"
-    | "Lowercase letters required"
-    | "Numbers required"
-    | "Special characters required";
+  clickAllThatApply?: "Uppercase letters required" | "Lowercase letters required" | "Numbers required" | "Special characters required";
 
   /**
    * Multi-Factor Authentication
@@ -272,12 +248,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Yes, for all users and systems", "Yes, for privileged accounts only", "Yes, for remote access only", "Yes, for critical systems only", "No, not implemented"
    * Required: no
    */
-  multiFactorAuthentication?:
-    | "Yes, for all users and systems"
-    | "Yes, for privileged accounts only"
-    | "Yes, for remote access only"
-    | "Yes, for critical systems only"
-    | "No, not implemented";
+  multiFactorAuthentication?: "Yes, for all users and systems" | "Yes, for privileged accounts only" | "Yes, for remote access only" | "Yes, for critical systems only" | "No, not implemented";
 
   /**
    * Default Credential Management
@@ -286,11 +257,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Always changed before deployment", "Changed during initial configuration", "Users required to change on first login", "No formal process"
    * Required: no
    */
-  defaultCredentialManagement?:
-    | "Always changed before deployment"
-    | "Changed during initial configuration"
-    | "Users required to change on first login"
-    | "No formal process";
+  defaultCredentialManagement?: "Always changed before deployment" | "Changed during initial configuration" | "Users required to change on first login" | "No formal process";
 
   /**
    * Number of failed attempts before lockout:
@@ -320,10 +287,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Administrator notification sent", " Security team alerted", "Logged for review"
    * Required: no
    */
-  clickAllThatApply2?:
-    | "Administrator notification sent"
-    | " Security team alerted"
-    | "Logged for review";
+  clickAllThatApply2?: "Administrator notification sent" | " Security team alerted" | "Logged for review";
 
   /**
    * Supporting Documentation
@@ -345,275 +309,106 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
 }
 
 /** Convert an LHC JSON response into a normalized IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses object. */
-export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(
-  input: Any,
-): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
+export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(input: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
   return {
-    implementationStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "362061549890"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "implementationStatus"
-    ],
-    userIdentificationStandards: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "139461602895"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "userIdentificationStandards"
-    ],
-    numberOfServiceAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "179545641231"),
-    ),
-    checkAllThatApply: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "753553198622"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "checkAllThatApply"
-    ],
-    doYouHaveADeviceInventorySpreadsheet: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "926744954268"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "doYouHaveADeviceInventorySpreadsheet"
-    ],
-    deviceIdentification: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "359160217347"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "deviceIdentification"
-    ],
-    workstationsLaptops: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "878410531769"),
-    ),
-    servers: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "361034048943"),
-    ),
-    mobileDevices: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "424090205463"),
-    ),
-    networkDevices: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "764441913827"),
-    ),
-    identityVerificationProcess: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "297397401977"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identityVerificationProcess"
-    ],
-    supportingDocumentation: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "210356958517"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "supportingDocumentation"
-    ],
-    additionalNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "268793244463"),
-    ),
-    implementationStatus2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "676336695824"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "implementationStatus2"
-    ],
-    userAuthenticationMethods: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "901079756471"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "userAuthenticationMethods"
-    ],
-    minimumLengthCharacters: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "444552965098"),
-    ),
-    passwordExpirationDays: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "499668919305"),
-    ),
-    passwordHistoryPasswordsRemembered: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "190124104069"),
-    ),
-    clickAllThatApply: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "404025003688"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply"
-    ],
-    multiFactorAuthentication: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "928879235030"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "multiFactorAuthentication"
-    ],
-    defaultCredentialManagement: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "830887074055"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "defaultCredentialManagement"
-    ],
-    numberOfFailedAttemptsBeforeLockout: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "647413778355"),
-    ),
-    accountLockoutDurationMinutes: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "552155632772"),
-    ),
-    clickAllThatApply2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "947716241721"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply2"
-    ],
-    supportingDocumentation2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "230111377333"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "supportingDocumentation2"
-    ],
-    additionalNotes2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "939036015644"),
-    ),
+  implementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "362061549890")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["implementationStatus"],
+  userIdentificationStandards: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "139461602895")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["userIdentificationStandards"],
+  numberOfServiceAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "179545641231")),
+  checkAllThatApply: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "753553198622")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["checkAllThatApply"],
+  doYouHaveADeviceInventorySpreadsheet: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "926744954268")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["doYouHaveADeviceInventorySpreadsheet"],
+  deviceIdentification: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "359160217347")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["deviceIdentification"],
+  workstationsLaptops: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "878410531769")),
+  servers: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "361034048943")),
+  mobileDevices: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "424090205463")),
+  networkDevices: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "764441913827")),
+  identityVerificationProcess: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "297397401977")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identityVerificationProcess"],
+  supportingDocumentation: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "210356958517")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["supportingDocumentation"],
+  additionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "268793244463")),
+  implementationStatus2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "676336695824")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["implementationStatus2"],
+  userAuthenticationMethods: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "901079756471")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["userAuthenticationMethods"],
+  minimumLengthCharacters: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "444552965098")),
+  passwordExpirationDays: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "499668919305")),
+  passwordHistoryPasswordsRemembered: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "190124104069")),
+  clickAllThatApply: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "404025003688")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply"],
+  multiFactorAuthentication: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "928879235030")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["multiFactorAuthentication"],
+  defaultCredentialManagement: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "830887074055")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["defaultCredentialManagement"],
+  numberOfFailedAttemptsBeforeLockout: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "647413778355")),
+  accountLockoutDurationMinutes: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "552155632772")),
+  clickAllThatApply2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "947716241721")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply2"],
+  supportingDocumentation2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "230111377333")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["supportingDocumentation2"],
+  additionalNotes2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "939036015644")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses object. */
-export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
+export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(qr: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
   return {
-    implementationStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "362061549890"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "implementationStatus"
-    ],
-    userIdentificationStandards: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "139461602895"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "userIdentificationStandards"
-    ],
-    numberOfServiceAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "179545641231"),
-    ),
-    checkAllThatApply: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "753553198622"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "checkAllThatApply"
-    ],
-    doYouHaveADeviceInventorySpreadsheet: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "926744954268"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "doYouHaveADeviceInventorySpreadsheet"
-    ],
-    deviceIdentification: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "359160217347"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "deviceIdentification"
-    ],
-    workstationsLaptops: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "878410531769"),
-    ),
-    servers: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "361034048943"),
-    ),
-    mobileDevices: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "424090205463"),
-    ),
-    networkDevices: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "764441913827"),
-    ),
-    identityVerificationProcess: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "297397401977"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identityVerificationProcess"
-    ],
-    supportingDocumentation: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "210356958517"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "supportingDocumentation"
-    ],
-    additionalNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "268793244463"),
-    ),
-    implementationStatus2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "676336695824"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "implementationStatus2"
-    ],
-    userAuthenticationMethods: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "901079756471"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "userAuthenticationMethods"
-    ],
-    minimumLengthCharacters: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "444552965098"),
-    ),
-    passwordExpirationDays: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "499668919305"),
-    ),
-    passwordHistoryPasswordsRemembered: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "190124104069"),
-    ),
-    clickAllThatApply: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "404025003688"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply"
-    ],
-    multiFactorAuthentication: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "928879235030"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "multiFactorAuthentication"
-    ],
-    defaultCredentialManagement: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "830887074055"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "defaultCredentialManagement"
-    ],
-    numberOfFailedAttemptsBeforeLockout: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "647413778355"),
-    ),
-    accountLockoutDurationMinutes: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "552155632772"),
-    ),
-    clickAllThatApply2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "947716241721"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply2"
-    ],
-    supportingDocumentation2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "230111377333"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "supportingDocumentation2"
-    ],
-    additionalNotes2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "939036015644"),
-    ),
+  implementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "362061549890")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["implementationStatus"],
+  userIdentificationStandards: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "139461602895")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["userIdentificationStandards"],
+  numberOfServiceAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "179545641231")),
+  checkAllThatApply: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "753553198622")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["checkAllThatApply"],
+  doYouHaveADeviceInventorySpreadsheet: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "926744954268")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["doYouHaveADeviceInventorySpreadsheet"],
+  deviceIdentification: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "359160217347")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["deviceIdentification"],
+  workstationsLaptops: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "878410531769")),
+  servers: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "361034048943")),
+  mobileDevices: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "424090205463")),
+  networkDevices: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "764441913827")),
+  identityVerificationProcess: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "297397401977")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identityVerificationProcess"],
+  supportingDocumentation: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "210356958517")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["supportingDocumentation"],
+  additionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "268793244463")),
+  implementationStatus2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "676336695824")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["implementationStatus2"],
+  userAuthenticationMethods: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "901079756471")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["userAuthenticationMethods"],
+  minimumLengthCharacters: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "444552965098")),
+  passwordExpirationDays: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "499668919305")),
+  passwordHistoryPasswordsRemembered: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "190124104069")),
+  clickAllThatApply: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "404025003688")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply"],
+  multiFactorAuthentication: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "928879235030")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["multiFactorAuthentication"],
+  defaultCredentialManagement: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "830887074055")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["defaultCredentialManagement"],
+  numberOfFailedAttemptsBeforeLockout: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "647413778355")),
+  accountLockoutDurationMinutes: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "552155632772")),
+  clickAllThatApply2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "947716241721")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply2"],
+  supportingDocumentation2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "230111377333")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["supportingDocumentation2"],
+  additionalNotes2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "939036015644")),
   };
 }
 
-/** High-level interpreter with factories, validation, and readiness scoring. */
+/**
+ * NOTE TO DEVELOPERS:
+ * -------------------
+ * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
+ * how to consume the normalized type-safe interface generated for this
+ * Questionnaire. It shows minimal factories (`fromLhc`, `fromQuestionnaireResponse`)
+ * and convenience methods (`validateRequiredFields`, `assessReadiness`) but it is
+ * NOT intended for production use.
+ *
+ * In real applications:
+ * - Treat this class as SAMPLE CODE only.
+ * - Replace or extend it with proper business logic, rules engines, or validation
+ *   frameworks appropriate to your domain.
+ * - Do not rely on the simplistic readiness scoring or validation in production
+ *   scenarios; they are illustrative, not authoritative.
+ *
+ * Best practice: use the generated TypeScript interface (`IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`) as your
+ * contract for normalized data, then integrate with your own rules processors,
+ * compliance engines, or plain TypeScript/JavaScript functions as needed.
+ */
 export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-  constructor(
-    readonly value:
-      IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses,
-  ) {}
+  constructor(readonly value: IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(
-      identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
+    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(
-      identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
+    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    >;
-  } {
-    const missing: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
-    const req: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> } {
+    const missing: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
+    const req: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -634,48 +429,13 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    >;
+    missingRequired: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses>;
   } {
-    const req: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
-    const all: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [
-      "implementationStatus",
-      "userIdentificationStandards",
-      "numberOfServiceAccounts",
-      "checkAllThatApply",
-      "doYouHaveADeviceInventorySpreadsheet",
-      "deviceIdentification",
-      "workstationsLaptops",
-      "servers",
-      "mobileDevices",
-      "networkDevices",
-      "identityVerificationProcess",
-      "supportingDocumentation",
-      "additionalNotes",
-      "implementationStatus2",
-      "userAuthenticationMethods",
-      "minimumLengthCharacters",
-      "passwordExpirationDays",
-      "passwordHistoryPasswordsRemembered",
-      "clickAllThatApply",
-      "multiFactorAuthentication",
-      "defaultCredentialManagement",
-      "numberOfFailedAttemptsBeforeLockout",
-      "accountLockoutDurationMinutes",
-      "clickAllThatApply2",
-      "supportingDocumentation2",
-      "additionalNotes2",
-    ];
+    const req: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
+    const all: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = ["implementationStatus", "userIdentificationStandards", "numberOfServiceAccounts", "checkAllThatApply", "doYouHaveADeviceInventorySpreadsheet", "deviceIdentification", "workstationsLaptops", "servers", "mobileDevices", "networkDevices", "identityVerificationProcess", "supportingDocumentation", "additionalNotes", "implementationStatus2", "userAuthenticationMethods", "minimumLengthCharacters", "passwordExpirationDays", "passwordHistoryPasswordsRemembered", "clickAllThatApply", "multiFactorAuthentication", "defaultCredentialManagement", "numberOfFailedAttemptsBeforeLockout", "accountLockoutDurationMinutes", "clickAllThatApply2", "supportingDocumentation2", "additionalNotes2"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
+    const missingReq: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -688,8 +448,7 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
     }
 
     return {
-      formTitle:
-        "Identification & Authentication (Verify identities of users and processes)",
+      formTitle: "Identification & Authentication (Verify identities of users and processes)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -700,8 +459,7 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
 }
 
 /** The original source */
-export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource =
-  `{
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource = `{
   "resourceType": "Questionnaire",
   "meta": {
     "profile": [

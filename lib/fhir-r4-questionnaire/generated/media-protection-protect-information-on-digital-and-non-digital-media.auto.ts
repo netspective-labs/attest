@@ -1,3 +1,4 @@
+import * as rt from "../r4q-runtime.ts";
 /**
  * @file media-protection-protect-information-on-digital-and-non-digital-media.auto.ts
  * @generated This file was auto-generated from the FHIR R4 Questionnaire "Media Protection (Protect information on digital and non-digital media)".
@@ -7,22 +8,31 @@
  * Normalizes LHC JSON and FHIR QuestionnaireResponse into the type-safe `MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia` interface.
  */
 
+// this is the module signature, used by importers to identify the module
+// using r4q-runtime.ts `moduleSignature` function
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaModuleSignature: rt.ModuleSignature = { 
+    title: "Media Protection (Protect information on digital and non-digital media)",
+    filename: "media-protection-protect-information-on-digital-and-non-digital-media.auto.ts",
+    titleCamel: "`mediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
+    titlePascal: "`MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
+    titleKebab: "`media-protection-protect-information-on-digital-and-non-digital-media`",
+    lhcFormResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter"
+}
+
 // deno-lint-ignore no-explicit-any
 type Any = any;
-import * as rt from "../r4q-runtime.ts";
 /**
  * Form Help (from display/help controls):
  * - Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse
  * - Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds =
-  {
-    doYouHaveAMediaDisposalPolicy: "957584520694",
-    implementationStatus: "272642906092",
-    confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply:
-      "698818405059",
-  } as const;
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds = {
+  doYouHaveAMediaDisposalPolicy: "957584520694",
+  implementationStatus: "272642906092",
+  confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply: "698818405059"
+} as const;
 
 /** Normalized view of "Media Protection (Protect information on digital and non-digital media)" answers. */
 export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
@@ -42,10 +52,7 @@ export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * Confirm that your media disposal policy includes the following elements (click all that apply):
@@ -55,107 +62,64 @@ export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
    * Options: "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))", "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)", "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)", "Destruction methods by media type (Specific destruction methods appropriate for each media type)", "Verification requirements (Procedures to verify sanitization or destruction was successful)", "Documentation requirements (Required records of sanitization and destruction activities)", "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)", "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
    * Required: no
    */
-  confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply?:
-    | "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
-    | "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
-    | "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
-    | "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
-    | "Verification requirements (Procedures to verify sanitization or destruction was successful)"
-    | "Documentation requirements (Required records of sanitization and destruction activities)"
-    | "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
-    | "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)";
+  confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply?: "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))" | "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)" | "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)" | "Destruction methods by media type (Specific destruction methods appropriate for each media type)" | "Verification requirements (Procedures to verify sanitization or destruction was successful)" | "Documentation requirements (Required records of sanitization and destruction activities)" | "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)" | "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)";
 }
 
 /** Convert an LHC JSON response into a normalized MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia object. */
-export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(
-  input: Any,
-): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
+export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(input: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
   return {
-    doYouHaveAMediaDisposalPolicy: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "957584520694"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "doYouHaveAMediaDisposalPolicy"
-    ],
-    implementationStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "272642906092"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "implementationStatus"
-    ],
-    confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply:
-      rt.coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "698818405059"),
-      ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-        "confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply"
-      ],
+  doYouHaveAMediaDisposalPolicy: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "957584520694")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["doYouHaveAMediaDisposalPolicy"],
+  implementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "272642906092")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["implementationStatus"],
+  confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "698818405059")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply"],
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia object. */
-export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
+export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(qr: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
   return {
-    doYouHaveAMediaDisposalPolicy: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "957584520694"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "doYouHaveAMediaDisposalPolicy"
-    ],
-    implementationStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "272642906092"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "implementationStatus"
-    ],
-    confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply:
-      rt.coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "698818405059"),
-      ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-        "confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply"
-      ],
+  doYouHaveAMediaDisposalPolicy: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "957584520694")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["doYouHaveAMediaDisposalPolicy"],
+  implementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "272642906092")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["implementationStatus"],
+  confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "698818405059")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply"],
   };
 }
 
-/** High-level interpreter with factories, validation, and readiness scoring. */
+/**
+ * NOTE TO DEVELOPERS:
+ * -------------------
+ * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
+ * how to consume the normalized type-safe interface generated for this
+ * Questionnaire. It shows minimal factories (`fromLhc`, `fromQuestionnaireResponse`)
+ * and convenience methods (`validateRequiredFields`, `assessReadiness`) but it is
+ * NOT intended for production use.
+ *
+ * In real applications:
+ * - Treat this class as SAMPLE CODE only.
+ * - Replace or extend it with proper business logic, rules engines, or validation
+ *   frameworks appropriate to your domain.
+ * - Do not rely on the simplistic readiness scoring or validation in production
+ *   scenarios; they are illustrative, not authoritative.
+ *
+ * Best practice: use the generated TypeScript interface (`MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`) as your
+ * contract for normalized data, then integrate with your own rules processors,
+ * compliance engines, or plain TypeScript/JavaScript functions as needed.
+ */
 export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-  constructor(
-    readonly value:
-      MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia,
-  ) {}
+  constructor(readonly value: MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(
-      mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
+    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(
-      mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
+    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    >;
-  } {
-    const missing: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
-    const req: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> } {
+    const missing: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
+    const req: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -176,25 +140,13 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    >;
+    missingRequired: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia>;
   } {
-    const req: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
-    const all: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [
-      "doYouHaveAMediaDisposalPolicy",
-      "implementationStatus",
-      "confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply",
-    ];
+    const req: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
+    const all: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = ["doYouHaveAMediaDisposalPolicy", "implementationStatus", "confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
+    const missingReq: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -207,8 +159,7 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
     }
 
     return {
-      formTitle:
-        "Media Protection (Protect information on digital and non-digital media)",
+      formTitle: "Media Protection (Protect information on digital and non-digital media)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -219,8 +170,7 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
 }
 
 /** The original source */
-export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource =
-  `{
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource = `{
   "resourceType": "Questionnaire",
   "meta": {
     "profile": [

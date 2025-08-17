@@ -1,3 +1,4 @@
+import * as rt from "../r4q-runtime.ts";
 /**
  * @file company-information.auto.ts
  * @generated This file was auto-generated from the FHIR R4 Questionnaire "Company Information".
@@ -7,9 +8,20 @@
  * Normalizes LHC JSON and FHIR QuestionnaireResponse into the type-safe `CompanyInformation` interface.
  */
 
+// this is the module signature, used by importers to identify the module
+// using r4q-runtime.ts `moduleSignature` function
+export const companyInformationModuleSignature: rt.ModuleSignature = { 
+    title: "Company Information",
+    filename: "company-information.auto.ts",
+    titleCamel: "`companyInformation`",
+    titlePascal: "`CompanyInformation`",
+    titleKebab: "`company-information`",
+    lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "companyInformationFhirQuestionnaireResponseAdapter"
+}
+
 // deno-lint-ignore no-explicit-any
 type Any = any;
-import * as rt from "../r4q-runtime.ts";
 /**
  * Form Help (from display/help controls):
  * - Provide essential information about your organization for CMMC compliance tracking.
@@ -27,7 +39,7 @@ export const companyInformationLinkIds = {
   employeeCount: "697235963218",
   contractTypes: "863463230823",
   cageCode: "805221373063",
-  dunsNumber: "374784155003",
+  dunsNumber: "374784155003"
 } as const;
 
 /** Normalized view of "Company Information" answers. */
@@ -143,116 +155,78 @@ export interface CompanyInformation {
 }
 
 /** Convert an LHC JSON response into a normalized CompanyInformation object. */
-export function companyInformationLhcFormResponseAdapter(
-  input: Any,
-): CompanyInformation {
+export function companyInformationLhcFormResponseAdapter(input: Any): CompanyInformation {
   return {
-    organizationName: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "715544477968"),
-    ),
-    formCompletedBy: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "655141523763"),
-    ),
-    positionTitle: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "761144039651"),
-    ),
-    emailAddress: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "441278853405"),
-    ),
-    workPhone: rt.coerceString(rt.findLhcValueByLinkId(input, "375736159279")),
-    mobilePhone: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "948589414714"),
-    ),
-    assessmentDate: rt.coerceOptionalDate(
-      rt.findLhcValueByLinkId(input, "276403539223"),
-    ),
-    industry: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "789286873476"),
-    ),
-    employeeCount: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "697235963218"),
-    ),
-    contractTypes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "863463230823"),
-    ),
-    cageCode: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "805221373063"),
-    ),
-    dunsNumber: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "374784155003"),
-    ),
+  organizationName: rt.coerceString(rt.findLhcValueByLinkId(input, "715544477968")),
+  formCompletedBy: rt.coerceString(rt.findLhcValueByLinkId(input, "655141523763")),
+  positionTitle: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "761144039651")),
+  emailAddress: rt.coerceString(rt.findLhcValueByLinkId(input, "441278853405")),
+  workPhone: rt.coerceString(rt.findLhcValueByLinkId(input, "375736159279")),
+  mobilePhone: rt.coerceString(rt.findLhcValueByLinkId(input, "948589414714")),
+  assessmentDate: rt.coerceOptionalDate(rt.findLhcValueByLinkId(input, "276403539223")),
+  industry: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "789286873476")),
+  employeeCount: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "697235963218")),
+  contractTypes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "863463230823")),
+  cageCode: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "805221373063")),
+  dunsNumber: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "374784155003")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized CompanyInformation object. */
-export function companyInformationFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): CompanyInformation {
+export function companyInformationFhirQuestionnaireResponseAdapter(qr: Any): CompanyInformation {
   return {
-    organizationName: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "715544477968"),
-    ),
-    formCompletedBy: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "655141523763"),
-    ),
-    positionTitle: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "761144039651"),
-    ),
-    emailAddress: rt.coerceString(rt.findQrAnswerByLinkId(qr, "441278853405")),
-    workPhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "375736159279")),
-    mobilePhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "948589414714")),
-    assessmentDate: rt.coerceOptionalDate(
-      rt.findQrAnswerByLinkId(qr, "276403539223"),
-    ),
-    industry: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "789286873476"),
-    ),
-    employeeCount: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "697235963218"),
-    ),
-    contractTypes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "863463230823"),
-    ),
-    cageCode: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "805221373063"),
-    ),
-    dunsNumber: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "374784155003"),
-    ),
+  organizationName: rt.coerceString(rt.findQrAnswerByLinkId(qr, "715544477968")),
+  formCompletedBy: rt.coerceString(rt.findQrAnswerByLinkId(qr, "655141523763")),
+  positionTitle: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "761144039651")),
+  emailAddress: rt.coerceString(rt.findQrAnswerByLinkId(qr, "441278853405")),
+  workPhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "375736159279")),
+  mobilePhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "948589414714")),
+  assessmentDate: rt.coerceOptionalDate(rt.findQrAnswerByLinkId(qr, "276403539223")),
+  industry: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "789286873476")),
+  employeeCount: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "697235963218")),
+  contractTypes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "863463230823")),
+  cageCode: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "805221373063")),
+  dunsNumber: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "374784155003")),
   };
 }
 
-/** High-level interpreter with factories, validation, and readiness scoring. */
+/**
+ * NOTE TO DEVELOPERS:
+ * -------------------
+ * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
+ * how to consume the normalized type-safe interface generated for this
+ * Questionnaire. It shows minimal factories (`fromLhc`, `fromQuestionnaireResponse`)
+ * and convenience methods (`validateRequiredFields`, `assessReadiness`) but it is
+ * NOT intended for production use.
+ *
+ * In real applications:
+ * - Treat this class as SAMPLE CODE only.
+ * - Replace or extend it with proper business logic, rules engines, or validation
+ *   frameworks appropriate to your domain.
+ * - Do not rely on the simplistic readiness scoring or validation in production
+ *   scenarios; they are illustrative, not authoritative.
+ *
+ * Best practice: use the generated TypeScript interface (`CompanyInformation`) as your
+ * contract for normalized data, then integrate with your own rules processors,
+ * compliance engines, or plain TypeScript/JavaScript functions as needed.
+ */
 export class CompanyInformationInterpreter {
   constructor(readonly value: CompanyInformation) {}
 
   /** Factory: build from LHC JSON. */
   static fromLhcFormResponse(input: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(
-      companyInformationLhcFormResponseAdapter(input),
-    );
+    return new CompanyInformationInterpreter(companyInformationLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
   static fromQuestionnaireResponse(qr: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(
-      companyInformationFhirQuestionnaireResponseAdapter(qr),
-    );
+    return new CompanyInformationInterpreter(companyInformationFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<keyof CompanyInformation>;
-  } {
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof CompanyInformation> } {
     const missing: Array<keyof CompanyInformation> = [];
-    const req: Array<keyof CompanyInformation> = [
-      "organizationName",
-      "formCompletedBy",
-      "emailAddress",
-      "workPhone",
-      "mobilePhone",
-    ];
+    const req: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "emailAddress", "workPhone", "mobilePhone"];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -275,27 +249,8 @@ export class CompanyInformationInterpreter {
     totalFields: number;
     missingRequired: Array<keyof CompanyInformation>;
   } {
-    const req: Array<keyof CompanyInformation> = [
-      "organizationName",
-      "formCompletedBy",
-      "emailAddress",
-      "workPhone",
-      "mobilePhone",
-    ];
-    const all: Array<keyof CompanyInformation> = [
-      "organizationName",
-      "formCompletedBy",
-      "positionTitle",
-      "emailAddress",
-      "workPhone",
-      "mobilePhone",
-      "assessmentDate",
-      "industry",
-      "employeeCount",
-      "contractTypes",
-      "cageCode",
-      "dunsNumber",
-    ];
+    const req: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "emailAddress", "workPhone", "mobilePhone"];
+    const all: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "positionTitle", "emailAddress", "workPhone", "mobilePhone", "assessmentDate", "industry", "employeeCount", "contractTypes", "cageCode", "dunsNumber"];
 
     let reqFilled = 0;
     const missingReq: Array<keyof CompanyInformation> = [];

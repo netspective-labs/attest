@@ -1,8 +1,11 @@
-import { fromFileUrl } from "jsr:@std/path";
+import { fromFileUrl, relative } from "jsr:@std/path";
 import { generateTsCodeForQuestionnaire } from "./r4q-resource-code-gen.ts";
 
 Deno.test("r4qctl CLI", async (t) => {
-    const outputDir = "generated";
+    const outputDir = relative(
+        Deno.cwd(),
+        fromFileUrl(import.meta.resolve("./generated")),
+    );
     for (
         const src of [
             "Access-Control-(Limit-information-system-access-to-authorized-users-and-processes).fhir-R4-questionnaire.json",

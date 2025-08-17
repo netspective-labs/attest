@@ -1,3 +1,4 @@
+import * as rt from "../r4q-runtime.ts";
 /**
  * @file access-control-limit-information-system-access-to-authorized-users-and-processes.auto.ts
  * @generated This file was auto-generated from the FHIR R4 Questionnaire "Access Control (Limit information system access to authorized users and processes)".
@@ -7,9 +8,20 @@
  * Normalizes LHC JSON and FHIR QuestionnaireResponse into the type-safe `AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses` interface.
  */
 
+// this is the module signature, used by importers to identify the module
+// using r4q-runtime.ts `moduleSignature` function
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesModuleSignature: rt.ModuleSignature = { 
+    title: "Access Control (Limit information system access to authorized users and processes)",
+    filename: "access-control-limit-information-system-access-to-authorized-users-and-processes.auto.ts",
+    titleCamel: "`accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
+    titlePascal: "`AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
+    titleKebab: "`access-control-limit-information-system-access-to-authorized-users-and-processes`",
+    lhcFormResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter"
+}
+
 // deno-lint-ignore no-explicit-any
 type Any = any;
-import * as rt from "../r4q-runtime.ts";
 /**
  * Form Help (from display/help controls):
  * - Limit information system access to authorized users, processes acting on behalf of authorized users, or devices (including other information systems).
@@ -32,36 +44,33 @@ import * as rt from "../r4q-runtime.ts";
  * - Designate and control who is allowed to publish or distribute organizational information
  */
 /** Map of normalized property names to their source `linkId`. */
-export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds =
-  {
-    doYouHaveAnAccessControlPolicy: "744146359806",
-    implementationStatus: "184584712182",
-    doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses:
-      "669545773690",
-    howManyAccountsAreCurrentlyInYourSystems: "182548770364",
-    activeUserAccounts: "927965645729",
-    inactiveDisabledUserAccounts: "903940962912",
-    serviceAccounts: "338820008158",
-    sharedAccounts: "673437974050",
-    howIsThePrincipleOfLeastPrivilegeImplemented: "368418823104",
-    howAreAccountLifecycleProcessesManaged: "341135397442",
-    howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess:
-      "563546854643",
-    implementationStatus2: "316234331937",
-    howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: "589002798804",
-    whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: "525896610609",
-    howAreHighRiskTransactionsAuthorized: "859148329958",
-    implementationStatus3: "358071855489",
-    whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: "261758300502",
-    howDoYouVerifyExternalSystemConnections: "495111707033",
-    whatLimitationsArePlacedOnExternalConnections: "597499672942",
-    implementationStatus4: "260717222110",
-    whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: "660159010455",
-    howDoYouEnsureFciIsNotPostedOnPublicSystems: "229261839700",
-    whoIsAuthorizedToPostContentToPublicSystems: "624223914711",
-    numberOfAuthorizedPersonnel: "374839487767",
-    chooseAllThatApply: "177243885107",
-  } as const;
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds = {
+  doYouHaveAnAccessControlPolicy: "744146359806",
+  implementationStatus: "184584712182",
+  doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: "669545773690",
+  howManyAccountsAreCurrentlyInYourSystems: "182548770364",
+  activeUserAccounts: "927965645729",
+  inactiveDisabledUserAccounts: "903940962912",
+  serviceAccounts: "338820008158",
+  sharedAccounts: "673437974050",
+  howIsThePrincipleOfLeastPrivilegeImplemented: "368418823104",
+  howAreAccountLifecycleProcessesManaged: "341135397442",
+  howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: "563546854643",
+  implementationStatus2: "316234331937",
+  howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: "589002798804",
+  whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: "525896610609",
+  howAreHighRiskTransactionsAuthorized: "859148329958",
+  implementationStatus3: "358071855489",
+  whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: "261758300502",
+  howDoYouVerifyExternalSystemConnections: "495111707033",
+  whatLimitationsArePlacedOnExternalConnections: "597499672942",
+  implementationStatus4: "260717222110",
+  whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: "660159010455",
+  howDoYouEnsureFciIsNotPostedOnPublicSystems: "229261839700",
+  whoIsAuthorizedToPostContentToPublicSystems: "624223914711",
+  numberOfAuthorizedPersonnel: "374839487767",
+  chooseAllThatApply: "177243885107"
+} as const;
 
 /** Normalized view of "Access Control (Limit information system access to authorized users and processes)" answers. */
 export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
@@ -72,9 +81,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Yes", " No - if no, would you like help creating one for your company?"
    * Required: no
    */
-  doYouHaveAnAccessControlPolicy?:
-    | "Yes"
-    | " No - if no, would you like help creating one for your company?";
+  doYouHaveAnAccessControlPolicy?: "Yes" | " No - if no, would you like help creating one for your company?";
 
   /**
    * Implementation Status
@@ -83,10 +90,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * Does your organization have a documented access control policy that addresses:
@@ -96,14 +100,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Purpose, scope, roles, and responsibilities", "Management commitment", "Coordination among organizational entities", "Compliance requirements"
    * Required: no
    */
-  doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses?:
-    | "Purpose, scope, roles, and responsibilities"
-    | "Management commitment"
-    | "Coordination among organizational entities"
-    | "Compliance requirements";
+  doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses?: "Purpose, scope, roles, and responsibilities" | "Management commitment" | "Coordination among organizational entities" | "Compliance requirements";
 
   /**
-   * How many accounts are currently in your systems?
+   * How many accounts are currently in your systems? 
    * linkId: 182548770364
    * FHIR type: display
    * Section: User Account Registry
@@ -155,10 +155,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully implemented across all systems", "Partially implemented", "Not implemented"
    * Required: no
    */
-  howIsThePrincipleOfLeastPrivilegeImplemented?:
-    | "Fully implemented across all systems"
-    | "Partially implemented"
-    | "Not implemented";
+  howIsThePrincipleOfLeastPrivilegeImplemented?: "Fully implemented across all systems" | "Partially implemented" | "Not implemented";
 
   /**
    * How are account lifecycle processes managed?
@@ -168,11 +165,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Automated identity management system", "Manual process with approval workflow", "Integration with HR systems", " Regular account reviews and recertification"
    * Required: no
    */
-  howAreAccountLifecycleProcessesManaged?:
-    | "Automated identity management system"
-    | "Manual process with approval workflow"
-    | "Integration with HR systems"
-    | " Regular account reviews and recertification";
+  howAreAccountLifecycleProcessesManaged?: "Automated identity management system" | "Manual process with approval workflow" | "Integration with HR systems" | " Regular account reviews and recertification";
 
   /**
    * How frequently are user accounts reviewed for validity and appropriate access?
@@ -182,11 +175,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Monthly", " Quarterly", "Annually", "Other (specify):"
    * Required: no
    */
-  howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess?:
-    | "Monthly"
-    | " Quarterly"
-    | "Annually"
-    | "Other (specify):";
+  howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess?: "Monthly" | " Quarterly" | "Annually" | "Other (specify):";
 
   /**
    * Implementation Status
@@ -195,10 +184,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus2?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus2?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * How do you limit user access to specific transactions and functions?
@@ -208,12 +194,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Role-based access control (RBAC)", "Function-based permissions (create, read, update, delete)", "Application-level access controls", "Time-based access restrictions", "Location-based access restrictions"
    * Required: no
    */
-  howDoYouLimitUserAccessToSpecificTransactionsAndFunctions?:
-    | "Role-based access control (RBAC)"
-    | "Function-based permissions (create, read, update, delete)"
-    | "Application-level access controls"
-    | "Time-based access restrictions"
-    | "Location-based access restrictions";
+  howDoYouLimitUserAccessToSpecificTransactionsAndFunctions?: "Role-based access control (RBAC)" | "Function-based permissions (create, read, update, delete)" | "Application-level access controls" | "Time-based access restrictions" | "Location-based access restrictions";
 
   /**
    * What types of functions are restricted based on user roles?
@@ -223,12 +204,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Administrative functions (user management, system configuration)", "Financial transactions and approvals", "Data export and bulk download functions", "Report generation and access", "System-level commands and utilities"
    * Required: no
    */
-  whatTypesOfFunctionsAreRestrictedBasedOnUserRoles?:
-    | "Administrative functions (user management, system configuration)"
-    | "Financial transactions and approvals"
-    | "Data export and bulk download functions"
-    | "Report generation and access"
-    | "System-level commands and utilities";
+  whatTypesOfFunctionsAreRestrictedBasedOnUserRoles?: "Administrative functions (user management, system configuration)" | "Financial transactions and approvals" | "Data export and bulk download functions" | "Report generation and access" | "System-level commands and utilities";
 
   /**
    * How are high-risk transactions authorized?
@@ -238,11 +214,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Manager approval required", "Two-person authorization", "Automated business rules and limits", "No special authorization required"
    * Required: no
    */
-  howAreHighRiskTransactionsAuthorized?:
-    | "Manager approval required"
-    | "Two-person authorization"
-    | "Automated business rules and limits"
-    | "No special authorization required";
+  howAreHighRiskTransactionsAuthorized?: "Manager approval required" | "Two-person authorization" | "Automated business rules and limits" | "No special authorization required";
 
   /**
    * Implementation Status
@@ -251,10 +223,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: " Fully Implemented", " Partially Implemented", " Not Implemented"
    * Required: no
    */
-  implementationStatus3?:
-    | " Fully Implemented"
-    | " Partially Implemented"
-    | " Not Implemented";
+  implementationStatus3?: " Fully Implemented" | " Partially Implemented" | " Not Implemented";
 
   /**
    * What types of external systems does your organization connect to?
@@ -264,14 +233,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Cloud services (email, file storage, applications)", "Business partner networks", "Vendor/supplier systems", "Government systems and portals", "Personal devices (BYOD)", "Remote access system", "No external connections"
    * Required: no
    */
-  whatTypesOfExternalSystemsDoesYourOrganizationConnectTo?:
-    | "Cloud services (email, file storage, applications)"
-    | "Business partner networks"
-    | "Vendor/supplier systems"
-    | "Government systems and portals"
-    | "Personal devices (BYOD)"
-    | "Remote access system"
-    | "No external connections";
+  whatTypesOfExternalSystemsDoesYourOrganizationConnectTo?: "Cloud services (email, file storage, applications)" | "Business partner networks" | "Vendor/supplier systems" | "Government systems and portals" | "Personal devices (BYOD)" | "Remote access system" | "No external connections";
 
   /**
    * How do you verify external system connections?
@@ -281,12 +243,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Digital certificates and PKI", "VPN connections with authentication", "Firewall rules and IP restrictions", "Signed interconnection agreements", "Continuous monitoring and logging"
    * Required: no
    */
-  howDoYouVerifyExternalSystemConnections?:
-    | "Digital certificates and PKI"
-    | "VPN connections with authentication"
-    | "Firewall rules and IP restrictions"
-    | "Signed interconnection agreements"
-    | "Continuous monitoring and logging";
+  howDoYouVerifyExternalSystemConnections?: "Digital certificates and PKI" | "VPN connections with authentication" | "Firewall rules and IP restrictions" | "Signed interconnection agreements" | "Continuous monitoring and logging";
 
   /**
    * What limitations are placed on external connections?
@@ -296,12 +253,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Time-based access restrictions", "Restrictions on data types that can be shared", "Limited to specific user groups", "Management approval required for each connection", "Comprehensive audit trails and logging"
    * Required: no
    */
-  whatLimitationsArePlacedOnExternalConnections?:
-    | "Time-based access restrictions"
-    | "Restrictions on data types that can be shared"
-    | "Limited to specific user groups"
-    | "Management approval required for each connection"
-    | "Comprehensive audit trails and logging";
+  whatLimitationsArePlacedOnExternalConnections?: "Time-based access restrictions" | "Restrictions on data types that can be shared" | "Limited to specific user groups" | "Management approval required for each connection" | "Comprehensive audit trails and logging";
 
   /**
    * Implementation Status
@@ -310,10 +262,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully Implemented", "Partially Implemented", "Not Implemented"
    * Required: no
    */
-  implementationStatus4?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | "Not Implemented";
+  implementationStatus4?: "Fully Implemented" | "Partially Implemented" | "Not Implemented";
 
   /**
    * What publicly accessible systems does your organization operate?
@@ -323,13 +272,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Company website", " Social media accounts", "Customer portals or self-service systems", "Corporate blog or news site", "Public forums or discussion boards", "No publicly accessible systems"
    * Required: no
    */
-  whatPubliclyAccessibleSystemsDoesYourOrganizationOperate?:
-    | "Company website"
-    | " Social media accounts"
-    | "Customer portals or self-service systems"
-    | "Corporate blog or news site"
-    | "Public forums or discussion boards"
-    | "No publicly accessible systems";
+  whatPubliclyAccessibleSystemsDoesYourOrganizationOperate?: "Company website" | " Social media accounts" | "Customer portals or self-service systems" | "Corporate blog or news site" | "Public forums or discussion boards" | "No publicly accessible systems";
 
   /**
    * How do you ensure FCI is not posted on public systems?
@@ -339,12 +282,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Pre-publication review and approval process", "Designated reviewers trained to identify FCI", "Automated content scanning for sensitive information", "Periodic audits of published content", "Procedures for rapid removal of inappropriate content"
    * Required: no
    */
-  howDoYouEnsureFciIsNotPostedOnPublicSystems?:
-    | "Pre-publication review and approval process"
-    | "Designated reviewers trained to identify FCI"
-    | "Automated content scanning for sensitive information"
-    | "Periodic audits of published content"
-    | "Procedures for rapid removal of inappropriate content";
+  howDoYouEnsureFciIsNotPostedOnPublicSystems?: "Pre-publication review and approval process" | "Designated reviewers trained to identify FCI" | "Automated content scanning for sensitive information" | "Periodic audits of published content" | "Procedures for rapid removal of inappropriate content";
 
   /**
    * Who is authorized to post content to public systems?
@@ -372,303 +310,108 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Marketing department", "Communications/PR team", "Executive leadership", "IT administrators"
    * Required: no
    */
-  chooseAllThatApply?:
-    | "Marketing department"
-    | "Communications/PR team"
-    | "Executive leadership"
-    | "IT administrators";
+  chooseAllThatApply?: "Marketing department" | "Communications/PR team" | "Executive leadership" | "IT administrators";
 }
 
 /** Convert an LHC JSON response into a normalized AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses object. */
-export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(
-  input: Any,
-): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
+export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(input: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
   return {
-    doYouHaveAnAccessControlPolicy: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "744146359806"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "doYouHaveAnAccessControlPolicy"
-    ],
-    implementationStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "184584712182"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus"
-    ],
-    doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "669545773690"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses"
-      ],
-    howManyAccountsAreCurrentlyInYourSystems: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "182548770364"),
-    ),
-    activeUserAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "927965645729"),
-    ),
-    inactiveDisabledUserAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "903940962912"),
-    ),
-    serviceAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "338820008158"),
-    ),
-    sharedAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "673437974050"),
-    ),
-    howIsThePrincipleOfLeastPrivilegeImplemented: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "368418823104"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howIsThePrincipleOfLeastPrivilegeImplemented"
-    ],
-    howAreAccountLifecycleProcessesManaged: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "341135397442"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howAreAccountLifecycleProcessesManaged"
-    ],
-    howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "563546854643"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess"
-      ],
-    implementationStatus2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "316234331937"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus2"
-    ],
-    howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "589002798804"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "howDoYouLimitUserAccessToSpecificTransactionsAndFunctions"
-      ],
-    whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "525896610609"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "whatTypesOfFunctionsAreRestrictedBasedOnUserRoles"
-    ],
-    howAreHighRiskTransactionsAuthorized: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "859148329958"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howAreHighRiskTransactionsAuthorized"
-    ],
-    implementationStatus3: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "358071855489"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus3"
-    ],
-    whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "261758300502"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "whatTypesOfExternalSystemsDoesYourOrganizationConnectTo"
-      ],
-    howDoYouVerifyExternalSystemConnections: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "495111707033"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howDoYouVerifyExternalSystemConnections"
-    ],
-    whatLimitationsArePlacedOnExternalConnections: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "597499672942"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "whatLimitationsArePlacedOnExternalConnections"
-    ],
-    implementationStatus4: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "260717222110"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus4"
-    ],
-    whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "660159010455"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "whatPubliclyAccessibleSystemsDoesYourOrganizationOperate"
-      ],
-    howDoYouEnsureFciIsNotPostedOnPublicSystems: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "229261839700"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howDoYouEnsureFciIsNotPostedOnPublicSystems"
-    ],
-    whoIsAuthorizedToPostContentToPublicSystems: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "624223914711"),
-    ),
-    numberOfAuthorizedPersonnel: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "374839487767"),
-    ),
-    chooseAllThatApply: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "177243885107"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "chooseAllThatApply"
-    ],
+  doYouHaveAnAccessControlPolicy: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "744146359806")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["doYouHaveAnAccessControlPolicy"],
+  implementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "184584712182")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus"],
+  doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "669545773690")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses"],
+  howManyAccountsAreCurrentlyInYourSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "182548770364")),
+  activeUserAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "927965645729")),
+  inactiveDisabledUserAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "903940962912")),
+  serviceAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "338820008158")),
+  sharedAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "673437974050")),
+  howIsThePrincipleOfLeastPrivilegeImplemented: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "368418823104")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howIsThePrincipleOfLeastPrivilegeImplemented"],
+  howAreAccountLifecycleProcessesManaged: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "341135397442")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howAreAccountLifecycleProcessesManaged"],
+  howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "563546854643")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess"],
+  implementationStatus2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "316234331937")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus2"],
+  howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "589002798804")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouLimitUserAccessToSpecificTransactionsAndFunctions"],
+  whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "525896610609")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatTypesOfFunctionsAreRestrictedBasedOnUserRoles"],
+  howAreHighRiskTransactionsAuthorized: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "859148329958")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howAreHighRiskTransactionsAuthorized"],
+  implementationStatus3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "358071855489")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus3"],
+  whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "261758300502")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatTypesOfExternalSystemsDoesYourOrganizationConnectTo"],
+  howDoYouVerifyExternalSystemConnections: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "495111707033")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouVerifyExternalSystemConnections"],
+  whatLimitationsArePlacedOnExternalConnections: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "597499672942")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatLimitationsArePlacedOnExternalConnections"],
+  implementationStatus4: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "260717222110")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus4"],
+  whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "660159010455")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatPubliclyAccessibleSystemsDoesYourOrganizationOperate"],
+  howDoYouEnsureFciIsNotPostedOnPublicSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "229261839700")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouEnsureFciIsNotPostedOnPublicSystems"],
+  whoIsAuthorizedToPostContentToPublicSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "624223914711")),
+  numberOfAuthorizedPersonnel: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "374839487767")),
+  chooseAllThatApply: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "177243885107")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["chooseAllThatApply"],
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses object. */
-export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
+export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(qr: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
   return {
-    doYouHaveAnAccessControlPolicy: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "744146359806"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "doYouHaveAnAccessControlPolicy"
-    ],
-    implementationStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "184584712182"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus"
-    ],
-    doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "669545773690"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses"
-      ],
-    howManyAccountsAreCurrentlyInYourSystems: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "182548770364"),
-    ),
-    activeUserAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "927965645729"),
-    ),
-    inactiveDisabledUserAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "903940962912"),
-    ),
-    serviceAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "338820008158"),
-    ),
-    sharedAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "673437974050"),
-    ),
-    howIsThePrincipleOfLeastPrivilegeImplemented: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "368418823104"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howIsThePrincipleOfLeastPrivilegeImplemented"
-    ],
-    howAreAccountLifecycleProcessesManaged: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "341135397442"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howAreAccountLifecycleProcessesManaged"
-    ],
-    howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "563546854643"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess"
-      ],
-    implementationStatus2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "316234331937"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus2"
-    ],
-    howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "589002798804"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "howDoYouLimitUserAccessToSpecificTransactionsAndFunctions"
-      ],
-    whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "525896610609"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "whatTypesOfFunctionsAreRestrictedBasedOnUserRoles"
-    ],
-    howAreHighRiskTransactionsAuthorized: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "859148329958"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howAreHighRiskTransactionsAuthorized"
-    ],
-    implementationStatus3: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "358071855489"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus3"
-    ],
-    whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "261758300502"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "whatTypesOfExternalSystemsDoesYourOrganizationConnectTo"
-      ],
-    howDoYouVerifyExternalSystemConnections: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "495111707033"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howDoYouVerifyExternalSystemConnections"
-    ],
-    whatLimitationsArePlacedOnExternalConnections: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "597499672942"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "whatLimitationsArePlacedOnExternalConnections"
-    ],
-    implementationStatus4: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "260717222110"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "implementationStatus4"
-    ],
-    whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "660159010455"),
-      ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-        "whatPubliclyAccessibleSystemsDoesYourOrganizationOperate"
-      ],
-    howDoYouEnsureFciIsNotPostedOnPublicSystems: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "229261839700"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "howDoYouEnsureFciIsNotPostedOnPublicSystems"
-    ],
-    whoIsAuthorizedToPostContentToPublicSystems: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "624223914711"),
-    ),
-    numberOfAuthorizedPersonnel: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "374839487767"),
-    ),
-    chooseAllThatApply: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "177243885107"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "chooseAllThatApply"
-    ],
+  doYouHaveAnAccessControlPolicy: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "744146359806")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["doYouHaveAnAccessControlPolicy"],
+  implementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "184584712182")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus"],
+  doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "669545773690")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses"],
+  howManyAccountsAreCurrentlyInYourSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "182548770364")),
+  activeUserAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "927965645729")),
+  inactiveDisabledUserAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "903940962912")),
+  serviceAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "338820008158")),
+  sharedAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "673437974050")),
+  howIsThePrincipleOfLeastPrivilegeImplemented: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "368418823104")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howIsThePrincipleOfLeastPrivilegeImplemented"],
+  howAreAccountLifecycleProcessesManaged: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "341135397442")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howAreAccountLifecycleProcessesManaged"],
+  howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "563546854643")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess"],
+  implementationStatus2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "316234331937")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus2"],
+  howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "589002798804")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouLimitUserAccessToSpecificTransactionsAndFunctions"],
+  whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "525896610609")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatTypesOfFunctionsAreRestrictedBasedOnUserRoles"],
+  howAreHighRiskTransactionsAuthorized: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "859148329958")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howAreHighRiskTransactionsAuthorized"],
+  implementationStatus3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "358071855489")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus3"],
+  whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "261758300502")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatTypesOfExternalSystemsDoesYourOrganizationConnectTo"],
+  howDoYouVerifyExternalSystemConnections: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "495111707033")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouVerifyExternalSystemConnections"],
+  whatLimitationsArePlacedOnExternalConnections: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "597499672942")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatLimitationsArePlacedOnExternalConnections"],
+  implementationStatus4: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "260717222110")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["implementationStatus4"],
+  whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "660159010455")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["whatPubliclyAccessibleSystemsDoesYourOrganizationOperate"],
+  howDoYouEnsureFciIsNotPostedOnPublicSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "229261839700")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["howDoYouEnsureFciIsNotPostedOnPublicSystems"],
+  whoIsAuthorizedToPostContentToPublicSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "624223914711")),
+  numberOfAuthorizedPersonnel: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "374839487767")),
+  chooseAllThatApply: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "177243885107")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["chooseAllThatApply"],
   };
 }
 
-/** High-level interpreter with factories, validation, and readiness scoring. */
+/**
+ * NOTE TO DEVELOPERS:
+ * -------------------
+ * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
+ * how to consume the normalized type-safe interface generated for this
+ * Questionnaire. It shows minimal factories (`fromLhc`, `fromQuestionnaireResponse`)
+ * and convenience methods (`validateRequiredFields`, `assessReadiness`) but it is
+ * NOT intended for production use.
+ *
+ * In real applications:
+ * - Treat this class as SAMPLE CODE only.
+ * - Replace or extend it with proper business logic, rules engines, or validation
+ *   frameworks appropriate to your domain.
+ * - Do not rely on the simplistic readiness scoring or validation in production
+ *   scenarios; they are illustrative, not authoritative.
+ *
+ * Best practice: use the generated TypeScript interface (`AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`) as your
+ * contract for normalized data, then integrate with your own rules processors,
+ * compliance engines, or plain TypeScript/JavaScript functions as needed.
+ */
 export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-  constructor(
-    readonly value:
-      AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses,
-  ) {}
+  constructor(readonly value: AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(
-      accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
+    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(
-      accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
+    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    >;
-  } {
-    const missing: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
-    const req: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> } {
+    const missing: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
+    const req: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -689,47 +432,13 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    >;
+    missingRequired: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses>;
   } {
-    const req: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
-    const all: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [
-      "doYouHaveAnAccessControlPolicy",
-      "implementationStatus",
-      "doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses",
-      "howManyAccountsAreCurrentlyInYourSystems",
-      "activeUserAccounts",
-      "inactiveDisabledUserAccounts",
-      "serviceAccounts",
-      "sharedAccounts",
-      "howIsThePrincipleOfLeastPrivilegeImplemented",
-      "howAreAccountLifecycleProcessesManaged",
-      "howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess",
-      "implementationStatus2",
-      "howDoYouLimitUserAccessToSpecificTransactionsAndFunctions",
-      "whatTypesOfFunctionsAreRestrictedBasedOnUserRoles",
-      "howAreHighRiskTransactionsAuthorized",
-      "implementationStatus3",
-      "whatTypesOfExternalSystemsDoesYourOrganizationConnectTo",
-      "howDoYouVerifyExternalSystemConnections",
-      "whatLimitationsArePlacedOnExternalConnections",
-      "implementationStatus4",
-      "whatPubliclyAccessibleSystemsDoesYourOrganizationOperate",
-      "howDoYouEnsureFciIsNotPostedOnPublicSystems",
-      "whoIsAuthorizedToPostContentToPublicSystems",
-      "numberOfAuthorizedPersonnel",
-      "chooseAllThatApply",
-    ];
+    const req: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
+    const all: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = ["doYouHaveAnAccessControlPolicy", "implementationStatus", "doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses", "howManyAccountsAreCurrentlyInYourSystems", "activeUserAccounts", "inactiveDisabledUserAccounts", "serviceAccounts", "sharedAccounts", "howIsThePrincipleOfLeastPrivilegeImplemented", "howAreAccountLifecycleProcessesManaged", "howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess", "implementationStatus2", "howDoYouLimitUserAccessToSpecificTransactionsAndFunctions", "whatTypesOfFunctionsAreRestrictedBasedOnUserRoles", "howAreHighRiskTransactionsAuthorized", "implementationStatus3", "whatTypesOfExternalSystemsDoesYourOrganizationConnectTo", "howDoYouVerifyExternalSystemConnections", "whatLimitationsArePlacedOnExternalConnections", "implementationStatus4", "whatPubliclyAccessibleSystemsDoesYourOrganizationOperate", "howDoYouEnsureFciIsNotPostedOnPublicSystems", "whoIsAuthorizedToPostContentToPublicSystems", "numberOfAuthorizedPersonnel", "chooseAllThatApply"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
+    const missingReq: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -742,8 +451,7 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
     }
 
     return {
-      formTitle:
-        "Access Control (Limit information system access to authorized users and processes)",
+      formTitle: "Access Control (Limit information system access to authorized users and processes)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -754,8 +462,7 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
 }
 
 /** The original source */
-export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource =
-  `{
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource = `{
   "resourceType": "Questionnaire",
   "meta": {
     "profile": [

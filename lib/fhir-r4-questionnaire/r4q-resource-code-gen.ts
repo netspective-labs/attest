@@ -30,7 +30,9 @@ export function indent(s: string, n = 1): string {
 export function renderHeaderBanner(
     filename: string,
     form: FhirQuestionnaire,
+    titleCamel: string,
     titlePascal: string,
+    titleKebab: string,
 ): string {
     const title = form.title ?? form.name ?? "(untitled Questionnaire)";
     const profiles = form.meta?.profile?.length
@@ -43,6 +45,18 @@ export function renderHeaderBanner(
  *
  * Normalizes LHC JSON and FHIR QuestionnaireResponse into the type-safe \`${titlePascal}\` interface.
  */
+
+// this is the module signature, used by importers to identify the module
+// using r4q-runtime.ts \`moduleSignature\` function
+export const ${titleCamel}ModuleSignature: rt.ModuleSignature = { 
+    title: "${title}",
+    filename: "${filename}",
+    titleCamel: "\`${titleCamel}\`",
+    titlePascal: "\`${titlePascal}\`",
+    titleKebab: "\`${titleKebab}\`",
+    lhcFormResponseAdapterFnName: "${titleCamel}LhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "${titleCamel}FhirQuestionnaireResponseAdapter"
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -357,7 +371,9 @@ function assembleFile(
     const header = renderHeaderBanner(
         path.basename(outFileName),
         q,
+        titleCamel,
         titlePascal,
+        toKebabCase(formTitle),
     );
     const importLine = renderSharedImports(commonImportPath);
     const helps = renderFormHelpsBlock(formHelps); // placed after import to satisfy "import immediately after banner"
@@ -376,8 +392,8 @@ function assembleFile(
         : "/** FYI: No source request **/";
 
     return [
-        header,
         importLine,
+        header,
         helps,
         linkIds,
         iface,
