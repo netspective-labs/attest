@@ -1,7 +1,7 @@
 import { fromFileUrl } from "jsr:@std/path";
 import { assertEquals } from "jsr:@std/assert";
 import { readJsonFile } from "../r4q-resource-code-gen.ts";
-import * as ci from "./company-information.auto.ts";
+import * as mod from "./mod.ts";
 
 Deno.test("Generated TypeScript code", async (t) => {
   await t.step("should load properly", async () => {
@@ -12,7 +12,7 @@ Deno.test("Generated TypeScript code", async (t) => {
         ),
       ),
     );
-    const cii = ci.CompanyInformationInterpreter.fromLhcFormResponse(
+    const cii = mod.CompanyInformationInterpreter.fromLhcFormResponse(
       lhcForm,
     );
     assertEquals({
