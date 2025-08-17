@@ -274,6 +274,12 @@ export class Walker {
         }
     }
 
+    get responses() {
+        return Array.from(
+            this.questionnaires.values().flatMap((q) => q.responses),
+        );
+    }
+
     async registerQuestionnaireSrcFile(srcFile: string) {
         const mapKey = basename(srcFile);
         const questionnaire = new Questionnaire(srcFile);
@@ -336,10 +342,7 @@ export class Walker {
     }
 
     async transformResponses() {
-        const responses = this.questionnaires.values().flatMap((q) =>
-            q.responses
-        );
-        for (const r of responses) {
+        for (const r of this.responses) {
             await r.transform({
                 qModules: this.qModules,
             });
