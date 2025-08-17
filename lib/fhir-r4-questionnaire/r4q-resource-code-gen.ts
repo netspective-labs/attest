@@ -216,7 +216,26 @@ export function renderInterpreter(
     const lhcFn = `${titleCamel}LhcFormResponseAdapter`;
     const qrFn = `${titleCamel}FhirQuestionnaireResponseAdapter`;
 
-    return `/** High-level interpreter with factories, validation, and readiness scoring. */
+    return `/**
+ * NOTE TO DEVELOPERS:
+ * -------------------
+ * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
+ * how to consume the normalized type-safe interface generated for this
+ * Questionnaire. It shows minimal factories (\`fromLhc\`, \`fromQuestionnaireResponse\`)
+ * and convenience methods (\`validateRequiredFields\`, \`assessReadiness\`) but it is
+ * NOT intended for production use.
+ *
+ * In real applications:
+ * - Treat this class as SAMPLE CODE only.
+ * - Replace or extend it with proper business logic, rules engines, or validation
+ *   frameworks appropriate to your domain.
+ * - Do not rely on the simplistic readiness scoring or validation in production
+ *   scenarios; they are illustrative, not authoritative.
+ *
+ * Best practice: use the generated TypeScript interface (\`${titlePascal}\`) as your
+ * contract for normalized data, then integrate with your own rules processors,
+ * compliance engines, or plain TypeScript/JavaScript functions as needed.
+ */
 export class ${className} {
   constructor(readonly value: ${titlePascal}) {}
 
