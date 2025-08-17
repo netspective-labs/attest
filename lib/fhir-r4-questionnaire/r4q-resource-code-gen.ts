@@ -124,7 +124,12 @@ ${indent(propLines, 1)}
 /** Decide which coercer to call given a FieldMeta and raw expression string. */
 export function coerceExprByType(f: FieldMeta, rawExpr: string): string {
     // If this is a string-literal union, we still coerce with string
-    if (/\|/.test(f.tsType) || f.tsType === "string") {
+    if (/\|/.test(f.tsType)) {
+        return f.required
+            ? `coerceString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`
+            : `coerceOptionalString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`;
+    }
+    if (f.tsType === "string") {
         return f.required
             ? `coerceString(${rawExpr})`
             : `coerceOptionalString(${rawExpr})`;
@@ -379,7 +384,12 @@ export async function generateTsCodeForQuestionnaire(
         if (!Array.isArray(q.item) || q.item.length === 0) {
             return new Error("Questionnaire has no `item` entries.");
         }
-        const { fields, formHelp } = flattenItems(q.item, used);
+        const { fields, formHelp } = flattenItems(
+            toCamelCase(formTitle),
+            toPascalCase(formTitle),
+            q.item,
+            used,
+        );
 
         // Derive filenames/paths
         const kebab = toKebabCase(formTitle);

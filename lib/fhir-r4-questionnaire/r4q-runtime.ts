@@ -67,6 +67,8 @@ export type FhirQuestionnaire = {
 
 /** Metadata captured for each emitted field in the generated interface. */
 export type FieldMeta = {
+    formTitleCamelCase: string; // Title of the form in camelCase
+    formTitlePascalCase: string; // Title of the form in PascalCase
     propName: string;
     linkId: string;
     fhirType: string;
@@ -208,6 +210,8 @@ export function fhirTypeToTs(fhirType: string): string {
  * Also aggregate any top-level or section-scoped help displays.
  */
 export function flattenItems(
+    titleCamelCase: string,
+    titlePascalCase: string,
     items: FhirQItem[] | undefined,
     usedNames: Set<string>,
     trail: string[] = [],
@@ -226,7 +230,15 @@ export function flattenItems(
 
         if (it.type === "group") {
             const nextTrail = it.text ? [...trail, it.text] : trail.slice();
-            flattenItems(it.item, usedNames, nextTrail, formHelp, acc);
+            flattenItems(
+                titleCamelCase,
+                titlePascalCase,
+                it.item,
+                usedNames,
+                nextTrail,
+                formHelp,
+                acc,
+            );
             continue;
         }
 
@@ -240,6 +252,8 @@ export function flattenItems(
             : fhirTypeToTs(it.type);
 
         acc.push({
+            formTitleCamelCase: titleCamelCase,
+            formTitlePascalCase: titlePascalCase,
             propName,
             linkId: String(it.linkId),
             fhirType: it.type,
