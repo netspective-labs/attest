@@ -279,7 +279,7 @@ export class ${className} {
 `;
 }
 
-async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
+export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
     try {
         const text = await Deno.readTextFile(filePath);
         return JSON.parse(text) as T;
@@ -410,7 +410,6 @@ export async function generateTsCodeForQuestionnaire(
                 );
             }
             await Deno.writeTextFile(outPath, content);
-            console.log(`[r4q] Wrote ${outPath}`);
         }
     } catch (e) {
         return e instanceof Error ? e : Error(String(e));
