@@ -15,7 +15,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Provide essential information about your organization for CMMC compliance tracking.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const CompanyInformationLinkIds = {
+export const companyInformationLinkIds = {
   organizationName: "715544477968",
   formCompletedBy: "655141523763",
   positionTitle: "761144039651",

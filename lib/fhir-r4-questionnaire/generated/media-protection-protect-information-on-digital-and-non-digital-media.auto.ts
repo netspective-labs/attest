@@ -16,7 +16,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds =
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds =
   {
     doYouHaveAMediaDisposalPolicy: "957584520694",
     implementationStatus: "272642906092",

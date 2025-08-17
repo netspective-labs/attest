@@ -69,12 +69,13 @@ export function renderSharedImports(importPath = "./r4q-runtime.ts"): string {
     return `import * as rt from "${prefixed}";\n`;
 }
 
-/** Emit the `<Title>LinkIds` constant. */
+/** Emit the `<title>LinkIds` constant. */
 export function renderLinkIdMap(
-    titlePascal: string,
+    titleCamel: string,
+    _titlePascal: string,
     fields: FieldMeta[],
 ): string {
-    const name = `${titlePascal}LinkIds`;
+    const name = `${titleCamel}LinkIds`;
     const entries = fields.map((f) =>
         `  ${f.propName}: ${JSON.stringify(f.linkId)}`
     ).join(",\n");
@@ -341,7 +342,7 @@ function assembleFile(
     );
     const importLine = renderSharedImports(commonImportPath);
     const helps = renderFormHelpsBlock(formHelps); // placed after import to satisfy "import immediately after banner"
-    const linkIds = renderLinkIdMap(titlePascal, fields);
+    const linkIds = renderLinkIdMap(titleCamel, titlePascal, fields);
     const iface = renderInterface(titlePascal, formTitle, fields);
     const lhc = renderLhcAdapter(titleCamel, titlePascal, fields);
     const qr = renderQrAdapter(titleCamel, titlePascal, fields);

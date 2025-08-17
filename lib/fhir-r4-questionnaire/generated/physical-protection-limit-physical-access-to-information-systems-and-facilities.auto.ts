@@ -32,7 +32,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Regularly perform maintenance and apply updates to physical access devices to ensure their reliability and security.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds =
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds =
   {
     howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach:
       "324592389560",

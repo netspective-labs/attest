@@ -20,7 +20,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds =
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds =
   {
     implementationStatus: "362061549890",
     userIdentificationStandards: "139461602895",

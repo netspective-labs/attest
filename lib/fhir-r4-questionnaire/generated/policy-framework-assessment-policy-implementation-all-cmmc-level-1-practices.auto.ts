@@ -20,7 +20,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Establish a process to document, review, and approve exceptions to policies while managing associated risks.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds =
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds =
   {
     whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies:
       "527949557496",

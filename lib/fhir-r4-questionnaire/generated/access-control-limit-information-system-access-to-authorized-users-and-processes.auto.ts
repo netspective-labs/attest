@@ -32,7 +32,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Designate and control who is allowed to publish or distribute organizational information
  */
 /** Map of normalized property names to their source `linkId`. */
-export const AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds =
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds =
   {
     doYouHaveAnAccessControlPolicy: "744146359806",
     implementationStatus: "184584712182",

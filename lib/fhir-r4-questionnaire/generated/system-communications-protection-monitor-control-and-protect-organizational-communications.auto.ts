@@ -23,7 +23,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds =
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds =
   {
     requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls:
       "998940326541",

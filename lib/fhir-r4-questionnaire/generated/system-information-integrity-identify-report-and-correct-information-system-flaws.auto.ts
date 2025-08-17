@@ -29,7 +29,7 @@ import * as rt from "../r4q-runtime.ts";
  * - Establish procedures to review scan results, respond to detected threats, and test scanning tools for effectiveness.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLinkIds =
+export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLinkIds =
   {
     howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities:
       "758011605310",
