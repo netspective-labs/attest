@@ -47,12 +47,12 @@ export class LhcFormResponse {
     readonly lhcFormInstance?: Record<string, unknown>;
     readonly lhcFormTitle?: string;
     readonly lhcFormReadError?: Error;
-    transformed: Record<string, unknown>;
-    transformError?: Error;
+    #transformerModule?: QuestionnaireModule;
+    #transformed?: Record<string, unknown>;
+    #transformError?: Error;
 
     constructor(readonly srcFile: string) {
         this.srcFile = srcFile;
-        this.transformed = {};
         try {
             const text = Deno.readTextFileSync(srcFile);
             this.lhcFormInstance = JSON.parse(text);
@@ -65,43 +65,68 @@ export class LhcFormResponse {
         }
     }
 
+    get isValidLhcForm() {
+        return this.lhcFormInstance !== undefined &&
+            this.lhcFormTitle !== undefined &&
+            this.lhcFormReadError === undefined;
+    }
+
+    get isValidTransformed() {
+        return this.transformed !== undefined &&
+            this.transformerModule !== undefined &&
+            this.transformError === undefined;
+    }
+
+    get transformerModule() {
+        return this.#transformerModule;
+    }
+
+    get transformed() {
+        return this.#transformed;
+    }
+
+    get transformError() {
+        return this.#transformError;
+    }
+
     async transform(
         options: { readonly qModules: Map<string, QuestionnaireModule> },
     ) {
         if (!this.lhcFormInstance || !this.lhcFormTitle) return;
 
-        const module = options.qModules.values().find(
+        this.#transformerModule = options.qModules.values().find(
             (m) =>
                 m.isValid &&
                 m.moduleSignature?.title === this.lhcFormTitle,
         );
-        if (!module) {
-            this.transformError = new Error(
+        if (!this.#transformerModule) {
+            this.#transformError = new Error(
                 `No matching questionnaire module found for LHC Form response with title "${this.lhcFormTitle}"`,
             );
             return;
         }
 
-        const lhcFormResponseAdapterFn = module.lhcFormResponseAdapterFn;
+        const lhcFormResponseAdapterFn = this.transformerModule
+            ?.lhcFormResponseAdapterFn;
         if (
             lhcFormResponseAdapterFn &&
             typeof lhcFormResponseAdapterFn ===
                 "function"
         ) {
             try {
-                this.transformed = await lhcFormResponseAdapterFn(
+                this.#transformed = await lhcFormResponseAdapterFn(
                     this.lhcFormInstance,
                 );
             } catch (error) {
-                this.transformError = error instanceof Error
+                this.#transformError = error instanceof Error
                     ? error
                     : new Error(
                         `Error transforming LHC Form response from ${this.srcFile}: ${error}`,
                     );
             }
         } else {
-            this.transformError = new Error(
-                `No LHC Form response adapter function found for module with title "${module.moduleSignature?.title}"`,
+            this.#transformError = new Error(
+                `No LHC Form response adapter function found for module with title "${this.transformerModule?.moduleSignature?.title}"`,
             );
         }
     }
