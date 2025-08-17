@@ -6,11 +6,8 @@ import { Walker } from "../r4q-walk.ts";
 // It uses the `r4qctl.ts` script to process the questionnaires and output SQL files.
 // The generated SQL files emitted as STDOUT to be read by `surveilr` as capturable executable.
 
-function relativeToCWD(path: string, defaultIfBlank = ".") {
-    const result = relative(Deno.cwd(), fromFileUrl(import.meta.resolve(path)));
-    return result
-        ? (result.trimEnd().length > 0 ? result : defaultIfBlank)
-        : defaultIfBlank;
+function relativeToCWD(path: string) {
+    return relative(Deno.cwd(), fromFileUrl(import.meta.resolve(path)));
 }
 
 const walker = new Walker({
@@ -21,5 +18,8 @@ const walker = new Walker({
     questionnairesHome: relativeToCWD("../fixtures/questionnaires"),
     respHome: relativeToCWD("../fixtures/responses"),
 });
-await walker.walk();
+
+await walker.walk("leave-work-dir");
 console.log(walker.questionnaires);
+
+await walker.cleanup();

@@ -368,11 +368,11 @@ export class Walker {
      * });
      * await walker.walk();
      */
-    async walk() {
+    async walk(cleanup: "cleanup" | "leave-work-dir" = "cleanup") {
         await this.discoverQuestionnaires();
         await this.prepareTypeScriptModules();
         await this.transformResponses();
-        await this.cleanup();
+        if (cleanup === "cleanup") await this.cleanup();
         return this;
     }
 }
