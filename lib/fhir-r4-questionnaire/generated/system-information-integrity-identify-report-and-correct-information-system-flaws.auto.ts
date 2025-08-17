@@ -17,7 +17,8 @@ export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystem
     titlePascal: "`SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws`",
     titleKebab: "`system-information-integrity-identify-report-and-correct-information-system-flaws`",
     lhcFormResponseAdapterFnName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsSource",
 }
 
 // deno-lint-ignore no-explicit-any

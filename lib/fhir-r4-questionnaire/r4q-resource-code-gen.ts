@@ -55,7 +55,8 @@ export const ${titleCamel}ModuleSignature: rt.ModuleSignature = {
     titlePascal: "\`${titlePascal}\`",
     titleKebab: "\`${titleKebab}\`",
     lhcFormResponseAdapterFnName: "${titleCamel}LhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "${titleCamel}FhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "${titleCamel}FhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "${titleCamel}Source",
 }
 
 // deno-lint-ignore no-explicit-any

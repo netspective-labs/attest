@@ -17,7 +17,8 @@ export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationa
     titlePascal: "`SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
     titleKebab: "`system-communications-protection-monitor-control-and-protect-organizational-communications`",
     lhcFormResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource",
 }
 
 // deno-lint-ignore no-explicit-any

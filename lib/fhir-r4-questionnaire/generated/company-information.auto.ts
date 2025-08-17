@@ -17,7 +17,8 @@ export const companyInformationModuleSignature: rt.ModuleSignature = {
     titlePascal: "`CompanyInformation`",
     titleKebab: "`company-information`",
     lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "companyInformationFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "companyInformationFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "companyInformationSource",
 }
 
 // deno-lint-ignore no-explicit-any

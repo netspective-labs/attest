@@ -17,7 +17,8 @@ export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesModu
     titlePascal: "`IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
     titleKebab: "`identification-authentication-verify-identities-of-users-and-processes`",
     lhcFormResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource",
 }
 
 // deno-lint-ignore no-explicit-any

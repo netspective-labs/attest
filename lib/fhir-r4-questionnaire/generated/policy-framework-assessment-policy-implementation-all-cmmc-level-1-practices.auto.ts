@@ -17,7 +17,8 @@ export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
     titlePascal: "`PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
     titleKebab: "`policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices`",
     lhcFormResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource",
 }
 
 // deno-lint-ignore no-explicit-any

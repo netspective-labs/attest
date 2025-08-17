@@ -17,7 +17,8 @@ export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
     titlePascal: "`AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
     titleKebab: "`access-control-limit-information-system-access-to-authorized-users-and-processes`",
     lhcFormResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource",
 }
 
 // deno-lint-ignore no-explicit-any

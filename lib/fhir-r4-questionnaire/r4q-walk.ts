@@ -195,6 +195,7 @@ export class QuestionnaireModule {
  */
 export class Questionnaire {
     static readonly EXTENSION = ".fhir-R4-questionnaire.json";
+    #module?: QuestionnaireModule;
     readonly responses: LhcFormResponse[];
 
     constructor(readonly srcFile: string) {
@@ -210,6 +211,10 @@ export class Questionnaire {
         },
     ) {
         await this.discoverResponses(options);
+    }
+
+    get transformerModule() {
+        return this.#module;
     }
 
     isResponseFileForQuestionnaire(fileName: string) {
@@ -342,7 +347,7 @@ export class Walker {
                     "--out-dir",
                     this.workDir,
                     "--force",
-                    // "--include-src"  TODO: re-enable this when testing is done
+                    "--include-src",
                 ],
                 stdin: "inherit",
                 stdout: "inherit",
@@ -364,6 +369,7 @@ export class Walker {
                 );
             }
         }
+        // TODO: map the questionnaire modules to the questionnaires
     }
 
     async transformResponses() {

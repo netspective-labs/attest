@@ -19,6 +19,7 @@ export interface ModuleSignature {
     titleKebab: string;
     lhcFormResponseAdapterFnName: string;
     fhirQuestionnaireResponseAdapterFnName: string;
+    sourceTextConstName: string;
 }
 
 /**

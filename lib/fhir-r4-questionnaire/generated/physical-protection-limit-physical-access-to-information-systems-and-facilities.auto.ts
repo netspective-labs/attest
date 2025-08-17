@@ -17,7 +17,8 @@ export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
     titlePascal: "`PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
     titleKebab: "`physical-protection-limit-physical-access-to-information-systems-and-facilities`",
     lhcFormResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource",
 }
 
 // deno-lint-ignore no-explicit-any

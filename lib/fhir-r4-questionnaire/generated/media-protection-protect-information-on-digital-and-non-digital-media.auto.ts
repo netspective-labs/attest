@@ -17,7 +17,8 @@ export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaModuleS
     titlePascal: "`MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
     titleKebab: "`media-protection-protect-information-on-digital-and-non-digital-media`",
     lhcFormResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter"
+    fhirQuestionnaireResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource",
 }
 
 // deno-lint-ignore no-explicit-any
