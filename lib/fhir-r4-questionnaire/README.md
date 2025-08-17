@@ -1,6 +1,8 @@
 # Attest FHIR R4 Questionnaire → Type-Safe Module Generator
 
-> See [example workflow](example-workflow.md) for technical details.
+> See [example workflow](example-workflow.md) for technical details and
+> [FHIR R4 Questionnaire resource and LHC Forms structures](fhir-r4-questionnaire-lhc-form-structure.md)
+> to understand more about the details of how JSON is structured.
 
 ## Purpose
 
@@ -94,8 +96,9 @@ Here’s the text-based flow of how data moves through the library:
       └───────────────────────────┘
 ```
 
-<mark>See [example workflow](example-workflow.md) for a full technical
-workflow.</mark>.
+- See [example workflow](example-workflow.md) for a full technical workflow.
+- See also
+  [FHIR R4 Questionnaire resource and LHC Forms structures](fhir-r4-questionnaire-lhc-form-structure.md).
 
 ## Project Structure
 

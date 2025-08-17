@@ -124,11 +124,17 @@ This is definition only; it does not render a form. It lets the generator
 discover structure, data types, and requiredness for type-safe normalization
 later.
 
+See
+[FHIR R4 Questionnaire resource and LHC Forms structures](fhir-r4-questionnaire-lhc-form-structure.md)
+for more information.
+
 ## 2) Fixture: LHC JSON response
 
 `fixtures/company-information.lhc-form-response.json` (keyed to the R4
 questionnaire above by `linkId`, values in `value`).It can be created by the LHC
-Form web widget.
+Form web widget. See
+[FHIR R4 Questionnaire resource and LHC Forms structures](fhir-r4-questionnaire-lhc-form-structure.md)
+for more information.
 
 ```json
 {
