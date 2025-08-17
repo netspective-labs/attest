@@ -23,6 +23,11 @@ const cli = new Command()
         "--out-dir <dir:string>",
         "Write outputs into <dir> instead of adjacent to inputs.",
     )
+    .option(
+        "--include-src",
+        "Include the questionnaire as an exported const in the generated code.",
+        { default: false },
+    )
     .option("--force", "Overwrite existing .auto.ts files.", { default: false })
     .action(async (options, ...pathsList) => {
         if (!pathsList.length) {

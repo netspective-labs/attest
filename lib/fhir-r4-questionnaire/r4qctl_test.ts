@@ -25,6 +25,7 @@ Deno.test("r4qctl CLI", async (t) => {
                 const result = await generateTsCodeForQuestionnaire(inputPath, {
                     outDir: outputDir,
                     force: true,
+                    includeSrc: true,
                 }, stdout);
                 if (result) {
                     throw result;

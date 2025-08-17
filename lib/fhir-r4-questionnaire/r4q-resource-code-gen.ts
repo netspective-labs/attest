@@ -67,7 +67,7 @@ export function renderSharedImports(importPath = "./r4q-runtime.ts"): string {
     // Normalize to POSIX-style for Deno import consistency
     const norm = importPath.replace(/\\/g, "/");
     const prefixed = norm.startsWith(".") ? norm : `./${norm}`;
-    return `import { coerceBoolean, coerceDate, coerceNumber, coerceString, coerceOptionalBoolean, coerceOptionalDate, coerceOptionalNumber, coerceOptionalString, findLhcValueByLinkId, findQrAnswerByLinkId, isBlank } from "${prefixed}";\n`;
+    return `import * as rt from "${prefixed}";\n`;
 }
 
 /** Emit the `<Title>LinkIds` constant. */
@@ -126,33 +126,33 @@ export function coerceExprByType(f: FieldMeta, rawExpr: string): string {
     // If this is a string-literal union, we still coerce with string
     if (/\|/.test(f.tsType)) {
         return f.required
-            ? `coerceString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`
-            : `coerceOptionalString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`;
+            ? `rt.coerceString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`
+            : `rt.coerceOptionalString(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`;
     }
     if (f.tsType === "string") {
         return f.required
-            ? `coerceString(${rawExpr})`
-            : `coerceOptionalString(${rawExpr})`;
+            ? `rt.coerceString(${rawExpr})`
+            : `rt.coerceOptionalString(${rawExpr})`;
     }
     if (f.tsType === "number") {
         return f.required
-            ? `coerceNumber(${rawExpr})`
-            : `coerceOptionalNumber(${rawExpr})`;
+            ? `rt.coerceNumber(${rawExpr})`
+            : `rt.coerceOptionalNumber(${rawExpr})`;
     }
     if (f.tsType === "boolean") {
         return f.required
-            ? `coerceBoolean(${rawExpr})`
-            : `coerceOptionalBoolean(${rawExpr})`;
+            ? `rt.coerceBoolean(${rawExpr})`
+            : `rt.coerceOptionalBoolean(${rawExpr})`;
     }
     if (f.tsType === "Date") {
         return f.required
-            ? `coerceDate(${rawExpr})`
-            : `coerceOptionalDate(${rawExpr})`;
+            ? `rt.coerceDate(${rawExpr})`
+            : `rt.coerceOptionalDate(${rawExpr})`;
     }
     // default fallback
     return f.required
-        ? `coerceString(${rawExpr})`
-        : `coerceOptionalString(${rawExpr})`;
+        ? `rt.coerceString(${rawExpr})`
+        : `rt.coerceOptionalString(${rawExpr})`;
 }
 
 /** Emit the LHC adapter function. */
@@ -163,7 +163,9 @@ export function renderLhcAdapter(
 ): string {
     const funcName = `${titleCamel}LhcFormResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `findLhcValueByLinkId(input, ${JSON.stringify(f.linkId)})`;
+        const raw = `rt.findLhcValueByLinkId(input, ${
+            JSON.stringify(f.linkId)
+        })`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -185,7 +187,7 @@ export function renderQrAdapter(
 ): string {
     const funcName = `${titleCamel}FhirQuestionnaireResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `findQrAnswerByLinkId(qr, ${JSON.stringify(f.linkId)})`;
+        const raw = `rt.findQrAnswerByLinkId(qr, ${JSON.stringify(f.linkId)})`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -234,7 +236,7 @@ export class ${className} {
     const req: Array<keyof ${titlePascal}> = [${requiredKeys}];
     for (const k of req) {
       const v = (this.value as Any)[k];
-      if (isBlank(v)) missing.push(k);
+      if (rt.isBlank(v)) missing.push(k);
     }
     return { ok: missing.length === 0, missing };
   }
@@ -261,13 +263,13 @@ export class ${className} {
     const missingReq: Array<keyof ${titlePascal}> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
-      if (!isBlank(v)) reqFilled++;
+      if (!rt.isBlank(v)) reqFilled++;
       else missingReq.push(k);
     }
 
     let totalFilled = 0;
     for (const k of all) {
-      if (!isBlank((this.value as Any)[k])) totalFilled++;
+      if (!rt.isBlank((this.value as Any)[k])) totalFilled++;
     }
 
     return {
@@ -282,6 +284,12 @@ export class ${className} {
 }
 
 `;
+}
+
+export function renderSource(q: FhirQuestionnaire, titleCamel: string): string {
+    return `/** The original source */\nexport const ${titleCamel}Source = \`${
+        JSON.stringify(q, null, 2)
+    }\`;`;
 }
 
 export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
@@ -322,6 +330,7 @@ function assembleFile(
     formHelps: string[],
     outFileName: string,
     commonImportPath: string,
+    includeSrc: boolean,
 ): string {
     const formTitle = q.title ?? q.name ?? "(untitled Questionnaire)";
     const titlePascal = toPascalCase(formTitle);
@@ -343,6 +352,9 @@ function assembleFile(
         formTitle,
         fields,
     );
+    const src = includeSrc
+        ? renderSource(q, titleCamel)
+        : "/** FYI: No source request **/";
 
     return [
         header,
@@ -353,12 +365,18 @@ function assembleFile(
         lhc,
         qr,
         interp,
+        src,
     ].join("");
 }
 
 export async function generateTsCodeForQuestionnaire(
     inPath: string,
-    options: { stdout?: boolean; outDir?: string; force?: boolean },
+    options: {
+        stdout?: boolean;
+        outDir?: string;
+        force?: boolean;
+        includeSrc?: boolean;
+    },
     results: string[],
 ) {
     try {
@@ -406,6 +424,7 @@ export async function generateTsCodeForQuestionnaire(
             formHelp,
             outPath,
             commonImportPath,
+            options.includeSrc ?? false,
         );
 
         if (options.stdout) {
