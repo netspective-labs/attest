@@ -47,6 +47,7 @@ You can then use:
 - The generated types and adapters in rules engines,
 - Validation pipelines,
 - Or front-end frameworks like Astro, React, Vue, etc.
+- Transform TypeScript to ESM Javascript for HTML/web.
 
 UI libraries are responsible for data entry. This tool ensures that once
 responses are collected, they can be normalized into strict TypeScript objects.
@@ -181,7 +182,7 @@ export function CompanyInformationLhcFormResponseAdapter(input: any): CompanyInf
 
 export function CompanyInformationFhirQuestionnaireResponseAdapter(qr: any): CompanyInformation { ... }
 
-/**
+/
  * This Interpreter class is provided only as an EXAMPLE scaffold to demonstrate
  * how to consume the normalized type-safe interface generated for this Questionnaire. 
  * Best practice: use the generated TypeScript interface (`<TitlePascal>`) 
@@ -197,30 +198,30 @@ export class CompanyInformationInterpreter {
 ```
 
 When reviewing the generated `[*Questionnaire*]Interpreter` class inside each
-`*.auto.ts` file, engineers should understand that this class is **deliberately
-simplistic** and is included primarily as an **illustrative scaffold**. Its
+`*.auto.ts` file, engineers should understand that this class is deliberately
+simplistic and is included primarily as an illustrative scaffold. Its
 methods—`fromLhc()`, `fromQuestionnaireResponse()`, `validateRequiredFields()`,
 and `assessReadiness()`—demonstrate how normalized data can be pulled into the
 strongly-typed interface and then checked for completeness. This is meant to
 give developers a concrete starting point for working with normalized objects,
-but it is **not intended for production use as-is**. The interpreter shows
-what’s possible (basic coercion, required field checks, readiness scoring), but
-it is not comprehensive enough for the complexity of real-world healthcare
-workflows or compliance-heavy scenarios.
+but it is not intended for production use as-is. The interpreter shows what’s
+possible (basic coercion, required field checks, readiness scoring), but it is
+not comprehensive enough for the complexity of real-world healthcare workflows
+or compliance-heavy scenarios.
 
-In a production system, these generated type-safe modules should be **paired
-with a proper rules engine or downstream processing layer**. The generated
-interface (`CompanyInformation`, for example) gives you the strict typing and
-normalized field mapping, which ensures type safety across your application.
-What you do with the typed object afterward—feeding it into a rules engine,
-validation framework, business logic processor, or even plain
-JavaScript/TypeScript functions—is up to the application design. The generated
-`Interpreter` exists to show developers how to bootstrap that process quickly,
-but production-ready validation, scoring, and workflow logic should live outside
-of these auto-generated files. Think of the `Interpreter` as a **sample
-harness**: it demonstrates the pattern, enforces consistency, and teaches usage,
-but you should treat it as scaffolding to replace with domain-specific logic in
-your own codebase.
+In a production system, these generated type-safe modules should be paired with
+a proper rules engine or downstream processing layer. The generated interface
+(`CompanyInformation`, for example) gives you the strict typing and normalized
+field mapping, which ensures type safety across your application. What you do
+with the typed object afterward—feeding it into a rules engine, validation
+framework, business logic processor, or even plain JavaScript/TypeScript
+functions—is up to the application design. The generated `Interpreter` exists to
+show developers how to bootstrap that process quickly, but production-ready
+validation, scoring, and workflow logic should live outside of these
+auto-generated files. Think of the `Interpreter` as a sample harness: it
+demonstrates the pattern, enforces consistency, and teaches usage, but you
+should treat it as scaffolding to replace with domain-specific logic in your own
+codebase.
 
 ## Maintenance Notes
 
@@ -303,3 +304,390 @@ console.log("Readiness:", interp.assessReadiness());
 - R5 Support: adjust to handle Questionnaire differences.
 - Localization: expand `helpNotes` and `entryFormat` parsing.
 - Better readiness scoring: add configurable weighting.
+
+## DevOps & Automation: CI/CD + Pre-Commit Hooks
+
+Automation keeps the generated `*.auto.ts` files consistently in sync with their
+`*.fhir-r4-questionnaire.json` sources. Use both CI/CD (server-side) and
+pre-commit hooks (developer machines) to prevent drift.
+
+- Never hand-edit generated files.
+- Deterministic generation on every PR and on developer machines.
+- Fast failure locally before code hits CI.
+
+### Local Automation: Pre-Commit Hooks
+
+1. Install Lefthook:
+
+```bash
+# macOS
+brew install lefthook
+# or use: curl -s https://raw.githubusercontent.com/evilmartians/lefthook/master/install.sh | bash
+```
+
+2. Add `lefthook.yml` to repo root:
+
+- [ ] TODO: this code block is not accurate, needs to be created/updated
+
+```yaml
+pre-commit:
+  parallel: false
+  commands:
+    generate-r4q:
+      run: deno run -A ./scripts/generate-r4q.ts
+    add-generated:
+      stage_fixed: true
+      run: git add ./src/generated
+```
+
+3. Enable hooks:
+
+```bash
+lefthook install
+```
+
+Lefthook will run the generator before each commit and include regenerated files
+automatically.
+
+### Repo Hygiene
+
+- Do commit `*.auto.ts` (treat as build artifacts).
+- Do not edit generated files by hand.
+- Add/adjust Questionnaires only in `./*.fhir-r4-questionnaire.json`.
+- Keep `r4q-resource-code-gen.ts` and `r4q-runtime.ts` versioned and
+  deterministic.
+
+### CI/CD Reminder (GitHub Actions)
+
+Pair your local hooks with server-side enforcement so PRs fail if someone
+bypasses hooks.
+
+- [ ] TODO: this code block is not accurate, needs to be created/updated
+
+```yaml
+name: Generate Type-Safe Questionnaire Modules
+
+on:
+  push:
+    paths: ["questionnaires/*.fhir-r4-questionnaire.json"]
+  pull_request:
+    paths: ["questionnaires/*.fhir-r4-questionnaire.json"]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with: { deno-version: v1.x }
+      - name: Generate
+        run: deno run -A ./r4qctl.ts questionnaires/*.fhir-r4-questionnaire.json --outDir ./src/generated --force
+      - name: Verify generated files are committed
+        run: |
+          if [[ -n "$(git status --porcelain ./src/generated)" ]]; then
+            echo "Generated files are out of sync. Run the generator and commit changes."
+            git diff -- ./src/generated || true
+            exit 1
+          fi
+```
+
+> If you prefer CI to commit outputs, add a follow-up “Commit regenerated files”
+> step as shown earlier.
+
+### Developer Experience Tips
+
+- Add a convenience script to `package.json` (even if you don’t otherwise use
+  Node):
+
+- [ ] TODO: this code block is not accurate, needs to be created/updated
+
+```json
+{
+  "scripts": {
+    "r4q:gen": "deno run -A ./scripts/generate-r4q.ts",
+    "r4q:check": "deno run -A ./r4qctl.ts questionnaires/*.fhir-r4-questionnaire.json --outDir ./src/generated && git diff --exit-code -- ./src/generated"
+  }
+}
+```
+
+- Keep the generator’s output style stable (avoid time/date in emitted code
+  except in comments).
+
+With these hooks and CI checks in place, any change to a Questionnaire
+definition will automatically regenerate its companion TypeScript module locally
+and in CI, keeping the repo consistent and the Astro/React
+reporting/interpretation code safely typed.
+
+## Publishing generated TypeScript as JavaScript with `deno bundle`
+
+It's a good idea to further automate to take the generated `*.auto.ts` modules
+and produce distributable JavaScript bundles using `deno bundle`. The goal is to
+make the normalized, type-safe adapters usable in browsers (via
+`<script type="module">`), Astro/React client/server code, or any ESM-compatible
+runtime—without requiring consumers to run TypeScript or Deno themselves.
+
+- Produce self-contained ESM JavaScript bundles from the generated TypeScript.
+- Keep one bundle per questionnaire or create a single “barrel” bundle that
+  re-exports many questionnaires.
+- Generate source maps to improve debugging in browsers and in Astro or React.
+- Make output deterministic for CI/CD and caching.
+
+### What gets bundled
+
+Each generated `[title-kebab].auto.ts` imports only from `./r4q-runtime.ts`.
+When you run `deno bundle` on a generated file, Deno will statically include the
+referenced parts of `r4q-runtime.ts` in the output bundle. There are no other
+runtime dependencies; JSR/Std modules are used only by the generator, not by
+generated files.
+
+### Prerequisites
+
+- Deno installed on your build machine/CI agent.
+- The generated `*.auto.ts` files exist and build successfully (run the
+  generator first).
+
+### Option A: bundle a single questionnaire
+
+Example: bundle `company-information.auto.ts` for use in the browser or Astro.
+See [Example Workflow](example-workflow.md) if you want to experiment. Remember,
+in Astro or React you use the `.auto.ts` TypeScript directly but in the web
+you'll use the transformed `*.esm.js`.
+
+```bash
+deno bundle \
+  --quiet \
+  --map=inline \
+  ./src/generated/company-information.auto.ts \
+  ./dist/company-information.esm.js
+```
+
+Notes
+
+- Output is an ESM JavaScript file suitable for `<script type="module">` or ESM
+  imports.
+- `--map=inline` embeds a source map for easier debugging. Omit if you prefer a
+  separate map: `--map=external`.
+
+Usage in Astro (server or client component) as TypeScript:
+
+```ts
+// Server-side or client-side ESM import the TypeScript directly
+import {
+  CompanyInformationInterpreter,
+} from "./src/generated/company-information.auto.ts";
+```
+
+Usage in the browser using CDN:
+
+```html
+<script type="module">
+  import { CompanyInformationInterpreter } from "https://raw.githubusercontent.com/netspective-labs/attest/refs/heads/main/lib/fhir-r4-questionnaire/generated/mod.esm.js";
+
+  // Example: normalize a QuestionnaireResponse object
+  const qr = await fetch("/data/qr.json").then((r) => r.json());
+  const interp = CompanyInformationInterpreter.fromQuestionnaireResponse(
+    qr,
+  );
+  console.log(interp.validateRequiredFields(), interp.assessReadiness());
+</script>
+```
+
+Usage in the browser if you bundled it with your app:
+
+```html
+<script type="module">
+  import { CompanyInformationInterpreter } from "/assets/company-information.esm.js";
+
+  // Example: normalize a QuestionnaireResponse object
+  const qr = await fetch("/data/qr.json").then((r) => r.json());
+  const interp = CompanyInformationInterpreter.fromQuestionnaireResponse(
+    qr,
+  );
+  console.log(interp.validateRequiredFields(), interp.assessReadiness());
+</script>
+```
+
+### Option B: create a “barrel” and bundle once
+
+If you have multiple generated forms, create a small TypeScript barrel that
+re-exports them, then bundle that single entry.
+
+`src/generated/mod.ts`:
+
+```ts
+export * from "./company-information.auto.ts";
+export * from "./policy-framework.auto.ts";
+export * from "./vendor-risk.auto.ts";
+// add more as needed
+```
+
+Bundle:
+
+```bash
+deno bundle \
+  --quiet \
+  --map=inline \
+  ./src/generated/mod.ts \
+  ./dist/forms.esm.js
+```
+
+Consumers can then import any exported symbol from `forms.esm.js`.
+
+### Source maps
+
+- Inline map: `--map=inline` (single file, convenient for CDN or file copy).
+- External map: `--map=external` (produces `*.js` and `*.js.map`). Ensure the
+  `.map` is published next to the JS.
+
+### Reproducibility and caching
+
+- Run the generator first so `*.auto.ts` are fresh.
+- Keep Deno version pinned in CI and document it in the repo readme.
+- Avoid embedding timestamps in emitted code (the generator’s banner comments
+  are fine, but avoid using timestamps inside logic).
+- Consider hashing inputs and publishing content-addressed filenames if you need
+  long-lived CDN caching (e.g., `forms.esm.[hash].js`).
+
+### CI workflow example: build bundles on every change
+
+This GitHub Actions workflow regenerates type-safe modules and bundles them when
+any questionnaire changes. It fails if bundles aren’t committed, or you can
+switch to an auto-commit/push pattern.
+
+```yaml
+name: Build questionnaire bundles
+
+on:
+  push:
+    paths:
+      - "questionnaires/*.fhir-r4-questionnaire.json"
+      - "r4q-runtime.ts"
+      - "r4qctl.ts"
+  pull_request:
+    paths:
+      - "questionnaires/*.fhir-r4-questionnaire.json"
+      - "r4q-runtime.ts"
+      - "r4qctl.ts"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Generate type-safe modules
+        run: |
+          deno run -A ./r4qctl.ts \
+            questionnaires/*.fhir-r4-questionnaire.json \
+            --outDir ./src/generated --force
+
+      - name: Bundle (barrel)
+        run: |
+          deno bundle --quiet --map=inline \
+            ./src/generated/index.ts \
+            ./dist/forms.esm.js
+
+      - name: Verify dist is committed
+        run: |
+          if [[ -n "$(git status --porcelain ./src/generated ./dist)" ]]; then
+            echo "Generated outputs are out of sync. Commit the changes."
+            git diff -- ./src/generated ./dist || true
+            exit 1
+          fi
+```
+
+If you prefer CI to commit bundles automatically:
+
+```yaml
+- name: Commit regenerated files
+  run: |
+    git config --global user.name "GitHub Actions"
+    git config --global user.email "actions@github.com"
+    git add ./src/generated ./dist
+    git commit -m "chore: regenerate TS and bundles" || echo "No changes"
+    git push
+```
+
+### Publishing and distribution patterns
+
+- External CDN: serve ESM bundles from GitHub `raw` CDN path and import via
+  absolute URL in browser modules.
+- GitHub Pages or any static host: place `./dist/*.js` (and `.map`) in a
+  published directory. Use `<script type="module">` from your site.
+- GitHub Releases artifacts: upload bundles during release; downstream projects
+  download or pin versions.
+- Internal CDN: serve ESM bundles from a CDN path and import via absolute URL in
+  Astro/React or browser modules.
+
+### Runtime environments
+
+- Browser: ESM modules via `<script type="module">` work out of the box.
+- Astro server or Node 18+: use the TypeScript `*.auto.ts` directly.
+
+### Import maps and JSR
+
+The generated `*.auto.ts` only import from `./r4q-runtime.ts`. After bundling,
+there are no live imports from JSR or Deno Std in the output bundle. Consumers
+don’t need Deno, JSR, or an import map at runtime—the bundle is self-contained.
+
+### Performance tips
+
+- Prefer the barrel approach to reduce HTTP round-trips in browsers.
+- If bundles get large, consider splitting by route or feature and lazy-loading
+  with dynamic `import()` in Astro or the browser.
+
+### Troubleshooting
+
+- “Cannot resolve import” during bundling: check relative paths in your barrel
+  and that `r4q-runtime.ts` sits next to generated files expected by imports.
+- Missing symbols after bundling: ensure you re-exported them from the barrel or
+  targeted the right entry module.
+- Large bundles: remove unused exports or split bundles per questionnaire.
+
+### Example: end-to-end script
+
+A simple script to regenerate everything and bundle a barrel, useful locally and
+in CI.
+
+```bash
+#!/usr/bin/env -S deno run --allow-read --allow-write
+// scripts/transform-r4q-to-esm.ts
+
+// 1) regenerate TS from all questionnaires
+const questionnaires: string[] = [];
+for await (const e of Deno.readDir("questionnaires")) {
+  if (e.isFile && e.name.endsWith(".fhir-r4-questionnaire.json")) {
+    questionnaires.push(`questionnaires/${e.name}`);
+  }
+}
+if (questionnaires.length) {
+  const gen = new Deno.Command(Deno.execPath(), {
+    args: ["run", "-A", "./r4qctl.ts", ...questionnaires, "--outDir", "./src/generated", "--force"],
+    stdin: "inherit", stdout: "inherit", stderr: "inherit",
+  });
+  const { code } = await gen.output();
+  if (code !== 0) Deno.exit(code);
+}
+
+// 2) bundle the barrel
+const bundle = new Deno.Command(Deno.execPath(), {
+  args: ["bundle", "--quiet", "--map=inline", "./src/generated/index.ts", "./dist/forms.esm.js"],
+  stdin: "inherit", stdout: "inherit", stderr: "inherit",
+});
+const { code } = await bundle.output();
+Deno.exit(code);
+```
+
+Run:
+
+```bash
+deno run -A ./scripts/transform-r4q-to-esm.ts
+```
+
+This produces `./dist/forms.esm.js` which you can import anywhere ESM is
+supported.
