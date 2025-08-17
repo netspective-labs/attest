@@ -390,6 +390,12 @@ export function coerceOptionalDate(v: unknown): Date | undefined {
  * Adapter helpers (finders)
  * ========================================================================== */
 
+// deno-lint-ignore no-explicit-any
+export function lhcFormTitle(node: any) {
+    if (!node) return undefined;
+    return node.title ?? node.name;
+}
+
 /**
  * Depth-first search within an LHC JSON object to find an item's `value` by linkId.
  * Expects an object with an `items` array where each element can contain nested `items`.
