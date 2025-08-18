@@ -24,7 +24,7 @@ export function sqlInfoSchema<Context extends SQLa.SqlEmitContext>(
             e2e_test_questionnaire_id: keys.textPrimaryKey(),
             src_file_name: sd.text(),
             source: sd.text(),
-            module_ts: sd.jsonText(),
+            module_js: sd.jsonText(),
             ...housekeeping.columns,
         },
     );
@@ -33,7 +33,8 @@ export function sqlInfoSchema<Context extends SQLa.SqlEmitContext>(
         "e2e_test_questionnaire_response",
         {
             e2e_test_questionnaire_response_id: keys.textPrimaryKey(),
-            questionnaire_id: qTable.belongsTo.e2e_test_questionnaire_id(),
+            questionnaire_id: qTable.belongsTo.e2e_test_questionnaire_id()
+                .optional(),
             lhc_form_response_json: sd.jsonText(),
             transformed_json: sd.jsonText(),
             ...housekeeping.columns,
@@ -67,31 +68,50 @@ const walker = new Walker({
 
 await walker.walk("leave-work-dir");
 
-interface CapExecEmitContext extends SQLa.SqlEmitContext {
-}
-const stContext = (): CapExecEmitContext => SQLa.typicalSqlEmitContext();
+const stContext = (): SQLa.SqlEmitContext => SQLa.typicalSqlEmitContext();
 const gts = tp.governedTemplateState<
     tp.TypicalDomainQS,
     tp.TypicalDomainsQS,
-    CapExecEmitContext
+    SQLa.SqlEmitContext
 >();
 const schema = sqlInfoSchema(gts.ddlOptions);
 const { qTable, respTable } = schema;
 
+const qTitleFKeyIDs = new Map<string, string>();
 const qInsertDMLs = Array.from(
-    walker.questionnaires.values().map((q) => {
+    walker.qModules.values().map((qm) => {
+        const e2e_test_questionnaire_id = monotonicUlid();
+        if (qm.moduleSignature?.title) {
+            qTitleFKeyIDs.set(
+                qm.moduleSignature.title,
+                e2e_test_questionnaire_id,
+            );
+        }
         return qTable.insertDML({
-            e2e_test_questionnaire_id: monotonicUlid(),
-            src_file_name: q.srcFile,
-            module_ts: "",
-            source: "",
+            e2e_test_questionnaire_id,
+            src_file_name: qm.srcFile,
+            module_js: "// TODO: use deno bundle to generate this JavaScript",
+            source: qm.originalSourceText ?? "--include-src was not used",
+            created_by: import.meta.url,
+        });
+    }),
+);
+
+const respInsertDMLs = Array.from(
+    walker.responses.values().map((r) => {
+        return respTable.insertDML({
+            e2e_test_questionnaire_response_id: monotonicUlid(),
+            questionnaire_id: qTitleFKeyIDs.get(r.lhcFormTitle ?? "") ??
+                undefined,
+            lhc_form_response_json: JSON.stringify(r.lhcFormInstance, null, 2),
+            transformed_json: JSON.stringify(r.transformed, null, 2),
             created_by: import.meta.url,
         });
     }),
 );
 
 // deno-fmt-ignore
-const DDL = SQLa.SQL<CapExecEmitContext>(gts.ddlOptions)`
+const DDL = SQLa.SQL<SQLa.SqlEmitContext>(gts.ddlOptions)`
     -- Governance:
     -- * use 3rd normal form for tables
     -- * use views to wrap business logic
@@ -105,23 +125,9 @@ const DDL = SQLa.SQL<CapExecEmitContext>(gts.ddlOptions)`
 
     ${respTable}
     
-    ${qInsertDMLs}`;
-
-console.log(DDL.SQL(stContext()));
-
-//console.log(walker.questionnaires);
-
-// Generate SQL for each questionnaire
-// for (const questionnaire of walker.questionnaires) {
-//     // create custom table for all questionnaires as rows
-//     // create custom table of responses per questionnaire using SQLite "untyped" columns
-
-//     const sqlFile = await walker.generateSQL(questionnaire);
-//     if (sqlFile) {
-//         console.log(`Generated SQL for ${questionnaire.id}: ${sqlFile}`);
-//     } else {
-//         console.error(`Failed to generate SQL for ${questionnaire.id}`);
-//     }
-// }
+    ${qInsertDMLs}
+    
+    ${respInsertDMLs}`;
 
 await walker.cleanup();
+console.log(DDL.SQL(stContext()));

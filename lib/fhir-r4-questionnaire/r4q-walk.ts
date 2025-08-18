@@ -1,3 +1,33 @@
+/**
+ * @module Questionnaire Walker
+ *
+ * This module provides the end-to-end workflow for discovering, preparing, and transforming
+ * FHIR R4 Questionnaires and their associated LHC Form responses. It is designed to automate
+ * the process of taking raw questionnaire JSON definitions and their completed form responses,
+ * generating type-safe TypeScript modules for them, and transforming responses into normalized,
+ * strongly-typed objects.
+ *
+ * Core responsibilities:
+ * - Discover FHIR Questionnaire JSON files from a specified directory.
+ * - Discover associated LHC Form response files and map them back to their questionnaires.
+ * - Dynamically generate and load TypeScript modules (`*.auto.ts`) for each questionnaire,
+ *   using `r4qctl.ts` as the generator.
+ * - Transform raw LHC Form responses into typed DTOs using adapter functions defined in the
+ *   generated questionnaire modules.
+ * - Provide an orchestrated `Walker` class that ties these steps together in a single workflow.
+ *
+ * Key classes:
+ * - `LhcFormResponse`: Wraps an LHC Form response file, validating and transforming it.
+ * - `QuestionnaireModule`: Represents a generated TS module for a questionnaire, exposing its
+ *   adapter functions and metadata signature.
+ * - `Questionnaire`: Represents a single FHIR Questionnaire definition and its discovered responses.
+ * - `Walker`: The orchestrator responsible for discovering questionnaires, preparing modules,
+ *   transforming responses, and handling cleanup of intermediate work.
+ *
+ * This module is intended to be used in CLI tools and automation scripts where bulk processing
+ * of questionnaires and responses is required, ensuring consistency and type safety across the pipeline.
+ */
+
 import {
     basename,
     fromFileUrl,
@@ -142,23 +172,46 @@ export class LhcFormResponse {
  */
 export class QuestionnaireModule {
     static readonly EXTENSION = ".auto.ts";
+    readonly moduleSourceText: string;
     private module?: Record<string, unknown>;
     private moduleError?: Error;
     private modulaSig?: r4qr.ModuleSignature;
 
+    /**
+     * Initializes the QuestionnaireModule by tracking the TypeScript module file.
+     * @param srcFile The path to the TypeScript module file, relative to this module.
+     */
     constructor(readonly srcFile: string) {
         this.srcFile = srcFile;
+        this.moduleSourceText = Deno.readTextFileSync(
+            fromFileUrl(import.meta.resolve(srcFile)),
+        );
+        this.module = undefined;
     }
 
+    /**
+     * Checks if the module is valid by ensuring it has been imported successfully,
+     * has no errors, and has a valid module signature.
+     * @returns True if the module is valid, otherwise false.
+     */
     get isValid() {
         return this.module !== undefined && this.moduleError === undefined &&
             this.modulaSig !== undefined;
     }
 
+    /**
+     * Returns the module "signature" of the questionnaire module so we can reflect
+     * the content. The module signature includes the title, source text constant name,
+     * and function names for transforming LHC Form responses and FHIR Questionnaire Responses.
+     * @returns The module signature if the module is valid, otherwise undefined.
+     */
     get moduleSignature() {
         return this.modulaSig;
     }
 
+    /**
+     * Returns the function that adapts a LHC Form response to a typed data transfer object.
+     */
     get lhcFormResponseAdapterFn() {
         if (this.module && this.modulaSig) {
             return this.module[this.modulaSig.lhcFormResponseAdapterFnName];
@@ -166,6 +219,9 @@ export class QuestionnaireModule {
         return undefined;
     }
 
+    /**
+     * Returns the function that adapts a FHIR Questionnaire Response to a data transfer object.
+     */
     get fhirQuestionnaireResponseAdapterFn() {
         if (this.module && this.modulaSig) {
             return this
@@ -174,10 +230,38 @@ export class QuestionnaireModule {
         return undefined;
     }
 
+    /**
+     * If --include-src was used when TypeScript was generated, this will be
+     * the original source text of the .fhir-R4-questionnaire.json file that
+     * the module was generated from (it's stored as a constant in the generated
+     * TypeScript).
+     */
+    get originalSourceText() {
+        if (this.module && this.modulaSig) {
+            return this
+                .module[this.modulaSig.sourceTextConstName] as
+                    | string
+                    | undefined;
+        }
+        return undefined;
+    }
+
+    /**
+     * Initializes the QuestionnaireModule by dynamically importing the TypeScript module
+     * and extracting the module signature.
+     * If the module cannot be imported, it captures the error and provides a way to access
+     * the error information.
+     * @returns A promise that resolves when the module is successfully imported and initialized.
+     * @throws An error if the module cannot be imported or if the module signature is not valid.
+     */
     async init() {
         try {
+            // Dynamically import the module (this.srcFile must be relative to this script not
+            // the current working directory).
             this.module = await import(this.srcFile);
             if (this.module) {
+                // Extract the module "signature" from the imported module to allow reflection
+                // of the content.
                 this.modulaSig = r4qr.moduleSignature(this.module);
             }
         } catch (error) {
