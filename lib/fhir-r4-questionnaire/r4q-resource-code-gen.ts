@@ -48,7 +48,7 @@ export function renderHeaderBanner(
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts \`moduleSignature\` function
-export const ${titleCamel}ModuleSignature: rt.ModuleSignature = { 
+export const ${titleCamel}ModuleSignature: rt.ModuleSignature = {
     title: "${title}",
     filename: "${filename}",
     titleCamel: "\`${titleCamel}\`",
@@ -116,14 +116,12 @@ export function renderInterface(
             ? `\n * Entry format: ${f.entryFormat}`
             : "";
         const choiceInfo = f.choiceLiterals?.length
-            ? `\n * Options: ${
-                f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
+            ? `\n * Options: ${f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
             }`
             : "";
         const req = f.required ? "\n * Required: yes" : "\n * Required: no";
-        const doc = `/**\n * ${
-            f.text ?? "(no label)"
-        }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
+        const doc = `/**\n * ${f.text ?? "(no label)"
+            }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
         const optional = f.required ? "" : "?";
         return `${doc}\n${f.propName}${optional}: ${f.tsType};`;
     }).join("\n\n");
@@ -138,6 +136,15 @@ ${indent(propLines, 1)}
 
 /** Decide which coercer to call given a FieldMeta and raw expression string. */
 export function coerceExprByType(f: FieldMeta, rawExpr: string): string {
+
+    // Arrays (multi-answer/repeats)
+    if (f.repeats) {
+        // For choice repeats we coerce to string[]
+        return f.required
+            ? `rt.coerceStringArray(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`
+            : `rt.coerceOptionalStringArray(${rawExpr}) as ${f.formTitlePascalCase}["${f.propName}"]`;
+    }
+
     // If this is a string-literal union, we still coerce with string
     if (/\|/.test(f.tsType)) {
         return f.required
@@ -178,9 +185,8 @@ export function renderLhcAdapter(
 ): string {
     const funcName = `${titleCamel}LhcFormResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `rt.findLhcValueByLinkId(input, ${
-            JSON.stringify(f.linkId)
-        })`;
+        const raw = `rt.findLhcValueByLinkId(input, ${JSON.stringify(f.linkId)
+            })`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -202,7 +208,9 @@ export function renderQrAdapter(
 ): string {
     const funcName = `${titleCamel}FhirQuestionnaireResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `rt.findQrAnswerByLinkId(qr, ${JSON.stringify(f.linkId)})`;
+        const raw = f.repeats
+            ? `rt.findQrAnswersByLinkId(qr, ${JSON.stringify(f.linkId)})`
+            : `rt.findQrAnswerByLinkId(qr, ${JSON.stringify(f.linkId)})`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -321,9 +329,8 @@ export class ${className} {
 }
 
 export function renderSource(q: FhirQuestionnaire, titleCamel: string): string {
-    return `/** The original source */\nexport const ${titleCamel}Source = \`${
-        JSON.stringify(q, null, 2)
-    }\`;`;
+    return `/** The original source */\nexport const ${titleCamel}Source = \`${JSON.stringify(q, null, 2)
+        }\`;`;
 }
 
 export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
@@ -332,8 +339,7 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
         return JSON.parse(text) as T;
     } catch (e) {
         throw new Error(
-            `Failed to read/parse JSON at ${filePath}: ${
-                e instanceof Error ? e.message : String(e)
+            `Failed to read/parse JSON at ${filePath}: ${e instanceof Error ? e.message : String(e)
             }`,
         );
     }
@@ -351,7 +357,7 @@ function computeCommonImportPathFor(outFile: string): string {
 
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
-    await Deno.mkdir(dir, { recursive: true }).catch(() => {});
+    await Deno.mkdir(dir, { recursive: true }).catch(() => { });
 }
 
 /* ========================================================================== *
@@ -421,8 +427,8 @@ export async function generateTsCodeForQuestionnaire(
         if (!q || q.resourceType !== "Questionnaire") {
             return new Error(
                 `Not a FHIR Questionnaire (resourceType="${
-                    // deno-lint-ignore no-explicit-any
-                    (q as any)?.resourceType}")`,
+                // deno-lint-ignore no-explicit-any
+                (q as any)?.resourceType}")`,
             );
         }
 
@@ -481,3 +487,4 @@ export async function generateTsCodeForQuestionnaire(
     }
     return false;
 }
+

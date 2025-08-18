@@ -10,6 +10,9 @@
  * - Provide small, composable primitives that are easy to unit-test.
  */
 
+// deno-lint-ignore no-explicit-any
+type Any = any;
+
 // this shape is written in the generated code
 export interface ModuleSignature {
     title: string;
@@ -87,6 +90,7 @@ export type FhirQItem = {
     text?: string;
     item?: FhirQItem[];
     required?: boolean;
+    repeats?: boolean;
     extension?: FhirExtension[];
     answerOption?: Array<{
         valueString?: string;
@@ -122,6 +126,7 @@ export type FieldMeta = {
     helpNotes?: string[];
     groupTrail: string[]; // Section/group titles encountered along the path
     choiceLiterals?: string[];
+    repeats: boolean;
 };
 
 /* ========================================================================== *
@@ -185,7 +190,7 @@ export function isDisplayHelp(item: FhirQItem): boolean {
     return ext.some((e) => {
         if (
             e.url !==
-                "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+            "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         ) return false;
         const codings = e.valueCodeableConcept?.coding ?? [];
         return codings.some((c) => c.code === "help");
@@ -290,9 +295,16 @@ export function flattenItems(
         const propName = uniqueName(baseName, usedNames);
         const entryFormat = getEntryFormat(it);
         const choiceLits = collectChoiceLiterals(it);
-        const tsType = choiceLits?.length
+        const repeats = (it as Any).repeats === true;
+
+        const union = choiceLits?.length
             ? choiceLits.map((s) => JSON.stringify(s)).join(" | ")
-            : fhirTypeToTs(it.type);
+            : undefined;
+
+        const baseTs = union ?? fhirTypeToTs(it.type);
+        const tsType = repeats
+            ? (union ? `(${union})[]` : `${baseTs}[]`)
+            : baseTs;
 
         acc.push({
             formTitleCamelCase: titleCamelCase,
@@ -304,9 +316,10 @@ export function flattenItems(
             required: it.required === true,
             text: it.text,
             entryFormat,
-            helpNotes: undefined, // Reserved for future localized per-field help
+            helpNotes: undefined,
             groupTrail: trail.slice(),
             choiceLiterals: choiceLits,
+            repeats,                           // <-- persist repeats flag
         });
     }
 
@@ -387,6 +400,25 @@ export function coerceOptionalDate(v: unknown): Date | undefined {
     return undefined;
 }
 
+export function coerceOptionalStringArray(v: unknown): string[] | undefined {
+    if (v === null || v === undefined) return undefined;
+    if (Array.isArray(v)) {
+        const out: string[] = [];
+        for (const el of v) {
+            const s = coerceOptionalString(el);
+            if (s !== undefined) out.push(s);
+        }
+        return out;
+    }
+    // Treat a lone scalar as a single selection
+    const s = coerceOptionalString(v);
+    return s !== undefined ? [s] : undefined;
+}
+
+export function coerceStringArray(v: unknown, defaultValue: string[] = []): string[] {
+    return coerceOptionalStringArray(v) ?? defaultValue;
+}
+
 /* ========================================================================== *
  * Adapter helpers (finders)
  * ========================================================================== */
@@ -408,8 +440,8 @@ export function findLhcValueByLinkId(node: any, linkId: string): unknown {
     const items: any[] = Array.isArray(node)
         ? node
         : Array.isArray(node.items)
-        ? node.items
-        : [];
+            ? node.items
+            : [];
     for (const it of items) {
         if (it?.linkId === linkId) {
             return "value" in it ? it.value : undefined;
@@ -456,3 +488,35 @@ export function findQrAnswerByLinkId(qr: any, linkId: string): unknown {
     }
     return undefined;
 }
+
+// deno-lint-ignore no-explicit-any
+export function findQrAnswersByLinkId(qr: any, linkId: string): unknown[] | undefined {
+    if (!qr) return undefined;
+    // deno-lint-ignore no-explicit-any
+    const stack: any[] = [];
+    if (Array.isArray(qr.item)) stack.push(...qr.item);
+
+    while (stack.length) {
+        const it = stack.pop();
+        if (!it) continue;
+        if (it.linkId === linkId && Array.isArray(it.answer) && it.answer.length) {
+            const vals: unknown[] = [];
+            for (const a of it.answer) {
+                if (a?.valueCoding) {
+                    const c = a.valueCoding as FhirCoding;
+                    vals.push(c.code ?? c.display ?? c.system ?? undefined);
+                    continue;
+                }
+                for (const k of Object.keys(a)) {
+                    if (!k.startsWith("value")) continue;
+                    const val = (a as Any)[k];
+                    if (val !== undefined) { vals.push(val); break; }
+                }
+            }
+            return vals.filter((v) => v !== undefined);
+        }
+        if (Array.isArray(it.item)) stack.push(...it.item);
+    }
+    return undefined;
+}
+
