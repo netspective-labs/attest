@@ -1,0 +1,1378 @@
+{
+    "lformsVersion": "38.2.0",
+    "PATH_DELIMITER": "/",
+    "code": null,
+    "codeList": null,
+    "identifier": null,
+    "name": "Access Control (Limit information system access to authorized users and processes)",
+    "template": "table",
+    "items": [
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "AC.L1-3.1.1 - Access Control Policy & Account Management",
+            "questionCode": "461149605484",
+            "questionCodeSystem": "LinkId",
+            "linkId": "461149605484",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [],
+            "codingInstructions": "Limit information system access to authorized users, processes acting on behalf of authorized users, or devices (including other information systems).",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Limit information system access to authorized users, processes acting on behalf of authorized users, or devices (including other information systems).",
+            "codingInstructionsLinkId": "461149605484_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "dataType": "CODING",
+            "question": "Do you have an Access Control Policy?",
+            "questionCode": "744146359806",
+            "questionCodeSystem": "LinkId",
+            "linkId": "744146359806",
+            "answerCardinality": {
+                "max": "1",
+                "min": "0"
+            },
+            "displayControl": {
+                "answerLayout": {
+                    "type": "RADIO_CHECKBOX"
+                }
+            },
+            "answers": [
+                {
+                    "text": "Yes"
+                },
+                {
+                    "text": " No - if no, would you like help creating one for your company?"
+                }
+            ],
+            "codeList": [],
+            "questionCardinality": {
+                "min": "1",
+                "max": "1"
+            },
+            "value": {
+                "text": "Yes"
+            }
+        },
+        {
+            "dataType": "CODING",
+            "question": "Implementation Status",
+            "questionCode": "184584712182",
+            "questionCodeSystem": "LinkId",
+            "linkId": "184584712182",
+            "answerCardinality": {
+                "max": "1",
+                "min": "0"
+            },
+            "displayControl": {
+                "answerLayout": {
+                    "type": "RADIO_CHECKBOX"
+                }
+            },
+            "answers": [
+                {
+                    "text": "Fully Implemented"
+                },
+                {
+                    "text": "Partially Implemented"
+                },
+                {
+                    "text": "Not Implemented"
+                }
+            ],
+            "codeList": [],
+            "questionCardinality": {
+                "min": "1",
+                "max": "1"
+            },
+            "value": {
+                "text": "Partially Implemented"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "1.",
+            "question": "Access Control Policy Elements",
+            "questionCode": "480722725067",
+            "questionCodeSystem": "LinkId",
+            "linkId": "480722725067",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "Does your organization have a documented access control policy that addresses:",
+                    "questionCode": "669545773690",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "669545773690",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Purpose, scope, roles, and responsibilities"
+                        },
+                        {
+                            "text": "Management commitment"
+                        },
+                        {
+                            "text": "Coordination among organizational entities"
+                        },
+                        {
+                            "text": "Compliance requirements"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Purpose, scope, roles, and responsibilities"
+                        },
+                        {
+                            "text": "Compliance requirements"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Establish clear access control rules, including who can access what information, how access is granted, reviewed, and revoked",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Establish clear access control rules, including who can access what information, how access is granted, reviewed, and revoked",
+            "codingInstructionsLinkId": "480722725067_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "2.",
+            "question": "User Account Registry",
+            "questionCode": "217670863053",
+            "questionCodeSystem": "LinkId",
+            "linkId": "217670863053",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "TITLE",
+                    "question": "How many accounts are currently in your systems? ",
+                    "questionCode": "182548770364",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "182548770364",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "dataType": "INT",
+                    "question": "Active user accounts:",
+                    "questionCode": "927965645729",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "927965645729",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    },
+                    "value": 250
+                },
+                {
+                    "dataType": "INT",
+                    "question": "Inactive/disabled user accounts:",
+                    "questionCode": "903940962912",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "903940962912",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    },
+                    "value": 10
+                },
+                {
+                    "dataType": "INT",
+                    "question": "Service accounts:",
+                    "questionCode": "338820008158",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "338820008158",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    },
+                    "value": 15
+                },
+                {
+                    "dataType": "INT",
+                    "question": "Shared accounts:",
+                    "questionCode": "673437974050",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "673437974050",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "restrictions": {
+                        "maxInclusive": 100
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    },
+                    "value": 3
+                }
+            ],
+            "codingInstructions": "Maintain a detailed and up-to-date record of all user accounts, including their access levels and status",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Maintain a detailed and up-to-date record of all user accounts, including their access levels and status",
+            "codingInstructionsLinkId": "217670863053_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "3.",
+            "question": "Principle of Least Privilege Implementation",
+            "questionCode": "159744780603",
+            "questionCodeSystem": "LinkId",
+            "linkId": "159744780603",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How is the principle of least privilege implemented?",
+                    "questionCode": "368418823104",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "368418823104",
+                    "answerCardinality": {
+                        "max": "1",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Fully implemented across all systems"
+                        },
+                        {
+                            "text": "Partially implemented"
+                        },
+                        {
+                            "text": "Not implemented"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": {
+                        "text": "Partially implemented"
+                    }
+                }
+            ],
+            "codingInstructions": "Grant users and systems only the minimum access necessary to perform their tasks",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Grant users and systems only the minimum access necessary to perform their tasks",
+            "codingInstructionsLinkId": "159744780603_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "4.",
+            "question": "Account Management Processes",
+            "questionCode": "589953648417",
+            "questionCodeSystem": "LinkId",
+            "linkId": "589953648417",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How are account lifecycle processes managed?",
+                    "questionCode": "341135397442",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "341135397442",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Automated identity management system"
+                        },
+                        {
+                            "text": "Manual process with approval workflow"
+                        },
+                        {
+                            "text": "Integration with HR systems"
+                        },
+                        {
+                            "text": " Regular account reviews and recertification"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Automated identity management system"
+                        },
+                        {
+                            "text": "Integration with HR systems"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Establish and follow formal procedures to manage user accounts throughout their lifecycle",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Establish and follow formal procedures to manage user accounts throughout their lifecycle",
+            "codingInstructionsLinkId": "589953648417_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "Account Review Frequency",
+            "questionCode": "789082578732",
+            "questionCodeSystem": "LinkId",
+            "linkId": "789082578732",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How frequently are user accounts reviewed for validity and appropriate access?",
+                    "questionCode": "563546854643",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "563546854643",
+                    "answerCardinality": {
+                        "max": "1",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Monthly"
+                        },
+                        {
+                            "text": " Quarterly"
+                        },
+                        {
+                            "text": "Annually"
+                        },
+                        {
+                            "text": "Other (specify):"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": {
+                        "text": " Quarterly"
+                    }
+                }
+            ],
+            "codingInstructions": "Regularly review user accounts to verify access is still appropriate and remove or adjust accounts as needed",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Regularly review user accounts to verify access is still appropriate and remove or adjust accounts as needed",
+            "codingInstructionsLinkId": "789082578732_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "AC.L1-3.1.2 - Transaction & Function Control",
+            "questionCode": "700726342337",
+            "questionCodeSystem": "LinkId",
+            "linkId": "700726342337",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [],
+            "codingInstructions": "Limit information system access to the types of transactions and functions that authorized users are permitted to execute.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Limit information system access to the types of transactions and functions that authorized users are permitted to execute.",
+            "codingInstructionsLinkId": "700726342337_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "dataType": "CODING",
+            "question": "Implementation Status",
+            "questionCode": "316234331937",
+            "questionCodeSystem": "LinkId",
+            "linkId": "316234331937",
+            "answerCardinality": {
+                "max": "1",
+                "min": "0"
+            },
+            "displayControl": {
+                "answerLayout": {
+                    "type": "RADIO_CHECKBOX"
+                }
+            },
+            "answers": [
+                {
+                    "text": "Fully Implemented"
+                },
+                {
+                    "text": "Partially Implemented"
+                },
+                {
+                    "text": "Not Implemented"
+                }
+            ],
+            "codeList": [],
+            "questionCardinality": {
+                "min": "1",
+                "max": "1"
+            },
+            "value": {
+                "text": "Partially Implemented"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "1.",
+            "question": "Transaction Control Implementation",
+            "questionCode": "899089109837",
+            "questionCodeSystem": "LinkId",
+            "linkId": "899089109837",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How do you limit user access to specific transactions and functions?",
+                    "questionCode": "589002798804",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "589002798804",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Role-based access control (RBAC)"
+                        },
+                        {
+                            "text": "Function-based permissions (create, read, update, delete)"
+                        },
+                        {
+                            "text": "Application-level access controls"
+                        },
+                        {
+                            "text": "Time-based access restrictions"
+                        },
+                        {
+                            "text": "Location-based access restrictions"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Role-based access control (RBAC)"
+                        },
+                        {
+                            "text": "Application-level access controls"
+                        },
+                        {
+                            "text": "Time-based access restrictions"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Implement controls to monitor and regulate transactions, ensuring only authorized actions are performed within systems and applications",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Implement controls to monitor and regulate transactions, ensuring only authorized actions are performed within systems and applications",
+            "codingInstructionsLinkId": "899089109837_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "2.",
+            "question": "Function Restrictions by Role",
+            "questionCode": "561249826496",
+            "questionCodeSystem": "LinkId",
+            "linkId": "561249826496",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "What types of functions are restricted based on user roles?",
+                    "questionCode": "525896610609",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "525896610609",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Administrative functions (user management, system configuration)"
+                        },
+                        {
+                            "text": "Financial transactions and approvals"
+                        },
+                        {
+                            "text": "Data export and bulk download functions"
+                        },
+                        {
+                            "text": "Report generation and access"
+                        },
+                        {
+                            "text": "System-level commands and utilities"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Data export and bulk download functions"
+                        },
+                        {
+                            "text": "System-level commands and utilities"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Limit system functions and capabilities based on user roles to ensure individuals can only perform actions necessary for their job responsibilities",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Limit system functions and capabilities based on user roles to ensure individuals can only perform actions necessary for their job responsibilities",
+            "codingInstructionsLinkId": "561249826496_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "3.",
+            "question": "Transaction Authorization Requirements",
+            "questionCode": "338456195634",
+            "questionCodeSystem": "LinkId",
+            "linkId": "338456195634",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How are high-risk transactions authorized?",
+                    "questionCode": "859148329958",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "859148329958",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Manager approval required"
+                        },
+                        {
+                            "text": "Two-person authorization"
+                        },
+                        {
+                            "text": "Automated business rules and limits"
+                        },
+                        {
+                            "text": "No special authorization required"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "No special authorization required"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Require formal approval before critical transactions are executed to prevent unauthorized or fraudulent activities.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Require formal approval before critical transactions are executed to prevent unauthorized or fraudulent activities.",
+            "codingInstructionsLinkId": "338456195634_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "AC.L1-3.1.20 - External Connections",
+            "questionCode": "293091353060",
+            "questionCodeSystem": "LinkId",
+            "linkId": "293091353060",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [],
+            "codingInstructions": "Verify and control/limit connections to and use of external information systems.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Verify and control/limit connections to and use of external information systems.",
+            "codingInstructionsLinkId": "293091353060_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "dataType": "CODING",
+            "question": "Implementation Status",
+            "questionCode": "358071855489",
+            "questionCodeSystem": "LinkId",
+            "linkId": "358071855489",
+            "answerCardinality": {
+                "max": "1",
+                "min": "0"
+            },
+            "displayControl": {
+                "answerLayout": {
+                    "type": "RADIO_CHECKBOX"
+                }
+            },
+            "answers": [
+                {
+                    "text": " Fully Implemented"
+                },
+                {
+                    "text": " Partially Implemented"
+                },
+                {
+                    "text": " Not Implemented"
+                }
+            ],
+            "codeList": [],
+            "questionCardinality": {
+                "min": "1",
+                "max": "1"
+            },
+            "value": {
+                "text": " Partially Implemented"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "1.",
+            "question": " External System Connections",
+            "questionCode": "118413869969",
+            "questionCodeSystem": "LinkId",
+            "linkId": "118413869969",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "What types of external systems does your organization connect to?",
+                    "questionCode": "261758300502",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "261758300502",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Cloud services (email, file storage, applications)"
+                        },
+                        {
+                            "text": "Business partner networks"
+                        },
+                        {
+                            "text": "Vendor/supplier systems"
+                        },
+                        {
+                            "text": "Government systems and portals"
+                        },
+                        {
+                            "text": "Personal devices (BYOD)"
+                        },
+                        {
+                            "text": "Remote access system"
+                        },
+                        {
+                            "text": "No external connections"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Cloud services (email, file storage, applications)"
+                        },
+                        {
+                            "text": "No external connections"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Manage and secure connections to external systems to protect your network from unauthorized access and data breaches.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Manage and secure connections to external systems to protect your network from unauthorized access and data breaches.",
+            "codingInstructionsLinkId": "118413869969_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "2.",
+            "question": "Connection Verification Methods",
+            "questionCode": "397995568740",
+            "questionCodeSystem": "LinkId",
+            "linkId": "397995568740",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How do you verify external system connections?",
+                    "questionCode": "495111707033",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "495111707033",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Digital certificates and PKI"
+                        },
+                        {
+                            "text": "VPN connections with authentication"
+                        },
+                        {
+                            "text": "Firewall rules and IP restrictions"
+                        },
+                        {
+                            "text": "Signed interconnection agreements"
+                        },
+                        {
+                            "text": "Continuous monitoring and logging"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "VPN connections with authentication"
+                        },
+                        {
+                            "text": "Signed interconnection agreements"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Use verification techniques to confirm the identity and security of external connections before allowing access to your systems",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Use verification techniques to confirm the identity and security of external connections before allowing access to your systems",
+            "codingInstructionsLinkId": "397995568740_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "Connection Control Limitations",
+            "questionCode": "354025378477",
+            "questionCodeSystem": "LinkId",
+            "linkId": "354025378477",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "What limitations are placed on external connections?",
+                    "questionCode": "597499672942",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "597499672942",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Time-based access restrictions"
+                        },
+                        {
+                            "text": "Restrictions on data types that can be shared"
+                        },
+                        {
+                            "text": "Limited to specific user groups"
+                        },
+                        {
+                            "text": "Management approval required for each connection"
+                        },
+                        {
+                            "text": "Comprehensive audit trails and logging"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Restrictions on data types that can be shared"
+                        },
+                        {
+                            "text": "Comprehensive audit trails and logging"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Define and enforce restrictions on external connections to minimize exposure and reduce security risks.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Define and enforce restrictions on external connections to minimize exposure and reduce security risks.",
+            "codingInstructionsLinkId": "354025378477_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "AC.L1-3.1.22 - Control Public Information",
+            "questionCode": "942841103790",
+            "questionCodeSystem": "LinkId",
+            "linkId": "942841103790",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [],
+            "codingInstructions": "Control information posted or processed on publicly accessible information systems.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Control information posted or processed on publicly accessible information systems.",
+            "codingInstructionsLinkId": "942841103790_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "dataType": "CODING",
+            "question": "Implementation Status",
+            "questionCode": "260717222110",
+            "questionCodeSystem": "LinkId",
+            "linkId": "260717222110",
+            "answerCardinality": {
+                "max": "1",
+                "min": "0"
+            },
+            "displayControl": {
+                "answerLayout": {
+                    "type": "RADIO_CHECKBOX"
+                }
+            },
+            "answers": [
+                {
+                    "text": "Fully Implemented"
+                },
+                {
+                    "text": "Partially Implemented"
+                },
+                {
+                    "text": "Not Implemented"
+                }
+            ],
+            "codeList": [],
+            "questionCardinality": {
+                "min": "1",
+                "max": "1"
+            },
+            "value": {
+                "text": "Partially Implemented"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "Publicly Accessible Systems",
+            "questionCode": "501427838641",
+            "questionCodeSystem": "LinkId",
+            "linkId": "501427838641",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "What publicly accessible systems does your organization operate?",
+                    "questionCode": "660159010455",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "660159010455",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Company website"
+                        },
+                        {
+                            "text": " Social media accounts"
+                        },
+                        {
+                            "text": "Customer portals or self-service systems"
+                        },
+                        {
+                            "text": "Corporate blog or news site"
+                        },
+                        {
+                            "text": "Public forums or discussion boards"
+                        },
+                        {
+                            "text": "No publicly accessible systems"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Company website"
+                        },
+                        {
+                            "text": "Public forums or discussion boards"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Secure and monitor systems that are accessible to the public to prevent unauthorized access and data leakage.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Secure and monitor systems that are accessible to the public to prevent unauthorized access and data leakage.",
+            "codingInstructionsLinkId": "501427838641_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "2.",
+            "question": "Content Review Process",
+            "questionCode": "786703783052",
+            "questionCodeSystem": "LinkId",
+            "linkId": "786703783052",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "CODING",
+                    "question": "How do you ensure FCI is not posted on public systems?",
+                    "questionCode": "229261839700",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "229261839700",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Pre-publication review and approval process"
+                        },
+                        {
+                            "text": "Designated reviewers trained to identify FCI"
+                        },
+                        {
+                            "text": "Automated content scanning for sensitive information"
+                        },
+                        {
+                            "text": "Periodic audits of published content"
+                        },
+                        {
+                            "text": "Procedures for rapid removal of inappropriate content"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Pre-publication review and approval process"
+                        },
+                        {
+                            "text": "Procedures for rapid removal of inappropriate content"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Establish regular procedures to review and validate information before it is published or shared",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Establish regular procedures to review and validate information before it is published or shared",
+            "codingInstructionsLinkId": "786703783052_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "prefix": "3.",
+            "question": "Authorized Publishing Personnel",
+            "questionCode": "815496752107",
+            "questionCodeSystem": "LinkId",
+            "linkId": "815496752107",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "TITLE",
+                    "question": "Who is authorized to post content to public systems?",
+                    "questionCode": "624223914711",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "624223914711",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "dataType": "INT",
+                    "question": "Number of authorized personnel:",
+                    "questionCode": "374839487767",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "374839487767",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    },
+                    "value": 250
+                },
+                {
+                    "dataType": "CODING",
+                    "question": "Choose all that apply:",
+                    "questionCode": "177243885107",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "177243885107",
+                    "answerCardinality": {
+                        "max": "*",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Marketing department"
+                        },
+                        {
+                            "text": "Communications/PR team"
+                        },
+                        {
+                            "text": "Executive leadership"
+                        },
+                        {
+                            "text": "IT administrators"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": [
+                        {
+                            "text": "Marketing department"
+                        },
+                        {
+                            "text": "Communications/PR team"
+                        }
+                    ]
+                }
+            ],
+            "codingInstructions": "Designate and control who is allowed to publish or distribute organizational information",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Designate and control who is allowed to publish or distribute organizational information",
+            "codingInstructionsLinkId": "815496752107_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        }
+    ],
+    "templateOptions": {
+        "showQuestionCode": false,
+        "showCodingInstruction": false,
+        "allowMultipleEmptyRepeatingItems": false,
+        "allowHTML": true,
+        "displayControl": {
+            "questionLayout": "vertical"
+        },
+        "viewMode": "auto",
+        "defaultAnswerLayout": {
+            "answerLayout": {
+                "type": "COMBO_BOX",
+                "columns": "0"
+            }
+        },
+        "hideTreeLine": false,
+        "hideIndentation": false,
+        "hideRepetitionNumber": false,
+        "displayScoreWithAnswerText": true,
+        "displayInvalidHTML": false,
+        "messageLevel": "error"
+    },
+    "hasSavedData": true,
+    "fhirVersion": "R4"
+}
