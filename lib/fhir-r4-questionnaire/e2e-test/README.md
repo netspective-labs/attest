@@ -4,11 +4,12 @@ This script demonstrates a full walk of FHIR R4 Questionnaires and their
 associated LHC Form responses, turning them into governed SQL tables with
 populated rows. It shows how to use the _questionnaire walker_ to discover
 artifacts, generate transformation modules, normalize responses, and then
-persist the results into a relational store.
+persist the results into SQLite via STDIN.
 
 ## Quick Start
 
 ```bash
+cd lib/fhir-r4-questionnaire/e2e-test
 rm -f e2e-test.sqlite.db && ./e2e-test.sql.ts | sqlite3 e2e-test.sqlite.db
 ```
 
