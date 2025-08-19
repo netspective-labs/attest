@@ -43,7 +43,7 @@
               "valueString": "Partially Implemented - Some boundary protection controls exist but gaps remain"
             },
             {
-              "valueString": " Not Implemented - No boundary protection controls currently in place"
+              "valueString": "Not Implemented - No boundary protection controls currently in place"
             }
           ]
         },
@@ -547,7 +547,7 @@
               "valueString": "Partially Implemented - Some separation exists but not comprehensive"
             },
             {
-              "valueString": " Not Implemented - No network separation for public systems"
+              "valueString": "Not Implemented - No network separation for public systems"
             }
           ]
         },
@@ -583,7 +583,7 @@
                   "valueString": "DNS servers"
                 },
                 {
-                  "valueString": " FTP servers"
+                  "valueString": "FTP servers"
                 },
                 {
                   "valueString": "VPN gateways"
@@ -714,7 +714,7 @@
               "repeats": true,
               "answerOption": [
                 {
-                  "valueString": " Default deny policies (all traffic blocked unless explicitly allowed)"
+                  "valueString": "Default deny policies (all traffic blocked unless explicitly allowed)"
                 },
                 {
                   "valueString": "Stateful firewall inspection"
@@ -723,7 +723,7 @@
                   "valueString": "Application-level proxy filtering"
                 },
                 {
-                  "valueString": " Intrusion detection and prevention systems"
+                  "valueString": "Intrusion detection and prevention systems"
                 },
                 {
                   "valueString": "Continuous network monitoring and logging"
@@ -787,10 +787,10 @@
                   "valueString": "Network monitoring tools and dashboards"
                 },
                 {
-                  "valueString": " Automated log analysis and alerting"
+                  "valueString": "Automated log analysis and alerting"
                 },
                 {
-                  "valueString": " Regular vulnerability scanning"
+                  "valueString": "Regular vulnerability scanning"
                 },
                 {
                   "valueString": "Periodic penetration testing"

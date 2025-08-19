@@ -52,7 +52,7 @@
                     "text": "Yes"
                 },
                 {
-                    "text": " No - if no, would you like help creating one for your company?"
+                    "text": "No - if no, would you like help creating one for your company?"
                 }
             ],
             "codeList": [],
@@ -384,7 +384,7 @@
                             "text": "Integration with HR systems"
                         },
                         {
-                            "text": " Regular account reviews and recertification"
+                            "text": "Regular account reviews and recertification"
                         }
                     ],
                     "codeList": [],
@@ -447,7 +447,7 @@
                             "text": "Monthly"
                         },
                         {
-                            "text": " Quarterly"
+                            "text": "Quarterly"
                         },
                         {
                             "text": "Annually"
@@ -462,7 +462,7 @@
                         "max": "1"
                     },
                     "value": {
-                        "text": " Quarterly"
+                        "text": "Quarterly"
                     }
                 }
             ],
@@ -797,13 +797,13 @@
             },
             "answers": [
                 {
-                    "text": " Fully Implemented"
+                    "text": "Fully Implemented"
                 },
                 {
-                    "text": " Partially Implemented"
+                    "text": "Partially Implemented"
                 },
                 {
-                    "text": " Not Implemented"
+                    "text": "Not Implemented"
                 }
             ],
             "codeList": [],
@@ -812,14 +812,14 @@
                 "max": "1"
             },
             "value": {
-                "text": " Partially Implemented"
+                "text": "Partially Implemented"
             }
         },
         {
             "header": true,
             "dataType": "SECTION",
             "prefix": "1.",
-            "question": " External System Connections",
+            "question": "External System Connections",
             "questionCode": "118413869969",
             "questionCodeSystem": "LinkId",
             "linkId": "118413869969",
@@ -1131,7 +1131,7 @@
                             "text": "Company website"
                         },
                         {
-                            "text": " Social media accounts"
+                            "text": "Social media accounts"
                         },
                         {
                             "text": "Customer portals or self-service systems"

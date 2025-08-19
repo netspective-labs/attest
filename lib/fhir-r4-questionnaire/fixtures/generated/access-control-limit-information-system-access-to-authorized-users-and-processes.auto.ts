@@ -1,4 +1,4 @@
-import * as rt from "../r4q-runtime.ts";
+import * as rt from "../../r4q-runtime.ts";
 /**
  * @file access-control-limit-information-system-access-to-authorized-users-and-processes.auto.ts
  * @generated This file was auto-generated from the FHIR R4 Questionnaire "Access Control (Limit information system access to authorized users and processes)".

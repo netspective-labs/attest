@@ -61,6 +61,78 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
   );
 
   await t.step(
+    "Access Control data transfer object (DTO) works",
+    async () => {
+      const lhcForm = await readJsonFile(
+        fromFileUrl(
+          import.meta.resolve("../fixtures/responses/Access Control (Limit information system access to authorized users and processes).lhc-form.json")
+        )
+      );
+      const cii = mod.accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(lhcForm);
+      assertEquals({
+        doYouHaveAnAccessControlPolicy: "Yes",
+        implementationStatus: "Partially Implemented",
+        doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: [
+          "Purpose, scope, roles, and responsibilities",
+          "Compliance requirements"
+        ],
+        howManyAccountsAreCurrentlyInYourSystems: undefined,
+        activeUserAccounts: 250,
+        inactiveDisabledUserAccounts: 10,
+        serviceAccounts: 15,
+        sharedAccounts: 3,
+        howIsThePrincipleOfLeastPrivilegeImplemented: "Partially implemented",
+        howAreAccountLifecycleProcessesManaged: [
+          "Automated identity management system",
+          "Integration with HR systems"
+        ],
+        howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: "Quarterly",
+        implementationStatus2: "Partially Implemented",
+        howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: [
+          "Role-based access control (RBAC)",
+          "Application-level access controls",
+          "Time-based access restrictions"
+        ],
+        whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: [
+          "Data export and bulk download functions",
+          "System-level commands and utilities"
+        ],
+        howAreHighRiskTransactionsAuthorized: [
+          "No special authorization required"
+        ],
+        implementationStatus3: "Partially Implemented",
+        whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: [
+          "Cloud services (email, file storage, applications)",
+          "No external connections"
+        ],
+        howDoYouVerifyExternalSystemConnections: [
+          "VPN connections with authentication",
+          "Signed interconnection agreements"
+        ],
+        whatLimitationsArePlacedOnExternalConnections: [
+          "Restrictions on data types that can be shared",
+          "Comprehensive audit trails and logging"
+        ],
+        implementationStatus4: "Partially Implemented",
+        whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: [
+          "Company website",
+          "Public forums or discussion boards"
+        ],
+        howDoYouEnsureFciIsNotPostedOnPublicSystems: [
+          "Pre-publication review and approval process",
+          "Procedures for rapid removal of inappropriate content"
+        ],
+        whoIsAuthorizedToPostContentToPublicSystems: undefined,
+        numberOfAuthorizedPersonnel: 250,
+        chooseAllThatApply: [
+          "Marketing department",
+          "Communications/PR team"
+        ],
+      }, cii);
+    },
+  );
+
+  await t.step(
     "Identification Authentication data transfer object (DTO) type exists",
     () => {
       expectType<

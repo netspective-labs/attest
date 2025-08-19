@@ -95,22 +95,22 @@
       "answerOption": [
         {
           "valueCoding": {
-            "display": " First name + last name (john.smith)"
+            "display": "First name + last name (john.smith)"
           }
         },
         {
           "valueCoding": {
-            "display": " First initial + last name (jsmith)"
+            "display": "First initial + last name (jsmith)"
           }
         },
         {
           "valueCoding": {
-            "display": " Employee ID numbers (EMP001234)"
+            "display": "Employee ID numbers (EMP001234)"
           }
         },
         {
           "valueCoding": {
-            "display": " Department codes + names (IT-jsmith)"
+            "display": "Department codes + names (IT-jsmith)"
           }
         }
       ]
@@ -150,22 +150,22 @@
           "answerOption": [
             {
               "valueCoding": {
-                "display": " Database services"
+                "display": "Database services"
               }
             },
             {
               "valueCoding": {
-                "display": " Web applications"
+                "display": "Web applications"
               }
             },
             {
               "valueCoding": {
-                "display": " Backup processes"
+                "display": "Backup processes"
               }
             },
             {
               "valueCoding": {
-                "display": " Monitoring/logging services"
+                "display": "Monitoring/logging services"
               }
             },
             {
@@ -522,7 +522,7 @@
         },
         {
           "valueCoding": {
-            "display": " Digital certificates"
+            "display": "Digital certificates"
           }
         },
         {
@@ -774,7 +774,7 @@
             },
             {
               "valueCoding": {
-                "display": " Security team alerted"
+                "display": "Security team alerted"
               }
             },
             {

@@ -87,7 +87,7 @@
               "repeats": true,
               "answerOption": [
                 {
-                  "valueString": " Server rooms/data centers"
+                  "valueString": "Server rooms/data centers"
                 },
                 {
                   "valueString": "Workstation areas processing FCI"
@@ -408,13 +408,13 @@
               "repeats": true,
               "answerOption": [
                 {
-                  "valueString": " Yes, all visitors must be escorted at all times"
+                  "valueString": "Yes, all visitors must be escorted at all times"
                 },
                 {
                   "valueString": "Yes, but only in restricted areas"
                 },
                 {
-                  "valueString": " No formal escort requirement"
+                  "valueString": "No formal escort requirement"
                 }
               ]
             },
@@ -474,7 +474,7 @@
                   "valueString": "Visitor sign-in log at reception"
                 },
                 {
-                  "valueString": " Photo identification requirement"
+                  "valueString": "Photo identification requirement"
                 },
                 {
                   "valueString": "Advance visitor approval and notification"
@@ -533,7 +533,7 @@
               "repeats": true,
               "answerOption": [
                 {
-                  "valueString": " Continuous escort by authorized personnel"
+                  "valueString": "Continuous escort by authorized personnel"
                 },
                 {
                   "valueString": "Security camera surveillance"
@@ -607,7 +607,7 @@
                   "valueString": "Trained escort personnel"
                 },
                 {
-                  "valueString": " Designated personnel only"
+                  "valueString": "Designated personnel only"
                 },
                 {
                   "valueString": "Managers and supervisors only"
@@ -667,7 +667,7 @@
               "valueString": "Partially Implemented"
             },
             {
-              "valueString": " Not Implemented"
+              "valueString": "Not Implemented"
             }
           ]
         },
@@ -717,7 +717,7 @@
                 }
               ],
               "linkId": "734633292283",
-              "text": " How do you log physical access to your facilities?",
+              "text": "How do you log physical access to your facilities?",
               "repeats": true,
               "answerOption": [
                 {
@@ -730,7 +730,7 @@
                   "valueString": "Security camera recordings"
                 },
                 {
-                  "valueString": " Security guard logs and reports"
+                  "valueString": "Security guard logs and reports"
                 },
                 {
                   "valueString": "Physical key assignment and tracking logs"
@@ -781,7 +781,7 @@
                 }
               ],
               "linkId": "174905707594",
-              "text": " What information is captured in your physical access logs Information Captured in Logs?",
+              "text": "What information is captured in your physical access logs Information Captured in Logs?",
               "repeats": true,
               "answerOption": [
                 {
@@ -981,7 +981,7 @@
               "valueString": "Partially Implemented"
             },
             {
-              "valueString": " Not Implemented"
+              "valueString": "Not Implemented"
             }
           ]
         }
@@ -1308,7 +1308,7 @@
               "valueString": "Partially Implemented"
             },
             {
-              "valueString": " Not Implemented"
+              "valueString": "Not Implemented"
             }
           ]
         }

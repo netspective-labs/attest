@@ -119,7 +119,7 @@
           "answerOption": [
             {
               "valueCoding": {
-                "display": " Formal tracking system or database"
+                "display": "Formal tracking system or database"
               }
             },
             {
@@ -211,7 +211,7 @@
                 },
                 {
                   "valueCoding": {
-                    "display": " Within 1 week"
+                    "display": "Within 1 week"
                   }
                 }
               ]

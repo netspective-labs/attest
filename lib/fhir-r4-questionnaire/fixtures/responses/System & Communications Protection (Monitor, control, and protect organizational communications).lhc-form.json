@@ -1,1 +1,1010 @@
-{"lformsVersion":"38.2.0","PATH_DELIMITER":"/","code":null,"codeList":null,"identifier":null,"name":"System & Communications Protection (Monitor, control, and protect organizational communications)","template":"table","items":[{"header":true,"dataType":"SECTION","question":"SC.L1-3.13.1 - Monitor and control system communications","questionCode":"617514452468","questionCodeSystem":"LinkId","linkId":"617514452468","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"TITLE","question":"Requirements: Implement network monitoring and boundary protection including firewalls, intrusion detection, and communication controls.","questionCode":"998940326541","questionCodeSystem":"LinkId","linkId":"998940326541","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}},{"dataType":"ST","question":"Implementation Status ","questionCode":"954433842901","questionCodeSystem":"LinkId","linkId":"954433842901","answerCardinality":{"max":"1","min":"1"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Fully Implemented - All boundary protection controls are in place and operational"},{"text":"Partially Implemented - Some boundary protection controls exist but gaps remain"},{"text":" Not Implemented - No boundary protection controls currently in place"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Fully Implemented - All boundary protection controls are in place and operational"}},{"dataType":"ST","question":"Do you have a network diagram showing system boundaries, key components, and data flows?","questionCode":"979372224491","questionCodeSystem":"LinkId","linkId":"979372224491","answerCardinality":{"max":"1","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Yes"},{"text":"No"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Yes"}},{"header":true,"dataType":"SECTION","question":"1. System Boundary Definition","questionCode":"861774438513","questionCodeSystem":"LinkId","linkId":"861774438513","questionCardinality":{"max":"1","min":"1"},"items":[{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"Include hardware models, firmware versions and their primary functions.  e.g., Cisco ASA 5515-X v9.12.3 - Primary perimeter firewall, Palo Alto PA-220 v10.1.2 - Branch office firewall."}],"dataType":"TX","question":"External Boundary Components","questionCode":"591770672887","questionCodeSystem":"LinkId","linkId":"591770672887","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"List the components that make up your external system boundaries (e.g., firewalls, routers, gateways); Include hardware models, firmware versions, and their primary functions","codingInstructionsFormat":"text","codingInstructionsPlain":"List the components that make up your external system boundaries (e.g., firewalls, routers, gateways); Include hardware models, firmware versions, and their primary functions","codingInstructionsLinkId":"591770672887_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"Palo Alto PA-220, Firmware v10.1.2,Cisco ASA 5515-X, Firmware v9.12.3"},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"Include components that separate development, test and production environments or create internal segmentation. eg., Internal VLAN switches, host-based firewalls,  Network ACLs."}],"dataType":"TX","question":"Key Internal Boundary Components","questionCode":"930792706809","questionCodeSystem":"LinkId","linkId":"930792706809","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"List any key internal boundaries that separate parts of your network; Include components that separate development, test, and production environments or create internal segmentation","codingInstructionsFormat":"text","codingInstructionsPlain":"List any key internal boundaries that separate parts of your network; Include components that separate development, test, and production environments or create internal segmentation","codingInstructionsLinkId":"930792706809_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"Internal VLAN Switches,Segmentation Gateways (VMware NSX v7.1),Internal Web Application Firewall (F5 BIG-IP v16.1)"}],"codingInstructions":"Clearly define the limits of your information systems to identify what needs protection and control.","codingInstructionsFormat":"text","codingInstructionsPlain":"Clearly define the limits of your information systems to identify what needs protection and control.","codingInstructionsLinkId":"861774438513_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"2. Firewall Configuration","questionCode":"835757897200","questionCodeSystem":"LinkId","linkId":"835757897200","questionCardinality":{"max":"1","min":"1"},"items":[{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"e.g., Cisco ASA 5500, Palo Alto PA-220"}],"dataType":"TX","question":"Firewall Manufacturer/Model","questionCode":"843201435494","questionCodeSystem":"LinkId","linkId":"843201435494","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"e.g., Cisco ASA 5500, Palo Alto PA-220","codingInstructionsFormat":"text","codingInstructionsPlain":"e.g., Cisco ASA 5500, Palo Alto PA-220","codingInstructionsLinkId":"843201435494_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"Cisco ASA 5515-X,Palo Alto PA-220"},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"e.g., v9.12.3"}],"dataType":"TX","question":"Firewall Software/Firmware Version","questionCode":"706452201694","questionCodeSystem":"LinkId","linkId":"706452201694","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"e.g., v9.12.3","codingInstructionsFormat":"text","codingInstructionsPlain":"e.g., v9.12.3","codingInstructionsLinkId":"706452201694_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"v10.1.2"},{"dataType":"CODING","question":"Default deny policy is implemented (traffic is denied by default unless explicitly permitted)","questionCode":"949755108024","questionCodeSystem":"LinkId","linkId":"949755108024","answerCardinality":{"max":"1","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Yes"},{"text":"No"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Yes"}},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)"}],"dataType":"TX","question":"Explicitly Allowed Services/Protocols","questionCode":"963088071424","questionCodeSystem":"LinkId","linkId":"963088071424","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)","codingInstructionsFormat":"text","codingInstructionsPlain":"e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)","codingInstructionsLinkId":"963088071424_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"HTTP/HTTPS (TCP 80/443),SMTP/IMAP/POP3 (TCP 25/143/110)"},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)"}],"dataType":"TX","question":"Explicitly Denied Services/Protocols","questionCode":"122305830447","questionCodeSystem":"LinkId","linkId":"122305830447","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)","codingInstructionsFormat":"text","codingInstructionsPlain":"e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)","codingInstructionsLinkId":"122305830447_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"},"value":"Telnet (TCP 23),FTP (TCP 21),NetBIOS/SMB (TCP 137–139, 445)"}],"codingInstructions":"Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.","codingInstructionsFormat":"text","codingInstructionsPlain":"Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.","codingInstructionsLinkId":"835757897200_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"3. Monitoring Implementation","questionCode":"434121826556","questionCodeSystem":"LinkId","linkId":"434121826556","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"CODING","question":"How do you monitor communications at system boundaries?","questionCode":"847131102373","questionCodeSystem":"LinkId","linkId":"847131102373","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Firewall logs and analysis"},{"text":"Intrusion detection/prevention systems"},{"text":"Network monitoring tools"},{"text":"SIEM system integration"},{"text":"Manual log review"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":"Firewall logs and analysis"},{"text":"Intrusion detection/prevention systems"},{"text":"SIEM system integration"}]}],"codingInstructions":"Establish continuous monitoring to detect and respond to security events within systems and communications.","codingInstructionsFormat":"text","codingInstructionsPlain":"Establish continuous monitoring to detect and respond to security events within systems and communications.","codingInstructionsLinkId":"434121826556_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. "}],"dataType":"TX","question":"Supporting Documentation","questionCode":"794317413983","questionCodeSystem":"LinkId","linkId":"794317413983","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"TITLE","question":"Note: Ensure these documents are readily available with your other compliance documentation for review","questionCode":"375737094397","questionCodeSystem":"LinkId","linkId":"375737094397","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}}],"codingInstructions":"List your supporting documentation and ensure these documents are available with your other compliance documentation","codingInstructionsFormat":"text","codingInstructionsPlain":"List your supporting documentation and ensure these documents are available with your other compliance documentation","codingInstructionsLinkId":"794317413983_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"}},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"Any additional information, challenges or implementation notes"}],"dataType":"TX","question":"Additional Notes","questionCode":"782731881405","questionCodeSystem":"LinkId","linkId":"782731881405","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}}],"codingInstructions":"Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.","codingInstructionsFormat":"text","codingInstructionsPlain":"Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.","codingInstructionsLinkId":"617514452468_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"SC.L1-3.13.5 - Implement subnetworks for publicly accessible components","questionCode":"587208645662","questionCodeSystem":"LinkId","linkId":"587208645662","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"TITLE","question":"Requirements: Create DMZ or separated network segments for public-facing systems to isolate them from internal networks.","questionCode":"556770566326","questionCodeSystem":"LinkId","linkId":"556770566326","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}},{"dataType":"ST","question":"Implementation Status ","questionCode":"274150359667","questionCodeSystem":"LinkId","linkId":"274150359667","answerCardinality":{"max":"1","min":"1"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Fully Implemented - DMZ/subnetworks properly isolate public systems"},{"text":"Partially Implemented - Some separation exists but not comprehensive"},{"text":" Not Implemented - No network separation for public systems"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Fully Implemented - DMZ/subnetworks properly isolate public systems"}},{"header":true,"dataType":"SECTION","question":"1. Publicly Accessible System Components","questionCode":"194546217130","questionCodeSystem":"LinkId","linkId":"194546217130","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"ST","question":"What publicly accessible system components does your organization operate?","questionCode":"956471776047","questionCodeSystem":"LinkId","linkId":"956471776047","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Web servers"},{"text":"Email servers (public-facing)"},{"text":"DNS servers"},{"text":" FTP servers"},{"text":"VPN gateways"},{"text":"Remote access servers"},{"text":"API gateways"},{"text":"No publicly accessible components"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":"Web servers"},{"text":"Email servers (public-facing)"},{"text":"DNS servers"},{"text":"VPN gateways"},{"text":"API gateways"}]}],"codingInstructions":"Identify and manage system components like web servers, email servers, and public applications that are accessible to external users","codingInstructionsFormat":"text","codingInstructionsPlain":"Identify and manage system components like web servers, email servers, and public applications that are accessible to external users","codingInstructionsLinkId":"194546217130_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"2. Network Separation Implementation","questionCode":"560463506575","questionCodeSystem":"LinkId","linkId":"560463506575","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"ST","question":"How are publicly accessible systems separated from internal networks?","questionCode":"517448335213","questionCodeSystem":"LinkId","linkId":"517448335213","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Demilitarized Zone (DMZ) implementation"},{"text":"Virtual LAN (VLAN) segmentation"},{"text":"Physical network separation"},{"text":"Firewall rules and access control lists"},{"text":"Cloud-based isolation and separation"},{"text":"Proxy servers and reverse proxies"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":"Demilitarized Zone (DMZ) implementation"},{"text":"Virtual LAN (VLAN) segmentation"},{"text":"Firewall rules and access control lists"}]}],"codingInstructions":"Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.","codingInstructionsFormat":"text","codingInstructionsPlain":"Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.","codingInstructionsLinkId":"560463506575_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"3. Access Control Between Networks","questionCode":"126262667735","questionCodeSystem":"LinkId","linkId":"126262667735","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"ST","question":"What controls prevent unauthorized access from public networks to internal networks?","questionCode":"634425708590","questionCodeSystem":"LinkId","linkId":"634425708590","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":" Default deny policies (all traffic blocked unless explicitly allowed)"},{"text":"Stateful firewall inspection"},{"text":"Application-level proxy filtering"},{"text":" Intrusion detection and prevention systems"},{"text":"Continuous network monitoring and logging"},{"text":"Strong authentication for any allowed connections"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":" Default deny policies (all traffic blocked unless explicitly allowed)"},{"text":"Stateful firewall inspection"},{"text":" Intrusion detection and prevention systems"},{"text":"Strong authentication for any allowed connections"}]}],"codingInstructions":"Control and restrict communication between networks to prevent unauthorized access and data transfer.","codingInstructionsFormat":"text","codingInstructionsPlain":"Control and restrict communication between networks to prevent unauthorized access and data transfer.","codingInstructionsLinkId":"126262667735_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"header":true,"dataType":"SECTION","question":"4. DMZ/Public Network Monitoring","questionCode":"414442892901","questionCodeSystem":"LinkId","linkId":"414442892901","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"ST","question":"How do you monitor activity in your public-facing network segments?","questionCode":"536378863536","questionCodeSystem":"LinkId","linkId":"536378863536","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Security Information and Event Management (SIEM) system"},{"text":"Network monitoring tools and dashboards"},{"text":" Automated log analysis and alerting"},{"text":" Regular vulnerability scanning"},{"text":"Periodic penetration testing"},{"text":"Manual log review and analysis"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":"Security Information and Event Management (SIEM) system"},{"text":"Network monitoring tools and dashboards"},{"text":" Automated log analysis and alerting"},{"text":" Regular vulnerability scanning"}]}],"codingInstructions":"Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.","codingInstructionsFormat":"text","codingInstructionsPlain":"Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.","codingInstructionsLinkId":"414442892901_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. "}],"dataType":"TX","question":"Supporting Documentation","questionCode":"980001173858","questionCodeSystem":"LinkId","linkId":"980001173858","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"TITLE","question":"Note: Ensure these documents are readily available with your other compliance documentation for review","questionCode":"561948412525","questionCodeSystem":"LinkId","linkId":"561948412525","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}}],"codingInstructions":"List your supporting documentation and ensure these documents are available with your other compliance documentation","codingInstructionsFormat":"text","codingInstructionsPlain":"List your supporting documentation and ensure these documents are available with your other compliance documentation","codingInstructionsLinkId":"980001173858_helpText","codeList":[],"answerCardinality":{"min":"0","max":"1"}},{"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/entryFormat","valueString":"Any additional information, challenges or implementation notes"}],"dataType":"TX","question":"Additional Notes","questionCode":"597392284230","questionCodeSystem":"LinkId","linkId":"597392284230","questionCardinality":{"max":"1","min":"1"},"codeList":[],"answerCardinality":{"min":"0","max":"1"}}],"codingInstructions":"Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.","codingInstructionsFormat":"text","codingInstructionsPlain":"Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.","codingInstructionsLinkId":"587208645662_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}}],"templateOptions":{"showQuestionCode":false,"showCodingInstruction":false,"allowMultipleEmptyRepeatingItems":false,"allowHTML":true,"displayControl":{"questionLayout":"vertical"},"viewMode":"auto","defaultAnswerLayout":{"answerLayout":{"type":"COMBO_BOX","columns":"0"}},"hideTreeLine":false,"hideIndentation":false,"hideRepetitionNumber":false,"displayScoreWithAnswerText":true,"displayInvalidHTML":false,"messageLevel":"error"},"hasSavedData":true,"fhirVersion":"R4"}
+{
+    "lformsVersion": "38.2.0",
+    "PATH_DELIMITER": "/",
+    "code": null,
+    "codeList": null,
+    "identifier": null,
+    "name": "System & Communications Protection (Monitor, control, and protect organizational communications)",
+    "template": "table",
+    "items": [
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "SC.L1-3.13.1 - Monitor and control system communications",
+            "questionCode": "617514452468",
+            "questionCodeSystem": "LinkId",
+            "linkId": "617514452468",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "TITLE",
+                    "question": "Requirements: Implement network monitoring and boundary protection including firewalls, intrusion detection, and communication controls.",
+                    "questionCode": "998940326541",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "998940326541",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "dataType": "ST",
+                    "question": "Implementation Status ",
+                    "questionCode": "954433842901",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "954433842901",
+                    "answerCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Fully Implemented - All boundary protection controls are in place and operational"
+                        },
+                        {
+                            "text": "Partially Implemented - Some boundary protection controls exist but gaps remain"
+                        },
+                        {
+                            "text": "Not Implemented - No boundary protection controls currently in place"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": {
+                        "text": "Fully Implemented - All boundary protection controls are in place and operational"
+                    }
+                },
+                {
+                    "dataType": "ST",
+                    "question": "Do you have a network diagram showing system boundaries, key components, and data flows?",
+                    "questionCode": "979372224491",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "979372224491",
+                    "answerCardinality": {
+                        "max": "1",
+                        "min": "0"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Yes"
+                        },
+                        {
+                            "text": "No"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": {
+                        "text": "Yes"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "1. System Boundary Definition",
+                    "questionCode": "861774438513",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "861774438513",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "Include hardware models, firmware versions and their primary functions.  e.g., Cisco ASA 5515-X v9.12.3 - Primary perimeter firewall, Palo Alto PA-220 v10.1.2 - Branch office firewall."
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "External Boundary Components",
+                            "questionCode": "591770672887",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "591770672887",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "List the components that make up your external system boundaries (e.g., firewalls, routers, gateways); Include hardware models, firmware versions, and their primary functions",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "List the components that make up your external system boundaries (e.g., firewalls, routers, gateways); Include hardware models, firmware versions, and their primary functions",
+                            "codingInstructionsLinkId": "591770672887_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "Palo Alto PA-220, Firmware v10.1.2,Cisco ASA 5515-X, Firmware v9.12.3"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "Include components that separate development, test and production environments or create internal segmentation. eg., Internal VLAN switches, host-based firewalls,  Network ACLs."
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "Key Internal Boundary Components",
+                            "questionCode": "930792706809",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "930792706809",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "List any key internal boundaries that separate parts of your network; Include components that separate development, test, and production environments or create internal segmentation",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "List any key internal boundaries that separate parts of your network; Include components that separate development, test, and production environments or create internal segmentation",
+                            "codingInstructionsLinkId": "930792706809_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "Internal VLAN Switches,Segmentation Gateways (VMware NSX v7.1),Internal Web Application Firewall (F5 BIG-IP v16.1)"
+                        }
+                    ],
+                    "codingInstructions": "Clearly define the limits of your information systems to identify what needs protection and control.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Clearly define the limits of your information systems to identify what needs protection and control.",
+                    "codingInstructionsLinkId": "861774438513_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "2. Firewall Configuration",
+                    "questionCode": "835757897200",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "835757897200",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "e.g., Cisco ASA 5500, Palo Alto PA-220"
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "Firewall Manufacturer/Model",
+                            "questionCode": "843201435494",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "843201435494",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "e.g., Cisco ASA 5500, Palo Alto PA-220",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "e.g., Cisco ASA 5500, Palo Alto PA-220",
+                            "codingInstructionsLinkId": "843201435494_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "Cisco ASA 5515-X,Palo Alto PA-220"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "e.g., v9.12.3"
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "Firewall Software/Firmware Version",
+                            "questionCode": "706452201694",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "706452201694",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "e.g., v9.12.3",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "e.g., v9.12.3",
+                            "codingInstructionsLinkId": "706452201694_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "v10.1.2"
+                        },
+                        {
+                            "dataType": "CODING",
+                            "question": "Default deny policy is implemented (traffic is denied by default unless explicitly permitted)",
+                            "questionCode": "949755108024",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "949755108024",
+                            "answerCardinality": {
+                                "max": "1",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Yes"
+                                },
+                                {
+                                    "text": "No"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": {
+                                "text": "Yes"
+                            }
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)"
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "Explicitly Allowed Services/Protocols",
+                            "questionCode": "963088071424",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "963088071424",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)",
+                            "codingInstructionsLinkId": "963088071424_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "HTTP/HTTPS (TCP 80/443),SMTP/IMAP/POP3 (TCP 25/143/110)"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                                    "valueString": "e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)"
+                                }
+                            ],
+                            "dataType": "TX",
+                            "question": "Explicitly Denied Services/Protocols",
+                            "questionCode": "122305830447",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "122305830447",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "items": [],
+                            "codingInstructions": "e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)",
+                            "codingInstructionsFormat": "text",
+                            "codingInstructionsPlain": "e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)",
+                            "codingInstructionsLinkId": "122305830447_helpText",
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            },
+                            "value": "Telnet (TCP 23),FTP (TCP 21),NetBIOS/SMB (TCP 137–139, 445)"
+                        }
+                    ],
+                    "codingInstructions": "Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.",
+                    "codingInstructionsLinkId": "835757897200_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "3. Monitoring Implementation",
+                    "questionCode": "434121826556",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "434121826556",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "CODING",
+                            "question": "How do you monitor communications at system boundaries?",
+                            "questionCode": "847131102373",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "847131102373",
+                            "answerCardinality": {
+                                "max": "*",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Firewall logs and analysis"
+                                },
+                                {
+                                    "text": "Intrusion detection/prevention systems"
+                                },
+                                {
+                                    "text": "Network monitoring tools"
+                                },
+                                {
+                                    "text": "SIEM system integration"
+                                },
+                                {
+                                    "text": "Manual log review"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": [
+                                {
+                                    "text": "Firewall logs and analysis"
+                                },
+                                {
+                                    "text": "Intrusion detection/prevention systems"
+                                },
+                                {
+                                    "text": "SIEM system integration"
+                                }
+                            ]
+                        }
+                    ],
+                    "codingInstructions": "Establish continuous monitoring to detect and respond to security events within systems and communications.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Establish continuous monitoring to detect and respond to security events within systems and communications.",
+                    "codingInstructionsLinkId": "434121826556_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                            "valueString": "eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. "
+                        }
+                    ],
+                    "dataType": "TX",
+                    "question": "Supporting Documentation",
+                    "questionCode": "794317413983",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "794317413983",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "TITLE",
+                            "question": "Note: Ensure these documents are readily available with your other compliance documentation for review",
+                            "questionCode": "375737094397",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "375737094397",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            }
+                        }
+                    ],
+                    "codingInstructions": "List your supporting documentation and ensure these documents are available with your other compliance documentation",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "List your supporting documentation and ensure these documents are available with your other compliance documentation",
+                    "codingInstructionsLinkId": "794317413983_helpText",
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                            "valueString": "Any additional information, challenges or implementation notes"
+                        }
+                    ],
+                    "dataType": "TX",
+                    "question": "Additional Notes",
+                    "questionCode": "782731881405",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "782731881405",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                }
+            ],
+            "codingInstructions": "Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.",
+            "codingInstructionsLinkId": "617514452468_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        },
+        {
+            "header": true,
+            "dataType": "SECTION",
+            "question": "SC.L1-3.13.5 - Implement subnetworks for publicly accessible components",
+            "questionCode": "587208645662",
+            "questionCodeSystem": "LinkId",
+            "linkId": "587208645662",
+            "questionCardinality": {
+                "max": "1",
+                "min": "1"
+            },
+            "items": [
+                {
+                    "dataType": "TITLE",
+                    "question": "Requirements: Create DMZ or separated network segments for public-facing systems to isolate them from internal networks.",
+                    "questionCode": "556770566326",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "556770566326",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "dataType": "ST",
+                    "question": "Implementation Status ",
+                    "questionCode": "274150359667",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "274150359667",
+                    "answerCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "displayControl": {
+                        "answerLayout": {
+                            "type": "RADIO_CHECKBOX"
+                        }
+                    },
+                    "answers": [
+                        {
+                            "text": "Fully Implemented - DMZ/subnetworks properly isolate public systems"
+                        },
+                        {
+                            "text": "Partially Implemented - Some separation exists but not comprehensive"
+                        },
+                        {
+                            "text": "Not Implemented - No network separation for public systems"
+                        }
+                    ],
+                    "codeList": [],
+                    "questionCardinality": {
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "value": {
+                        "text": "Fully Implemented - DMZ/subnetworks properly isolate public systems"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "1. Publicly Accessible System Components",
+                    "questionCode": "194546217130",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "194546217130",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "ST",
+                            "question": "What publicly accessible system components does your organization operate?",
+                            "questionCode": "956471776047",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "956471776047",
+                            "answerCardinality": {
+                                "max": "*",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Web servers"
+                                },
+                                {
+                                    "text": "Email servers (public-facing)"
+                                },
+                                {
+                                    "text": "DNS servers"
+                                },
+                                {
+                                    "text": "FTP servers"
+                                },
+                                {
+                                    "text": "VPN gateways"
+                                },
+                                {
+                                    "text": "Remote access servers"
+                                },
+                                {
+                                    "text": "API gateways"
+                                },
+                                {
+                                    "text": "No publicly accessible components"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": [
+                                {
+                                    "text": "Web servers"
+                                },
+                                {
+                                    "text": "Email servers (public-facing)"
+                                },
+                                {
+                                    "text": "DNS servers"
+                                },
+                                {
+                                    "text": "VPN gateways"
+                                },
+                                {
+                                    "text": "API gateways"
+                                }
+                            ]
+                        }
+                    ],
+                    "codingInstructions": "Identify and manage system components like web servers, email servers, and public applications that are accessible to external users",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Identify and manage system components like web servers, email servers, and public applications that are accessible to external users",
+                    "codingInstructionsLinkId": "194546217130_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "2. Network Separation Implementation",
+                    "questionCode": "560463506575",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "560463506575",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "ST",
+                            "question": "How are publicly accessible systems separated from internal networks?",
+                            "questionCode": "517448335213",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "517448335213",
+                            "answerCardinality": {
+                                "max": "*",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Demilitarized Zone (DMZ) implementation"
+                                },
+                                {
+                                    "text": "Virtual LAN (VLAN) segmentation"
+                                },
+                                {
+                                    "text": "Physical network separation"
+                                },
+                                {
+                                    "text": "Firewall rules and access control lists"
+                                },
+                                {
+                                    "text": "Cloud-based isolation and separation"
+                                },
+                                {
+                                    "text": "Proxy servers and reverse proxies"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": [
+                                {
+                                    "text": "Demilitarized Zone (DMZ) implementation"
+                                },
+                                {
+                                    "text": "Virtual LAN (VLAN) segmentation"
+                                },
+                                {
+                                    "text": "Firewall rules and access control lists"
+                                }
+                            ]
+                        }
+                    ],
+                    "codingInstructions": "Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.",
+                    "codingInstructionsLinkId": "560463506575_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "3. Access Control Between Networks",
+                    "questionCode": "126262667735",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "126262667735",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "ST",
+                            "question": "What controls prevent unauthorized access from public networks to internal networks?",
+                            "questionCode": "634425708590",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "634425708590",
+                            "answerCardinality": {
+                                "max": "*",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Default deny policies (all traffic blocked unless explicitly allowed)"
+                                },
+                                {
+                                    "text": "Stateful firewall inspection"
+                                },
+                                {
+                                    "text": "Application-level proxy filtering"
+                                },
+                                {
+                                    "text": "Intrusion detection and prevention systems"
+                                },
+                                {
+                                    "text": "Continuous network monitoring and logging"
+                                },
+                                {
+                                    "text": "Strong authentication for any allowed connections"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": [
+                                {
+                                    "text": "Default deny policies (all traffic blocked unless explicitly allowed)"
+                                },
+                                {
+                                    "text": "Stateful firewall inspection"
+                                },
+                                {
+                                    "text": "Intrusion detection and prevention systems"
+                                },
+                                {
+                                    "text": "Strong authentication for any allowed connections"
+                                }
+                            ]
+                        }
+                    ],
+                    "codingInstructions": "Control and restrict communication between networks to prevent unauthorized access and data transfer.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Control and restrict communication between networks to prevent unauthorized access and data transfer.",
+                    "codingInstructionsLinkId": "126262667735_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "header": true,
+                    "dataType": "SECTION",
+                    "question": "4. DMZ/Public Network Monitoring",
+                    "questionCode": "414442892901",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "414442892901",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "ST",
+                            "question": "How do you monitor activity in your public-facing network segments?",
+                            "questionCode": "536378863536",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "536378863536",
+                            "answerCardinality": {
+                                "max": "*",
+                                "min": "0"
+                            },
+                            "displayControl": {
+                                "answerLayout": {
+                                    "type": "RADIO_CHECKBOX"
+                                }
+                            },
+                            "answers": [
+                                {
+                                    "text": "Security Information and Event Management (SIEM) system"
+                                },
+                                {
+                                    "text": "Network monitoring tools and dashboards"
+                                },
+                                {
+                                    "text": "Automated log analysis and alerting"
+                                },
+                                {
+                                    "text": "Regular vulnerability scanning"
+                                },
+                                {
+                                    "text": "Periodic penetration testing"
+                                },
+                                {
+                                    "text": "Manual log review and analysis"
+                                }
+                            ],
+                            "codeList": [],
+                            "questionCardinality": {
+                                "min": "1",
+                                "max": "1"
+                            },
+                            "value": [
+                                {
+                                    "text": "Security Information and Event Management (SIEM) system"
+                                },
+                                {
+                                    "text": "Network monitoring tools and dashboards"
+                                },
+                                {
+                                    "text": "Automated log analysis and alerting"
+                                },
+                                {
+                                    "text": "Regular vulnerability scanning"
+                                }
+                            ]
+                        }
+                    ],
+                    "codingInstructions": "Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.",
+                    "codingInstructionsLinkId": "414442892901_helpText",
+                    "codeList": [],
+                    "displayControl": {
+                        "questionLayout": "vertical"
+                    },
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                            "valueString": "eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. "
+                        }
+                    ],
+                    "dataType": "TX",
+                    "question": "Supporting Documentation",
+                    "questionCode": "980001173858",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "980001173858",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "items": [
+                        {
+                            "dataType": "TITLE",
+                            "question": "Note: Ensure these documents are readily available with your other compliance documentation for review",
+                            "questionCode": "561948412525",
+                            "questionCodeSystem": "LinkId",
+                            "linkId": "561948412525",
+                            "questionCardinality": {
+                                "max": "1",
+                                "min": "1"
+                            },
+                            "codeList": [],
+                            "answerCardinality": {
+                                "min": "0",
+                                "max": "1"
+                            }
+                        }
+                    ],
+                    "codingInstructions": "List your supporting documentation and ensure these documents are available with your other compliance documentation",
+                    "codingInstructionsFormat": "text",
+                    "codingInstructionsPlain": "List your supporting documentation and ensure these documents are available with your other compliance documentation",
+                    "codingInstructionsLinkId": "980001173858_helpText",
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                            "valueString": "Any additional information, challenges or implementation notes"
+                        }
+                    ],
+                    "dataType": "TX",
+                    "question": "Additional Notes",
+                    "questionCode": "597392284230",
+                    "questionCodeSystem": "LinkId",
+                    "linkId": "597392284230",
+                    "questionCardinality": {
+                        "max": "1",
+                        "min": "1"
+                    },
+                    "codeList": [],
+                    "answerCardinality": {
+                        "min": "0",
+                        "max": "1"
+                    }
+                }
+            ],
+            "codingInstructions": "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.",
+            "codingInstructionsFormat": "text",
+            "codingInstructionsPlain": "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.",
+            "codingInstructionsLinkId": "587208645662_helpText",
+            "codeList": [],
+            "displayControl": {
+                "questionLayout": "vertical"
+            },
+            "answerCardinality": {
+                "min": "0",
+                "max": "1"
+            }
+        }
+    ],
+    "templateOptions": {
+        "showQuestionCode": false,
+        "showCodingInstruction": false,
+        "allowMultipleEmptyRepeatingItems": false,
+        "allowHTML": true,
+        "displayControl": {
+            "questionLayout": "vertical"
+        },
+        "viewMode": "auto",
+        "defaultAnswerLayout": {
+            "answerLayout": {
+                "type": "COMBO_BOX",
+                "columns": "0"
+            }
+        },
+        "hideTreeLine": false,
+        "hideIndentation": false,
+        "hideRepetitionNumber": false,
+        "displayScoreWithAnswerText": true,
+        "displayInvalidHTML": false,
+        "messageLevel": "error"
+    },
+    "hasSavedData": true,
+    "fhirVersion": "R4"
+}

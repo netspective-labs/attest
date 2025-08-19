@@ -288,7 +288,7 @@
           "answerOption": [
             {
               "valueCoding": {
-                "display": " Regular internal audits"
+                "display": "Regular internal audits"
               }
             },
             {
@@ -363,7 +363,7 @@
           "answerOption": [
             {
               "valueCoding": {
-                "display": " Formal exception request process"
+                "display": "Formal exception request process"
               }
             },
             {

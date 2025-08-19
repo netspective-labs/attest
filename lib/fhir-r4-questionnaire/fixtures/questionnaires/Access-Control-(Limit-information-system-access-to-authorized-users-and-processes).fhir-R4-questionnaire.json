@@ -64,7 +64,7 @@
         },
         {
           "valueCoding": {
-            "display": " No - if no, would you like help creating one for your company?",
+            "display": "No - if no, would you like help creating one for your company?",
             "score": 0
           }
         }
@@ -344,7 +344,7 @@
             },
             {
               "valueCoding": {
-                "display": " Regular account reviews and recertification"
+                "display": "Regular account reviews and recertification"
               }
             }
           ]
@@ -404,7 +404,7 @@
             },
             {
               "valueCoding": {
-                "display": " Quarterly"
+                "display": "Quarterly"
               }
             },
             {
@@ -777,17 +777,17 @@
       "answerOption": [
         {
           "valueCoding": {
-            "display": " Fully Implemented"
+            "display": "Fully Implemented"
           }
         },
         {
           "valueCoding": {
-            "display": " Partially Implemented"
+            "display": "Partially Implemented"
           }
         },
         {
           "valueCoding": {
-            "display": " Not Implemented"
+            "display": "Not Implemented"
           }
         }
       ]
@@ -875,7 +875,7 @@
       "type": "group",
       "linkId": "118413869969",
       "prefix": "1.",
-      "text": " External System Connections"
+      "text": "External System Connections"
     },
     {
       "item": [
@@ -1119,7 +1119,7 @@
             },
             {
               "valueCoding": {
-                "display": " Social media accounts"
+                "display": "Social media accounts"
               }
             },
             {
