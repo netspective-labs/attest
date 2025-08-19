@@ -23,6 +23,7 @@ import {
     coerceOptionalDate,
     coerceOptionalNumber,
     coerceOptionalString,
+    coerceOptionalStringArray,
     coerceString,
     collectChoiceLiterals,
     // Types
@@ -352,6 +353,132 @@ Deno.test("findLhcValueByLinkId: DFS across nested items", () => {
     assertStrictEquals(findLhcValueByLinkId(lhc, "c"), "Value C");
     assertStrictEquals(findLhcValueByLinkId(lhc, "d"), undefined);
     assertStrictEquals(findLhcValueByLinkId(lhc, "missing"), undefined);
+});
+
+Deno.test("findLhcValueByLinkId: retrieves values from single-key objects and arrays", () => {
+    const lhc = {
+        items: [
+            {
+                header: true,
+                linkId: "section",
+                items: [
+                    {
+                        "dataType": "CODING",
+                        "question": "Do you have an Access Control Policy?",
+                        "questionCode": "744146359806",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "744146359806",
+                        "value": {
+                            "text": "Yes"
+                        }
+                    },
+                    {
+                        "dataType": "TITLE",
+                        "question": "How many accounts are currently in your systems?",
+                        "questionCode": "182548770364",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "182548770364",
+                    },
+                    {
+                        "dataType": "INT",
+                        "question": "Active user accounts:",
+                        "questionCode": "927965645729",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "927965645729",
+                        "value": 250
+                    },
+                    {
+                        "dataType": "CODING",
+                        "question": "Does your organization have a documented access control policy that addresses:",
+                        "questionCode": "669545773690",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "669545773690",
+                        "value": [
+                            {
+                                "text": "Purpose, scope, roles, and responsibilities"
+                            },
+                            {
+                                "text": "Compliance requirements"
+                            }
+                        ]
+                    }
+                ],
+            },
+        ],
+    };
+    assertEquals(
+        findLhcValueByLinkId(lhc, "744146359806"),
+        { text: "Yes" },
+    );
+    assertStrictEquals(findLhcValueByLinkId(lhc, "182548770364"), undefined);
+    assertStrictEquals(findLhcValueByLinkId(lhc, "927965645729"), 250);
+    assertEquals(
+        findLhcValueByLinkId(lhc, "669545773690"),
+        [
+            { text: "Purpose, scope, roles, and responsibilities" },
+            { text: "Compliance requirements" }
+        ]
+    );
+});
+
+Deno.test("findLhcValueByLinkId: coerces object and array values into strings", () => {
+    const lhc = {
+        items: [
+            {
+                header: true,
+                linkId: "section",
+                items: [
+                    {
+                        "dataType": "CODING",
+                        "question": "Do you have an Access Control Policy?",
+                        "questionCode": "744146359806",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "744146359806",
+                        "value": {
+                            "text": "Yes"
+                        }
+                    },
+                    {
+                        "dataType": "TITLE",
+                        "question": "How many accounts are currently in your systems?",
+                        "questionCode": "182548770364",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "182548770364",
+                    },
+                    {
+                        "dataType": "INT",
+                        "question": "Active user accounts:",
+                        "questionCode": "927965645729",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "927965645729",
+                        "value": 250
+                    },
+                    {
+                        "dataType": "CODING",
+                        "question": "Does your organization have a documented access control policy that addresses:",
+                        "questionCode": "669545773690",
+                        "questionCodeSystem": "LinkId",
+                        "linkId": "669545773690",
+                        "value": [
+                            {
+                                "text": "Purpose, scope, roles, and responsibilities"
+                            },
+                            {
+                                "text": "Compliance requirements"
+                            }
+                        ]
+                    }
+                ],
+            },
+        ],
+    };
+    assertEquals(coerceOptionalString(findLhcValueByLinkId(lhc, "744146359806")), "Yes");
+    assertStrictEquals(findLhcValueByLinkId(lhc, "182548770364"), undefined);
+    assertStrictEquals(findLhcValueByLinkId(lhc, "927965645729"), 250);
+    assertEquals(
+        coerceOptionalStringArray(findLhcValueByLinkId(lhc, "669545773690")),
+        ["Purpose, scope, roles, and responsibilities", "Compliance requirements"]
+    );
 });
 
 Deno.test("findQrAnswerByLinkId: prefers coding.code, then display/system, then value* primitives", () => {
