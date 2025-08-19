@@ -362,6 +362,18 @@ export function coerceOptionalString(v: unknown): string | undefined {
     if (typeof v === "string") return v;
     if (typeof v === "number" || typeof v === "boolean") return String(v);
     if (v instanceof Date && !isNaN(v.getTime())) return v.toISOString();
+
+    // Handle object with a single key
+    if (typeof v === "object") {
+        const entries = Object.entries(v as Record<string, unknown>);
+        if (entries.length === 1) {
+            const [, value] = entries[0];
+            if (value === null || value === undefined) return undefined;
+            if (typeof value === "string") return value;
+            if (typeof value === "number" || typeof value === "boolean") return String(value);
+            if (value instanceof Date && !isNaN(value.getTime())) return value.toISOString();
+        }
+    }
     return undefined;
 }
 
