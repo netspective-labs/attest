@@ -36,7 +36,7 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
       const lhcForm = await readJsonFile(
         fromFileUrl(
           import.meta.resolve(
-            "../fixtures/responses/Company-Information.lhc-form.json",
+            "../fixtures/responses/company-information.lhc-form.json",
           ),
         ),
       );
@@ -65,7 +65,7 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/Access Control (Limit information system access to authorized users and processes).lhc-form.json")
+          import.meta.resolve("../fixtures/responses/access-control-limit-information-system-access-to-authorized-users-and-processes.lhc-form.json")
         )
       );
       const cii = mod.accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(lhcForm);
@@ -137,7 +137,7 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/Media Protection (Protect information on digital and non-digital media).lhc-form.json")
+          import.meta.resolve("../fixtures/responses/media-protection-protect-information-on-digital-and-non-digital-media.lhc-form.json")
         )
       );
 
@@ -162,7 +162,7 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/System & Communications Protection (Monitor, control, and protect organizational communications).lhc-form.json")
+          import.meta.resolve("../fixtures/responses/system-communications-protection-monitor-control-and-protect-organizational-communications.lhc-form.json")
         )
       );
 
