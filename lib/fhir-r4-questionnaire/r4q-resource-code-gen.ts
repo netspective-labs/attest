@@ -355,17 +355,17 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
 function computeCommonImportPathFor(outFile: string): string {
     const runtimeFile = "r4q-runtime.ts";
 
-    if (/^(https?:|jsr:)/.test(outFile)) {
+    if ((new URL(import.meta.url)).protocol === "file:") {
+        // --- Local path handling ---
+        const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
+        const commonAbs = path.join(thisDir, runtimeFile);
+        const outDir = path.dirname(path.resolve(outFile));
+        let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
+        if (!rel.startsWith(".")) rel = "./" + rel;
+        return rel;
+    } else {
         return import.meta.resolve(`./${runtimeFile}`);
     }
-
-    // --- Local path handling ---
-    const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
-    const commonAbs = path.join(thisDir, runtimeFile);
-    const outDir = path.dirname(path.resolve(outFile));
-    let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
-    if (!rel.startsWith(".")) rel = "./" + rel;
-    return rel;
 }
 
 /** Ensure directory exists. */
