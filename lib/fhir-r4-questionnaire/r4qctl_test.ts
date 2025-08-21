@@ -1,6 +1,6 @@
 import { fromFileUrl, relative } from "jsr:@std/path";
 import { generateTsCodeForQuestionnaire as generateTsCodeLocal } from "./r4q-resource-code-gen.ts";
-import { generateTsCodeForQuestionnaire as generateTsCodeRemote } from "https://raw.githubusercontent.com/netspective-labs/attest/refs/tags/v0.0.2/lib/fhir-r4-questionnaire/r4q-resource-code-gen.ts";
+import { generateTsCodeForQuestionnaire as generateTsCodeRemote } from "https://raw.githubusercontent.com/netspective-labs/attest/refs/tags/v0.0.3/lib/fhir-r4-questionnaire/r4q-resource-code-gen.ts";
 
 const fixtures = [
     "access-control-limit-information-system-access-to-authorized-users-and-processes.fhir-R4-questionnaire.json",
@@ -49,6 +49,7 @@ Deno.test("r4qctl CLI remote", async (t) => {
                 );
                 const stdout: string[] = [];
                 const result = await generateTsCodeRemote(inputPath, {
+                    stdout: true,
                     includeSrc: true,
                 }, stdout);
                 if (result) {
