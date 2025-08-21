@@ -355,29 +355,23 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
 //     return rel;
 // }
 
-function computeCommonImportPathFor(outFile: string): string {
-    const importMetaUrl = import.meta.url;
-    let thisDir: string;
 
-    // Check if we're running from a file:// URL or https:// URL
-    if (importMetaUrl.startsWith('file://')) {
-        // Local file system - use path.fromFileUrl
-        thisDir = path.dirname(path.fromFileUrl(importMetaUrl));
-    } else {
-        // Remote URL (https://) - extract path from URL
-        const url = new URL(importMetaUrl);
-        thisDir = path.dirname(url.pathname);
+function computeCommonImportPathFor(importMetaUrl: string): string {
+    try {
+        if (importMetaUrl.startsWith('file://')) {
+            return path.fromFileUrl(importMetaUrl);
+        } else if (importMetaUrl.startsWith('https://')) {
+            // For remote URLs, we can't use fromFileUrl
+            // Return a sensible default or handle differently
+            const url = new URL(importMetaUrl);
+            return url.pathname; // or handle this case as needed for your logic
+        } else {
+            throw new Error(`Unsupported URL scheme: ${importMetaUrl}`);
+        }
+    } catch (error) {
+        console.warn(`Could not process import URL: ${importMetaUrl}`, error);
+        return './'; // fallback path
     }
-
-    const commonAbs = path.join(thisDir, "r4q-runtime.ts");
-    const outDir = path.dirname(path.resolve(outFile));
-    let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
-
-    if (!rel.startsWith(".")) {
-        rel = "./" + rel;
-    }
-
-    return rel;
 }
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
@@ -445,7 +439,6 @@ export async function generateTsCodeForQuestionnaire(
     },
     results: string[],
 ) {
-    console.log("options:", options)
     try {
         const q = await readJsonFile<FhirQuestionnaire>(inPath);
 
