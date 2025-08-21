@@ -346,15 +346,39 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
 }
 
 /** Compute the relative import path from an output file to r4q-runtime.ts. */
+// function computeCommonImportPathFor(outFile: string): string {
+//     const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
+//     const commonAbs = path.join(thisDir, "r4q-runtime.ts");
+//     const outDir = path.dirname(path.resolve(outFile));
+//     let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
+//     if (!rel.startsWith(".")) rel = "./" + rel;
+//     return rel;
+// }
+
 function computeCommonImportPathFor(outFile: string): string {
-    const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
+    const importMetaUrl = import.meta.url;
+    let thisDir: string;
+
+    // Check if we're running from a file:// URL or https:// URL
+    if (importMetaUrl.startsWith('file://')) {
+        // Local file system - use path.fromFileUrl
+        thisDir = path.dirname(path.fromFileUrl(importMetaUrl));
+    } else {
+        // Remote URL (https://) - extract path from URL
+        const url = new URL(importMetaUrl);
+        thisDir = path.dirname(url.pathname);
+    }
+
     const commonAbs = path.join(thisDir, "r4q-runtime.ts");
     const outDir = path.dirname(path.resolve(outFile));
     let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
-    if (!rel.startsWith(".")) rel = "./" + rel;
+
+    if (!rel.startsWith(".")) {
+        rel = "./" + rel;
+    }
+
     return rel;
 }
-
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
     await Deno.mkdir(dir, { recursive: true }).catch(() => { });
@@ -421,6 +445,7 @@ export async function generateTsCodeForQuestionnaire(
     },
     results: string[],
 ) {
+    console.log("options:", options)
     try {
         const q = await readJsonFile<FhirQuestionnaire>(inPath);
 
