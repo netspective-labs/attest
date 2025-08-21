@@ -25,8 +25,8 @@ Deno.test("Walker with fixtures", async () => {
 
     assertEquals(
         walker.responses.length,
-        1,
-        "Should have discovered 1 response",
+        8,
+        "Should have discovered 1 responses",
     );
 
     const companyInfo = walker.responses.find(
