@@ -355,18 +355,8 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
 function computeCommonImportPathFor(outFile: string): string {
     const runtimeFile = "r4q-runtime.ts";
 
-    // Detect if outFile is a remote URL
-    const isRemote = /^(https?:|jsr:)/.test(outFile);
-
-    if (isRemote) {
-        // If this file itself was loaded remotely, reuse its base
-        if (import.meta.url.startsWith("http")) {
-            const baseUrl = new URL(import.meta.url);
-            baseUrl.pathname = baseUrl.pathname.replace(/[^/]+$/, runtimeFile);
-            return baseUrl.href;
-        }
-        // Otherwise, default to a canonical remote location (customize as needed)
-        return `./${runtimeFile}`;
+    if (/^(https?:|jsr:)/.test(outFile)) {
+        return import.meta.resolve(`./${runtimeFile}`);
     }
 
     // --- Local path handling ---
