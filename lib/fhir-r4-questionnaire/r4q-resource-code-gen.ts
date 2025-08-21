@@ -116,12 +116,14 @@ export function renderInterface(
             ? `\n * Entry format: ${f.entryFormat}`
             : "";
         const choiceInfo = f.choiceLiterals?.length
-            ? `\n * Options: ${f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
+            ? `\n * Options: ${
+                f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
             }`
             : "";
         const req = f.required ? "\n * Required: yes" : "\n * Required: no";
-        const doc = `/**\n * ${f.text ?? "(no label)"
-            }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
+        const doc = `/**\n * ${
+            f.text ?? "(no label)"
+        }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
         const optional = f.required ? "" : "?";
         return `${doc}\n${f.propName}${optional}: ${f.tsType};`;
     }).join("\n\n");
@@ -136,7 +138,6 @@ ${indent(propLines, 1)}
 
 /** Decide which coercer to call given a FieldMeta and raw expression string. */
 export function coerceExprByType(f: FieldMeta, rawExpr: string): string {
-
     // Arrays (multi-answer/repeats)
     if (f.repeats) {
         // For choice repeats we coerce to string[]
@@ -185,8 +186,9 @@ export function renderLhcAdapter(
 ): string {
     const funcName = `${titleCamel}LhcFormResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `rt.findLhcValueByLinkId(input, ${JSON.stringify(f.linkId)
-            })`;
+        const raw = `rt.findLhcValueByLinkId(input, ${
+            JSON.stringify(f.linkId)
+        })`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -329,8 +331,9 @@ export class ${className} {
 }
 
 export function renderSource(q: FhirQuestionnaire, titleCamel: string): string {
-    return `/** The original source */\nexport const ${titleCamel}Source = \`${JSON.stringify(q, null, 2)
-        }\`;`;
+    return `/** The original source */\nexport const ${titleCamel}Source = \`${
+        JSON.stringify(q, null, 2)
+    }\`;`;
 }
 
 export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
@@ -339,26 +342,45 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
         return JSON.parse(text) as T;
     } catch (e) {
         throw new Error(
-            `Failed to read/parse JSON at ${filePath}: ${e instanceof Error ? e.message : String(e)
+            `Failed to read/parse JSON at ${filePath}: ${
+                e instanceof Error ? e.message : String(e)
             }`,
         );
     }
 }
 
-/** Compute the relative import path from an output file to r4q-runtime.ts. */
+/** Compute the import path from an output file to r4q-runtime.ts.
+ * If the output file is remote, return a remote import URL.
+ */
 function computeCommonImportPathFor(outFile: string): string {
+    const runtimeFile = "r4q-runtime.ts";
+
+    // Detect if outFile is a remote URL
+    const isRemote = /^(https?:|jsr:)/.test(outFile);
+
+    if (isRemote) {
+        // If this file itself was loaded remotely, reuse its base
+        if (import.meta.url.startsWith("http")) {
+            const baseUrl = new URL(import.meta.url);
+            baseUrl.pathname = baseUrl.pathname.replace(/[^/]+$/, runtimeFile);
+            return baseUrl.href;
+        }
+        // Otherwise, default to a canonical remote location (customize as needed)
+        return `./${runtimeFile}`;
+    }
+
+    // --- Local path handling ---
     const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
-    const commonAbs = path.join(thisDir, "r4q-runtime.ts");
+    const commonAbs = path.join(thisDir, runtimeFile);
     const outDir = path.dirname(path.resolve(outFile));
     let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
     if (!rel.startsWith(".")) rel = "./" + rel;
     return rel;
 }
 
-
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
-    await Deno.mkdir(dir, { recursive: true }).catch(() => { });
+    await Deno.mkdir(dir, { recursive: true }).catch(() => {});
 }
 
 /* ========================================================================== *
@@ -428,8 +450,8 @@ export async function generateTsCodeForQuestionnaire(
         if (!q || q.resourceType !== "Questionnaire") {
             return new Error(
                 `Not a FHIR Questionnaire (resourceType="${
-                // deno-lint-ignore no-explicit-any
-                (q as any)?.resourceType}")`,
+                    // deno-lint-ignore no-explicit-any
+                    (q as any)?.resourceType}")`,
             );
         }
 
@@ -488,4 +510,3 @@ export async function generateTsCodeForQuestionnaire(
     }
     return false;
 }
-
