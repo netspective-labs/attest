@@ -346,10 +346,32 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
 }
 
 /** Compute the relative import path from an output file to r4q-runtime.ts. */
+// function computeCommonImportPathFor(outFile: string): string {
+//     const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
+//     const commonAbs = path.join(thisDir, "r4q-runtime.ts");
+//     const outDir = path.dirname(path.resolve(outFile));
+//     let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
+//     if (!rel.startsWith(".")) rel = "./" + rel;
+//     return rel;
+// }
+
 function computeCommonImportPathFor(outFile: string): string {
-    console.log("import.meta.url", import.meta.url)
-    const thisDir = path.dirname(import.meta.url);
-    // const thisDir = path.dirname(path.fromFileUrl(import.meta.url));
+    const moduleUrl = new URL(import.meta.url);
+
+    // If the module is running from a remote URL, we should not perform
+    // local file system path operations. The relative path should be
+    // computed based on the URL's path segment, ensuring it resolves
+    // correctly from the remote source.
+    if (moduleUrl.protocol !== "file:") {
+        // Here, we assume a simple relative path to the runtime module.
+        // This is a common and robust pattern for Deno modules hosted
+        // on a simple URL structure like raw.githubusercontent.com.
+        return "./r4q-runtime.ts";
+    }
+
+    // If we've passed the check, we know it's a file:// URL and can safely
+    // use fromFileUrl to work with the local file system.
+    const thisDir = path.dirname(path.fromFileUrl(moduleUrl));
     const commonAbs = path.join(thisDir, "r4q-runtime.ts");
     const outDir = path.dirname(path.resolve(outFile));
     let rel = path.relative(outDir, commonAbs).replace(/\\/g, "/");
