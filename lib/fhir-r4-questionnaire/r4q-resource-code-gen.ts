@@ -359,7 +359,7 @@ function computeCommonImportPathFor(outFile: string): string {
         if (!rel.startsWith(".")) rel = "./" + rel;
         return rel;
     } else {
-        return import.meta.resolve(`${runtimeFile}`);
+        return import.meta.resolve(runtimeFile);
     }
 }
 
@@ -468,7 +468,6 @@ export async function generateTsCodeForQuestionnaire(
             : path.join(path.dirname(path.resolve(inPath)), fileName);
 
         const commonImportPath = computeCommonImportPathFor(outPath);
-        console.log("commonImportPath:", commonImportPath)
         const content = assembleFile(
             q,
             fields,
