@@ -77,11 +77,16 @@ ${lines}
 }
 
 /** The single import line used by generated files. */
-export function renderSharedImports(importPath = "./r4q-runtime.ts"): string {
-    // Normalize to POSIX-style for Deno import consistency
-    const norm = importPath.replace(/\\/g, "/");
-    const prefixed = norm.startsWith(".") ? norm : `./${norm}`;
-    return `import * as rt from "${prefixed}";\n`;
+export function renderSharedImports(importPath = "./r4q-runtime.ts") {
+    if ((new URL(import.meta.url)).protocol === "file:") {
+        // Normalize to POSIX-style for Deno import consistency
+        const norm = importPath.replace(/\\/g, "/");
+        const prefixed = norm.startsWith(".") ? norm : `./${norm}`;
+        return `import * as rt from "${prefixed}";\n`;
+    } else {
+        // Remote, don't touch the path
+        return `import * as rt from "${importPath}";\n`;
+    }
 }
 
 /** Emit the `<title>LinkIds` constant. */
@@ -116,12 +121,14 @@ export function renderInterface(
             ? `\n * Entry format: ${f.entryFormat}`
             : "";
         const choiceInfo = f.choiceLiterals?.length
-            ? `\n * Options: ${f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
+            ? `\n * Options: ${
+                f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
             }`
             : "";
         const req = f.required ? "\n * Required: yes" : "\n * Required: no";
-        const doc = `/**\n * ${f.text ?? "(no label)"
-            }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
+        const doc = `/**\n * ${
+            f.text ?? "(no label)"
+        }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
         const optional = f.required ? "" : "?";
         return `${doc}\n${f.propName}${optional}: ${f.tsType};`;
     }).join("\n\n");
@@ -184,8 +191,9 @@ export function renderLhcAdapter(
 ): string {
     const funcName = `${titleCamel}LhcFormResponseAdapter`;
     const body = fields.map((f) => {
-        const raw = `rt.findLhcValueByLinkId(input, ${JSON.stringify(f.linkId)
-            })`;
+        const raw = `rt.findLhcValueByLinkId(input, ${
+            JSON.stringify(f.linkId)
+        })`;
         const coerced = coerceExprByType(f, raw);
         return `  ${f.propName}: ${coerced},`;
     }).join("\n");
@@ -328,8 +336,9 @@ export class ${className} {
 }
 
 export function renderSource(q: FhirQuestionnaire, titleCamel: string): string {
-    return `/** The original source */\nexport const ${titleCamel}Source = \`${JSON.stringify(q, null, 2)
-        }\`;`;
+    return `/** The original source */\nexport const ${titleCamel}Source = \`${
+        JSON.stringify(q, null, 2)
+    }\`;`;
 }
 
 export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
@@ -338,7 +347,8 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
         return JSON.parse(text) as T;
     } catch (e) {
         throw new Error(
-            `Failed to read/parse JSON at ${filePath}: ${e instanceof Error ? e.message : String(e)
+            `Failed to read/parse JSON at ${filePath}: ${
+                e instanceof Error ? e.message : String(e)
             }`,
         );
     }
@@ -359,13 +369,14 @@ function computeCommonImportPathFor(outFile: string): string {
         if (!rel.startsWith(".")) rel = "./" + rel;
         return rel;
     } else {
-        return import.meta.resolve(runtimeFile);
+        // find the file relative to the remote module
+        return import.meta.resolve(`./${runtimeFile}`);
     }
 }
 
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
-    await Deno.mkdir(dir, { recursive: true }).catch(() => { });
+    await Deno.mkdir(dir, { recursive: true }).catch(() => {});
 }
 
 /* ========================================================================== *
@@ -435,8 +446,8 @@ export async function generateTsCodeForQuestionnaire(
         if (!q || q.resourceType !== "Questionnaire") {
             return new Error(
                 `Not a FHIR Questionnaire (resourceType="${
-                // deno-lint-ignore no-explicit-any
-                (q as any)?.resourceType}")`,
+                    // deno-lint-ignore no-explicit-any
+                    (q as any)?.resourceType}")`,
             );
         }
 
