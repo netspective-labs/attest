@@ -468,6 +468,7 @@ export async function generateTsCodeForQuestionnaire(
             : path.join(path.dirname(path.resolve(inPath)), fileName);
 
         const commonImportPath = computeCommonImportPathFor(outPath);
+        console.log("commonImportPath:", commonImportPath)
         const content = assembleFile(
             q,
             fields,
