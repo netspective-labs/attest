@@ -1,0 +1,22 @@
+% -- Entity declarations
+user("u1").
+user("u2").
+
+% -- Attributes (snake_case)
+user_name("u1", "Alice").
+user_name("u2", "Bob").
+
+is_active("u1", true).
+is_active("u2", false).
+
+% -- Convenience unary for boolean-true
+active("u1").
+
+% -- Roles captured with index to preserve order
+roles("u1", 0, "admin").
+roles("u1", 1, "editor").
+roles("u2", 0, "viewer").
+
+% -- Relationships (and inverse)
+has_manager("u1", "u2").
+manages("u2", "u1").

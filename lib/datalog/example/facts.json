@@ -1,0 +1,20 @@
+[
+    {
+        "id": "u1",
+        "userName": "Alice",
+        "isActive": true,
+        "roles": [
+            "admin",
+            "editor"
+        ],
+        "managerId": "u2"
+    },
+    {
+        "id": "u2",
+        "userName": "Bob",
+        "isActive": false,
+        "roles": [
+            "viewer"
+        ]
+    }
+]
