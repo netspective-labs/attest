@@ -30,8 +30,8 @@ for a good list.
 ## Developer Guide
 
 This guide teaches you how to turn JSON into Datalog facts using a tiny,
-deterministic engine and composable projection plugins. We start simple
-(junior-friendly) and gradually add power (for seniors).
+deterministic engine and composable projection plugins. We start simple and
+gradually add power (for advanced functionality).
 
 ### What you get
 
@@ -60,7 +60,7 @@ import { stringify } from "./lib/datalog/mod.ts";
 import { pack } from "./lib/datalog/mod.ts";
 ```
 
-### 1) Getting started (the “Hello, facts”)
+### Getting started (the “Hello, facts”)
 
 We’ll emit classic `snake_case` key predicates, scoped by an object id:
 
@@ -95,7 +95,7 @@ app.user_name("u1", "Alice").
 - The engine only walks the JSON.
 - The projection decides what facts to print.
 
-### 2) Add helper facts for easier rules
+### Add helper facts for easier rules
 
 The `genericKVWithHelpers` pack adds:
 
@@ -155,7 +155,7 @@ attr("u1", "userName", "Alice").
 Your Datalog rules can now be tiny and generic, using just
 `status_item/answered/attr`.
 
-### 3) Add schema + provenance (audit-friendly)
+### Add schema + provenance (audit-friendly)
 
 Attach entity type (`user(Id)`), attribute types, and provenance metadata:
 
@@ -186,7 +186,7 @@ You get:
 > The pack inspects already-emitted facts in `onAfterAll`, so order matters:
 > emit facts first, then attach meta.
 
-### 4) Relationships with optional inverses
+### Relationships with optional inverses
 
 Map specific keys to relations and optionally emit an inverse:
 
@@ -224,7 +224,7 @@ stringify(employee, { objectId: "e9", projections: [directOnly] });
 // only: has_manager("e9","m1")
 ```
 
-### 5) Ignoring fields (PII & noise)
+### Ignoring fields (PII & noise)
 
 #### Ignore by path (blocklist)
 
@@ -265,7 +265,7 @@ const kvNoId = filterEmits(
 stringify(myJson, { objectId: "u1", projections: [kvNoId] });
 ```
 
-### 6) Composing and gating projections
+### Composing and gating projections
 
 You can compose projections and gate where they run.
 
@@ -304,7 +304,7 @@ const projections = compose(
 stringify(json, { objectId: "h1", projections });
 ```
 
-### 7) The projection API (for advanced functionality)
+### The projection API (for advanced functionality)
 
 Engine: `stringify(src, { objectId?, projections, sort?, dedupe? }) → string[]`
 
@@ -396,7 +396,7 @@ export const packDates = () =>
   );
 ```
 
-### 8) Testing patterns
+### Testing patterns
 
 #### Unit test a projection (no engine)
 
@@ -413,7 +413,7 @@ export const packDates = () =>
 - Assert key facts are present; don’t overfit on ordering (the engine sorts).
 - Keep tests small and readable (see `mod_test.ts`).
 
-### 9) Tips, pitfalls, and performance
+### Tips, pitfalls, and performance
 
 - Status synonyms: avoid overlaps like `"implemented"` vs `"Not implemented"`.
   Prefer explicit phrases (`"fully implemented"`, `"not implemented"`). If you
@@ -427,7 +427,7 @@ export const packDates = () =>
 - Side-effect free: projections should only use `api.*` to emit; avoid global
   state or I/O.
 
-### 10) Quick reference
+### Quick reference
 
 Common packs
 
@@ -472,17 +472,7 @@ exceptPaths(blockedPathsOrFn, inner);
 filterEmits(keepFn, inner);
 ```
 
-### 11) Migration notes (old → projections-first)
-
-- Replace option soup with packs (start with `genericKVWithHelpers`).
-- Move “entity type”, “relations”, “provenance”, “schema” into packs in the
-  projections array.
-- Where you previously toggled booleans, prefer composition (`compose`) and
-  filters (`onlyPath`, `exceptPaths`, `filterEmits`).
-- Rules get shorter once you rely on `status_item/answered/attr` instead of
-  per-family predicates.
-
-### 12) Example: “from 0 to production” in \~10 lines
+### Example: “from 0 to production” in \~10 lines
 
 ```ts
 import { compose, exceptPaths, pack, stringify } from "./lib/datalog/mod.ts";
