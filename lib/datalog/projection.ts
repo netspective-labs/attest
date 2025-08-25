@@ -492,3 +492,252 @@ export function booleanUnaryProjection(
     },
   };
 }
+
+// --- functionInfoProjection -----------------------------------------------
+/**
+ * Emit metadata for functions without executing them.
+ * fn_info(Subject, "path.key", "fnName", Arity).
+ */
+export function functionInfoProjection(pred = "fn_info"): ProjectionPlugin {
+  return {
+    name: "functionInfo",
+    onValue(ctx, api) {
+      if (api.subject === undefined) return;
+      if (ctx.kind !== "function") return;
+      // deno-lint-ignore ban-types
+      const fn = ctx.value as Function;
+      const name = typeof fn?.name === "string" && fn.name.length
+        ? fn.name
+        : "(anonymous)";
+      const arity = typeof fn?.length === "number" ? fn.length : 0;
+      api.emit(pred, String(api.subject), api.join("."), name, arity);
+    },
+  };
+}
+
+// --- evaluateFunctionsProjection ------------------------------------------
+/**
+ * Safely evaluate whitelisted functions (sync only) and project their results as facts.
+ * - Never evaluates unless the current path is allowed.
+ * - Errors are caught and optionally emitted as error facts.
+ * - Returned values are projected in "attr" or "kv" style (depth-limited).
+ */
+export function evaluateFunctionsProjection(
+  opts: Readonly<{
+    /** Paths allowed to execute, or a predicate. Paths are joined with "." (e.g., "metrics.score"). */
+    allow: readonly string[] | ((path: string, fn: unknown) => boolean);
+
+    /** How to emit results: "attr" -> attr(Id,"path[.sub]",Val), "kv" -> prefix.path_pred(Id[,idx],Val). */
+    mode?: "attr" | "kv";
+
+    /** KV naming options (used iff mode==="kv"). */
+    prefix?: string; // e.g., "app."
+    snakeCase?: boolean; // default true
+    sep?: string; // default "_"
+
+    /** Max depth to traverse returned objects/arrays (default 1). 0 = only top-level. */
+    maxDepth?: number;
+
+    /** Called errors are emitted as fn_error(Subject, "path", "Message") if provided. */
+    errorPred?: string; // e.g., "fn_error"
+
+    /** Whether to skip nested functions in the returned structure (default true). */
+    skipNestedFunctions?: boolean;
+
+    /** Optional custom evaluator (default: (fn) => fn()) — must be sync. */
+    call?: (fn: unknown) => unknown;
+  }>,
+): ProjectionPlugin {
+  const allow = typeof opts.allow === "function"
+    ? opts.allow
+    : (p: string) => (opts.allow as readonly string[]).includes(p);
+  const snake = opts.snakeCase ?? true;
+  const sep = opts.sep ?? "_";
+  const mode = opts.mode ?? "attr";
+  const depthMax = opts.maxDepth ?? 1;
+  const skipNested = opts.skipNestedFunctions ?? true;
+  const callFn = opts.call ?? ((fn) => (fn as Any)());
+
+  const toSnake = (s: string) =>
+    s.replace(/([a-z0-9])([A-Z])/g, "$1_$2").toLowerCase();
+
+  const pathToPred = (segments: readonly string[]) => {
+    const clean = snake ? segments.map(toSnake) : segments;
+    return (opts.prefix ?? "") + clean.join(sep);
+  };
+
+  const isPrim = (v: unknown): v is string | number | boolean =>
+    ["string", "number", "boolean"].includes(typeof v);
+
+  const emitKV = (
+    api: ProjectionApi,
+    baseSegs: readonly string[],
+    v: unknown,
+  ) => {
+    const pred = pathToPred(baseSegs);
+    if (isPrim(v)) {
+      api.emit(pred, String(api.subject), v);
+    } else if (Array.isArray(v)) {
+      v.forEach((item, idx) => {
+        if (isPrim(item)) api.emit(pred, String(api.subject), idx, item);
+      });
+    }
+  };
+
+  const emitAttr = (api: ProjectionApi, joinedPath: string, v: unknown) => {
+    if (isPrim(v)) api.emit("attr", String(api.subject), joinedPath, String(v));
+    else if (Array.isArray(v)) {
+      v.forEach((item, idx) => {
+        if (isPrim(item)) {
+          api.emit(
+            "attr",
+            String(api.subject),
+            `${joinedPath}.${idx}`,
+            String(item),
+          );
+        }
+      });
+    }
+  };
+
+  const walkReturned = (
+    api: ProjectionApi,
+    basePathSegs: readonly string[],
+    joinedBase: string,
+    v: unknown,
+    depth: number,
+  ) => {
+    // Top-level emission
+    if (mode === "kv") emitKV(api, basePathSegs, v);
+    else emitAttr(api, joinedBase, v);
+
+    if (depth >= depthMax) return;
+    // Shallowly traverse if object/array and emit sub-keys/items
+    if (Array.isArray(v)) {
+      v.forEach((item, idx) => {
+        if (isPrim(item)) {
+          if (mode === "kv") emitKV(api, [...basePathSegs], [item]); // already handled above, skip
+          else emitAttr(api, `${joinedBase}.${idx}`, item);
+        } else if (typeof item === "object" && item !== null) {
+          // Recurse one level deeper (attr only; kv path uses same predicate name)
+          if (mode === "attr") {
+            Object.entries(item as Record<string, unknown>).forEach(
+              ([k, vv]) => {
+                walkReturned(
+                  api,
+                  basePathSegs,
+                  `${joinedBase}.${k}`,
+                  vv,
+                  depth + 1,
+                );
+              },
+            );
+          }
+        } else if (typeof item === "function") {
+          if (!skipNested && allow(`${joinedBase}.${idx}`, item)) {
+            try {
+              const rv = callFn(item);
+              walkReturned(
+                api,
+                basePathSegs,
+                `${joinedBase}.${idx}`,
+                rv,
+                depth + 1,
+              );
+            } catch (e) {
+              if (opts.errorPred) {
+                api.emit(
+                  opts.errorPred,
+                  String(api.subject),
+                  `${joinedBase}.${idx}`,
+                  String(e),
+                );
+              }
+            }
+          }
+        }
+      });
+    } else if (typeof v === "object" && v !== null) {
+      Object.entries(v as Record<string, unknown>).forEach(([k, vv]) => {
+        const subSegs = [...basePathSegs, k];
+        const subJoined = `${joinedBase}.${k}`;
+        if (
+          isPrim(vv) || Array.isArray(vv) ||
+          (typeof vv === "object" && vv !== null)
+        ) {
+          if (mode === "kv") {
+            // For kv we treat each primitive sub-key under same predicate base (optional design)
+            if (isPrim(vv)) {
+              const pred = pathToPred(subSegs);
+              api.emit(pred, String(api.subject), vv);
+            } else if (Array.isArray(vv)) {
+              vv.forEach((it, i) =>
+                isPrim(it) &&
+                api.emit(pathToPred(subSegs), String(api.subject), i, it)
+              );
+            } else {
+              // deeper object: only 1 level deep by default; you can raise maxDepth if needed
+              if (depth + 1 <= depthMax) {
+                Object.entries(vv as Record<string, unknown>).forEach(
+                  ([kk, vvv]) => {
+                    const p2 = pathToPred([...subSegs, kk]);
+                    if (isPrim(vvv)) api.emit(p2, String(api.subject), vvv);
+                  },
+                );
+              }
+            }
+          } else {
+            walkReturned(api, subSegs, subJoined, vv, depth + 1);
+          }
+        } else if (typeof vv === "function" && !skipNested) {
+          if (allow(subJoined, vv)) {
+            try {
+              const rv = callFn(vv);
+              walkReturned(api, subSegs, subJoined, rv, depth + 1);
+            } catch (e) {
+              if (opts.errorPred) {
+                api.emit(
+                  opts.errorPred,
+                  String(api.subject),
+                  subJoined,
+                  String(e),
+                );
+              }
+            }
+          }
+        }
+      });
+    }
+  };
+
+  return {
+    name: "evaluateFunctions",
+    onValue(ctx, api) {
+      if (api.subject === undefined) return;
+      if (ctx.kind !== "function") return;
+
+      const joined = api.join(".");
+      const fn = ctx.value;
+
+      if (!allow(joined, fn)) return;
+
+      // Evaluate safely
+      let rv: unknown;
+      try {
+        rv = callFn(fn);
+        // Disallow Promises (engine is sync)
+        if (rv && typeof (rv as Any).then === "function") {
+          throw new Error("async function result is not supported");
+        }
+      } catch (e) {
+        if (opts.errorPred) {
+          api.emit(opts.errorPred, String(api.subject), joined, String(e));
+        }
+        return;
+      }
+
+      // Emit result facts
+      walkReturned(api, api.path, joined, rv, 0);
+    },
+  };
+}

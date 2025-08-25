@@ -508,5 +508,263 @@ console.log(
 );
 ```
 
-You’re live, with a tiny engine you’ll almost never touch again — and projection
-plugins/packs that you can compose, filter, and evolve safely over time.
+## Handling Function-Valued Fields (safe, deterministic)
+
+Sometimes a field in your input object isn’t a scalar—it’s a function that can
+compute a value on demand (e.g., `metrics.score()`). Executing arbitrary code
+during fact generation is risky and can break determinism. This section shows
+how to do it safely with two opt-in projections and a few guardrails.
+
+## TL;DR
+
+- Default: don’t run user code. Use `functionInfoProjection` to _describe_
+  functions.
+- Opt-in: when you must compute results, use `evaluateFunctionsProjection` with:
+
+  - a tight allowlist of paths,
+  - sync-only execution (no Promises),
+  - depth limits and error capture,
+  - output style: `"attr"` or `"kv"`.
+
+Everything stays pure from the engine’s perspective.
+
+### Describe functions without running them
+
+```ts
+import { functionInfoProjection, stringify } from "./mod.ts";
+
+const json = { actions: { recalc: function recalc() {/* ... */} } };
+
+const out = stringify(json, {
+  objectId: "u1",
+  projections: [functionInfoProjection("fn_info")],
+});
+
+console.log(out.join("\n"));
+/*
+fn_info("u1", "actions.recalc", "recalc", 0).
+*/
+```
+
+This is the safest default. You can write rules like:
+
+```prolog
+has_action(Id, Path) :- fn_info(Id, Path, _, _).
+```
+
+### Evaluate whitelisted functions (sync, depth-limited)
+
+```ts
+import {
+  compose,
+  evaluateFunctionsProjection,
+  kvPredicateProjection,
+  stringify,
+} from "./mod.ts";
+
+const json = {
+  id: "u1",
+  metrics: {
+    score: () => 99, // primitive
+    tags: () => ["alpha", "beta"], // array
+  },
+};
+
+// Only run *these* functions; emit KV-style facts with a prefix.
+const evalFns = evaluateFunctionsProjection({
+  allow: ["metrics.score", "metrics.tags"], // tight allowlist
+  mode: "kv",
+  prefix: "app.",
+  snakeCase: true,
+  errorPred: "fn_error", // optional: emit errors as facts
+  maxDepth: 1, // default; traverse returns shallowly
+});
+
+const projections = compose(
+  kvPredicateProjection({ prefix: "app.", snakeCase: true }), // regular KV too
+  evalFns,
+);
+
+const out = stringify(json, { objectId: "u1", projections });
+console.log(out.join("\n"));
+/*
+app.id("u1", "u1").
+app.metrics_score("u1", 99).
+app.metrics_tags("u1", 0, "alpha").
+app.metrics_tags("u1", 1, "beta").
+*/
+```
+
+#### Notes
+
+- If the function throws, `fn_error(Subject, "path", "Error: message").` is
+  emitted when `errorPred` is set.
+- If a function returns a Promise, it’s rejected with an error fact (async not
+  supported).
+
+### Attribute-style emission instead of KV
+
+```ts
+const evalAsAttr = evaluateFunctionsProjection({
+  allow: ["profile.computeAge"],
+  mode: "attr", // emits attr(Id,"profile.computeAge","42")
+  errorPred: "fn_error",
+});
+
+stringify(json, { objectId: "u1", projections: [evalAsAttr] });
+/*
+attr("u1", "profile.computeAge", "42").
+*/
+```
+
+### Controlling scope & behavior
+
+#### Allowlist predicate
+
+You can allow by function:
+
+```ts
+const allow = (path: string, fn: unknown) =>
+  path === "metrics.safeCalc" && typeof fn === "function";
+
+evaluateFunctionsProjection({ allow, mode: "attr" });
+```
+
+#### Depth & nested functions
+
+- `maxDepth` bounds traversal of returned objects/arrays.
+- `skipNestedFunctions` (default `true`) prevents evaluating any functions found
+  _inside_ the returned data structure.
+
+#### Custom caller (bind context/args)
+
+```ts
+const evalWithContext = evaluateFunctionsProjection({
+  allow: ["calc.withContext"],
+  call: (fn) => (fn as any).call({ tz: "UTC" }), // no args; still sync
+  mode: "attr",
+});
+```
+
+### Security & determinism checklist
+
+- Never evaluate untrusted code.
+- Keep the allowlist tight (exact paths, not wildcards).
+- Sync only; no Promises, no timers.
+- Avoid non-deterministic functions (e.g., `Date.now()`, `Math.random()`).
+
+  - If unavoidable, record provenance (`pack.schemaAndProvenance`) so results
+    are audit-traceable.
+- Use `exceptPaths` to block sensitive subtrees entirely.
+- Use `filterEmits` to suppress any specific predicates you don’t want to leak.
+
+### Common patterns
+
+#### “Document functions, compute a subset”
+
+```ts
+import {
+  compose,
+  evaluateFunctionsProjection,
+  functionInfoProjection,
+} from "./mod.ts";
+
+const projections = compose(
+  functionInfoProjection("fn_info"),
+  evaluateFunctionsProjection({
+    allow: ["metrics.score", "risk.estimate"],
+    mode: "attr",
+    errorPred: "fn_error",
+  }),
+);
+```
+
+#### Gate evaluation to a subtree
+
+```ts
+import { evaluateFunctionsProjection, onlyPath } from "./mod.ts";
+
+const gatedEval = onlyPath(
+  (p) => p.startsWith("sc."), // e.g., only under System & Communications
+  evaluateFunctionsProjection({
+    allow: ["sc.computeScore"],
+    mode: "kv",
+    prefix: "sc.",
+  }),
+);
+```
+
+#### Harden a pack with ignores & filters
+
+```ts
+import {
+  compose,
+  evaluateFunctionsProjection,
+  exceptPaths,
+  filterEmits,
+  pack,
+} from "./mod.ts";
+
+const base = pack.genericKVWithHelpers({
+  prefix: "app.",
+  statusKeys: [],
+  statusSynonyms: {},
+  answeredKeys: [],
+});
+
+const evalFns = evaluateFunctionsProjection({
+  allow: ["metrics.score"],
+  mode: "kv",
+  prefix: "app.",
+});
+
+// Block PII entirely, and drop a specific emitted predicate if it sneaks through
+const hardened = compose(
+  exceptPaths(["ci.ssn", "secrets"], compose(base, evalFns)),
+  filterEmits((pred) => pred !== "app.secrets", base),
+);
+```
+
+### Testing function projections
+
+Unit test projections (no engine):
+
+- Use the mock `ProjectionApi` pattern (see `projection_test.ts`).
+- Call `onValue({ kind: "function", value: fn })`.
+- Assert emitted facts (or `fn_error`).
+
+End-to-end test (engine + packs):
+
+- Build a minimal JSON fixture with one or two functions.
+- Compose KV + `functionInfoProjection` + `evaluateFunctionsProjection`.
+- Assert both metadata and computed facts appear.
+
+### Anti-patterns to avoid
+
+- Evaluating everything (no allowlist).
+- Async evaluators (they break determinism and the engine contract).
+- Hidden I/O inside evaluated functions (network, filesystem).
+- Deep, unbounded traversal of returned structures (`maxDepth` exists for a
+  reason).
+- Overlapping responsibilities: keep computation small; if logic grows, compute
+  upstream and pass scalars into the facts generator.
+
+### Quick reference
+
+```ts
+functionInfoProjection(pred = "fn_info")
+// Emits: fn_info(Subject, "path", "fnName", Arity).
+
+evaluateFunctionsProjection({
+  allow: string[] | (path: string, fn: unknown) => boolean,
+  mode?: "attr" | "kv",
+  prefix?: string, snakeCase?: boolean, sep?: string,
+  maxDepth?: number,                    // default 1
+  errorPred?: string,                   // e.g., "fn_error"
+  skipNestedFunctions?: boolean,        // default true
+  call?: (fn: unknown) => unknown,      // default: (fn)=>fn()
+})
+```
+
+Use these two together to stay safe by default, and explicit when you need
+computed values.

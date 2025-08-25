@@ -9,8 +9,10 @@ import {
   attrProjection,
   booleanUnaryProjection,
   compose,
+  evaluateFunctionsProjection,
   exceptPaths,
   filterEmits,
+  functionInfoProjection,
   kvPredicateProjection,
   onlyPath,
   pack,
@@ -422,5 +424,78 @@ Deno.test("end-to-end: relations keep direct and drop inverse via filterEmits", 
   }
   if (out.some((l) => l.startsWith(`manages("u1", "u9")`))) {
     throw new Error("inverse manages should have been suppressed");
+  }
+});
+
+Deno.test("E2E: function info + evaluated results (kv) mixed with KV pack", () => {
+  const json = {
+    id: "u1",
+    metrics: {
+      score: () => 99,
+      tags: () => ["alpha", "beta"],
+    },
+  };
+
+  const projections = compose(
+    // Regular KV will ignore functions (no facts)
+    kvPredicateProjection({ prefix: "app.", snakeCase: true }),
+    // Describe functions without running
+    functionInfoProjection("fn_info"),
+    // Evaluate only the functions we whitelist, emit KV-style facts
+    evaluateFunctionsProjection({
+      allow: ["metrics.score", "metrics.tags"],
+      mode: "kv",
+      prefix: "app.",
+      snakeCase: true,
+      errorPred: "fn_error",
+    }),
+  );
+
+  const out = stringify(json, { objectId: "u1", projections: [projections] });
+
+  // fn_info present
+  if (!out.includes(`fn_info("u1", "metrics.score", "score", 0).`)) {
+    throw new Error("missing fn_info for score");
+  }
+  if (!out.includes(`fn_info("u1", "metrics.tags", "tags", 0).`)) {
+    throw new Error("missing fn_info for tags");
+  }
+
+  // Evaluated results in KV form
+  const expects = [
+    `app.metrics_score("u1", 99).`,
+    `app.metrics_tags("u1", 0, "alpha").`,
+    `app.metrics_tags("u1", 1, "beta").`,
+  ];
+  for (const e of expects) {
+    if (!out.includes(e)) {
+      throw new Error(`expected: ${e}\nGot:\n${out.join("\n")}`);
+    }
+  }
+});
+
+Deno.test("E2E: evaluateFunctionsProjection does not evaluate non-whitelisted functions", () => {
+  const json = { utils: { now: () => Date.now() } };
+
+  const projections = compose(
+    functionInfoProjection("fn_info"),
+    evaluateFunctionsProjection({
+      allow: [], // nothing allowed
+      mode: "attr",
+      errorPred: "fn_error",
+    }),
+  );
+
+  const out = stringify(json, { objectId: "sys", projections: [projections] });
+
+  // We only get fn_info; no attr, no errors
+  if (!out.includes(`fn_info("sys", "utils.now", "now", 0).`)) {
+    throw new Error("expected fn_info for utils.now");
+  }
+  if (out.some((l) => l.startsWith(`attr("sys", "utils.now"`))) {
+    throw new Error("did not expect attr fact");
+  }
+  if (out.some((l) => l.startsWith(`fn_error("sys",`))) {
+    throw new Error("did not expect fn_error");
   }
 });

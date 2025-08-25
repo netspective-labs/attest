@@ -8,9 +8,11 @@ import {
   booleanUnaryProjection,
   compose,
   entityTypeUnaryProjection,
+  evaluateFunctionsProjection,
   exceptPaths,
   filterEmits,
   flagProjection,
+  functionInfoProjection,
   kvPredicateProjection,
   provenanceProjection,
   relationMappingProjection,
@@ -277,5 +279,81 @@ Deno.test("filterEmits can drop a specific KV predicate (e.g., app.id/2)", () =>
 
   if (facts.length !== 0) {
     throw new Error("expected no facts after dropping app.id");
+  }
+});
+
+Deno.test("functionInfoProjection emits fn_info without executing", () => {
+  const { api, setPath, facts } = makeMockApi("U");
+  const fnInfo = functionInfoProjection("fn_info");
+
+  function calcScore() {
+    return 99;
+  }
+  setPath(["metrics", "score"]);
+  fnInfo.onValue({ kind: "function", value: calcScore }, api);
+
+  const s = facts.map(printer).sort();
+  if (!s.includes(`fn_info("U", "metrics.score", "calcScore", 0).`)) {
+    throw new Error("expected fn_info fact");
+  }
+});
+
+Deno.test("evaluateFunctionsProjection: attr mode on whitelisted function", () => {
+  const { api, setPath, facts } = makeMockApi("U");
+  const evalFns = evaluateFunctionsProjection({
+    allow: ["profile.computeAge"],
+    mode: "attr",
+    errorPred: "fn_error",
+  });
+
+  setPath(["profile", "computeAge"]);
+  evalFns.onValue({ kind: "function", value: () => 42 }, api);
+
+  const s = facts.map(printer).sort();
+  if (!s.includes(`attr("U", "profile.computeAge", "42").`)) {
+    throw new Error("expected attr fact from computed value");
+  }
+});
+
+Deno.test("evaluateFunctionsProjection: kv mode with prefix + array result", () => {
+  const { api, setPath, facts } = makeMockApi("S");
+  const evalFns = evaluateFunctionsProjection({
+    allow: ["tags.loader"],
+    mode: "kv",
+    prefix: "app.",
+    snakeCase: true,
+  });
+
+  setPath(["tags", "loader"]);
+  evalFns.onValue({ kind: "function", value: () => ["a", "b"] }, api);
+
+  const s = facts.map(printer).sort();
+  if (
+    !s.includes(`app.tags_loader("S", 0, "a").`) ||
+    !s.includes(`app.tags_loader("S", 1, "b").`)
+  ) {
+    throw new Error("expected kv facts for array result");
+  }
+});
+
+Deno.test("evaluateFunctionsProjection: error path emits fn_error", () => {
+  const { api, setPath, facts } = makeMockApi("S");
+  const evalFns = evaluateFunctionsProjection({
+    allow: ["broken.fn"],
+    mode: "attr",
+    errorPred: "fn_error",
+  });
+
+  setPath(["broken", "fn"]);
+  evalFns.onValue({
+    kind: "function",
+    value: () => {
+      throw new Error("boom");
+    },
+  }, api);
+
+  const s = facts.map(printer).join("\n");
+  if (!s.includes(`fn_error("S", "broken.fn", "Error: boom").`)) {
+    throw new Error("expected fn_error fact");
   }
 });
