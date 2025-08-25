@@ -8,18 +8,9 @@ Prolog, [Google Mangle](https://github.com/google/mangle) or
 [Modern Datalog Engines](https://soft.vub.ac.be/Publications/2022/vub-tr-soft-22-21.pdf)
 for a good list.
 
-Datalog Aide includes:
-
-- a TypeScript API: `DatalogFacts.stringify(obj, options)`
-- a CLI: `modctl.ts to-facts` that reads JSON from stdin and writes facts to
-  stdout
-
-It is designed for evidence-friendly systems where provenance, temporal
-annotations, and deterministic outputs matter.
-
 ## What it does
 
-- Flattens nested objects and arrays into Datalog facts
+- Flattens nested objects and arrays into Datalog _facts_
 - Adds optional entity, relation, and schema context so your rules are simpler
 - Enforces predicate arities via an optional registry
 - Emits helpful meta-facts (attribute types, enums, cardinality,
@@ -36,313 +27,496 @@ annotations, and deterministic outputs matter.
 - You want to layer human-written rules on top of a predictable fact base
 - You want traceability for where each fact came from and when it was valid
 
-## Architecture at a glance
+## Developer Guide
 
-Input
+This guide teaches you how to turn JSON into Datalog facts using a tiny,
+deterministic engine and composable projection plugins. We start simple
+(junior-friendly) and gradually add power (for seniors).
 
-- JSON object or array of objects
+### What you get
 
-Processor
+- Engine (`stringify`) — walks JSON, calls your projections, returns fact
+  strings.
+- Projections — pure, small plugins that decide _what facts to emit_.
+- Projection packs — curated, composable bundles for common tasks.
+- Combinators — helpers to filter, prefix, compose, or suppress emitted facts.
 
-- `DatalogFacts.stringify` traverses properties, arrays, and nested objects
-- Applies naming, relation mappings, type metadata, provenance, and temporal
-  options
-- Validates predicate arities when a registry is provided and strict mode is
-  enabled
+Everything is functional, immutable, and side-effect free.
 
-Output
+### Install & Layout
 
-- One fact per line: `predicate(arg1, arg2, ...).`
-- Deterministically sorted and de-duplicated
-
-## Installation
-
-Use the library directly in a Deno 2 project:
-
-```ts
-// Local import; adjust path to where mod.ts lives in your repo
-import { createRegistry, DatalogFacts } from "./mod.ts";
+```
+lib/datalog/
+  core.ts               # engine (no domain logic)
+  projection.ts         # projection plugins + combinators
+  pack.ts               # projection packs (ready to use)
+  mod.ts                # public exports
 ```
 
-Use the CLI:
-
-```bash
-./modctl.ts --help
-```
-
-## TypeScript API quick start
+Import from your code:
 
 ```ts
-import { createRegistry, DatalogFacts } from "./mod.ts";
+import { stringify } from "./lib/datalog/mod.ts";
+import { pack } from "./lib/datalog/mod.ts";
+```
 
-const user = {
-    userId: 123,
-    userName: "Alice",
-    isActive: true,
-    profile: { city: "São Paulo" },
-    roles: ["admin", "editor"],
+### 1) Getting started (the “Hello, facts”)
+
+We’ll emit classic `snake_case` key predicates, scoped by an object id:
+
+```ts
+import { pack, stringify } from "./lib/datalog/mod.ts";
+
+const json = {
+  id: "u1",
+  userName: "Alice",
+  isActive: true,
 };
 
-const registry = createRegistry({
-    user: 1,
-    has_manager: 2,
-    manages: 2,
+const out = stringify(json, {
+  objectId: "u1",
+  projections: [
+    // basic KV facts like: app.user_name("u1","Alice").
+    pack.basicKV({ prefix: "app.", snakeCase: true }),
+  ],
 });
 
-const facts = DatalogFacts.stringify(user, {
-    entityType: "user", // emits user(Id).
-    objectId: "u1", // subject for attribute/relational facts
-    prefix: "app.", // predicate prefix
-    camelToSnakeCase: true, // userName -> user_name
-    keySeparator: ".", // nested.profile.city -> profile.city
-    includeTypes: true, // attribute_type("user_name","string")
-    normalizeLowerCase: true, // *_lc variant for strings
-    normalizeAscii: true, // *_ascii variant for strings
-    booleanUnaryHelper: true, // is_active(u,true) => active(u)
-    registry, // predicate arity map
-    strictArity: true, // enforce arities
-    schemaNs: "app.v1", // schema_ns("app.v1")
-    required: ["email"], // missing_attr if absent
-    cardinality: { roles: "many" },
-    enumAllowed: { status: ["invited", "active", "suspended"] },
-    includeProvenance: true, // fact_source/json_path/tx_time/valid_time
-    sourceId: "fixture-001",
-    txTimeIso: "2025-08-24T15:00:00Z",
-});
-
-console.log(facts.join("\n"));
+console.log(out.join("\n"));
 ```
 
-Typical output highlights
+Output (order sorted & de-duped):
 
-```datalog
-schema_ns("app.v1").
-user("u1").
-app.user_id("u1", 123).
-attribute_type("user_id", "number").
-app.user_name("u1", "Alice").
-app.user_name_lc("u1", "alice").
-app.user_name_ascii("u1", "Alice").
-attribute_type("user_name", "string").
+```
+app.id("u1", "u1").
 app.is_active("u1", true).
-active("u1").
-attribute_type("is_active", "boolean").
-app.profile.city("u1", "São Paulo").
-app.profile.city_lc("u1", "são paulo").
-app.profile.city_ascii("u1", "Sao Paulo").
-app.roles("u1", 0, "admin").
-app.roles("u1", 1, "editor").
-missing_attr("u1", "email").
-...
+app.user_name("u1", "Alice").
 ```
 
-## Options you will actually use
+- The engine only walks the JSON.
+- The projection decides what facts to print.
 
-Naming and shapes
+### 2) Add helper facts for easier rules
 
-- prefix: prepend to every derived predicate (for namespacing)
-- camelToSnakeCase: convert key paths to lower snake case
-- keySeparator: used when building nested key paths (default “\_”)
+The `genericKVWithHelpers` pack adds:
 
-Entity and relations
+- `attr/3`: flat key/value (`attr(Id, "userName", "Alice")`)
+- `flag/2`: presence/yes-no (`flag(Id, "sc.hasDiagram")`)
+- `status_item/3`: normalized categorical statuses
+- `answered/2` + `answered_value/3` for array coverage
 
-- entityType: emits a unary class predicate like user(Id)
-- objectId: the subject for attribute and relation facts
-- relationKeys: map property paths to relation predicates, e.g.
-  `{ managerId: "has_manager" }`
-- relationInverse: optional inverse relations, e.g. `{ has_manager: "manages" }`
-- booleanUnaryHelper: emit a unary helper when a boolean attribute is true
+```ts
+import { pack, stringify } from "./lib/datalog/mod.ts";
 
-Schema and meta
+const data = {
+  id: "u1",
+  userName: "Alice",
+  sc: {
+    implementationStatus: "Partially",
+    training: ["ops", "101"], // multi-select
+  },
+  pp: { implementationStatus: "Fully implemented" },
+};
 
-- includeTypes: emit attribute\_type facts
-- enumAllowed: emit attribute\_allowed for finite domains
-- cardinality: annotate one vs many
-- required: emit missing\_attr if absent or undefined
+const Status = {
+  not: ["not", "not implemented"],
+  partially: ["partially", "partial", "in progress"],
+  fully: ["fully", "fully implemented", "complete"],
+} as const;
 
-Provenance and temporal
+const out = stringify(data, {
+  objectId: "u1",
+  projections: [
+    pack.genericKVWithHelpers({
+      prefix: "app.",
+      statusKeys: [
+        "sc.implementationStatus",
+        "pp.implementationStatus",
+      ] as const,
+      statusSynonyms: Status, // typed and collision-safe
+      answeredKeys: ["sc.training"] as const,
+    }),
+  ],
+});
 
-- includeProvenance: enable provenance output
-- sourceId: identify the source
-- txTimeIso: transaction time
-- validFromIso and validToIso: validity time range
-
-Quality controls
-
-- registry and strictArity: arity registry and enforcement
-- exclude: skip noisy keys
-
-Arrays
-
-- primitive arrays emit ternary facts `(subject, index, value)`
-- complex arrays recurse with index in the path
-
-Determinism
-
-- output is sorted and de-duplicated
-
-Friendly errors
-
-- if a relation is mapped via relationKeys and strictArity is on but no objectId
-  is provided, the library throws a clear error indicating the missing subject
-
-## CLI quick start
-
-The CLI reads JSON from stdin and writes facts to stdout.
-
-Basic emit
-
-```bash
-cat user.json \
-| ./modctl.ts to-facts \
-  --entity-type user \
-  --object-id u1 \
-  --camel-to-snake \
-  --prefix app.
+console.log(out.join("\n"));
 ```
 
-Relational mapping with inverse and arity checks
+You’ll see (among others):
 
-```bash
-cat user.json \
-| ./modctl.ts to-facts \
-  --entity-type user \
-  --object-id u1 \
-  --relation-keys '{"managerId":"has_manager"}' \
-  --relation-inverse '{"has_manager":"manages"}' \
-  --registry '{"user":1,"has_manager":2,"manages":2}' \
-  --strict-arity
+```
+status_item("u1", "pp", "fully").
+status_item("u1", "sc", "partially").
+answered("u1", "sc.training").
+answered_value("u1", "sc.training", "ops").
+answered_value("u1", "sc.training", "101").
+attr("u1", "userName", "Alice").
 ```
 
-Derive subject ids from input objects
+Your Datalog rules can now be tiny and generic, using just
+`status_item/answered/attr`.
 
-```bash
-# users.json is an array of objects each with { "id": "...", ... }
-cat users.json \
-| ./modctl.ts to-facts \
-  --entity-type user \
-  --object-id-path id \
-  --camel-to-snake
+### 3) Add schema + provenance (audit-friendly)
+
+Attach entity type (`user(Id)`), attribute types, and provenance metadata:
+
+```ts
+const enriched = stringify(data, {
+  objectId: "u1",
+  projections: [
+    pack.genericKVWithHelpers({/* …as above… */}),
+    pack.schemaAndProvenance({
+      entityPred: "user", // emits user("u1").
+      sourceId: "ingestion-42", // emits source/1 & fact_source/2
+      txTimeIso: "2025-08-24T00:00:00Z",
+      validFromIso: "2025-08-01T00:00:00Z",
+      validToIso: "2025-12-31T23:59:59Z",
+      booleanUnary: true, // isActive -> active("u1").
+    }),
+  ],
+});
 ```
 
-Schema and provenance
+You get:
 
-```bash
-cat obj.json \
-| ./modctl.ts to-facts \
-  --include-types \
-  --schema-ns app.v1 \
-  --enum-allowed '{"status":["invited","active","suspended"]}' \
-  --cardinality '{"roles":"many"}' \
-  --required email \
-  --include-provenance \
-  --source-id "import-42" \
-  --tx-time-iso "2025-08-24T15:10:00Z" \
-  --valid-from-iso "2025-08-01T00:00:00Z"
+- `attribute_type("userName", "string").`
+- `source("ingestion-42").`, `fact_source("<hash>", "ingestion-42").`
+- `tx_time("<hash>", "2025-08-24T00:00:00Z").`
+- `valid_time("<hash>", "2025-08-01T00:00:00Z", "2025-12-31T23:59:59Z").`
+
+> The pack inspects already-emitted facts in `onAfterAll`, so order matters:
+> emit facts first, then attach meta.
+
+### 4) Relationships with optional inverses
+
+Map specific keys to relations and optionally emit an inverse:
+
+```ts
+import { pack, stringify } from "./lib/datalog/mod.ts";
+
+const employee = { id: "e9", managerId: "m1" };
+
+const out = stringify(employee, {
+  objectId: "e9",
+  projections: [
+    pack.relationsWithInverse({
+      map: { "managerId": "has_manager" },
+      inverse: { has_manager: "manages" }, // optional
+    }),
+  ],
+});
+// has_manager("e9","m1") and manages("m1","e9")
 ```
 
-Key flags
+#### Suppress the inverse (fine-grained)
 
-- JSON-accepting flags: `--relation-keys`, `--relation-inverse`, `--registry`,
-  `--enum-allowed`, `--cardinality`
-- CSV flags: `--exclude`, `--required`
-- Derive id: `--object-id-path` for single objects or arrays
-- Normalization: `--normalize-lower`, `--normalize-ascii`
-- Safety: `--strict-arity` with `--registry`
+Use `filterEmits` to drop specific emitted facts:
 
-Exit behavior
+```ts
+import { filterEmits } from "./lib/datalog/mod.ts";
+const relations = pack.relationsWithInverse({
+  map: { managerId: "has_manager" },
+  inverse: { has_manager: "manages" },
+});
 
-- exits non-zero on input parse failures or strict arity violations
-- writes warnings to stderr for non-object array entries or non-primitive ids at
-  `--object-id-path`
+const directOnly = filterEmits((pred) => pred !== "manages", relations);
 
-## Authoring rules on top of emitted facts
-
-Unary helpers for class membership
-
-```prolog
-active_user(U) :- user(U), active(U).
+stringify(employee, { objectId: "e9", projections: [directOnly] });
+// only: has_manager("e9","m1")
 ```
 
-Relations for org charts
+### 5) Ignoring fields (PII & noise)
 
-```prolog
-manages(M, E) :- has_manager(E, M).
-manages(M, E) :- has_manager(E, X), manages(M, X).
+#### Ignore by path (blocklist)
+
+Wrap your projection with `exceptPaths`:
+
+```ts
+import { exceptPaths, pack, stringify } from "./lib/datalog/mod.ts";
+
+const base = pack.genericKVWithHelpers({/* … */});
+const meta = pack.schemaAndProvenance({ entityPred: "user", sourceId: "src" });
+
+const blocked = ["password", "ci.ssn"]; // blocks "password" and "ci.*" subtree
+
+const out = stringify(myJson, {
+  objectId: "u1",
+  projections: [
+    exceptPaths(blocked, base),
+    exceptPaths(blocked, meta), // even schema ignores these fields
+  ],
+});
 ```
 
-Presence, required attributes, and data quality
+#### Ignore by emitted predicate/args
 
-```prolog
-missing_required(U, A) :- user(U), required(attr:A, true), not has_attr(U, A).
-invalid_email(U) :- has_attr(U, "email"), not email_e164(U, _).  % example with your own validators
+Drop facts based on predicate/arity/values:
+
+```ts
+import { filterEmits, pack } from "./lib/datalog/mod.ts";
+
+const kv = pack.basicKV({ prefix: "app.", snakeCase: true });
+
+// Drop the specific `app.id/2` fact
+const kvNoId = filterEmits(
+  (pred, args) => !(pred === "app.id" && args.length >= 2),
+  kv,
+);
+
+stringify(myJson, { objectId: "u1", projections: [kvNoId] });
 ```
 
-String normalization helpers
+### 6) Composing and gating projections
 
-```prolog
-city_matches_ascii(U, "Sao Paulo") :- app.profile.city_ascii(U, "Sao Paulo").
+You can compose projections and gate where they run.
+
+```ts
+import {
+  attrProjection,
+  compose,
+  kvPredicateProjection,
+  onlyKinds,
+  onlyPath,
+  statusItemProjection,
+  withPredicatePrefix,
+} from "./lib/datalog/mod.ts";
+
+const Status = {
+  ok: ["ok", "green"],
+  warn: ["warn", "yellow"],
+  err: ["err", "red"],
+} as const;
+
+const projections = compose(
+  // Base KV with prefix
+  kvPredicateProjection({ prefix: "k.", snakeCase: true }),
+  // Only run attr for "sc.*" paths
+  onlyPath((p) => p.startsWith("sc."), attrProjection("sc_attr")),
+  // Namespace status facts under "ns." and run only on primitives
+  withPredicatePrefix(
+    "ns.",
+    onlyKinds(
+      ["primitive"],
+      statusItemProjection(["health.status"] as const, Status, "health_status"),
+    ),
+  ),
+);
+
+stringify(json, { objectId: "h1", projections });
 ```
 
-Temporal reasoning with provenance
+### 7) The projection API (for advanced functionality)
 
-```prolog
-recent_fact(H) :- tx_time(H, T), T >= "2025-08-01T00:00:00Z".
-from_source(H, "import-42") :- fact_source(H, "import-42").
+Engine: `stringify(src, { objectId?, projections, sort?, dedupe? }) → string[]`
+
+- Walks every value in `src`.
+- Calls your projections with a `NodeContext` and `ProjectionApi`.
+
+NodeContext
+
+```ts
+type NodeKind =
+  | "primitive"
+  | "nullish"
+  | "function"
+  | "object"
+  | "array"
+  | "array-item";
+
+type NodeContext = {
+  kind: NodeKind;
+  value: unknown;
+  key?: string; // when visiting object properties
+  index?: number; // when visiting array items
+};
 ```
 
-## Testing and CI patterns
+ProjectionApi
 
-Golden snapshots
+```ts
+interface ProjectionApi {
+  readonly subject?: string | number; // objectId you passed in
+  readonly path: readonly string[]; // current path segments
+  join(sep?: string): string; // convenience — joined path
+  emit(pred: string, ...args: (string | number | boolean)[]): void; // typed fact
+  emitRaw(line: string): void; // already-printed line; '.' will be added if missing
+  facts(): readonly Fact[]; // snapshot of typed facts so far
+}
+```
 
-- capture `.facts` files and compare in Deno tests
-- deterministic sorting and de-dupe keep diffs stable
+ProjectionPlugin
 
-CLI tests with Dax
+```ts
+interface ProjectionPlugin {
+  name: string;
+  onInit?(api: ProjectionApi): void; // called before traversal
+  onValue(ctx: NodeContext, api: ProjectionApi): void; // called for each visited node
+  onAfterAll?(api: ProjectionApi): void; // called after traversal
+}
+```
 
-- invoke `modctl.ts` with `$` from JSR, pipe stdin, assert on stdout/stderr
+Write your own plugin
 
-Example target assertions
+```ts
+import type {
+  NodeContext,
+  ProjectionApi,
+  ProjectionPlugin,
+} from "./lib/datalog/mod.ts";
 
-- presence of key facts, not exact ordering
-- friendly error when relation is used without `objectId` in strict mode
+export function myDatesProjection(): ProjectionPlugin {
+  return {
+    name: "dates→iso",
+    onValue(ctx, api) {
+      if (api.subject === undefined) return;
+      if (ctx.kind !== "primitive") return;
+      if (typeof ctx.value !== "string") return;
+      if (!/^\d{4}-\d{2}-\d{2}/.test(ctx.value)) return; // naive date detection
 
-## Troubleshooting
+      api.emit(
+        "date_attr",
+        String(api.subject),
+        api.join("."),
+        ctx.value.slice(0, 10),
+      );
+    },
+  };
+}
+```
 
-Relation mapped but no objectId
+Ship it with a pack
 
-- enable strict mode and provide `objectId` or `--object-id-path`
-- or remove the relation mapping for that property
+```ts
+import { compose, kvPredicateProjection } from "./lib/datalog/mod.ts";
+import { myDatesProjection } from "./my-dates.ts";
 
-Arity mismatch
+export const packDates = () =>
+  compose(
+    kvPredicateProjection({ prefix: "app.", snakeCase: true }),
+    myDatesProjection(),
+  );
+```
 
-- ensure `--registry` matches the predicates you emit and their argument counts
-- inverse relations also need entries in the registry when `--strict-arity` is
-  on
+### 8) Testing patterns
 
-Unexpected predicate names
+#### Unit test a projection (no engine)
 
-- review `prefix`, `camelToSnakeCase`, and `keySeparator` interactions
-- relation mappings bypass prefix and case conversion, by design
+- Create a tiny mock `ProjectionApi` that captures `emit`/`emitRaw`.
+- Call `onValue` with your own `NodeContext` objects.
+- Assert captured facts.
 
-No facts for a key
+(See `projection_test.ts` for examples including `exceptPaths` and
+`filterEmits`.)
 
-- key may be in `--exclude`
-- value may be null/undefined and you did not supply an `undefinedFact` handler
+#### End-to-end test a pack (engine included)
 
-## Recommended conventions
+- Call `stringify` with a JSON fixture + your pack(s).
+- Assert key facts are present; don’t overfit on ordering (the engine sorts).
+- Keep tests small and readable (see `mod_test.ts`).
 
-- subject-first, value-second for attributes; subject-object for relations;
-  subject-index-value for arrays
-- give relation predicates semantic names (`has_manager`) rather than scalar
-  ones (`manager_id`)
-- always emit a unary entity predicate (`user(Id)`) per object
-- choose and stick to a schema namespace version (`schema_ns("app.v1")`) for
-  evolution
+### 9) Tips, pitfalls, and performance
 
-## Roadmap ideas
+- Status synonyms: avoid overlaps like `"implemented"` vs `"Not implemented"`.
+  Prefer explicit phrases (`"fully implemented"`, `"not implemented"`). If you
+  must overlap, list the stricter match earlier (e.g., `not` before `fully`).
+- Order matters for meta: anything that inspects _emitted_ facts (schema,
+  provenance) should come after base emitters in `projections: []`.
+- Gating is cheap: use `onlyPath`, `onlyKinds`, `exceptPaths` to cut unnecessary
+  work.
+- Typed status unions: with `statusItemProjection<T>`, your synonyms map defines
+  the status type and locks downstream TS code to valid values.
+- Side-effect free: projections should only use `api.*` to emit; avoid global
+  state or I/O.
 
-- optional Soufflé printer while keeping the current printer
-- JSON-Lines (`jsonl`) input mode for the CLI
-- round-trip helpers from facts to objects for selected patterns
-- richer normalization (ICU) delegated to platform features
+### 10) Quick reference
+
+Common packs
+
+```ts
+pack.basicKV({ prefix, snakeCase, sep, subjectRequired });
+pack.genericKVWithHelpers({ prefix, statusKeys, statusSynonyms, answeredKeys });
+pack.relationsWithInverse({ map, inverse });
+pack.schemaAndProvenance({
+  entityPred,
+  sourceId,
+  txTimeIso,
+  validFromIso,
+  validToIso,
+  booleanUnary,
+});
+pack.withPrefix(prefix, innerPack);
+```
+
+Core projections
+
+```ts
+kvPredicateProjection({ prefix?, snakeCase?, sep?, subjectRequired? })
+attrProjection(pred = "attr")
+flagProjection(pred = "flag", mode = "presence"|"truthy"|"yesNo", yesValues = ["yes","true","y","1"])
+statusItemProjection<TStatus>(keys, synonyms: Record<TStatus,string[]>, pred = "status_item")
+answeredProjection(keys, answeredPred = "answered", answeredValPred = "answered_value")
+entityTypeUnaryProjection(entityPred)
+relationMappingProjection({ map, inverse? })
+attributeTypeProjection(pred = "attribute_type")
+provenanceProjection({ sourceId?, txTimeIso?, validFromIso?, validToIso?, hashPred? })
+booleanUnaryProjection(transform? = segment => …)
+```
+
+Combinators
+
+```ts
+compose(...plugins);
+onlyKinds(kinds, inner);
+onlyPath(pathPredicate, inner);
+withPredicatePrefix(prefix, inner);
+exceptPaths(blockedPathsOrFn, inner);
+filterEmits(keepFn, inner);
+```
+
+### 11) Migration notes (old → projections-first)
+
+- Replace option soup with packs (start with `genericKVWithHelpers`).
+- Move “entity type”, “relations”, “provenance”, “schema” into packs in the
+  projections array.
+- Where you previously toggled booleans, prefer composition (`compose`) and
+  filters (`onlyPath`, `exceptPaths`, `filterEmits`).
+- Rules get shorter once you rely on `status_item/answered/attr` instead of
+  per-family predicates.
+
+### 12) Example: “from 0 to production” in \~10 lines
+
+```ts
+import { compose, exceptPaths, pack, stringify } from "./lib/datalog/mod.ts";
+
+const Status = {
+  not: ["not", "not implemented"],
+  partially: ["partial", "in progress"],
+  fully: ["fully", "fully implemented"],
+} as const;
+
+const projections = compose(
+  pack.genericKVWithHelpers({
+    prefix: "app.",
+    statusKeys: ["pp.implementationStatus", "sc.implementationStatus"] as const,
+    statusSynonyms: Status,
+    answeredKeys: ["sc.training"] as const,
+  }),
+  pack.schemaAndProvenance({
+    entityPred: "user",
+    sourceId: "prod-import-17",
+    booleanUnary: true,
+  }),
+);
+
+// Block PII (one line)
+const hardened = exceptPaths(["password", "ci.ssn"], projections);
+
+// Run
+console.log(
+  stringify(loadJson(), { objectId: "u123", projections: [hardened] }).join(
+    "\n",
+  ),
+);
+```
+
+You’re live, with a tiny engine you’ll almost never touch again — and projection
+plugins/packs that you can compose, filter, and evolve safely over time.
