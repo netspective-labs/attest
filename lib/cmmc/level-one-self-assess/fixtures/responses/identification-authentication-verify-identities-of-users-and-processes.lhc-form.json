@@ -1,0 +1,1818 @@
+{
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Identification & Authentication",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "IA.L1-B.1.V - Identification",
+      "questionCode": "228228158249",
+      "questionCodeSystem": "LinkId",
+      "linkId": "228228158249",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "362061549890",
+          "questionCodeSystem": "LinkId",
+          "linkId": "362061549890",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": "Not Implemented"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "281929303054",
+              "questionCodeSystem": "LinkId",
+              "linkId": "281929303054",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "All users identified using first name + last name."
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "100",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "100"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "User Identification Standards",
+          "questionCode": "139461602895",
+          "questionCodeSystem": "LinkId",
+          "linkId": "139461602895",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": " First name + last name (john.smith)"
+            },
+            {
+              "text": " First initial + last name (jsmith)"
+            },
+            {
+              "text": " Employee ID numbers (EMP001234)"
+            },
+            {
+              "text": " Department codes + names (IT-jsmith)"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence:",
+              "questionCode": "243749447566",
+              "questionCodeSystem": "LinkId",
+              "linkId": "243749447566",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": " First name + last name (john.smith)"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Service Account Management",
+          "questionCode": "446911811643",
+          "questionCodeSystem": "LinkId",
+          "linkId": "446911811643",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter number"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Number of service accounts:",
+              "questionCode": "179545641231",
+              "questionCodeSystem": "LinkId",
+              "linkId": "179545641231",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 8
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Check all that apply:",
+              "questionCode": "753553198622",
+              "questionCodeSystem": "LinkId",
+              "linkId": "753553198622",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Database services"
+                },
+                {
+                  "text": " Web applications"
+                },
+                {
+                  "text": " Backup processes"
+                },
+                {
+                  "text": " Monitoring/logging services"
+                },
+                {
+                  "text": "Security scanning tools"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Database services"
+                },
+                {
+                  "text": " Web applications"
+                },
+                {
+                  "text": " Backup processes"
+                },
+                {
+                  "text": " Monitoring/logging services"
+                },
+                {
+                  "text": "Security scanning tools"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "441172825241",
+              "questionCodeSystem": "LinkId",
+              "linkId": "441172825241",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Do you have a device inventory spreadsheet?",
+              "questionCode": "926744954268",
+              "questionCodeSystem": "LinkId",
+              "linkId": "926744954268",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "TX",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "279054233268",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "279054233268",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Identity Verification Process",
+              "questionCode": "297397401977",
+              "questionCodeSystem": "LinkId",
+              "linkId": "297397401977",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "HR verification with employee records"
+                },
+                {
+                  "text": "Manager approval with written authorization"
+                },
+                {
+                  "text": "Background check completion"
+                },
+                {
+                  "text": "Photo identification verification"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "HR verification with employee records"
+                },
+                {
+                  "text": "Manager approval with written authorization"
+                },
+                {
+                  "text": "Background check completion"
+                },
+                {
+                  "text": "Photo identification verification"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "627017348272",
+              "questionCodeSystem": "LinkId",
+              "linkId": "627017348272",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Manage service accounts carefully by assigning minimal privileges and regularly reviewing their usage to prevent misuse.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Manage service accounts carefully by assigning minimal privileges and regularly reviewing their usage to prevent misuse.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Device Inventory",
+          "questionCode": "543189099428",
+          "questionCodeSystem": "LinkId",
+          "linkId": "543189099428",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "INT",
+              "question": "Workstations/laptops:",
+              "questionCode": "878410531769",
+              "questionCodeSystem": "LinkId",
+              "linkId": "878410531769",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 120
+            },
+            {
+              "dataType": "INT",
+              "question": "Servers:",
+              "questionCode": "361034048943",
+              "questionCodeSystem": "LinkId",
+              "linkId": "361034048943",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 25
+            },
+            {
+              "dataType": "INT",
+              "question": "Mobile devices:",
+              "questionCode": "424090205463",
+              "questionCodeSystem": "LinkId",
+              "linkId": "424090205463",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 60
+            },
+            {
+              "dataType": "INT",
+              "question": "Network devices:",
+              "questionCode": "764441913827",
+              "questionCodeSystem": "LinkId",
+              "linkId": "764441913827",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 15
+            }
+          ],
+          "codingInstructions": "Maintain an up-to-date list of all devices connected to the network to track and manage authorized hardware",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Maintain an up-to-date list of all devices connected to the network to track and manage authorized hardware",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "99.96",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "99.96"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Device Identification",
+          "questionCode": "359160217347",
+          "questionCodeSystem": "LinkId",
+          "linkId": "359160217347",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "MAC addresses"
+            },
+            {
+              "text": "IP addresses (static)"
+            },
+            {
+              "text": "Computer/device names"
+            },
+            {
+              "text": "Asset tag numbers"
+            },
+            {
+              "text": "Serial numbers"
+            },
+            {
+              "text": "Certificates/digital signatures"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "MAC addresses"
+            },
+            {
+              "text": "IP addresses (static)"
+            },
+            {
+              "text": "Computer/device names"
+            },
+            {
+              "text": "Asset tag numbers"
+            },
+            {
+              "text": "Serial numbers"
+            },
+            {
+              "text": "Certificates/digital signatures"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Notes / Evidence",
+          "questionCode": "157280172274",
+          "questionCodeSystem": "LinkId",
+          "linkId": "157280172274",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Supporting Documentation",
+          "questionCode": "210356958517",
+          "questionCodeSystem": "LinkId",
+          "linkId": "210356958517",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "438433871645",
+              "questionCodeSystem": "LinkId",
+              "linkId": "438433871645",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Device inventory logs updated monthly"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes",
+          "questionCode": "268793244463",
+          "questionCodeSystem": "LinkId",
+          "linkId": "268793244463",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Identify information system users, processes acting on behalf of users, or devices.",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Identify information system users, processes acting on behalf of users, or devices.",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "IA.L1-B.1.VI - Authentication",
+      "questionCode": "865372145224",
+      "questionCodeSystem": "LinkId",
+      "linkId": "865372145224",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "676336695824",
+          "questionCodeSystem": "LinkId",
+          "linkId": "676336695824",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": "Not Implemented"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "440326396427",
+              "questionCodeSystem": "LinkId",
+              "linkId": "440326396427",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Username and password, Multi-factor authentication (MFA), Smart cards/PIV cards"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "99.96",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "99.96"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "User Authentication Methods",
+          "questionCode": "901079756471",
+          "questionCodeSystem": "LinkId",
+          "linkId": "901079756471",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Username and password"
+            },
+            {
+              "text": "Multi-factor authentication (MFA)"
+            },
+            {
+              "text": "Smart cards/PIV cards"
+            },
+            {
+              "text": "Biometric authentication"
+            },
+            {
+              "text": " Digital certificates"
+            },
+            {
+              "text": "Single sign-on (SSO)"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "Username and password"
+            },
+            {
+              "text": "Multi-factor authentication (MFA)"
+            },
+            {
+              "text": " Digital certificates"
+            },
+            {
+              "text": "Single sign-on (SSO)"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Notes / Evidence",
+          "questionCode": "115035657570",
+          "questionCodeSystem": "LinkId",
+          "linkId": "115035657570",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Password Requirements",
+          "questionCode": "459655669415",
+          "questionCodeSystem": "LinkId",
+          "linkId": "459655669415",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "8"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Minimum length (characters):",
+              "questionCode": "444552965098",
+              "questionCodeSystem": "LinkId",
+              "linkId": "444552965098",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 8
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "90"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Password expiration (days):",
+              "questionCode": "499668919305",
+              "questionCodeSystem": "LinkId",
+              "linkId": "499668919305",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 90
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "5"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Password history (passwords remembered):",
+              "questionCode": "190124104069",
+              "questionCodeSystem": "LinkId",
+              "linkId": "190124104069",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 5
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Click all that apply:",
+              "questionCode": "404025003688",
+              "questionCodeSystem": "LinkId",
+              "linkId": "404025003688",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Uppercase letters required"
+                },
+                {
+                  "text": "Lowercase letters required"
+                },
+                {
+                  "text": "Numbers required"
+                },
+                {
+                  "text": "Special characters required"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Uppercase letters required"
+                },
+                {
+                  "text": "Lowercase letters required"
+                },
+                {
+                  "text": "Numbers required"
+                },
+                {
+                  "text": "Special characters required"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "149539043632",
+              "questionCodeSystem": "LinkId",
+              "linkId": "149539043632",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Set and enforce strong password rules to ensure users and processes securely verify their identity before accessing systems.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Set and enforce strong password rules to ensure users and processes securely verify their identity before accessing systems.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "100",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "100"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Multi-Factor Authentication",
+          "questionCode": "928879235030",
+          "questionCodeSystem": "LinkId",
+          "linkId": "928879235030",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes, for all users and systems"
+            },
+            {
+              "text": "Yes, for privileged accounts only"
+            },
+            {
+              "text": "Yes, for remote access only"
+            },
+            {
+              "text": "Yes, for critical systems only"
+            },
+            {
+              "text": "No, not implemented"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "496212946934",
+              "questionCodeSystem": "LinkId",
+              "linkId": "496212946934",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes, for all users and systems"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "100",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "100"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Default Credential Management",
+          "questionCode": "830887074055",
+          "questionCodeSystem": "LinkId",
+          "linkId": "830887074055",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Always changed before deployment"
+            },
+            {
+              "text": "Changed during initial configuration"
+            },
+            {
+              "text": "Users required to change on first login"
+            },
+            {
+              "text": "No formal process"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "273984680811",
+              "questionCodeSystem": "LinkId",
+              "linkId": "273984680811",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Always changed before deployment"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Authentication Failure Handling",
+          "questionCode": "341175611920",
+          "questionCodeSystem": "LinkId",
+          "linkId": "341175611920",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "3"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Number of failed attempts before lockout:",
+              "questionCode": "647413778355",
+              "questionCodeSystem": "LinkId",
+              "linkId": "647413778355",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 5
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "30"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Account lockout duration (minutes):",
+              "questionCode": "552155632772",
+              "questionCodeSystem": "LinkId",
+              "linkId": "552155632772",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 30
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Click all that apply:",
+              "questionCode": "947716241721",
+              "questionCodeSystem": "LinkId",
+              "linkId": "947716241721",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Administrator notification sent"
+                },
+                {
+                  "text": " Security team alerted"
+                },
+                {
+                  "text": "Logged for review"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Administrator notification sent"
+                },
+                {
+                  "text": " Security team alerted"
+                },
+                {
+                  "text": "Logged for review"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "434988961472",
+              "questionCodeSystem": "LinkId",
+              "linkId": "434988961472",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Supporting Documentation",
+          "questionCode": "230111377333",
+          "questionCodeSystem": "LinkId",
+          "linkId": "230111377333",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "questionCode": "116846260787",
+              "questionCodeSystem": "LinkId",
+              "linkId": "116846260787",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes",
+          "questionCode": "939036015644",
+          "questionCodeSystem": "LinkId",
+          "linkId": "939036015644",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "3",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "3"
+          }
+        ]
+      }
+    }
+  ],
+  "hasSavedData": true,
+  "fhirVersion": "R4"
+}

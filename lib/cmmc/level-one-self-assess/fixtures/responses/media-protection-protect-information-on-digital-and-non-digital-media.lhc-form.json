@@ -1,0 +1,391 @@
+{
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Media Protection (Protect information on digital and non-digital media)",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "MP.L1-B.1.VII - MEDIA PROTECTION (MP) - 1 PRACTICE",
+      "questionCode": "609511072752",
+      "questionCodeSystem": "LinkId",
+      "linkId": "609511072752",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Do you have a Media Disposal Policy?",
+          "questionCode": "957584520694",
+          "questionCodeSystem": "LinkId",
+          "linkId": "957584520694",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "256250807567",
+          "questionCodeSystem": "LinkId",
+          "linkId": "256250807567",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "value": "Media disposal policy is documented and covers both digital and non-digital media, including hard drives, SSDs, USB drives, and printed materials."
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "272642906092",
+          "questionCodeSystem": "LinkId",
+          "linkId": "272642906092",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": " Not Implemented"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "686200078306",
+          "questionCodeSystem": "LinkId",
+          "linkId": "686200078306",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "value": "Media disposal processes are fully operational and in compliance with NIST SP 800-88 guidelines."
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Policy Elements",
+          "questionCode": "393852162334",
+          "questionCodeSystem": "LinkId",
+          "linkId": "393852162334",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "maxScore",
+                "language": "text/fhirpath",
+                "expression": "100",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "100"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Confirm that your media disposal policy includes the following elements (click all that apply):",
+          "questionCode": "698818405059",
+          "questionCodeSystem": "LinkId",
+          "linkId": "698818405059",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
+            },
+            {
+              "text": "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
+            },
+            {
+              "text": "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
+            },
+            {
+              "text": "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
+            },
+            {
+              "text": "Verification requirements (Procedures to verify sanitization or destruction was successful)"
+            },
+            {
+              "text": "Documentation requirements (Required records of sanitization and destruction activities)"
+            },
+            {
+              "text": "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
+            },
+            {
+              "text": "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
+            },
+            {
+              "text": "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
+            },
+            {
+              "text": "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
+            },
+            {
+              "text": "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
+            },
+            {
+              "text": "Verification requirements (Procedures to verify sanitization or destruction was successful)"
+            },
+            {
+              "text": "Documentation requirements (Required records of sanitization and destruction activities)"
+            },
+            {
+              "text": "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
+            },
+            {
+              "text": "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "806966265807",
+          "questionCodeSystem": "LinkId",
+          "linkId": "806966265807",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "value": "Media disposal policy includes procedures for secure data wiping, degaussing, shredding, and destruction certificates. Responsible roles are designated in the IT Asset Management team."
+        }
+      ],
+      "codingInstructions": "Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "4",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "4"
+          }
+        ]
+      }
+    }
+  ],
+  "hasSavedData": true,
+  "fhirVersion": "R4"
+}

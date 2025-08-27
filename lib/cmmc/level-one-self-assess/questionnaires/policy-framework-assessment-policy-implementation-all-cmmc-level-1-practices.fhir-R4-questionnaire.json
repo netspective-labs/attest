@@ -1,0 +1,849 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "Policy Assessment"
+      },
+      {
+        "display": "CMMC Level 1"
+      },
+      {
+        "display": "Cybersecurity Governance"
+      },
+      {
+        "display": "Policy Compliance"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "8",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "8"
+          }
+        ]
+      }
+    }
+  ],
+  "version": "1.0",
+  "name": "policy_framework_assessment",
+  "title": "Policy Framework Assessment",
+  "status": "draft",
+  "date": "2025-08-26",
+  "publisher": "Netspective",
+  "description": "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+  "purpose": "To assess the existence, implementation, and effectiveness of organizational policies supporting CMMC Level 1 practices, ensuring compliance, governance, and foundational cybersecurity controls.",
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "527949557496",
+              "text": "Who is responsible for developing and approving CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Chief Information Officer"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Chief Information Security Officer"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Chief Executive Officer"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Legal/Compliance Department"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "IT Security Team"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "576726184171",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "590810573907_helpText",
+              "type": "display",
+              "text": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "590810573907",
+          "prefix": "1.",
+          "text": "Policy Development and Approval"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "992068463537",
+              "text": "How frequently are CMMC-related policies reviewed and updated?",
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Quarterly"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Bi-annually"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Annually"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "When regulations change"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "No formal schedule"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "891438058183",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "441079114846_helpText",
+              "type": "display",
+              "text": "Implement regular procedures to review and update policies to keep them current and effective.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "441079114846",
+          "prefix": "2.",
+          "text": "Policy Review and Update Procedures"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "472951321809",
+              "text": "What training is provided to employees on CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Initial security awareness training"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Role-specific policy training"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Annual refresher training"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "just-in-time training for policy changes"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "No formal training program"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "948893743049",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "401642968533_helpText",
+              "type": "display",
+              "text": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "401642968533",
+          "prefix": "3.",
+          "text": "Employee Training on Policies"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "758349008850",
+              "text": "How is compliance with CMMC-related policies monitored?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": " Regular internal audits"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Automated compliance monitoring"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Self-assessment questionnaires"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Manager reviews and attestations"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Third-party assessments"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "230314073532",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "237023742748_helpText",
+              "type": "display",
+              "text": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "237023742748",
+          "prefix": "4.",
+          "text": "Policy Compliance Monitoring"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "255836550808",
+              "text": "How are exceptions to CMMC-related policies managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": " Formal exception request process"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Risk assessment for exceptions"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Compensating controls for exceptions"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Regular review of approved exceptions"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "No formal exception process"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "683517806081",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "260429244098_helpText",
+              "type": "display",
+              "text": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "260429244098",
+          "prefix": "5.",
+          "text": "Policy Exception Management"
+        },
+        {
+          "linkId": "364455629781_helpText",
+          "type": "display",
+          "text": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "364455629781",
+      "text": "Policy Framework Assessment"
+    },
+    {
+      "type": "text",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Any additional information about your policy framework."
+        }
+      ],
+      "linkId": "795388091631",
+      "text": "Additional Notes"
+    }
+  ]
+}

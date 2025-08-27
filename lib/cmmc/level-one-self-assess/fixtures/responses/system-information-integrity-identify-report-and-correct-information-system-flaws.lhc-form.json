@@ -1,0 +1,2563 @@
+{
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "System & Information Integrity",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "SI.L1-B.1.XII – Flaw Remediation",
+      "questionCode": "350961856234",
+      "questionCodeSystem": "LinkId",
+      "linkId": "350961856234",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Flaw Identification Process",
+          "questionCode": "544004255685",
+          "questionCodeSystem": "LinkId",
+          "linkId": "544004255685",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How does your organization identify system flaws and vulnerabilities?",
+              "questionCode": "758011605310",
+              "questionCodeSystem": "LinkId",
+              "linkId": "758011605310",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Automated vulnerability scanning"
+                },
+                {
+                  "text": "Vendor security notifications and bulletins"
+                },
+                {
+                  "text": "Penetration testing"
+                },
+                {
+                  "text": "Regular security assessments"
+                },
+                {
+                  "text": "Threat intelligence feeds"
+                },
+                {
+                  "text": "Incident response and forensics"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Automated vulnerability scanning"
+                },
+                {
+                  "text": "Vendor security notifications and bulletins"
+                },
+                {
+                  "text": "Penetration testing"
+                },
+                {
+                  "text": "Regular security assessments"
+                },
+                {
+                  "text": "Threat intelligence feeds"
+                },
+                {
+                  "text": "Incident response and forensics"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "135467801033",
+              "questionCodeSystem": "LinkId",
+              "linkId": "135467801033",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Weekly scans via Qualys/Nessus, monthly penetration testing, continuous vendor patch notifications."
+            }
+          ],
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "2.",
+          "question": "Flaw Reporting and Tracking",
+          "questionCode": "603452357063",
+          "questionCodeSystem": "LinkId",
+          "linkId": "603452357063",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How are identified flaws reported and tracked?",
+              "questionCode": "854540559647",
+              "questionCodeSystem": "LinkId",
+              "linkId": "854540559647",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Formal tracking system or database"
+                },
+                {
+                  "text": "Automatic management notification"
+                },
+                {
+                  "text": "Risk assessment and prioritization"
+                },
+                {
+                  "text": "Communication to affected stakeholders"
+                },
+                {
+                  "text": "Detailed documentation of findings"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Formal tracking system or database"
+                },
+                {
+                  "text": "Automatic management notification"
+                },
+                {
+                  "text": "Risk assessment and prioritization"
+                },
+                {
+                  "text": "Communication to affected stakeholders"
+                },
+                {
+                  "text": "Detailed documentation of findings"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "924286782806",
+              "questionCodeSystem": "LinkId",
+              "linkId": "924286782806",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Formal tracking system (JIRA/SNOW), automatic management notifications, risk assessment and prioritization, communication to stakeholders, detailed documentation of findings"
+            }
+          ],
+          "codingInstructions": "Establish processes to identify, report, and track system flaws and vulnerabilities until they are resolved.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish processes to identify, report, and track system flaws and vulnerabilities until they are resolved.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "3.",
+          "question": "Flaw Correction Timeline",
+          "questionCode": "702845194175",
+          "questionCodeSystem": "LinkId",
+          "linkId": "702845194175",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "header": true,
+              "dataType": "SECTION",
+              "question": "What are your target timeframes for correcting identified flaws?",
+              "questionCode": "802989461197",
+              "questionCodeSystem": "LinkId",
+              "linkId": "802989461197",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                      "valueExpression": {
+                        "name": "weight",
+                        "language": "text/fhirpath",
+                        "expression": "1",
+                        "extension": [
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                            "valueString": "simple"
+                          },
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                            "valueString": "1"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "dataType": "CNE",
+                  "question": "Critical Severity Flaws:",
+                  "questionCode": "885354230428",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "885354230428",
+                  "answerCardinality": {
+                    "max": "1",
+                    "min": "0"
+                  },
+                  "displayControl": {
+                    "answerLayout": {
+                      "type": "RADIO_CHECKBOX"
+                    }
+                  },
+                  "answers": [
+                    {
+                      "text": "Immediate (within hours)"
+                    },
+                    {
+                      "text": "Within 24 hours"
+                    },
+                    {
+                      "text": "Within 72 hours"
+                    },
+                    {
+                      "text": " Within 1 week"
+                    }
+                  ],
+                  "codeList": [],
+                  "questionCardinality": {
+                    "min": "1",
+                    "max": "1"
+                  },
+                  "value": {
+                    "text": "Within 24 hours"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                      "valueExpression": {
+                        "name": "weight",
+                        "language": "text/fhirpath",
+                        "expression": "1",
+                        "extension": [
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                            "valueString": "simple"
+                          },
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                            "valueString": "1"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "dataType": "CNE",
+                  "question": "High Severity Flaws:",
+                  "questionCode": "149460684671",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "149460684671",
+                  "answerCardinality": {
+                    "max": "1",
+                    "min": "0"
+                  },
+                  "displayControl": {
+                    "answerLayout": {
+                      "type": "RADIO_CHECKBOX"
+                    }
+                  },
+                  "answers": [
+                    {
+                      "text": "Within 1 week"
+                    },
+                    {
+                      "text": "Within 2 weeks"
+                    },
+                    {
+                      "text": "Within 1 month"
+                    }
+                  ],
+                  "codeList": [],
+                  "questionCardinality": {
+                    "min": "1",
+                    "max": "1"
+                  },
+                  "value": {
+                    "text": "Within 1 week"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                      "valueExpression": {
+                        "name": "weight",
+                        "language": "text/fhirpath",
+                        "expression": "1",
+                        "extension": [
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                            "valueString": "simple"
+                          },
+                          {
+                            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                            "valueString": "1"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "dataType": "CNE",
+                  "question": "Medium/Low Severity Flaws:",
+                  "questionCode": "119144494365",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "119144494365",
+                  "answerCardinality": {
+                    "max": "1",
+                    "min": "0"
+                  },
+                  "displayControl": {
+                    "answerLayout": {
+                      "type": "RADIO_CHECKBOX"
+                    }
+                  },
+                  "answers": [
+                    {
+                      "text": "Within 1 month"
+                    },
+                    {
+                      "text": "Within 1 quarter"
+                    },
+                    {
+                      "text": "Next scheduled maintenance window"
+                    }
+                  ],
+                  "codeList": [],
+                  "questionCardinality": {
+                    "min": "1",
+                    "max": "1"
+                  },
+                  "value": {
+                    "text": "Within 1 month"
+                  }
+                }
+              ],
+              "codeList": [],
+              "displayControl": {
+                "questionLayout": "vertical"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "478326704189",
+              "questionCodeSystem": "LinkId",
+              "linkId": "478326704189",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Define and follow timelines to promptly address and fix identified system vulnerabilities to reduce security risks.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Define and follow timelines to promptly address and fix identified system vulnerabilities to reduce security risks.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "4.",
+          "question": "Patch Management Process",
+          "questionCode": "535096646220",
+          "questionCodeSystem": "LinkId",
+          "linkId": "535096646220",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How are security patches and updates managed?",
+              "questionCode": "896010001522",
+              "questionCodeSystem": "LinkId",
+              "linkId": "896010001522",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Testing in non-production environment before deployment"
+                },
+                {
+                  "text": "Formal change control process"
+                },
+                {
+                  "text": "Rollback procedures in case of issues"
+                },
+                {
+                  "text": "Automated patch deployment capabilities"
+                },
+                {
+                  "text": "Emergency patching procedures for critical flaws"
+                },
+                {
+                  "text": "Documentation of all patches applied"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Testing in non-production environment before deployment"
+                },
+                {
+                  "text": "Formal change control process"
+                },
+                {
+                  "text": "Rollback procedures in case of issues"
+                },
+                {
+                  "text": "Automated patch deployment capabilities"
+                },
+                {
+                  "text": "Emergency patching procedures for critical flaws"
+                },
+                {
+                  "text": "Documentation of all patches applied"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Any additional context, challenges, or implementation details..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Additional Notes or Comments",
+              "questionCode": "731360730463",
+              "questionCodeSystem": "LinkId",
+              "linkId": "731360730463",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "List or describe the supporting documentation you have available (policies, procedures, scan reports, etc.)..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Supporting Documentation",
+              "questionCode": "231346071278",
+              "questionCodeSystem": "LinkId",
+              "linkId": "231346071278",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "Note: Have documentation available that demonstrates your flaw remediation processes, vulnerability scanning procedures, and patch management policies.",
+              "codingInstructionsFormat": "text",
+              "codingInstructionsPlain": "Note: Have documentation available that demonstrates your flaw remediation processes, vulnerability scanning procedures, and patch management policies.",
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Patch management policy v3.4, change management SOP, vulnerability remediation logs"
+            }
+          ],
+          "codingInstructions": "Implement procedures to regularly apply updates and patches to systems to protect against known vulnerabilities.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement procedures to regularly apply updates and patches to systems to protect against known vulnerabilities.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Identify, report, and correct information and information system flaws in a timely manner",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Identify, report, and correct information and information system flaws in a timely manner",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "SI.L1-B.1.XIII – Malicious Code Protection",
+      "questionCode": "340771388729",
+      "questionCodeSystem": "LinkId",
+      "linkId": "340771388729",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Do you have a malicious code protection policy document?",
+          "questionCode": "892692932760",
+          "questionCodeSystem": "LinkId",
+          "linkId": "892692932760",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "514312894888",
+              "questionCodeSystem": "LinkId",
+              "linkId": "514312894888",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "dataType": "ST",
+          "question": "Do you need assistance?",
+          "questionCode": "942706169228",
+          "questionCodeSystem": "LinkId",
+          "linkId": "942706169228",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "342802754726",
+              "questionCodeSystem": "LinkId",
+              "linkId": "342802754726",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Protection Locations",
+          "questionCode": "120577885697",
+          "questionCodeSystem": "LinkId",
+          "linkId": "120577885697",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Select all locations where malicious code protection is implemented:",
+              "questionCode": "457010911238",
+              "questionCodeSystem": "LinkId",
+              "linkId": "457010911238",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Email Gateway"
+                },
+                {
+                  "text": "Web Proxy/Gateway"
+                },
+                {
+                  "text": "Perimeter Firewall"
+                },
+                {
+                  "text": "VPN Gateway"
+                },
+                {
+                  "text": "Endpoints (Workstations, Laptops)"
+                },
+                {
+                  "text": "Servers"
+                },
+                {
+                  "text": "Mobile Devices"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Email Gateway"
+                },
+                {
+                  "text": "Web Proxy/Gateway"
+                },
+                {
+                  "text": "Perimeter Firewall"
+                },
+                {
+                  "text": "VPN Gateway"
+                },
+                {
+                  "text": "Endpoints (Workstations, Laptops)"
+                },
+                {
+                  "text": "Servers"
+                },
+                {
+                  "text": "Mobile Devices"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "388699038922",
+              "questionCodeSystem": "LinkId",
+              "linkId": "388699038922",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Identify and secure critical points in systems and networks where integrity controls must be applied to prevent unauthorized changes.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Identify and secure critical points in systems and networks where integrity controls must be applied to prevent unauthorized changes.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter primary anti-malware solution"
+            }
+          ],
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "2.",
+          "question": "Implementation Details",
+          "questionCode": "123297792461",
+          "questionCodeSystem": "LinkId",
+          "linkId": "123297792461",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter primary anti-malware solution"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Primary Anti-Malware Product/Solution: e.g., Microsoft Defender, McAfee, Symantec",
+              "questionCode": "149423997720",
+              "questionCodeSystem": "LinkId",
+              "linkId": "149423997720",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Microsoft Defender for Endpoint"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter version or release identifier"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Anti-Malware Version/Release: Version number or release identifier",
+              "questionCode": "343942743605",
+              "questionCodeSystem": "LinkId",
+              "linkId": "343942743605",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Enterprise E5 edition (current release)"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your anti-malware implementation scope..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Implementation Scope: Describe the scope of your anti-malware implementation (e.g., all company endpoints, specific servers)",
+              "questionCode": "581419297519",
+              "questionCodeSystem": "LinkId",
+              "linkId": "581419297519",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Organization-wide deployment on endpoints, servers, and remote devices"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Real-Time Protection Enabled:",
+              "questionCode": "394557514652",
+              "questionCodeSystem": "LinkId",
+              "linkId": "394557514652",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "466807023155",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "466807023155",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Centrally Managed:",
+              "questionCode": "137330973781",
+              "questionCodeSystem": "LinkId",
+              "linkId": "137330973781",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "266083093634",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "266083093634",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  },
+                  "value": "via Microsoft Endpoint Manager"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            }
+          ],
+          "codingInstructions": "Deploy and maintain tools and processes to detect, prevent, and respond to malware infections in your systems.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Deploy and maintain tools and processes to detect, prevent, and respond to malware infections in your systems.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional context, challenges, or implementation details..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes or Comments",
+          "questionCode": "750023247979",
+          "questionCodeSystem": "LinkId",
+          "linkId": "750023247979",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "List or describe the supporting documentation you have available(policies, configuration guides, deployment records, etc.)..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Supporting Documentation",
+          "questionCode": "278751204941",
+          "questionCodeSystem": "LinkId",
+          "linkId": "278751204941",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "Note: Have documentation available that demonstrates your malicious code protection policies, anti-malware configurations, and deployment procedures.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Note: Have documentation available that demonstrates your malicious code protection policies, anti-malware configurations, and deployment procedures.",
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "value": "via Microsoft Endpoint Manager"
+        }
+      ],
+      "codingInstructions": "Provide protection from malicious code at appropriate locations within organizational information systems",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Provide protection from malicious code at appropriate locations within organizational information systems",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "SI.L1-B.1.XIV – Update Malicious Code Protection",
+      "questionCode": "363972470334",
+      "questionCodeSystem": "LinkId",
+      "linkId": "363972470334",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Update Frequency",
+          "questionCode": "370529733824",
+          "questionCodeSystem": "LinkId",
+          "linkId": "370529733824",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How frequently are malicious code protection mechanisms updated?",
+              "questionCode": "830996907328",
+              "questionCodeSystem": "LinkId",
+              "linkId": "830996907328",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Real-time updates (as available)"
+                },
+                {
+                  "text": "Hourly"
+                },
+                {
+                  "text": "Daily"
+                },
+                {
+                  "text": "Weekly"
+                },
+                {
+                  "text": "Manual updates only"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Real-time updates (as available)"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "583208753437",
+              "questionCodeSystem": "LinkId",
+              "linkId": "583208753437",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Regularly update malware protection tools and definitions to ensure defense against the latest threats.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Regularly update malware protection tools and definitions to ensure defense against the latest threats.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "2.",
+          "question": "Update Management Process",
+          "questionCode": "400782620614",
+          "questionCodeSystem": "LinkId",
+          "linkId": "400782620614",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How are malicious code protection updates managed?",
+              "questionCode": "733457774453",
+              "questionCodeSystem": "LinkId",
+              "linkId": "733457774453",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Automatic updates enabled"
+                },
+                {
+                  "text": "Centralized update management system"
+                },
+                {
+                  "text": "Verification of successful updates"
+                },
+                {
+                  "text": "Rollback capability for problematic updates"
+                },
+                {
+                  "text": "Testing of updates before deployment"
+                },
+                {
+                  "text": "Notification of update status and failures"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Automatic updates enabled"
+                },
+                {
+                  "text": "Centralized update management system"
+                },
+                {
+                  "text": "Verification of successful updates"
+                },
+                {
+                  "text": "Rollback capability for problematic updates"
+                },
+                {
+                  "text": "Testing of updates before deployment"
+                },
+                {
+                  "text": "Notification of update status and failures"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "222629834244",
+              "questionCodeSystem": "LinkId",
+              "linkId": "222629834244",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Which external sources are scanned?",
+              "questionCode": "146442608630",
+              "questionCodeSystem": "LinkId",
+              "linkId": "146442608630",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Internet Downloads"
+                },
+                {
+                  "text": "Email Attachments"
+                },
+                {
+                  "text": "Removable Media"
+                },
+                {
+                  "text": "Cloud Storage"
+                },
+                {
+                  "text": "Network Shares"
+                },
+                {
+                  "text": "Other External Sources"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Internet Downloads"
+                },
+                {
+                  "text": "Email Attachments"
+                },
+                {
+                  "text": "Removable Media"
+                },
+                {
+                  "text": "Cloud Storage"
+                },
+                {
+                  "text": "Network Shares"
+                },
+                {
+                  "text": "Other External Sources"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "692565504391",
+              "questionCodeSystem": "LinkId",
+              "linkId": "692565504391",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Establish procedures to manage and verify timely updates to malicious code protection systems.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish procedures to manage and verify timely updates to malicious code protection systems.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional context challenges, or implementation details..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes or Comments",
+          "questionCode": "660268414578",
+          "questionCodeSystem": "LinkId",
+          "linkId": "660268414578",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "List o describe the supporting documentation you have available (update procedures, verification logs, rollback plans, etc.)..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Supporting Documentation",
+          "questionCode": "717091491475",
+          "questionCodeSystem": "LinkId",
+          "linkId": "717091491475",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "Note: Have documentation available that demonstrates your update management procedures, verification processes, and rollback capabilities.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Note: Have documentation available that demonstrates your update management procedures, verification processes, and rollback capabilities.",
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Update malicious code protection mechanisms when new releases are available",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Update malicious code protection mechanisms when new releases are available",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "SI.L1-B.1.XV – System & File Scanning",
+      "questionCode": "237888898879",
+      "questionCodeSystem": "LinkId",
+      "linkId": "237888898879",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "dataType": "CNE",
+          "question": "Do you have a system scanning policy documentation, file scanning policy, and scanning procedure documentation?",
+          "questionCode": "470606272303",
+          "questionCodeSystem": "LinkId",
+          "linkId": "470606272303",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "646475656187",
+              "questionCodeSystem": "LinkId",
+              "linkId": "646475656187",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Anti-Malware Implementation",
+          "questionCode": "359679551926",
+          "questionCodeSystem": "LinkId",
+          "linkId": "359679551926",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "Does your organization have antivirus/anti-malware software installed on all systems?",
+              "questionCode": "189466095401",
+              "questionCodeSystem": "LinkId",
+              "linkId": "189466095401",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                },
+                {
+                  "text": "Partially (some systems only)"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "720788097516",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "720788097516",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter your current antivirus/anti-malware solution"
+                }
+              ],
+              "dataType": "ST",
+              "question": "What antivirus/anti-malware solution is currently deployed? e.g., Microsoft Defender, Norton, McAfee, etc.",
+              "questionCode": "694425083943",
+              "questionCodeSystem": "LinkId",
+              "linkId": "694425083943",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Microsoft Defender for Endpoint, CrowdStrike Falcon for high-security servers"
+            }
+          ],
+          "codingInstructions": "Deploy anti-malware solutions to regularly scan systems and files for malicious software and remove threats promptly.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Deploy anti-malware solutions to regularly scan systems and files for malicious software and remove threats promptly.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "2.",
+          "question": "Periodic Scanning Implementation",
+          "questionCode": "558460360931",
+          "questionCodeSystem": "LinkId",
+          "linkId": "558460360931",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Frequency --"
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How frequently are full system scans conducted?",
+              "questionCode": "508929065591",
+              "questionCodeSystem": "LinkId",
+              "linkId": "508929065591",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Daily"
+                },
+                {
+                  "text": "Weekily"
+                },
+                {
+                  "text": "Bi-weekly"
+                },
+                {
+                  "text": "Monthly"
+                },
+                {
+                  "text": "Quarterly"
+                },
+                {
+                  "text": "Custom Schedule"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "112297593264",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "112297593264",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Daily"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Scan Depth --"
+                }
+              ],
+              "dataType": "CNE",
+              "question": "What level of thoroughness is used for periodic scans?",
+              "questionCode": "889472415570",
+              "questionCodeSystem": "LinkId",
+              "linkId": "889472415570",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Quick Scan (critical files only)"
+                },
+                {
+                  "text": "Standard Scan (system files and common user directories)"
+                },
+                {
+                  "text": "Full Scan (entire file system)"
+                },
+                {
+                  "text": "Custom Scan (specific directories)"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "119870353096",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "119870353096",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Quick Scan (critical files only)"
+              }
+            }
+          ],
+          "codingInstructions": "Schedule regular scans of systems and files to detect and address malware or security issues consistently.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Schedule regular scans of systems and files to detect and address malware or security issues consistently.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "3.",
+          "question": "Real-time Scanning & File Integrity",
+          "questionCode": "527252274149",
+          "questionCodeSystem": "LinkId",
+          "linkId": "527252274149",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "Are files from external sources scanned in real-time?",
+              "questionCode": "740865411316",
+              "questionCodeSystem": "LinkId",
+              "linkId": "740865411316",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                },
+                {
+                  "text": "Partially (some sources only)"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "499524923589",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "499524923589",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "dataType": "CNE",
+              "question": "Do you employ file integrity monitoring for critical system files?",
+              "questionCode": "842602142275",
+              "questionCodeSystem": "LinkId",
+              "linkId": "842602142275",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                },
+                {
+                  "text": "Planned"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "658767359751",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "658767359751",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  },
+                  "value": "Standard Scan (system files and common user directories)"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            }
+          ],
+          "codingInstructions": "Use real-time scanning to detect threats immediately and monitor file integrity to prevent unauthorized changes.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Use real-time scanning to detect threats immediately and monitor file integrity to prevent unauthorized changes.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "4.",
+          "question": "Results Handling & Testing",
+          "questionCode": "123247885877",
+          "questionCodeSystem": "LinkId",
+          "linkId": "123247885877",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your process for reviewing and documenting scan results..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "How are scan results reviewed and documented? Describe your process for reviewing and documenting scan results...",
+              "questionCode": "707425868010",
+              "questionCodeSystem": "LinkId",
+              "linkId": "707425868010",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Response Timeframe --"
+                }
+              ],
+              "dataType": "CWE",
+              "question": "What is your response timeframe when malware or vulnerabilities are detected?",
+              "questionCode": "986030389075",
+              "questionCodeSystem": "LinkId",
+              "linkId": "986030389075",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Immediate (within hours)"
+                },
+                {
+                  "text": "Within 24 hours"
+                },
+                {
+                  "text": "Within 48 hours"
+                },
+                {
+                  "text": "Within a week"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "936289816171",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "936289816171",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Immediate (within hours)"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your process for remediating issues detected during scanning.."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Describe your remediation process for identified issues: Describe your process for remediating issues detected during scanning...",
+              "questionCode": "164191875680",
+              "questionCodeSystem": "LinkId",
+              "linkId": "164191875680",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "dataType": "CNE",
+              "question": "Has scanning effectiveness been tested?",
+              "questionCode": "967054991522",
+              "questionCodeSystem": "LinkId",
+              "linkId": "967054991522",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Type your comments here..."
+                    }
+                  ],
+                  "dataType": "ST",
+                  "question": "Notes / Evidence ",
+                  "questionCode": "145622130157",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "145622130157",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "codeList": [],
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  }
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "List or describe the supporting documentation you have available(scanning policies , procedures , scan logs , remediation records, etc.)..."
+                }
+              ],
+              "dataType": "TX",
+              "question": "Supporting Documentation",
+              "questionCode": "901609884580",
+              "questionCodeSystem": "LinkId",
+              "linkId": "901609884580",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "Note: Have documentation available that demonstrates your scanning policies, procedures, scan results, and remediation processes.",
+              "codingInstructionsFormat": "text",
+              "codingInstructionsPlain": "Note: Have documentation available that demonstrates your scanning policies, procedures, scan results, and remediation processes.",
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Establish procedures to review scan results, respond to detected threats, and test scanning tools for effectiveness.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish procedures to review scan results, respond to detected threats, and test scanning tools for effectiveness.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Perform periodic scans of the information system and real-time scans of files from external sources",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Perform periodic scans of the information system and real-time scans of files from external sources",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "7",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "7"
+          }
+        ]
+      }
+    }
+  ],
+  "hasSavedData": true,
+  "fhirVersion": "R4"
+}

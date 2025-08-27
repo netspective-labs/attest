@@ -1,0 +1,2590 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "Physical Security"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "5",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "5"
+          }
+        ]
+      }
+    }
+  ],
+  "version": "1.0",
+  "name": "physical_protection",
+  "title": "Physical Protection",
+  "status": "draft",
+  "publisher": "Netspective",
+  "description": "Physical Protection (Limit physical access to information systems and facilities)",
+  "purpose": "To safeguard information assets and facilities by implementing physical access controls, monitoring mechanisms, and security measures that prevent unauthorized entry or physical intrusion.",
+  "approvalDate": "2025-08-26",
+  "lastReviewDate": "2025-08-26",
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "display",
+              "linkId": "324592389560",
+              "text": "How many individuals are authorized for physical access to FCI areas (fill in the total for each)?"
+            },
+            {
+              "type": "integer",
+              "linkId": "436045572485",
+              "text": "Full-time employees:"
+            },
+            {
+              "type": "integer",
+              "linkId": "857782926958",
+              "text": "Contractors:"
+            },
+            {
+              "type": "integer",
+              "linkId": "944400994758",
+              "text": "Part-time employees:"
+            },
+            {
+              "type": "integer",
+              "linkId": "571574306369",
+              "text": "Visitors (with escort):"
+            },
+            {
+              "linkId": "296125947947_helpText",
+              "type": "display",
+              "text": "Maintain an updated list of individuals authorized to access secure physical areas to ensure proper access control.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "296125947947",
+          "text": "1. Authorized Personnel Inventory",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "702794466613",
+              "text": "What areas require controlled physical access?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": " Server rooms/data centers"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Workstation areas processing FCI"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Executive offices"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Mail/shipping areas"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Network equipment rooms"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Storage areas for FCI media"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Conference rooms used for FCI discussions"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "279391143609",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "209389086115_helpText",
+              "type": "display",
+              "text": "Control and restrict access to sensitive physical locations to prevent unauthorized entry and protect assets.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "209389086115",
+          "text": "2. Physical Access Areas"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "784352573703",
+              "text": "Who authorizes physical access to controlled areas?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Facility manager"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Department supervisor"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "IT security team"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security manager"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "HR department"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "159961192967",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "869992586185_helpText",
+              "type": "display",
+              "text": "Establish formal procedures to grant, review, and revoke physical access permissions for personnel.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "869992586185",
+          "text": "3. Authorization Process"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "120",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "120"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "773851219827",
+              "text": "What types of physical access credentials are issued?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Photo ID badges"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Physical keys"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Biometric scanners"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Proximity cards/key fobs"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "PIN codes"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Visitor badges"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "614664633852",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "263666472314_helpText",
+              "type": "display",
+              "text": "Issue and manage secure access credentials to verify and control entry to restricted physical areas.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "263666472314",
+          "text": "4. Access Credentials"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "80",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "80"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "208747627440",
+              "text": "Are there time-based restrictions on physical access?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Yes, business hours only"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Yes, specific hours by role"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Yes, weekdays only"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "No time restrictions"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "864878261078",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "409121643490_helpText",
+              "type": "display",
+              "text": "Limit physical access to authorized areas during specific times to reduce security risks outside business hours.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "409121643490",
+          "text": "5. Time-Based Access Restrictions",
+          "repeats": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "660777712272",
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 100
+                }
+              ],
+              "valueCoding": {
+                "display": "Fully Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 50
+                }
+              ],
+              "valueCoding": {
+                "display": "Partially Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueCoding": {
+                "display": "Not Implemented"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "linkId": "158505675327",
+          "text": "Notes / Evidence"
+        },
+        {
+          "linkId": "624769621183_helpText",
+          "type": "display",
+          "text": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "624769621183",
+      "text": "PE.L1-B.1.VIII - Physical Access Authorization"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "684131391577",
+              "text": "Does your organization require all visitors to be escorted?",
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 100
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Yes, all visitors must be escorted at all times"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 50
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Yes, but only in restricted areas"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 0
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "No formal escort requirement"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "372121837424",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "984680126159_helpText",
+              "type": "display",
+              "text": "Require authorized personnel to accompany visitors while they are in secure areas to ensure safety and security.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "984680126159",
+          "text": "1. Visitor Escort Policy",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "400470675855",
+              "text": "How are visitors identified and distinguished from employees?",
+              "required": false,
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Distinctive visitor badges or lanyards"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Visitor sign-in log at reception"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Photo identification requirement"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Advance visitor approval and notification"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Temporary access cards or badges"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "739299710732",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "896661213301_helpText",
+              "type": "display",
+              "text": "Implement procedures to verify and record visitor identities before granting physical access to facilities.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "896661213301",
+          "text": "2. Visitor Identification",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "829474009766",
+              "text": "How is visitor activity monitored while on premises?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Continuous escort by authorized personnel"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security camera surveillance"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Physical access restrictions to sensitive areas"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Time limits on visitor access"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Activity logs maintained by escorts"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "398473749950",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "588293653185_helpText",
+              "type": "display",
+              "text": "Track and record visitor movements within facilities to detect and prevent unauthorized activities.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "588293653185",
+          "text": "3. Visitor Activity Monitoring",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "422650784362",
+              "text": "Who is authorized to escort visitors?",
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Any employee"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security staff only"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Trained escort personnel"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Designated personnel only"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Managers and supervisors only"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "766282850057",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "286167746672_helpText",
+              "type": "display",
+              "text": "Define who is permitted to escort visitors and ensure they understand their responsibilities for security and supervision.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "286167746672",
+          "text": "4. Escort Authorization",
+          "repeats": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "231843690847",
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 100
+                }
+              ],
+              "valueCoding": {
+                "display": "Fully Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 50
+                }
+              ],
+              "valueCoding": {
+                "display": "Partially Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueCoding": {
+                "display": "Not Implemented"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "linkId": "972038317766",
+          "text": "Notes / Evidence"
+        },
+        {
+          "linkId": "197390251867_helpText",
+          "type": "display",
+          "text": "Escort visitors and monitor visitor activity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "197390251867",
+      "text": "PE.L1-B.1.IX – Manage Visitors & Physical Access"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "734633292283",
+              "text": " How do you log physical access to your facilities?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Electronic badge readers with automatic logging"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Manual sign-in/sign-out sheets"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security camera recordings"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security guard logs and reports"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Physical key assignment and tracking logs"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "325061856971",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "492440543443_helpText",
+              "type": "display",
+              "text": "Implement methods to accurately record entry and exit activities in secure areas for audit and investigation purposes.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "492440543443",
+          "text": "1. Access Logging Methods"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "70",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "70"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "174905707594",
+              "text": " What information is captured in your physical access logs Information Captured in Logs?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Person's identity (name, employee ID, visitor ID)"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Date and time of access"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Entry and exit times"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Specific location or area accessed"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Purpose of visit or access"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Escort information (if applicable)"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 10
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Failed access attempts"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "750143252884",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "349759491673_helpText",
+              "type": "display",
+              "text": "Record key details such as date, time, personnel identity, and access points to ensure comprehensive tracking of physical access events.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "349759491673",
+          "text": "2. Information Captured in Logs"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "245305278102",
+              "text": "How long are physical access logs retained?",
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 100
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "30 Days"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 80
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "90 Days"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 60
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "6 Months"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 40
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "1 Year"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Longer than 1 year"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "571727427731",
+              "text": "Notes / Evidence "
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "741567851452",
+              "text": "How frequently are access logs reviewed?",
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 100
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Daily"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 80
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Weekly"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 60
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Monthly"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 40
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Quaterly"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Only when incidents occur"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 0
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Never formally reviewed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "910408738855",
+              "text": "Notes / Evidence "
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "80",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "80"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "745836226925",
+              "text": "Who reviews the physical access logs?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Security manager"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "IT security team"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "Facility manager"
+                  }
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                      "valueDecimal": 20
+                    }
+                  ],
+                  "valueCoding": {
+                    "display": "HR department"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "361446942388",
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "831615420801_helpText",
+              "type": "display",
+              "text": "Maintain and regularly review access logs to detect anomalies and support security investigations.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "831615420801",
+          "text": "3. Log Retention and Review "
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "320438032270",
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 100
+                }
+              ],
+              "valueCoding": {
+                "display": "Fully Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 50
+                }
+              ],
+              "valueCoding": {
+                "display": "Partially Implemented"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueCoding": {
+                "display": "Not Implemented"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "linkId": "724862600014",
+          "text": "Notes / Evidence"
+        }
+      ],
+      "type": "group",
+      "linkId": "430398414481",
+      "text": "PE.L1-B.1.IX –Physical Access Logs"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "903629274308",
+              "text": "What types of physical access devices does your organization use?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Physical keys"
+                },
+                {
+                  "valueString": "Proximity cards or fobs"
+                },
+                {
+                  "valueString": "Keypad entry systems"
+                },
+                {
+                  "valueString": "Electronic key cards or badges"
+                },
+                {
+                  "valueString": "Biometric scanners (fingerprint, retina, etc.) Smart cards with embedded chips"
+                },
+                {
+                  "valueString": "Mobile phone apps for access control"
+                },
+                {
+                  "valueString": "Smart cards with embedded chips"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "896964575016",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "621187042559_helpText",
+              "type": "display",
+              "text": "Keep an up-to-date inventory of all devices used to control physical access, such as card readers and locks, to ensure proper management and security.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "621187042559",
+          "text": "1. Physical Access Device Inventory "
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "173451266066",
+              "text": "How are physical access devices controlled and managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Formal inventory tracking system"
+                },
+                {
+                  "valueString": "Device assignment records maintained"
+                },
+                {
+                  "valueString": "Device return procedures for departing employees"
+                },
+                {
+                  "valueString": "Regular audits of device assignment"
+                },
+                {
+                  "valueString": "Procedures for lost or stolen devices"
+                },
+                {
+                  "valueString": "Ability to quickly revoke device access"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "164071724457",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "250263340197_helpText",
+              "type": "display",
+              "text": "Implement procedures to configure, monitor, and maintain physical access devices to prevent unauthorized use or tampering.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "250263340197",
+          "text": "2. Device Control and Management "
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "911514884520",
+              "text": "What security measures protect physical access devices?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Secure storage for unassigned devices"
+                },
+                {
+                  "valueString": "Encrypted data on electronic devices"
+                },
+                {
+                  "valueString": "Device expiration dates and automatic deactivation"
+                },
+                {
+                  "valueString": "Protection against unauthorized duplication"
+                },
+                {
+                  "valueString": "Tamper-resistant design"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "653480882123",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "703507215918_helpText",
+              "type": "display",
+              "text": "Apply security controls to protect physical access devices from damage, tampering, or unauthorized modification.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "703507215918",
+          "text": "3. Device Security Measures "
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "check-box",
+                            "display": "Check-box"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "944580322601",
+                  "text": "Check all that apply:",
+                  "repeats": true,
+                  "answerOption": [
+                    {
+                      "valueString": "Regular testing of device functionality"
+                    },
+                    {
+                      "valueString": "Battery monitoring and replacement"
+                    },
+                    {
+                      "valueString": "Regular software/firmware updates"
+                    },
+                    {
+                      "valueString": "Calibration of biometric devices"
+                    },
+                    {
+                      "valueString": "Backup systems for device failures"
+                    }
+                  ]
+                }
+              ],
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "466342459779",
+              "text": "How frequently are electronic access systems updated?",
+              "answerOption": [
+                {
+                  "valueString": "Real-time update"
+                },
+                {
+                  "valueString": "Daily"
+                },
+                {
+                  "valueString": "Weekly"
+                },
+                {
+                  "valueString": "Monthly"
+                },
+                {
+                  "valueString": "As Needed Basis"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "951698714660",
+              "text": "Notes / Evidence"
+            },
+            {
+              "linkId": "130535369896_helpText",
+              "type": "display",
+              "text": "Regularly perform maintenance and apply updates to physical access devices to ensure their reliability and security.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "130535369896",
+          "text": "4. Device Maintenance and Updates"
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "294892506040",
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully Implemented"
+            },
+            {
+              "valueString": "Partially Implemented"
+            },
+            {
+              "valueString": " Not Implemented"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "linkId": "140603351800",
+          "text": "Notes / Evidence "
+        }
+      ],
+      "type": "group",
+      "linkId": "806534035552",
+      "text": "PE.L1-B.1.IX –Manage Physical Access Devices"
+    }
+  ]
+}

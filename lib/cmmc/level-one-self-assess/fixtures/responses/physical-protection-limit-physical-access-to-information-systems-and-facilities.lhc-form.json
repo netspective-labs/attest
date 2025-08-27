@@ -1,0 +1,2570 @@
+{
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Physical Protection",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "PE.L1-B.1.VIII - Physical Access Authorization",
+      "questionCode": "624769621183",
+      "questionCodeSystem": "LinkId",
+      "linkId": "624769621183",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "1. Authorized Personnel Inventory",
+          "questionCode": "296125947947",
+          "questionCodeSystem": "LinkId",
+          "linkId": "296125947947",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "TITLE",
+              "question": "How many individuals are authorized for physical access to FCI areas (fill in the total for each)?",
+              "questionCode": "324592389560",
+              "questionCodeSystem": "LinkId",
+              "linkId": "324592389560",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "dataType": "INT",
+              "question": "Full-time employees:",
+              "questionCode": "436045572485",
+              "questionCodeSystem": "LinkId",
+              "linkId": "436045572485",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 150
+            },
+            {
+              "dataType": "INT",
+              "question": "Contractors:",
+              "questionCode": "857782926958",
+              "questionCodeSystem": "LinkId",
+              "linkId": "857782926958",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 5
+            },
+            {
+              "dataType": "INT",
+              "question": "Part-time employees:",
+              "questionCode": "944400994758",
+              "questionCodeSystem": "LinkId",
+              "linkId": "944400994758",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 60
+            },
+            {
+              "dataType": "INT",
+              "question": "Visitors (with escort):",
+              "questionCode": "571574306369",
+              "questionCodeSystem": "LinkId",
+              "linkId": "571574306369",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 10
+            }
+          ],
+          "codingInstructions": "Maintain an updated list of individuals authorized to access secure physical areas to ensure proper access control.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Maintain an updated list of individuals authorized to access secure physical areas to ensure proper access control.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "2. Physical Access Areas",
+          "questionCode": "209389086115",
+          "questionCodeSystem": "LinkId",
+          "linkId": "209389086115",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "What areas require controlled physical access?",
+              "questionCode": "702794466613",
+              "questionCodeSystem": "LinkId",
+              "linkId": "702794466613",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Server rooms/data centers"
+                },
+                {
+                  "text": "Workstation areas processing FCI"
+                },
+                {
+                  "text": "Executive offices"
+                },
+                {
+                  "text": "Mail/shipping areas"
+                },
+                {
+                  "text": "Network equipment rooms"
+                },
+                {
+                  "text": "Storage areas for FCI media"
+                },
+                {
+                  "text": "Conference rooms used for FCI discussions"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Server rooms/data centers"
+                },
+                {
+                  "text": "Workstation areas processing FCI"
+                },
+                {
+                  "text": "Executive offices"
+                },
+                {
+                  "text": "Mail/shipping areas"
+                },
+                {
+                  "text": "Network equipment rooms"
+                },
+                {
+                  "text": "Storage areas for FCI media"
+                },
+                {
+                  "text": "Conference rooms used for FCI discussions"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "279391143609",
+              "questionCodeSystem": "LinkId",
+              "linkId": "279391143609",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Control and restrict access to sensitive physical locations to prevent unauthorized entry and protect assets.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Control and restrict access to sensitive physical locations to prevent unauthorized entry and protect assets.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "3. Authorization Process",
+          "questionCode": "869992586185",
+          "questionCodeSystem": "LinkId",
+          "linkId": "869992586185",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Who authorizes physical access to controlled areas?",
+              "questionCode": "784352573703",
+              "questionCodeSystem": "LinkId",
+              "linkId": "784352573703",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Facility manager"
+                },
+                {
+                  "text": "Department supervisor"
+                },
+                {
+                  "text": "IT security team"
+                },
+                {
+                  "text": "Security manager"
+                },
+                {
+                  "text": "HR department"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Facility manager"
+                },
+                {
+                  "text": "Department supervisor"
+                },
+                {
+                  "text": "IT security team"
+                },
+                {
+                  "text": "Security manager"
+                },
+                {
+                  "text": "HR department"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "159961192967",
+              "questionCodeSystem": "LinkId",
+              "linkId": "159961192967",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Establish formal procedures to grant, review, and revoke physical access permissions for personnel.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish formal procedures to grant, review, and revoke physical access permissions for personnel.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "4. Access Credentials",
+          "questionCode": "263666472314",
+          "questionCodeSystem": "LinkId",
+          "linkId": "263666472314",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "120",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "120"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "What types of physical access credentials are issued?",
+              "questionCode": "773851219827",
+              "questionCodeSystem": "LinkId",
+              "linkId": "773851219827",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Photo ID badges"
+                },
+                {
+                  "text": "Physical keys"
+                },
+                {
+                  "text": "Biometric scanners"
+                },
+                {
+                  "text": "Proximity cards/key fobs"
+                },
+                {
+                  "text": "PIN codes"
+                },
+                {
+                  "text": "Visitor badges"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Photo ID badges"
+                },
+                {
+                  "text": "Proximity cards/key fobs"
+                },
+                {
+                  "text": "Visitor badges"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "614664633852",
+              "questionCodeSystem": "LinkId",
+              "linkId": "614664633852",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Issue and manage secure access credentials to verify and control entry to restricted physical areas.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Issue and manage secure access credentials to verify and control entry to restricted physical areas.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "5. Time-Based Access Restrictions",
+          "questionCode": "409121643490",
+          "questionCodeSystem": "LinkId",
+          "linkId": "409121643490",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "80",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "80"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Are there time-based restrictions on physical access?",
+              "questionCode": "208747627440",
+              "questionCodeSystem": "LinkId",
+              "linkId": "208747627440",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes, business hours only"
+                },
+                {
+                  "text": "Yes, specific hours by role"
+                },
+                {
+                  "text": "Yes, weekdays only"
+                },
+                {
+                  "text": "No time restrictions"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Yes, business hours only"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "864878261078",
+              "questionCodeSystem": "LinkId",
+              "linkId": "864878261078",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Limit physical access to authorized areas during specific times to reduce security risks outside business hours.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Limit physical access to authorized areas during specific times to reduce security risks outside business hours.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "660777712272",
+          "questionCodeSystem": "LinkId",
+          "linkId": "660777712272",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": "Not Implemented"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "158505675327",
+          "questionCodeSystem": "LinkId",
+          "linkId": "158505675327",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "PE.L1-B.1.IX – Manage Visitors & Physical Access",
+      "questionCode": "197390251867",
+      "questionCodeSystem": "LinkId",
+      "linkId": "197390251867",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "1. Visitor Escort Policy",
+          "questionCode": "984680126159",
+          "questionCodeSystem": "LinkId",
+          "linkId": "984680126159",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Does your organization require all visitors to be escorted?",
+              "questionCode": "684131391577",
+              "questionCodeSystem": "LinkId",
+              "linkId": "684131391577",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes, all visitors must be escorted at all times"
+                },
+                {
+                  "text": "Yes, but only in restricted areas"
+                },
+                {
+                  "text": "No formal escort requirement"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes, all visitors must be escorted at all times"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "372121837424",
+              "questionCodeSystem": "LinkId",
+              "linkId": "372121837424",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Require authorized personnel to accompany visitors while they are in secure areas to ensure safety and security.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Require authorized personnel to accompany visitors while they are in secure areas to ensure safety and security.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "2. Visitor Identification",
+          "questionCode": "896661213301",
+          "questionCodeSystem": "LinkId",
+          "linkId": "896661213301",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "How are visitors identified and distinguished from employees?",
+              "questionCode": "400470675855",
+              "questionCodeSystem": "LinkId",
+              "linkId": "400470675855",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Distinctive visitor badges or lanyards"
+                },
+                {
+                  "text": "Visitor sign-in log at reception"
+                },
+                {
+                  "text": "Photo identification requirement"
+                },
+                {
+                  "text": "Advance visitor approval and notification"
+                },
+                {
+                  "text": "Temporary access cards or badges"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Distinctive visitor badges or lanyards"
+                },
+                {
+                  "text": "Visitor sign-in log at reception"
+                },
+                {
+                  "text": "Advance visitor approval and notification"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "739299710732",
+              "questionCodeSystem": "LinkId",
+              "linkId": "739299710732",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Implement procedures to verify and record visitor identities before granting physical access to facilities.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement procedures to verify and record visitor identities before granting physical access to facilities.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "3. Visitor Activity Monitoring",
+          "questionCode": "588293653185",
+          "questionCodeSystem": "LinkId",
+          "linkId": "588293653185",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How is visitor activity monitored while on premises?",
+              "questionCode": "829474009766",
+              "questionCodeSystem": "LinkId",
+              "linkId": "829474009766",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Continuous escort by authorized personnel"
+                },
+                {
+                  "text": "Security camera surveillance"
+                },
+                {
+                  "text": "Physical access restrictions to sensitive areas"
+                },
+                {
+                  "text": "Time limits on visitor access"
+                },
+                {
+                  "text": "Activity logs maintained by escorts"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Continuous escort by authorized personnel"
+                },
+                {
+                  "text": "Security camera surveillance"
+                },
+                {
+                  "text": "Physical access restrictions to sensitive areas"
+                },
+                {
+                  "text": "Time limits on visitor access"
+                },
+                {
+                  "text": "Activity logs maintained by escorts"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "398473749950",
+              "questionCodeSystem": "LinkId",
+              "linkId": "398473749950",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Track and record visitor movements within facilities to detect and prevent unauthorized activities.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Track and record visitor movements within facilities to detect and prevent unauthorized activities.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "4. Escort Authorization",
+          "questionCode": "286167746672",
+          "questionCodeSystem": "LinkId",
+          "linkId": "286167746672",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Who is authorized to escort visitors?",
+              "questionCode": "422650784362",
+              "questionCodeSystem": "LinkId",
+              "linkId": "422650784362",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Any employee"
+                },
+                {
+                  "text": "Security staff only"
+                },
+                {
+                  "text": "Trained escort personnel"
+                },
+                {
+                  "text": "Designated personnel only"
+                },
+                {
+                  "text": "Managers and supervisors only"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Any employee"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "766282850057",
+              "questionCodeSystem": "LinkId",
+              "linkId": "766282850057",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Define who is permitted to escort visitors and ensure they understand their responsibilities for security and supervision.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Define who is permitted to escort visitors and ensure they understand their responsibilities for security and supervision.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "231843690847",
+          "questionCodeSystem": "LinkId",
+          "linkId": "231843690847",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": "Not Implemented"
+            }
+          ],
+          "codeList": [],
+          "displayControl": {
+            "answerLayout": {
+              "type": "COMBO_BOX",
+              "columns": "0"
+            }
+          },
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "972038317766",
+          "questionCodeSystem": "LinkId",
+          "linkId": "972038317766",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Escort visitors and monitor visitor activity",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Escort visitors and monitor visitor activity",
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "PE.L1-B.1.IX –Physical Access Logs",
+      "questionCode": "430398414481",
+      "questionCodeSystem": "LinkId",
+      "linkId": "430398414481",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "1. Access Logging Methods",
+          "questionCode": "492440543443",
+          "questionCodeSystem": "LinkId",
+          "linkId": "492440543443",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "100",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "100"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": " How do you log physical access to your facilities?",
+              "questionCode": "734633292283",
+              "questionCodeSystem": "LinkId",
+              "linkId": "734633292283",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "answers": [
+                {
+                  "text": "Electronic badge readers with automatic logging"
+                },
+                {
+                  "text": "Manual sign-in/sign-out sheets"
+                },
+                {
+                  "text": "Security camera recordings"
+                },
+                {
+                  "text": "Security guard logs and reports"
+                },
+                {
+                  "text": "Physical key assignment and tracking logs"
+                }
+              ],
+              "codeList": [],
+              "displayControl": {
+                "answerLayout": {
+                  "type": "COMBO_BOX",
+                  "columns": "0"
+                }
+              },
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Electronic badge readers with automatic logging"
+                },
+                {
+                  "text": "Manual sign-in/sign-out sheets"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "325061856971",
+              "questionCodeSystem": "LinkId",
+              "linkId": "325061856971",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Implement methods to accurately record entry and exit activities in secure areas for audit and investigation purposes.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement methods to accurately record entry and exit activities in secure areas for audit and investigation purposes.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "2. Information Captured in Logs",
+          "questionCode": "349759491673",
+          "questionCodeSystem": "LinkId",
+          "linkId": "349759491673",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "70",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "70"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": " What information is captured in your physical access logs Information Captured in Logs?",
+              "questionCode": "174905707594",
+              "questionCodeSystem": "LinkId",
+              "linkId": "174905707594",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Person's identity (name, employee ID, visitor ID)"
+                },
+                {
+                  "text": "Date and time of access"
+                },
+                {
+                  "text": "Entry and exit times"
+                },
+                {
+                  "text": "Specific location or area accessed"
+                },
+                {
+                  "text": "Purpose of visit or access"
+                },
+                {
+                  "text": "Escort information (if applicable)"
+                },
+                {
+                  "text": "Failed access attempts"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Person's identity (name, employee ID, visitor ID)"
+                },
+                {
+                  "text": "Date and time of access"
+                },
+                {
+                  "text": "Entry and exit times"
+                },
+                {
+                  "text": "Specific location or area accessed"
+                },
+                {
+                  "text": "Purpose of visit or access"
+                },
+                {
+                  "text": "Escort information (if applicable)"
+                },
+                {
+                  "text": "Failed access attempts"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "750143252884",
+              "questionCodeSystem": "LinkId",
+              "linkId": "750143252884",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Record key details such as date, time, personnel identity, and access points to ensure comprehensive tracking of physical access events.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Record key details such as date, time, personnel identity, and access points to ensure comprehensive tracking of physical access events.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "3. Log Retention and Review ",
+          "questionCode": "831615420801",
+          "questionCodeSystem": "LinkId",
+          "linkId": "831615420801",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How long are physical access logs retained?",
+              "questionCode": "245305278102",
+              "questionCodeSystem": "LinkId",
+              "linkId": "245305278102",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "30 Days"
+                },
+                {
+                  "text": "90 Days"
+                },
+                {
+                  "text": "6 Months"
+                },
+                {
+                  "text": "1 Year"
+                },
+                {
+                  "text": "Longer than 1 year"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "30 Days"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "571727427731",
+              "questionCodeSystem": "LinkId",
+              "linkId": "571727427731",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "How frequently are access logs reviewed?",
+              "questionCode": "741567851452",
+              "questionCodeSystem": "LinkId",
+              "linkId": "741567851452",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Daily"
+                },
+                {
+                  "text": "Weekly"
+                },
+                {
+                  "text": "Monthly"
+                },
+                {
+                  "text": "Quaterly"
+                },
+                {
+                  "text": "Only when incidents occur"
+                },
+                {
+                  "text": "Never formally reviewed"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Daily"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "910408738855",
+              "questionCodeSystem": "LinkId",
+              "linkId": "910408738855",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "weight",
+                    "language": "text/fhirpath",
+                    "expression": "1",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/variable",
+                  "valueExpression": {
+                    "name": "maxScore",
+                    "language": "text/fhirpath",
+                    "expression": "80",
+                    "extension": [
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                        "valueString": "simple"
+                      },
+                      {
+                        "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                        "valueString": "80"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "dataType": "CNE",
+              "question": "Who reviews the physical access logs?",
+              "questionCode": "745836226925",
+              "questionCodeSystem": "LinkId",
+              "linkId": "745836226925",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Security manager"
+                },
+                {
+                  "text": "IT security team"
+                },
+                {
+                  "text": "Facility manager"
+                },
+                {
+                  "text": "HR department"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Security manager"
+                },
+                {
+                  "text": "IT security team"
+                },
+                {
+                  "text": "Facility manager"
+                },
+                {
+                  "text": "HR department"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "questionCode": "361446942388",
+              "questionCodeSystem": "LinkId",
+              "linkId": "361446942388",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Maintain and regularly review access logs to detect anomalies and support security investigations.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Maintain and regularly review access logs to detect anomalies and support security investigations.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "questionCode": "320438032270",
+          "questionCodeSystem": "LinkId",
+          "linkId": "320438032270",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": "Not Implemented"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "questionCode": "724862600014",
+          "questionCodeSystem": "LinkId",
+          "linkId": "724862600014",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "PE.L1-B.1.IX –Manage Physical Access Devices",
+      "questionCode": "806534035552",
+      "questionCodeSystem": "LinkId",
+      "linkId": "806534035552",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "1. Physical Access Device Inventory ",
+          "questionCode": "621187042559",
+          "questionCodeSystem": "LinkId",
+          "linkId": "621187042559",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "ST",
+              "question": "What types of physical access devices does your organization use?",
+              "questionCode": "903629274308",
+              "questionCodeSystem": "LinkId",
+              "linkId": "903629274308",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Physical keys"
+                },
+                {
+                  "text": "Proximity cards or fobs"
+                },
+                {
+                  "text": "Keypad entry systems"
+                },
+                {
+                  "text": "Electronic key cards or badges"
+                },
+                {
+                  "text": "Biometric scanners (fingerprint, retina, etc.) Smart cards with embedded chips"
+                },
+                {
+                  "text": "Mobile phone apps for access control"
+                },
+                {
+                  "text": "Smart cards with embedded chips"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Physical keys"
+                },
+                {
+                  "text": "Proximity cards or fobs"
+                },
+                {
+                  "text": "Keypad entry systems"
+                },
+                {
+                  "text": "Biometric scanners (fingerprint, retina, etc.) Smart cards with embedded chips"
+                },
+                {
+                  "text": "Mobile phone apps for access control"
+                },
+                {
+                  "text": "Smart cards with embedded chips"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "896964575016",
+              "questionCodeSystem": "LinkId",
+              "linkId": "896964575016",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Keep an up-to-date inventory of all devices used to control physical access, such as card readers and locks, to ensure proper management and security.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Keep an up-to-date inventory of all devices used to control physical access, such as card readers and locks, to ensure proper management and security.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "2. Device Control and Management ",
+          "questionCode": "250263340197",
+          "questionCodeSystem": "LinkId",
+          "linkId": "250263340197",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "ST",
+              "question": "How are physical access devices controlled and managed?",
+              "questionCode": "173451266066",
+              "questionCodeSystem": "LinkId",
+              "linkId": "173451266066",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Formal inventory tracking system"
+                },
+                {
+                  "text": "Device assignment records maintained"
+                },
+                {
+                  "text": "Device return procedures for departing employees"
+                },
+                {
+                  "text": "Regular audits of device assignment"
+                },
+                {
+                  "text": "Procedures for lost or stolen devices"
+                },
+                {
+                  "text": "Ability to quickly revoke device access"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Formal inventory tracking system"
+                },
+                {
+                  "text": "Device assignment records maintained"
+                },
+                {
+                  "text": "Device return procedures for departing employees"
+                },
+                {
+                  "text": "Regular audits of device assignment"
+                },
+                {
+                  "text": "Procedures for lost or stolen devices"
+                },
+                {
+                  "text": "Ability to quickly revoke device access"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "164071724457",
+              "questionCodeSystem": "LinkId",
+              "linkId": "164071724457",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Implement procedures to configure, monitor, and maintain physical access devices to prevent unauthorized use or tampering.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement procedures to configure, monitor, and maintain physical access devices to prevent unauthorized use or tampering.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "3. Device Security Measures ",
+          "questionCode": "703507215918",
+          "questionCodeSystem": "LinkId",
+          "linkId": "703507215918",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "ST",
+              "question": "What security measures protect physical access devices?",
+              "questionCode": "911514884520",
+              "questionCodeSystem": "LinkId",
+              "linkId": "911514884520",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Secure storage for unassigned devices"
+                },
+                {
+                  "text": "Encrypted data on electronic devices"
+                },
+                {
+                  "text": "Device expiration dates and automatic deactivation"
+                },
+                {
+                  "text": "Protection against unauthorized duplication"
+                },
+                {
+                  "text": "Tamper-resistant design"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Secure storage for unassigned devices"
+                },
+                {
+                  "text": "Encrypted data on electronic devices"
+                },
+                {
+                  "text": "Device expiration dates and automatic deactivation"
+                },
+                {
+                  "text": "Protection against unauthorized duplication"
+                },
+                {
+                  "text": "Tamper-resistant design"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "653480882123",
+              "questionCodeSystem": "LinkId",
+              "linkId": "653480882123",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Apply security controls to protect physical access devices from damage, tampering, or unauthorized modification.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Apply security controls to protect physical access devices from damage, tampering, or unauthorized modification.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "4. Device Maintenance and Updates",
+          "questionCode": "130535369896",
+          "questionCodeSystem": "LinkId",
+          "linkId": "130535369896",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "ST",
+              "question": "How frequently are electronic access systems updated?",
+              "questionCode": "466342459779",
+              "questionCodeSystem": "LinkId",
+              "linkId": "466342459779",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Real-time update"
+                },
+                {
+                  "text": "Daily"
+                },
+                {
+                  "text": "Weekly"
+                },
+                {
+                  "text": "Monthly"
+                },
+                {
+                  "text": "As Needed Basis"
+                }
+              ],
+              "items": [
+                {
+                  "dataType": "ST",
+                  "question": "Check all that apply:",
+                  "questionCode": "944580322601",
+                  "questionCodeSystem": "LinkId",
+                  "linkId": "944580322601",
+                  "answerCardinality": {
+                    "max": "*",
+                    "min": "0"
+                  },
+                  "displayControl": {
+                    "answerLayout": {
+                      "type": "RADIO_CHECKBOX"
+                    }
+                  },
+                  "answers": [
+                    {
+                      "text": "Regular testing of device functionality"
+                    },
+                    {
+                      "text": "Battery monitoring and replacement"
+                    },
+                    {
+                      "text": "Regular software/firmware updates"
+                    },
+                    {
+                      "text": "Calibration of biometric devices"
+                    },
+                    {
+                      "text": "Backup systems for device failures"
+                    }
+                  ],
+                  "codeList": [],
+                  "questionCardinality": {
+                    "min": "1",
+                    "max": "1"
+                  },
+                  "value": [
+                    {
+                      "text": "Regular testing of device functionality"
+                    },
+                    {
+                      "text": "Calibration of biometric devices"
+                    }
+                  ]
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Real-time update"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence",
+              "questionCode": "951698714660",
+              "questionCodeSystem": "LinkId",
+              "linkId": "951698714660",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "codeList": [],
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Regularly perform maintenance and apply updates to physical access devices to ensure their reliability and security.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Regularly perform maintenance and apply updates to physical access devices to ensure their reliability and security.",
+          "codeList": [],
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "ST",
+          "question": "Implementation Status",
+          "questionCode": "294892506040",
+          "questionCodeSystem": "LinkId",
+          "linkId": "294892506040",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": " Not Implemented"
+            }
+          ],
+          "codeList": [],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Type your comments here..."
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence ",
+          "questionCode": "140603351800",
+          "questionCodeSystem": "LinkId",
+          "linkId": "140603351800",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "codeList": [],
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codeList": [],
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "displayOrder",
+        "language": "text/fhirpath",
+        "expression": "5",
+        "extension": [
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+            "valueString": "simple"
+          },
+          {
+            "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+            "valueString": "5"
+          }
+        ]
+      }
+    }
+  ],
+  "hasSavedData": true,
+  "fhirVersion": "R4"
+}
