@@ -11,6 +11,13 @@
     {
       "type": "group",
       "linkId": "158032884208",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-details",
+          "display": "Organization Details"
+        }
+      ],
       "text": "Organization Details",
       "item": [
         {
@@ -44,6 +51,13 @@
         }
       ],
       "linkId": "715544477968",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-name",
+          "display": "Organization Name"
+        }
+      ],
       "text": "Organization Name",
       "required": true
     },
@@ -56,6 +70,13 @@
         }
       ],
       "linkId": "655141523763",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-form-completed-by",
+          "display": "Form Completed By"
+        }
+      ],
       "text": "Form Completed By",
       "required": true
     },
@@ -68,6 +89,13 @@
         }
       ],
       "linkId": "761144039651",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-position-title",
+          "display": "Position Title"
+        }
+      ],
       "text": "Position/Title"
     },
     {
@@ -79,6 +107,13 @@
         }
       ],
       "linkId": "441278853405",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-email-address",
+          "display": "Email Address"
+        }
+      ],
       "text": "Email Address",
       "required": true
     },
@@ -91,6 +126,13 @@
         }
       ],
       "linkId": "375736159279",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-work-phone",
+          "display": "Work Phone"
+        }
+      ],
       "text": "Work Phone",
       "required": true
     },
@@ -103,12 +145,26 @@
         }
       ],
       "linkId": "948589414714",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-mobile-phone",
+          "display": "Mobile Phone"
+        }
+      ],
       "text": "Mobile Phone",
       "required": true
     },
     {
       "type": "date",
       "linkId": "276403539223",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-assessment-date",
+          "display": "Assessment Date"
+        }
+      ],
       "text": "Assessment Date"
     },
     {
@@ -120,6 +176,13 @@
         }
       ],
       "linkId": "789286873476",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-industry",
+          "display": "Industry"
+        }
+      ],
       "text": "Industry"
     },
     {
@@ -131,6 +194,13 @@
         }
       ],
       "linkId": "697235963218",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-employee-count",
+          "display": "Employee Count"
+        }
+      ],
       "text": "Employee Count"
     },
     {
@@ -142,6 +212,13 @@
         }
       ],
       "linkId": "863463230823",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-contract-types",
+          "display": "Contract Types"
+        }
+      ],
       "text": "Contract Types"
     },
     {
@@ -155,6 +232,13 @@
             }
           ],
           "linkId": "805221373063",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-cage-code",
+              "display": "Cage Code"
+            }
+          ],
           "text": "CAGE Code"
         },
         {
@@ -166,11 +250,25 @@
             }
           ],
           "linkId": "374784155003",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-duns-number",
+              "display": "Duns Number"
+            }
+          ],
           "text": "DUNS Number"
         }
       ],
       "type": "group",
       "linkId": "127163950314",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-identifiers",
+          "display": "Organization Identifiers"
+        }
+      ],
       "text": "Organization Identifiers"
     }
   ]

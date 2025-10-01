@@ -1,1016 +1,1665 @@
 {
-    "lformsVersion": "38.2.0",
-    "PATH_DELIMITER": "/",
-    "code": null,
-    "codeList": null,
-    "identifier": null,
-    "name": "Identification & Authentication (Verify identities of users and processes)",
-    "template": "table",
-    "items": [
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Identification & Authentication",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "IA.L1-B.1.V - Identification",
+      "codeList": [
         {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "IA.L1-3.5.1 - Identify users and authenticate identities",
-            "questionCode": "228228158249",
-            "questionCodeSystem": "LinkId",
-            "linkId": "228228158249",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [],
-            "codingInstructions": "Identify information system users, processes acting on behalf of users, or devices.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Identify information system users, processes acting on behalf of users, or devices.",
-            "codingInstructionsLinkId": "228228158249_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Implementation Status",
-            "questionCode": "362061549890",
-            "questionCodeSystem": "LinkId",
-            "linkId": "362061549890",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Fully Implemented"
-                },
-                {
-                    "text": "Partially Implemented"
-                },
-                {
-                    "text": "Not Implemented"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Partially Implemented"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "User Identification Standards",
-            "questionCode": "139461602895",
-            "questionCodeSystem": "LinkId",
-            "linkId": "139461602895",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "First name + last name (john.smith)"
-                },
-                {
-                    "text": "First initial + last name (jsmith)"
-                },
-                {
-                    "text": "Employee ID numbers (EMP001234)"
-                },
-                {
-                    "text": "Department codes + names (IT-jsmith)"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "First name + last name (john.smith)"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Service Account Management",
-            "questionCode": "446911811643",
-            "questionCodeSystem": "LinkId",
-            "linkId": "446911811643",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "Enter number"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Number of service accounts:",
-                    "questionCode": "179545641231",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "179545641231",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 10
-                },
-                {
-                    "dataType": "CODING",
-                    "question": "Check all that apply:",
-                    "questionCode": "753553198622",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "753553198622",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Database services"
-                        },
-                        {
-                            "text": "Web applications"
-                        },
-                        {
-                            "text": "Backup processes"
-                        },
-                        {
-                            "text": "Monitoring/logging services"
-                        },
-                        {
-                            "text": "Security scanning tools"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Database services"
-                        },
-                        {
-                            "text": "Web applications"
-                        },
-                        {
-                            "text": "Backup processes"
-                        }
-                    ]
-                },
-                {
-                    "dataType": "CODING",
-                    "question": "Do you have a device inventory spreadsheet?",
-                    "questionCode": "926744954268",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "926744954268",
-                    "answerCardinality": {
-                        "max": "1",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Yes"
-                        },
-                        {
-                            "text": "No"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": {
-                        "text": "Yes"
-                    }
-                }
-            ],
-            "codingInstructions": "Manage service accounts carefully by assigning minimal privileges and regularly reviewing their usage to prevent misuse.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Manage service accounts carefully by assigning minimal privileges and regularly reviewing their usage to prevent misuse.",
-            "codingInstructionsLinkId": "446911811643_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Device Identification",
-            "questionCode": "359160217347",
-            "questionCodeSystem": "LinkId",
-            "linkId": "359160217347",
-            "answerCardinality": {
-                "max": "*",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "MAC addresses"
-                },
-                {
-                    "text": "IP addresses (static)"
-                },
-                {
-                    "text": "Computer/device names"
-                },
-                {
-                    "text": "Asset tag numbers"
-                },
-                {
-                    "text": "Serial numbers"
-                },
-                {
-                    "text": "Certificates/digital signatures"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": [
-                {
-                    "text": "MAC addresses"
-                },
-                {
-                    "text": "IP addresses (static)"
-                },
-                {
-                    "text": "Serial numbers"
-                }
-            ]
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Device Inventory",
-            "questionCode": "543189099428",
-            "questionCodeSystem": "LinkId",
-            "linkId": "543189099428",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "INT",
-                    "question": "Workstations/laptops:",
-                    "questionCode": "878410531769",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "878410531769",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 150
-                },
-                {
-                    "dataType": "INT",
-                    "question": "Servers:",
-                    "questionCode": "361034048943",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "361034048943",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 25
-                },
-                {
-                    "dataType": "INT",
-                    "question": "Mobile devices:",
-                    "questionCode": "424090205463",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "424090205463",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 80
-                },
-                {
-                    "dataType": "INT",
-                    "question": "Network devices:",
-                    "questionCode": "764441913827",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "764441913827",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 40
-                }
-            ],
-            "codingInstructions": "Maintain an up-to-date list of all devices connected to the network to track and manage authorized hardware",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Maintain an up-to-date list of all devices connected to the network to track and manage authorized hardware",
-            "codingInstructionsLinkId": "543189099428_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Identity Verification Process",
-            "questionCode": "297397401977",
-            "questionCodeSystem": "LinkId",
-            "linkId": "297397401977",
-            "answerCardinality": {
-                "max": "*",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "HR verification with employee records"
-                },
-                {
-                    "text": "Manager approval with written authorization"
-                },
-                {
-                    "text": "Background check completion"
-                },
-                {
-                    "text": "Photo identification verification"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": [
-                {
-                    "text": "HR verification with employee records"
-                },
-                {
-                    "text": "Manager approval with written authorization"
-                },
-                {
-                    "text": "Background check completion"
-                },
-                {
-                    "text": "Photo identification verification"
-                }
-            ]
-        },
-        {
-            "dataType": "CODING",
-            "question": "Supporting Documentation",
-            "questionCode": "210356958517",
-            "questionCodeSystem": "LinkId",
-            "linkId": "210356958517",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Yes"
-                },
-                {
-                    "text": "No"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Yes"
-            }
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Any additional notes, remediation plans, or implementation challenges..."
-                }
-            ],
-            "dataType": "TX",
-            "question": "Additional Notes",
-            "questionCode": "268793244463",
-            "questionCodeSystem": "LinkId",
-            "linkId": "268793244463",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "codeList": [],
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "IA.L1-3.5.2 - Authenticate users and processes",
-            "questionCode": "865372145224",
-            "questionCodeSystem": "LinkId",
-            "linkId": "865372145224",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [],
-            "codingInstructions": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.",
-            "codingInstructionsLinkId": "865372145224_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Implementation Status",
-            "questionCode": "676336695824",
-            "questionCodeSystem": "LinkId",
-            "linkId": "676336695824",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Fully Implemented"
-                },
-                {
-                    "text": "Partially Implemented"
-                },
-                {
-                    "text": "Not Implemented"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Fully Implemented"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "User Authentication Methods",
-            "questionCode": "901079756471",
-            "questionCodeSystem": "LinkId",
-            "linkId": "901079756471",
-            "answerCardinality": {
-                "max": "*",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Username and password"
-                },
-                {
-                    "text": "Multi-factor authentication (MFA)"
-                },
-                {
-                    "text": "Smart cards/PIV cards"
-                },
-                {
-                    "text": "Biometric authentication"
-                },
-                {
-                    "text": "Digital certificates"
-                },
-                {
-                    "text": "Single sign-on (SSO)"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": [
-                {
-                    "text": "Username and password"
-                },
-                {
-                    "text": "Multi-factor authentication (MFA)"
-                },
-                {
-                    "text": "Biometric authentication"
-                }
-            ]
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Password Requirements",
-            "questionCode": "459655669415",
-            "questionCodeSystem": "LinkId",
-            "linkId": "459655669415",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "8"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Minimum length (characters):",
-                    "questionCode": "444552965098",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "444552965098",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 8
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "90"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Password expiration (days):",
-                    "questionCode": "499668919305",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "499668919305",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 90
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "5"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Password history (passwords remembered):",
-                    "questionCode": "190124104069",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "190124104069",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 5
-                },
-                {
-                    "dataType": "CODING",
-                    "question": "Click all that apply:",
-                    "questionCode": "404025003688",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "404025003688",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Uppercase letters required"
-                        },
-                        {
-                            "text": "Lowercase letters required"
-                        },
-                        {
-                            "text": "Numbers required"
-                        },
-                        {
-                            "text": "Special characters required"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Uppercase letters required"
-                        },
-                        {
-                            "text": "Lowercase letters required"
-                        },
-                        {
-                            "text": "Numbers required"
-                        },
-                        {
-                            "text": "Special characters required"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Set and enforce strong password rules to ensure users and processes securely verify their identity before accessing systems.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Set and enforce strong password rules to ensure users and processes securely verify their identity before accessing systems.",
-            "codingInstructionsLinkId": "459655669415_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Multi-Factor Authentication",
-            "questionCode": "928879235030",
-            "questionCodeSystem": "LinkId",
-            "linkId": "928879235030",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Yes, for all users and systems"
-                },
-                {
-                    "text": "Yes, for privileged accounts only"
-                },
-                {
-                    "text": "Yes, for remote access only"
-                },
-                {
-                    "text": "Yes, for critical systems only"
-                },
-                {
-                    "text": "No, not implemented"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Yes, for all users and systems"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Default Credential Management",
-            "questionCode": "830887074055",
-            "questionCodeSystem": "LinkId",
-            "linkId": "830887074055",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Always changed before deployment"
-                },
-                {
-                    "text": "Changed during initial configuration"
-                },
-                {
-                    "text": "Users required to change on first login"
-                },
-                {
-                    "text": "No formal process"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Always changed before deployment"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Authentication Failure Handling",
-            "questionCode": "341175611920",
-            "questionCodeSystem": "LinkId",
-            "linkId": "341175611920",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "3"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Number of failed attempts before lockout:",
-                    "questionCode": "647413778355",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "647413778355",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 3
-                },
-                {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "30"
-                        }
-                    ],
-                    "dataType": "INT",
-                    "question": "Account lockout duration (minutes):",
-                    "questionCode": "552155632772",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "552155632772",
-                    "questionCardinality": {
-                        "max": "1",
-                        "min": "1"
-                    },
-                    "codeList": [],
-                    "answerCardinality": {
-                        "min": "0",
-                        "max": "1"
-                    },
-                    "value": 30
-                },
-                {
-                    "dataType": "CODING",
-                    "question": "Click all that apply:",
-                    "questionCode": "947716241721",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "947716241721",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Administrator notification sent"
-                        },
-                        {
-                            "text": "Security team alerted"
-                        },
-                        {
-                            "text": "Logged for review"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Administrator notification sent"
-                        },
-                        {
-                            "text": "Security team alerted"
-                        },
-                        {
-                            "text": "Logged for review"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.",
-            "codingInstructionsLinkId": "341175611920_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "dataType": "CODING",
-            "question": "Supporting Documentation",
-            "questionCode": "230111377333",
-            "questionCodeSystem": "LinkId",
-            "linkId": "230111377333",
-            "answerCardinality": {
-                "max": "1",
-                "min": "0"
-            },
-            "displayControl": {
-                "answerLayout": {
-                    "type": "RADIO_CHECKBOX"
-                }
-            },
-            "answers": [
-                {
-                    "text": "Yes"
-                },
-                {
-                    "text": "No"
-                }
-            ],
-            "codeList": [],
-            "questionCardinality": {
-                "min": "1",
-                "max": "1"
-            },
-            "value": {
-                "text": "Yes"
-            }
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Any additional notes, remediation plans, or implementation challenges..."
-                }
-            ],
-            "dataType": "TX",
-            "question": "Additional Notes",
-            "questionCode": "939036015644",
-            "questionCodeSystem": "LinkId",
-            "linkId": "939036015644",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "codeList": [],
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-identification-overview",
+          "display": "Identification Overview"
         }
-    ],
-    "templateOptions": {
-        "showQuestionCode": false,
-        "showCodingInstruction": false,
-        "allowMultipleEmptyRepeatingItems": false,
-        "allowHTML": true,
-        "displayControl": {
-            "questionLayout": "vertical"
-        },
-        "viewMode": "auto",
-        "defaultAnswerLayout": {
-            "answerLayout": {
-                "type": "COMBO_BOX",
-                "columns": "0"
+      ],
+      "questionCode": "identification-authentication-identification-overview",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+      "linkId": "228228158249",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
             }
+          ],
+          "dataType": "TX",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-section-notes",
+              "display": "Identification Section Notes"
+            }
+          ],
+          "questionCode": "identification-authentication-identification-section-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "608483664601",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "value": "Users authenticate using unique credentials, strong passwords, and multi-factor authentication (MFA) where applicable; access is logged and monitored for anomalies."
         },
-        "hideTreeLine": false,
-        "hideIndentation": false,
-        "hideRepetitionNumber": false,
-        "displayScoreWithAnswerText": true,
-        "displayInvalidHTML": false,
-        "messageLevel": "error"
+        {
+          "dataType": "CNE",
+          "question": "What is the status of making sure all employees, devices, and automated tools that use your systems have unique IDs so you can tell them apart?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-unique-ids",
+              "display": "Status Unique Ids"
+            }
+          ],
+          "questionCode": "identification-authentication-status-unique-ids",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "362061549890",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked."
+            },
+            {
+              "text": "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified."
+            },
+            {
+              "text": "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems."
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-unique-ids-notes",
+                  "display": "Status Unique Ids Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-status-unique-ids-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "281929303054",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Every user, device, and automated tool has a unique identifier; accounts are managed through an identity management system and regularly audited to ensure uniqueness and traceability."
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked."
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "What format do you use to create employee login IDs?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-employee-login-id-format",
+              "display": "Employee Login Id Format"
+            }
+          ],
+          "questionCode": "identification-authentication-employee-login-id-format",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "139461602895",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": " First name + last name (john.smith)"
+            },
+            {
+              "text": " First initial + last name (jsmith)"
+            },
+            {
+              "text": " Employee ID numbers (EMP001234)"
+            },
+            {
+              "text": " Department codes + names (IT-jsmith)"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-employee-login-id-format-notes",
+                  "display": "Employee Login Id Format Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-employee-login-id-format-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "243749447566",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Employee login IDs follow the format first initial + last name (e.g., jdoe) or a company-assigned unique ID; consistently applied across systems for easy identification and management."
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": " First name + last name (john.smith)"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Service Account Management",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-service-account-management",
+              "display": "Service Account Management"
+            }
+          ],
+          "questionCode": "identification-authentication-service-account-management",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "446911811643",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter number"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Number of service accounts (special logins used by software or automated tools, not people):",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-number-of-service-accounts",
+                  "display": "Number Of Service Accounts"
+                }
+              ],
+              "questionCode": "identification-authentication-number-of-service-accounts",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "179545641231",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 50
+            },
+            {
+              "dataType": "CNE",
+              "question": "Check all that apply:",
+              "questionCode": "753553198622",
+              "questionCodeSystem": "LinkId",
+              "linkId": "753553198622",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Database services"
+                },
+                {
+                  "text": " Web applications"
+                },
+                {
+                  "text": " Backup processes"
+                },
+                {
+                  "text": " Monitoring/logging services"
+                },
+                {
+                  "text": "Security scanning tools"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Database services"
+                },
+                {
+                  "text": "Security scanning tools"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-service-account-management-notes",
+                  "display": "Service Account Management Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-service-account-management-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "441172825241",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "Service accounts are tracked, documented, and restricted to necessary permissions; usage is monitored and reviewed regularly."
+            },
+            {
+              "dataType": "CNE",
+              "question": "Do you keep a list or spreadsheet of all company devices (computers, phones, servers, etc.) that connect to your systems?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-company-device-inventory-list",
+                  "display": "Company Device Inventory List"
+                }
+              ],
+              "questionCode": "identification-authentication-company-device-inventory-list",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "926744954268",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Yes"
+                },
+                {
+                  "text": "No"
+                }
+              ],
+              "items": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "dataType": "TX",
+                  "question": "Notes / Evidence ",
+                  "codeList": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "identification-authentication-company-device-inventory-list-notes",
+                      "display": "Company Device Inventory List Notes"
+                    }
+                  ],
+                  "questionCode": "identification-authentication-company-device-inventory-list-notes",
+                  "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "linkId": "279054233268",
+                  "questionCardinality": {
+                    "max": "1",
+                    "min": "1"
+                  },
+                  "items": [],
+                  "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+                  "codingInstructionsFormat": "html",
+                  "answerCardinality": {
+                    "min": "0",
+                    "max": "1"
+                  },
+                  "value": "A maintained inventory lists all company devices, including computers, phones, servers, and other endpoints; regularly updated and audited to ensure accuracy."
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Yes"
+              }
+            },
+            {
+              "dataType": "CNE",
+              "question": "How do you verify a person’s identity before giving them access to company systems?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-process",
+                  "display": "User Identity Verification Process"
+                }
+              ],
+              "questionCode": "identification-authentication-user-identity-verification-process",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "297397401977",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "HR verification with employee records"
+                },
+                {
+                  "text": "Manager approval with written authorization"
+                },
+                {
+                  "text": "Background check completion"
+                },
+                {
+                  "text": "Photo identification verification"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "HR verification with employee records"
+                },
+                {
+                  "text": "Background check completion"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-notes",
+                  "display": "User Identity Verification Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-user-identity-verification-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "627017348272",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": "New users are verified via HR records, government ID, or employment documentation before account creation; access approvals are required from management, and multi-factor authentication is enforced."
+            }
+          ],
+          "codingInstructions": "<p style=\"margin-bottom: 0px;\"> <span style=\"color: #003366;\"><i>Service Accounts</i></span> are special logins used by software or automated tools, not people. Keep them limited to only what’s necessary and review them regularly to prevent misuse. </p>",
+          "codingInstructionsFormat": "html",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Device Inventory",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-inventory",
+              "display": "Device Inventory"
+            }
+          ],
+          "questionCode": "identification-authentication-device-inventory",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "543189099428",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "INT",
+              "question": "Workstations/laptops:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-workstations",
+                  "display": "Device Count Workstations"
+                }
+              ],
+              "questionCode": "identification-authentication-device-count-workstations",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "878410531769",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 300
+            },
+            {
+              "dataType": "INT",
+              "question": "Servers:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-servers",
+                  "display": "Device Count Servers"
+                }
+              ],
+              "questionCode": "identification-authentication-device-count-servers",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "361034048943",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 20
+            },
+            {
+              "dataType": "INT",
+              "question": "Mobile devices:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-mobile",
+                  "display": "Device Count Mobile"
+                }
+              ],
+              "questionCode": "identification-authentication-device-count-mobile",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "424090205463",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 50
+            },
+            {
+              "dataType": "INT",
+              "question": "Network devices:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-network",
+                  "display": "Device Count Network"
+                }
+              ],
+              "questionCode": "identification-authentication-device-count-network",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "764441913827",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 60
+            }
+          ],
+          "codingInstructions": "<p style=\"margin-bottom: 0px;\"> <span style=\"color: #003366;\"><i>Device Inventory</i></span> tracks every device that connects to your systems — like laptops, desktops, and phones. This helps ensure only approved, secure devices are used for work that involves government contract information. </p>",
+          "codingInstructionsFormat": "html",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Every computer, phone, or server should have a unique identifier so you know exactly which device is connecting. How do you uniquely identify each device that connects to your systems?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods",
+              "display": "Device Identification Methods"
+            }
+          ],
+          "questionCode": "identification-authentication-device-identification-methods",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "359160217347",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "MAC addresses"
+            },
+            {
+              "text": "IP addresses (static)"
+            },
+            {
+              "text": "Computer/device names"
+            },
+            {
+              "text": "Asset tag numbers"
+            },
+            {
+              "text": "Serial numbers"
+            },
+            {
+              "text": "Certificates/digital signatures"
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "MAC addresses"
+            },
+            {
+              "text": "Serial numbers"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "dataType": "TX",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods-notes",
+              "display": "Device Identification Methods Notes"
+            }
+          ],
+          "questionCode": "identification-authentication-device-identification-methods-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "346437919917",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            }
+          ],
+          "dataType": "CNE",
+          "question": "Supporting Documentation",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-supporting-docs",
+              "display": "Identification Supporting Docs"
+            }
+          ],
+          "questionCode": "identification-authentication-identification-supporting-docs",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "157280172274",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-identification-supporting-docs-notes",
+                  "display": "Identification Supporting Docs Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-identification-supporting-docs-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "876744570203",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-additional-notes",
+              "display": "Identification Additional Notes"
+            }
+          ],
+          "questionCode": "identification-authentication-identification-additional-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "382279609009",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Identification (IA)</span></i> requires assigning a unique ID to every user and device so that access to systems and Federal Contract Information (FCI) can always be linked to a specific, authorized individual.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Unique User IDs:</b> Each employee or contractor must have their own login account.<br>\n  &bull; &nbsp; <b>No Shared Accounts:</b> Prevents confusion and makes activity traceable.<br>\n  &bull; &nbsp; <b>Device Identification:</b> Computers, phones, and servers should also have unique identifiers.<br>\n  &bull; &nbsp; <b>Account Lifecycle:</b> Add new IDs only when needed and remove them promptly when no longer in use.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+      "codingInstructionsFormat": "html",
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
     },
-    "hasSavedData": true,
-    "fhirVersion": "R4"
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "IA.L1-B.1.VI - Authentication",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-authentication-overview",
+          "display": "Authentication Overview"
+        }
+      ],
+      "questionCode": "identification-authentication-authentication-overview",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+      "linkId": "865372145224",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "dataType": "CNE",
+          "question": "What is the current status of the controls that verify that users and devices are who they say they are before giving them access?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-authentication-controls",
+              "display": "Status Authentication Controls"
+            }
+          ],
+          "questionCode": "identification-authentication-status-authentication-controls",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "676336695824",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access."
+            },
+            {
+              "text": "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use."
+            },
+            {
+              "text": "Not Implemented"
+            },
+            {
+              "text": "Not applicable – No systems in scope store or process FCI."
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-authentication-controls-notes",
+                  "display": "Status Authentication Controls Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-status-authentication-controls-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "440326396427",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Not Implemented"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "What methods do you use to confirm a user’s identity before they can log in?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods",
+              "display": "User Authentication Methods"
+            }
+          ],
+          "questionCode": "identification-authentication-user-authentication-methods",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "901079756471",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Username and password – The most common method; each employee has a unique login and password."
+            },
+            {
+              "text": "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone."
+            },
+            {
+              "text": "Smart cards / PIV cards – Physical cards employees insert or tap to log in."
+            },
+            {
+              "text": "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits."
+            },
+            {
+              "text": "Digital certificates – Software-based “ID cards” that prove a device or user is trusted."
+            },
+            {
+              "text": "Single sign-on (SSO) – One secure login gives access to multiple company applications."
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "Username and password – The most common method; each employee has a unique login and password."
+            },
+            {
+              "text": "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone."
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "dataType": "TX",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods-notes",
+              "display": "User Authentication Methods Notes"
+            }
+          ],
+          "questionCode": "identification-authentication-user-authentication-methods-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "115035657570",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Password Requirements",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-password-requirements",
+              "display": "Password Requirements"
+            }
+          ],
+          "questionCode": "identification-authentication-password-requirements",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "459655669415",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "8"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Minimum length (characters):",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-min-length",
+                  "display": "Password Min Length"
+                }
+              ],
+              "questionCode": "identification-authentication-password-min-length",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "444552965098",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 8
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "90"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Password expiration (days):",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-expiration-days",
+                  "display": "Password Expiration Days"
+                }
+              ],
+              "questionCode": "identification-authentication-password-expiration-days",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "499668919305",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 0
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "5"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Password history (passwords remembered):",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-history-count",
+                  "display": "Password History Count"
+                }
+              ],
+              "questionCode": "identification-authentication-password-history-count",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "190124104069",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 5
+            },
+            {
+              "dataType": "CNE",
+              "question": "Click all that apply:",
+              "questionCode": "404025003688",
+              "questionCodeSystem": "LinkId",
+              "linkId": "404025003688",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Uppercase letters required"
+                },
+                {
+                  "text": "Lowercase letters required"
+                },
+                {
+                  "text": "Numbers required"
+                },
+                {
+                  "text": "Special characters required"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Uppercase letters required"
+                },
+                {
+                  "text": "Lowercase letters required"
+                },
+                {
+                  "text": "Special characters required"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-requirements-notes",
+                  "display": "Password Requirements Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-password-requirements-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "149539043632",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Password Requirements</span></i> define the rules for creating strong passwords so accounts are harder to guess or break.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Length:</b> Require a minimum of 8–12 characters (longer is stronger).<br>\n  &bull; &nbsp; <b>Complexity:</b> Use a mix of uppercase, lowercase, numbers, and symbols.<br>\n  &bull; &nbsp; <b>Uniqueness:</b> Do not reuse old or common passwords.<br>\n  &bull; &nbsp; <b>Protection:</b> Never share passwords or store them in plain text.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+          "codingInstructionsFormat": "html",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Multi-factor authentication (MFA) means using more than one proof of identity before someone can log in. For example, a password plus a code texted to your phone, or a password plus a fingerprint scan. Do you use MFA?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-mfa-usage",
+              "display": "Mfa Usage"
+            }
+          ],
+          "questionCode": "identification-authentication-mfa-usage",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "928879235030",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes, for all users and systems"
+            },
+            {
+              "text": "Yes, for privileged accounts only"
+            },
+            {
+              "text": "Yes, for remote access only"
+            },
+            {
+              "text": "Yes, for critical systems only"
+            },
+            {
+              "text": "No, not implemented"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-mfa-usage-notes",
+                  "display": "Mfa Usage Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-mfa-usage-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "496212946934",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes, for all users and systems"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "How do you handle default usernames and passwords that come with new systems or software?",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-default-credential-handling",
+              "display": "Default Credential Handling"
+            }
+          ],
+          "questionCode": "identification-authentication-default-credential-handling",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "830887074055",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Always changed before deployment – IT changes default logins before the system is ever used."
+            },
+            {
+              "text": "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment."
+            },
+            {
+              "text": "Users required to change on first login – The system forces a password change the first time someone logs in."
+            },
+            {
+              "text": "No formal process – Default credentials may remain in place, creating a serious security risk."
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-default-credential-handling-notes",
+                  "display": "Default Credential Handling Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-default-credential-handling-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "273984680811",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Always changed before deployment – IT changes default logins before the system is ever used."
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "question": "Authentication Failure Handling",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-failure-handling",
+              "display": "Authentication Failure Handling"
+            }
+          ],
+          "questionCode": "identification-authentication-authentication-failure-handling",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "341175611920",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "3"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Number of failed attempts before lockout:",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-failed-attempts-lockout",
+                  "display": "Failed Attempts Lockout"
+                }
+              ],
+              "questionCode": "identification-authentication-failed-attempts-lockout",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "647413778355",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 3
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "30"
+                }
+              ],
+              "dataType": "INT",
+              "question": "Account lockout duration (minutes):",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-account-lockout-duration",
+                  "display": "Account Lockout Duration"
+                }
+              ],
+              "questionCode": "identification-authentication-account-lockout-duration",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "552155632772",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "value": 30
+            },
+            {
+              "dataType": "CNE",
+              "question": "Click all that apply:",
+              "questionCode": "947716241721",
+              "questionCodeSystem": "LinkId",
+              "linkId": "947716241721",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Administrator notification sent"
+                },
+                {
+                  "text": " Security team alerted"
+                },
+                {
+                  "text": "Logged for review"
+                }
+              ],
+              "codeList": [],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Administrator notification sent"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-failure-handling-notes",
+                  "display": "Authentication Failure Handling Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-authentication-failure-handling-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "434988961472",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Authentication Failure Handling</span></i> defines what happens when someone enters the wrong login credentials multiple times. This prevents attackers from guessing passwords repeatedly.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Account Lockout:</b> Lock accounts after a set number of failed attempts.<br>\n  &bull; &nbsp; <b>Timed Delay:</b> Add a waiting period before more login attempts are allowed.<br>\n  &bull; &nbsp; <b>Alerts:</b> Notify administrators if repeated failures occur.<br>\n  &bull; &nbsp; <b>Reset Process:</b> Provide a secure method for users to unlock or reset their accounts.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+          "codingInstructionsFormat": "html",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Supporting Documentation",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-supporting-docs",
+              "display": "Authentication Supporting Docs"
+            }
+          ],
+          "questionCode": "identification-authentication-authentication-supporting-docs",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "230111377333",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "TX",
+              "question": "Notes / Evidence",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-supporting-docs-notes",
+                  "display": "Authentication Supporting Docs Notes"
+                }
+              ],
+              "questionCode": "identification-authentication-authentication-supporting-docs-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "116846260787",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "dataType": "TX",
+          "question": "Additional Notes",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-additional-notes",
+              "display": "Authentication Additional Notes"
+            }
+          ],
+          "questionCode": "identification-authentication-authentication-additional-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "939036015644",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Authentication (IA)</span></i> ensures that users prove their identity before accessing company systems or Federal Contract Information (FCI). This prevents unauthorized access, even if someone knows a username.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Passwords:</b> Require strong, unique passwords that are not shared between accounts.<br>\n  &bull; &nbsp; <b>Multi-Factor Authentication (MFA):</b> Add extra steps like codes, apps, or tokens for sensitive systems.<br>\n  &bull; &nbsp; <b>Session Controls:</b> Lock accounts after failed login attempts and log users out after inactivity.<br>\n  &bull; &nbsp; <b>Account Security:</b> Change default credentials and disable unused accounts.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+      "codingInstructionsFormat": "html",
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "hasSavedData": true,
+  "fhirVersion": "R4"
 }

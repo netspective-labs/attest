@@ -10,311 +10,535 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsModuleSignature: rt.ModuleSignature = {
-    title: "System & Communications Protection (Monitor, control, and protect organizational communications)",
-    filename: "system-communications-protection-monitor-control-and-protect-organizational-communications.auto.ts",
-    titleCamel: "`systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
-    titlePascal: "`SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
-    titleKebab: "`system-communications-protection-monitor-control-and-protect-organizational-communications`",
-    lhcFormResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter",
-    sourceTextConstName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource",
-}
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsModuleSignature:
+  rt.ModuleSignature = {
+    title:
+      "System & Communications Protection (Monitor, control, and protect organizational communications)",
+    filename:
+      "system-communications-protection-monitor-control-and-protect-organizational-communications.auto.ts",
+    titleCamel:
+      "`systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
+    titlePascal:
+      "`SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
+    titleKebab:
+      "`system-communications-protection-monitor-control-and-protect-organizational-communications`",
+    lhcFormResponseAdapterFnName:
+      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName:
+      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter",
+    sourceTextConstName:
+      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource",
+  };
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
 /**
  * Form Help (from display/help controls):
- * - Clearly define the limits of your information systems to identify what needs protection and control.
- * - Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.
- * - Establish continuous monitoring to detect and respond to security events within systems and communications.
  * - Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.
- * - Identify and manage system components like web servers, email servers, and public applications that are accessible to external users
- * - Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.
- * - Control and restrict communication between networks to prevent unauthorized access and data transfer.
- * - Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.
- * - Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds = {
-  requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls: "998940326541",
-  implementationStatus: "954433842901",
-  doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows: "979372224491",
-  externalBoundaryComponents: "591770672887",
-  keyInternalBoundaryComponents: "930792706809",
-  firewallManufacturerModel: "843201435494",
-  firewallSoftwareFirmwareVersion: "706452201694",
-  defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted: "949755108024",
-  explicitlyAllowedServicesProtocols: "963088071424",
-  explicitlyDeniedServicesProtocols: "122305830447",
-  howDoYouMonitorCommunicationsAtSystemBoundaries: "847131102373",
-  supportingDocumentation: "794317413983",
-  additionalNotes: "782731881405",
-  requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks: "556770566326",
-  implementationStatus2: "274150359667",
-  whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate: "956471776047",
-  howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks: "517448335213",
-  whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks: "634425708590",
-  howDoYouMonitorActivityInYourPublicFacingNetworkSegments: "536378863536",
-  supportingDocumentation2: "980001173858",
-  additionalNotes2: "597392284230"
-} as const;
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds =
+  {
+    systemCommunicationsProtectionFrontGateMonitorControl: "998940326541",
+    systemCommunicationsProtectionStatusNetworkPerimeterSecurity:
+      "954433842901",
+    systemCommunicationProtectionNetworkNotesEvidence: "494412529555",
+    systemCommunicationsProtectionNetworkDiagram: "979372224491",
+    systemCommunicationProtectionNetworkDiagramNotesEvidence: "353406656082",
+    systemCommunicationsProtectionProtectNetworkOutsideWorld: "591770672887",
+    systemCommunicationsProtectionProtectSensitiveAreasNetwork: "930792706809",
+    systemCommunicationsProtectionFirewallManufacturerModel: "843201435494",
+    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion:
+      "706452201694",
+    systemCommunicationsProtectionDefaultDenyPolicy: "949755108024",
+    systemCommunicationsProtectionSystemCommunicationProtectionComments:
+      "156526970162",
+    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols:
+      "963088071424",
+    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols:
+      "122305830447",
+    systemCommunicationsProtectionMonitorTrafficCrossing: "847131102373",
+    systemCommunicationProtectionMonitoringNotesEvidence: "305967020301",
+    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes:
+      "500229418620",
+    systemCommunicationsProtectionDemilitarizedZonePublicSystems:
+      "556770566326",
+    systemCommunicationsProtectionSeparatingPublicSystems: "274150359667",
+    systemCommunicationProtectionSeparatePublicSystemNotesEvidence:
+      "496638290461",
+    systemCommunicationsProtectionAccessibleSystemComponentsOperate:
+      "956471776047",
+    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence:
+      "272791116387",
+    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated:
+      "517448335213",
+    systemCommunicationProtectionNetworkSeparationNotesEvidence: "299978179191",
+    systemCommunicationsProtectionPreventUnauthorizedAccessPublic:
+      "634425708590",
+    systemCommunicationProtectionAccessControlNotesEvidence: "845777456178",
+    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork:
+      "536378863536",
+    systemCommunicationProtectionPublicNetworkNotesEvidence: "122899280845",
+    systemCommunicationProtectionPublicNetworkAdditionalNotes: "388464619346",
+  } as const;
 
 /** Normalized view of "System & Communications Protection (Monitor, control, and protect organizational communications)" answers. */
 export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
   /**
-   * Requirements: Implement network monitoring and boundary protection including firewalls, intrusion detection, and communication controls.
+   * Your company’s computer network needs a ‘front gate’ that monitors and protects traffic going in and out. This means using tools like firewalls (to block unwanted traffic), intrusion detection (to spot suspicious activity), and rules that control what data can flow where.
    * linkId: 998940326541
    * FHIR type: display
-   * Section: SC.L1-3.13.1 - Monitor and control system communications
+   * Section: SC.L1-B.1.X – Boundary Protection
    * Required: no
    */
-  requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls?: string;
+  systemCommunicationsProtectionFrontGateMonitorControl?: string;
 
   /**
-   * Implementation Status 
+   * What is the status of your network perimeter security (tools that control and monitor data entering or leaving your systems)?
    * linkId: 954433842901
    * FHIR type: string
-   * Section: SC.L1-3.13.1 - Monitor and control system communications
+   * Section: SC.L1-B.1.X – Boundary Protection
    * Required: yes
    */
-  implementationStatus: string;
+  systemCommunicationsProtectionStatusNetworkPerimeterSecurity: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 494412529555
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Boundary Protection
+   * Required: no
+   */
+  systemCommunicationProtectionNetworkNotesEvidence?: string;
 
   /**
    * Do you have a network diagram showing system boundaries, key components, and data flows?
    * linkId: 979372224491
    * FHIR type: string
-   * Section: SC.L1-3.13.1 - Monitor and control system communications
+   * Section: SC.L1-B.1.X – Boundary Protection
    * Required: no
    */
-  doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows?: string;
+  systemCommunicationsProtectionNetworkDiagram?: string;
 
   /**
-   * External Boundary Components
+   * Notes / Evidence
+   * linkId: 353406656082
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Boundary Protection
+   * Required: no
+   */
+  systemCommunicationProtectionNetworkDiagramNotesEvidence?: string;
+
+  /**
+   * What systems protect the edge of your network from the outside world (e.g., internet traffic)?
    * linkId: 591770672887
    * FHIR type: text
    * Entry format: Include hardware models, firmware versions and their primary functions.  e.g., Cisco ASA 5515-X v9.12.3 - Primary perimeter firewall, Palo Alto PA-220 v10.1.2 - Branch office firewall.
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 1. System Boundary Definition
+   * Section: SC.L1-B.1.X – Boundary Protection > 1. System Boundary Definition
    * Required: no
    */
-  externalBoundaryComponents?: string;
+  systemCommunicationsProtectionProtectNetworkOutsideWorld?: string;
 
   /**
-   * Key Internal Boundary Components
+   * What systems protect sensitive areas inside your network from the rest of the company?
    * linkId: 930792706809
    * FHIR type: text
    * Entry format: Include components that separate development, test and production environments or create internal segmentation. eg., Internal VLAN switches, host-based firewalls,  Network ACLs.
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 1. System Boundary Definition
+   * Section: SC.L1-B.1.X – Boundary Protection > 1. System Boundary Definition
    * Required: no
    */
-  keyInternalBoundaryComponents?: string;
+  systemCommunicationsProtectionProtectSensitiveAreasNetwork?: string;
 
   /**
    * Firewall Manufacturer/Model
    * linkId: 843201435494
    * FHIR type: text
    * Entry format: e.g., Cisco ASA 5500, Palo Alto PA-220
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 2. Firewall Configuration
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
    * Required: no
    */
-  firewallManufacturerModel?: string;
+  systemCommunicationsProtectionFirewallManufacturerModel?: string;
 
   /**
    * Firewall Software/Firmware Version
    * linkId: 706452201694
    * FHIR type: text
    * Entry format: e.g., v9.12.3
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 2. Firewall Configuration
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
    * Required: no
    */
-  firewallSoftwareFirmwareVersion?: string;
+  systemCommunicationsProtectionFirewallSoftwareFirmwareVersion?: string;
 
   /**
    * Default deny policy is implemented (traffic is denied by default unless explicitly permitted)
    * linkId: 949755108024
    * FHIR type: choice
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 2. Firewall Configuration
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
    * Options: "Yes", "No"
    * Required: no
    */
-  defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted?: "Yes" | "No";
+  systemCommunicationsProtectionDefaultDenyPolicy?: "Yes" | "No";
+
+  /**
+   * Type your comments here...
+   * linkId: 156526970162
+   * FHIR type: string
+   * Entry format: Type your comments here...
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
+   * Required: no
+   */
+  systemCommunicationsProtectionSystemCommunicationProtectionComments?: string;
 
   /**
    * Explicitly Allowed Services/Protocols
    * linkId: 963088071424
    * FHIR type: text
    * Entry format: e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 2. Firewall Configuration
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
    * Required: no
    */
-  explicitlyAllowedServicesProtocols?: string;
+  systemCommunicationsProtectionExplicitlyAllowedServicesProtocols?: string;
 
   /**
    * Explicitly Denied Services/Protocols
    * linkId: 122305830447
    * FHIR type: text
    * Entry format: e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 2. Firewall Configuration
+   * Section: SC.L1-B.1.X – Boundary Protection > 2. Firewall Configuration
    * Required: no
    */
-  explicitlyDeniedServicesProtocols?: string;
+  systemCommunicationsProtectionExplicitlyDeniedServicesProtocols?: string;
 
   /**
-   * How do you monitor communications at system boundaries?
+   * How do you monitor traffic crossing into or out of your company’s network?
    * linkId: 847131102373
    * FHIR type: choice
-   * Section: SC.L1-3.13.1 - Monitor and control system communications > 3. Monitoring Implementation
+   * Section: SC.L1-B.1.X – Boundary Protection > 3. Monitoring Implementation
    * Options: "Firewall logs and analysis", "Intrusion detection/prevention systems", "Network monitoring tools", "SIEM system integration", "Manual log review"
    * Required: no
    */
-  howDoYouMonitorCommunicationsAtSystemBoundaries?: ("Firewall logs and analysis" | "Intrusion detection/prevention systems" | "Network monitoring tools" | "SIEM system integration" | "Manual log review")[];
+  systemCommunicationsProtectionMonitorTrafficCrossing?: (
+    | "Firewall logs and analysis"
+    | "Intrusion detection/prevention systems"
+    | "Network monitoring tools"
+    | "SIEM system integration"
+    | "Manual log review"
+  )[];
 
   /**
-   * Supporting Documentation
-   * linkId: 794317413983
-   * FHIR type: text
-   * Entry format: eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. 
-   * Section: SC.L1-3.13.1 - Monitor and control system communications
+   * Notes / Evidence
+   * linkId: 305967020301
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Boundary Protection > 3. Monitoring Implementation
    * Required: no
    */
-  supportingDocumentation?: string;
+  systemCommunicationProtectionMonitoringNotesEvidence?: string;
 
   /**
    * Additional Notes
-   * linkId: 782731881405
-   * FHIR type: text
-   * Entry format: Any additional information, challenges or implementation notes
-   * Section: SC.L1-3.13.1 - Monitor and control system communications
+   * linkId: 500229418620
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Boundary Protection
    * Required: no
    */
-  additionalNotes?: string;
+  systemCommunicationsBoundaryProtectionProtectionAdditionalNotes?: string;
 
   /**
-   * Requirements: Create DMZ or separated network segments for public-facing systems to isolate them from internal networks.
+   * Set up a Demilitarized Zone (DMZ) or other Demilitarized Zone area for public systems. This ensures that public-facing tools are isolated from sensitive internal systems that store government contract data.
    * linkId: 556770566326
    * FHIR type: display
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks
    * Required: no
    */
-  requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks?: string;
+  systemCommunicationsProtectionDemilitarizedZonePublicSystems?: string;
 
   /**
-   * Implementation Status 
+   * What is the status of separating public systems (like websites or portals) from your internal network?
    * linkId: 274150359667
    * FHIR type: string
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks
    * Required: yes
    */
-  implementationStatus2: string;
+  systemCommunicationsProtectionSeparatingPublicSystems: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 496638290461
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks
+   * Required: no
+   */
+  systemCommunicationProtectionSeparatePublicSystemNotesEvidence?: string;
 
   /**
    * What publicly accessible system components does your organization operate?
    * linkId: 956471776047
    * FHIR type: string
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components > 1. Publicly Accessible System Components
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 1. Publicly Accessible System Components
    * Required: no
    */
-  whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate?: string[];
+  systemCommunicationsProtectionAccessibleSystemComponentsOperate?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 272791116387
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 1. Publicly Accessible System Components
+   * Required: no
+   */
+  systemCommunicationProtectionPublicAccessibleSystemNotesEvidence?: string;
 
   /**
    * How are publicly accessible systems separated from internal networks?
    * linkId: 517448335213
    * FHIR type: string
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components > 2. Network Separation Implementation
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 2. Network Separation Implementation
    * Required: no
    */
-  howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks?: string[];
+  systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 299978179191
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 2. Network Separation Implementation
+   * Required: no
+   */
+  systemCommunicationProtectionNetworkSeparationNotesEvidence?: string;
 
   /**
    * What controls prevent unauthorized access from public networks to internal networks?
    * linkId: 634425708590
    * FHIR type: string
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components > 3. Access Control Between Networks
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 3. Access Control Between Networks
    * Required: no
    */
-  whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks?: string[];
+  systemCommunicationsProtectionPreventUnauthorizedAccessPublic?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 845777456178
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 3. Access Control Between Networks
+   * Required: no
+   */
+  systemCommunicationProtectionAccessControlNotesEvidence?: string;
 
   /**
    * How do you monitor activity in your public-facing network segments?
    * linkId: 536378863536
    * FHIR type: string
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components > 4. DMZ/Public Network Monitoring
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 4. DMZ/Public Network Monitoring
    * Required: no
    */
-  howDoYouMonitorActivityInYourPublicFacingNetworkSegments?: string[];
+  systemCommunicationsProtectionMonitorActivityPublicFacingNetwork?: string[];
 
   /**
-   * Supporting Documentation
-   * linkId: 980001173858
-   * FHIR type: text
-   * Entry format: eg., Network Security Policy, v2.1, Firewall configuration documentation, Security monitoring procedures. 
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components
+   * Notes / Evidence
+   * linkId: 122899280845
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks > 4. DMZ/Public Network Monitoring
    * Required: no
    */
-  supportingDocumentation2?: string;
+  systemCommunicationProtectionPublicNetworkNotesEvidence?: string;
 
   /**
    * Additional Notes
-   * linkId: 597392284230
-   * FHIR type: text
-   * Entry format: Any additional information, challenges or implementation notes
-   * Section: SC.L1-3.13.5 - Implement subnetworks for publicly accessible components
+   * linkId: 388464619346
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SC.L1-B.1.X – Separate Public Systems from Internal Networks
    * Required: no
    */
-  additionalNotes2?: string;
+  systemCommunicationProtectionPublicNetworkAdditionalNotes?: string;
 }
 
 /** Convert an LHC JSON response into a normalized SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications object. */
-export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(input: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
+export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(
+  input: Any,
+): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
   return {
-  requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "998940326541")),
-  implementationStatus: rt.coerceString(rt.findLhcValueByLinkId(input, "954433842901")),
-  doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "979372224491")),
-  externalBoundaryComponents: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "591770672887")),
-  keyInternalBoundaryComponents: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "930792706809")),
-  firewallManufacturerModel: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "843201435494")),
-  firewallSoftwareFirmwareVersion: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "706452201694")),
-  defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "949755108024")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted"],
-  explicitlyAllowedServicesProtocols: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "963088071424")),
-  explicitlyDeniedServicesProtocols: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "122305830447")),
-  howDoYouMonitorCommunicationsAtSystemBoundaries: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "847131102373")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howDoYouMonitorCommunicationsAtSystemBoundaries"],
-  supportingDocumentation: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "794317413983")),
-  additionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "782731881405")),
-  requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "556770566326")),
-  implementationStatus2: rt.coerceString(rt.findLhcValueByLinkId(input, "274150359667")),
-  whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "956471776047")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate"],
-  howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "517448335213")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks"],
-  whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "634425708590")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks"],
-  howDoYouMonitorActivityInYourPublicFacingNetworkSegments: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "536378863536")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howDoYouMonitorActivityInYourPublicFacingNetworkSegments"],
-  supportingDocumentation2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "980001173858")),
-  additionalNotes2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "597392284230")),
+    systemCommunicationsProtectionFrontGateMonitorControl: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "998940326541")),
+    systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt
+      .coerceString(rt.findLhcValueByLinkId(input, "954433842901")),
+    systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "494412529555"),
+    ),
+    systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "979372224491"),
+    ),
+    systemCommunicationProtectionNetworkDiagramNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "353406656082")),
+    systemCommunicationsProtectionProtectNetworkOutsideWorld: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "591770672887")),
+    systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "930792706809")),
+    systemCommunicationsProtectionFirewallManufacturerModel: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "843201435494")),
+    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "706452201694")),
+    systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "949755108024"),
+    ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+      "systemCommunicationsProtectionDefaultDenyPolicy"
+    ],
+    systemCommunicationsProtectionSystemCommunicationProtectionComments: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "156526970162")),
+    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "963088071424")),
+    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "122305830447")),
+    systemCommunicationsProtectionMonitorTrafficCrossing: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "847131102373"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionMonitorTrafficCrossing"
+      ],
+    systemCommunicationProtectionMonitoringNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "305967020301")),
+    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "500229418620")),
+    systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "556770566326")),
+    systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "274150359667"),
+    ),
+    systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "496638290461")),
+    systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "956471776047"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionAccessibleSystemComponentsOperate"
+      ],
+    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "272791116387")),
+    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "517448335213"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"
+      ],
+    systemCommunicationProtectionNetworkSeparationNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "299978179191")),
+    systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "634425708590"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionPreventUnauthorizedAccessPublic"
+      ],
+    systemCommunicationProtectionAccessControlNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "845777456178")),
+    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "536378863536"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"
+      ],
+    systemCommunicationProtectionPublicNetworkNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "122899280845")),
+    systemCommunicationProtectionPublicNetworkAdditionalNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "388464619346")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications object. */
-export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(qr: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
+export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(
+  qr: Any,
+): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
   return {
-  requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "998940326541")),
-  implementationStatus: rt.coerceString(rt.findQrAnswerByLinkId(qr, "954433842901")),
-  doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "979372224491")),
-  externalBoundaryComponents: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "591770672887")),
-  keyInternalBoundaryComponents: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "930792706809")),
-  firewallManufacturerModel: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "843201435494")),
-  firewallSoftwareFirmwareVersion: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "706452201694")),
-  defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "949755108024")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted"],
-  explicitlyAllowedServicesProtocols: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "963088071424")),
-  explicitlyDeniedServicesProtocols: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122305830447")),
-  howDoYouMonitorCommunicationsAtSystemBoundaries: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "847131102373")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howDoYouMonitorCommunicationsAtSystemBoundaries"],
-  supportingDocumentation: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "794317413983")),
-  additionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "782731881405")),
-  requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "556770566326")),
-  implementationStatus2: rt.coerceString(rt.findQrAnswerByLinkId(qr, "274150359667")),
-  whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "956471776047")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate"],
-  howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "517448335213")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks"],
-  whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "634425708590")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks"],
-  howDoYouMonitorActivityInYourPublicFacingNetworkSegments: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "536378863536")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["howDoYouMonitorActivityInYourPublicFacingNetworkSegments"],
-  supportingDocumentation2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "980001173858")),
-  additionalNotes2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "597392284230")),
+    systemCommunicationsProtectionFrontGateMonitorControl: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "998940326541")),
+    systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt
+      .coerceString(rt.findQrAnswerByLinkId(qr, "954433842901")),
+    systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "494412529555"),
+    ),
+    systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "979372224491"),
+    ),
+    systemCommunicationProtectionNetworkDiagramNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "353406656082")),
+    systemCommunicationsProtectionProtectNetworkOutsideWorld: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "591770672887")),
+    systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "930792706809")),
+    systemCommunicationsProtectionFirewallManufacturerModel: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "843201435494")),
+    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "706452201694")),
+    systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "949755108024"),
+    ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+      "systemCommunicationsProtectionDefaultDenyPolicy"
+    ],
+    systemCommunicationsProtectionSystemCommunicationProtectionComments: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "156526970162")),
+    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "963088071424")),
+    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122305830447")),
+    systemCommunicationsProtectionMonitorTrafficCrossing: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "847131102373"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionMonitorTrafficCrossing"
+      ],
+    systemCommunicationProtectionMonitoringNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "305967020301")),
+    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "500229418620")),
+    systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "556770566326")),
+    systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "274150359667"),
+    ),
+    systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "496638290461")),
+    systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "956471776047"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionAccessibleSystemComponentsOperate"
+      ],
+    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "272791116387")),
+    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "517448335213"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"
+      ],
+    systemCommunicationProtectionNetworkSeparationNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "299978179191")),
+    systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "634425708590"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionPreventUnauthorizedAccessPublic"
+      ],
+    systemCommunicationProtectionAccessControlNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "845777456178")),
+    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "536378863536"),
+      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
+        "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"
+      ],
+    systemCommunicationProtectionPublicNetworkNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122899280845")),
+    systemCommunicationProtectionPublicNetworkAdditionalNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "388464619346")),
   };
 }
 
@@ -339,22 +563,49 @@ export function systemCommunicationsProtectionMonitorControlAndProtectOrganizati
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-  constructor(readonly value: SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications) {}
+  constructor(
+    readonly value:
+      SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications,
+  ) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(input: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(input));
+  static fromLhcFormResponse(
+    input: Any,
+  ): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
+    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(
+      systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(
+        input,
+      ),
+    );
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(qr: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(qr));
+  static fromQuestionnaireResponse(
+    qr: Any,
+  ): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
+    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(
+      systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(
+        qr,
+      ),
+    );
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): { ok: boolean; missing: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> } {
-    const missing: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = [];
-    const req: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["implementationStatus", "implementationStatus2"];
+  validateRequiredFields(): {
+    ok: boolean;
+    missing: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    >;
+  } {
+    const missing: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    > = [];
+    const req: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    > = [
+      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
+      "systemCommunicationsProtectionSeparatingPublicSystems",
+    ];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -375,13 +626,53 @@ export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationa
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications>;
+    missingRequired: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    >;
   } {
-    const req: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["implementationStatus", "implementationStatus2"];
-    const all: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls", "implementationStatus", "doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows", "externalBoundaryComponents", "keyInternalBoundaryComponents", "firewallManufacturerModel", "firewallSoftwareFirmwareVersion", "defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted", "explicitlyAllowedServicesProtocols", "explicitlyDeniedServicesProtocols", "howDoYouMonitorCommunicationsAtSystemBoundaries", "supportingDocumentation", "additionalNotes", "requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks", "implementationStatus2", "whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate", "howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks", "whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks", "howDoYouMonitorActivityInYourPublicFacingNetworkSegments", "supportingDocumentation2", "additionalNotes2"];
+    const req: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    > = [
+      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
+      "systemCommunicationsProtectionSeparatingPublicSystems",
+    ];
+    const all: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    > = [
+      "systemCommunicationsProtectionFrontGateMonitorControl",
+      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
+      "systemCommunicationProtectionNetworkNotesEvidence",
+      "systemCommunicationsProtectionNetworkDiagram",
+      "systemCommunicationProtectionNetworkDiagramNotesEvidence",
+      "systemCommunicationsProtectionProtectNetworkOutsideWorld",
+      "systemCommunicationsProtectionProtectSensitiveAreasNetwork",
+      "systemCommunicationsProtectionFirewallManufacturerModel",
+      "systemCommunicationsProtectionFirewallSoftwareFirmwareVersion",
+      "systemCommunicationsProtectionDefaultDenyPolicy",
+      "systemCommunicationsProtectionSystemCommunicationProtectionComments",
+      "systemCommunicationsProtectionExplicitlyAllowedServicesProtocols",
+      "systemCommunicationsProtectionExplicitlyDeniedServicesProtocols",
+      "systemCommunicationsProtectionMonitorTrafficCrossing",
+      "systemCommunicationProtectionMonitoringNotesEvidence",
+      "systemCommunicationsBoundaryProtectionProtectionAdditionalNotes",
+      "systemCommunicationsProtectionDemilitarizedZonePublicSystems",
+      "systemCommunicationsProtectionSeparatingPublicSystems",
+      "systemCommunicationProtectionSeparatePublicSystemNotesEvidence",
+      "systemCommunicationsProtectionAccessibleSystemComponentsOperate",
+      "systemCommunicationProtectionPublicAccessibleSystemNotesEvidence",
+      "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated",
+      "systemCommunicationProtectionNetworkSeparationNotesEvidence",
+      "systemCommunicationsProtectionPreventUnauthorizedAccessPublic",
+      "systemCommunicationProtectionAccessControlNotesEvidence",
+      "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork",
+      "systemCommunicationProtectionPublicNetworkNotesEvidence",
+      "systemCommunicationProtectionPublicNetworkAdditionalNotes",
+    ];
 
     let reqFilled = 0;
-    const missingReq: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = [];
+    const missingReq: Array<
+      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -394,7 +685,8 @@ export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationa
     }
 
     return {
-      formTitle: "System & Communications Protection (Monitor, control, and protect organizational communications)",
+      formTitle:
+        "System & Communications Protection (Monitor, control, and protect organizational communications)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,

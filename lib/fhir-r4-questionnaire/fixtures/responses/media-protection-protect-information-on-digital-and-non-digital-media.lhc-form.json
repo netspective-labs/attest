@@ -1,1 +1,400 @@
-{"lformsVersion":"38.2.0","PATH_DELIMITER":"/","code":null,"codeList":null,"identifier":null,"name":"Media Protection (Protect information on digital and non-digital media)","template":"table","items":[{"header":true,"dataType":"SECTION","question":"MP.L1-3.8.3 - MEDIA PROTECTION (MP) - 1 PRACTICE","questionCode":"609511072752","questionCodeSystem":"LinkId","linkId":"609511072752","questionCardinality":{"max":"1","min":"1"},"items":[],"codingInstructions":"Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse","codingInstructionsFormat":"text","codingInstructionsPlain":"Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse","codingInstructionsLinkId":"609511072752_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}},{"dataType":"CODING","question":"Do you have a Media Disposal Policy?","questionCode":"957584520694","questionCodeSystem":"LinkId","linkId":"957584520694","answerCardinality":{"max":"1","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Yes"},{"text":"No"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Yes"}},{"dataType":"CODING","question":"Implementation Status","questionCode":"272642906092","questionCodeSystem":"LinkId","linkId":"272642906092","answerCardinality":{"max":"1","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Fully Implemented"},{"text":"Partially Implemented"},{"text":"Not Implemented"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":{"text":"Fully Implemented"}},{"header":true,"dataType":"SECTION","prefix":"1.","question":"Policy Elements","questionCode":"393852162334","questionCodeSystem":"LinkId","linkId":"393852162334","questionCardinality":{"max":"1","min":"1"},"items":[{"dataType":"CODING","question":"Confirm that your media disposal policy includes the following elements (click all that apply):","questionCode":"698818405059","questionCodeSystem":"LinkId","linkId":"698818405059","answerCardinality":{"max":"*","min":"0"},"displayControl":{"answerLayout":{"type":"RADIO_CHECKBOX"}},"answers":[{"text":"Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"},{"text":"Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"},{"text":"Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"},{"text":"Destruction methods by media type (Specific destruction methods appropriate for each media type)"},{"text":"Verification requirements (Procedures to verify sanitization or destruction was successful)"},{"text":"Documentation requirements (Required records of sanitization and destruction activities)"},{"text":"Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"},{"text":"Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"}],"codeList":[],"questionCardinality":{"min":"1","max":"1"},"value":[{"text":"Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"},{"text":"Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"},{"text":"Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"},{"text":"Destruction methods by media type (Specific destruction methods appropriate for each media type)"},{"text":"Verification requirements (Procedures to verify sanitization or destruction was successful)"},{"text":"Documentation requirements (Required records of sanitization and destruction activities)"}]}],"codingInstructions":"Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.","codingInstructionsFormat":"text","codingInstructionsPlain":"Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.","codingInstructionsLinkId":"393852162334_helpText","codeList":[],"displayControl":{"questionLayout":"vertical"},"answerCardinality":{"min":"0","max":"1"}}],"templateOptions":{"showQuestionCode":false,"showCodingInstruction":false,"allowMultipleEmptyRepeatingItems":false,"allowHTML":true,"displayControl":{"questionLayout":"vertical"},"viewMode":"auto","defaultAnswerLayout":{"answerLayout":{"type":"COMBO_BOX","columns":"0"}},"hideTreeLine":false,"hideIndentation":false,"hideRepetitionNumber":false,"displayScoreWithAnswerText":true,"displayInvalidHTML":false,"messageLevel":"error"},"hasSavedData":true,"fhirVersion":"R4"}
+{
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Media Protection",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "MP.L1-B.1.VII - MEDIA PROTECTION (MP) - 1 PRACTICE",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "media-protection-overview",
+          "display": "Media Protection Overview"
+        }
+      ],
+      "questionCode": "media-protection-overview",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+      "linkId": "609511072752",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "dataType": "CNE",
+          "question": "Do you have a written policy for safely disposing of devices and media (like laptops, phones, hard drives, CDs, or paper) that contain Federal Contract Information (FCI)? (This is called a Media Disposal Policy.)",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy",
+              "display": "Media Disposal Policy"
+            }
+          ],
+          "questionCode": "media-protection-media-disposal-policy",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "957584520694",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Yes"
+            },
+            {
+              "text": "No"
+            }
+          ],
+          "items": [],
+          "codingInstructions": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Media Disposal Policy</span></i> defines how information system media containing Federal Contract Information (FCI) is handled when it is no longer needed. A proper policy should cover:\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Sanitization:</b> Wiping or clearing digital storage (like USB drives or hard disks) before reuse.<br>\n  &bull; &nbsp; <b>Destruction:</b> Shredding, incinerating, or otherwise rendering unreadable media that is being discarded.<br>\n  &bull; &nbsp; <b>Documentation:</b> Keeping records of how and when media was disposed of.<br>\n  &bull; &nbsp; <b>Responsibility:</b> Assigning staff or teams accountable for secure disposal.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+          "codingInstructionsFormat": "html",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Yes"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-notes",
+              "display": "Media Disposal Policy Notes"
+            }
+          ],
+          "questionCode": "media-protection-media-disposal-policy-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "256250807567",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Implementation Status",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "questionCode": "media-protection-implementation-status",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "272642906092",
+          "answerCardinality": {
+            "max": "1",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Fully Implemented"
+            },
+            {
+              "text": "Partially Implemented"
+            },
+            {
+              "text": " Not Implemented"
+            }
+          ],
+          "skipLogic": {
+            "conditions": [
+              {
+                "source": "957584520694",
+                "trigger": {
+                  "value": {
+                    "text": "Yes"
+                  }
+                }
+              }
+            ],
+            "action": "show"
+          },
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": {
+            "text": "Fully Implemented"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-implementation-status-notes",
+              "display": "Implementation Status Notes"
+            }
+          ],
+          "questionCode": "media-protection-implementation-status-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "806966265807",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "skipLogic": {
+            "conditions": [
+              {
+                "source": "957584520694",
+                "trigger": {
+                  "value": {
+                    "text": "Yes"
+                  }
+                }
+              }
+            ],
+            "action": "show"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Policy Elements",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-policy-elements",
+              "display": "Policy Elements"
+            }
+          ],
+          "questionCode": "media-protection-policy-elements",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "393852162334",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "skipLogic": {
+            "conditions": [
+              {
+                "source": "957584520694",
+                "trigger": {
+                  "value": {
+                    "text": "Yes"
+                  }
+                }
+              }
+            ],
+            "action": "show"
+          },
+          "items": [],
+          "codingInstructions": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>",
+          "codingInstructionsFormat": "html",
+          "codingInstructionsPlain": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "dataType": "CNE",
+          "question": "Confirm that your media disposal policy includes the following elements (click all that apply):",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-elements",
+              "display": "Media Disposal Policy Elements"
+            }
+          ],
+          "questionCode": "media-protection-media-disposal-policy-elements",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "698818405059",
+          "answerCardinality": {
+            "max": "*",
+            "min": "0"
+          },
+          "displayControl": {
+            "answerLayout": {
+              "type": "RADIO_CHECKBOX"
+            }
+          },
+          "answers": [
+            {
+              "text": "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
+            },
+            {
+              "text": "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
+            },
+            {
+              "text": "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
+            },
+            {
+              "text": "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
+            },
+            {
+              "text": "Verification requirements (Procedures to verify sanitization or destruction was successful)"
+            },
+            {
+              "text": "Documentation requirements (Required records of sanitization and destruction activities)"
+            },
+            {
+              "text": "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
+            },
+            {
+              "text": "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
+            }
+          ],
+          "skipLogic": {
+            "conditions": [
+              {
+                "source": "957584520694",
+                "trigger": {
+                  "value": {
+                    "text": "Yes"
+                  }
+                }
+              }
+            ],
+            "action": "show"
+          },
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "value": [
+            {
+              "text": "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
+            },
+            {
+              "text": "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
+            },
+            {
+              "text": "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "dataType": "ST",
+          "question": "Notes / Evidence",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-elements-notes",
+              "display": "Media Disposal Policy Elements Notes"
+            }
+          ],
+          "questionCode": "media-protection-media-disposal-policy-elements-notes",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "686200078306",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "skipLogic": {
+            "conditions": [
+              {
+                "source": "957584520694",
+                "trigger": {
+                  "value": {
+                    "text": "Yes"
+                  }
+                }
+              }
+            ],
+            "action": "show"
+          },
+          "items": [],
+          "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+          "codingInstructionsFormat": "html",
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse",
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "hasSavedData": true,
+  "fhirVersion": "R4"
+}

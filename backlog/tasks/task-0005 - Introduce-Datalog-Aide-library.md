@@ -2,9 +2,9 @@
 id: task-0005
 title: Introduce Datalog Aide library
 status: To Do
-assignee: ['shah']
-created_date: '2025-08-24 21:39'
-labels: ['lib']
+assignee: ["shah"]
+created_date: "2025-08-24 21:39"
+labels: ["lib"]
 dependencies: []
 ---
 

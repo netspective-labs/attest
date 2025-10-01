@@ -26,11 +26,11 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       expectType<mod.CompanyInformation>(
         {
-          emailAddress: TVNI,
-          formCompletedBy: TVNI,
-          mobilePhone: TVNI,
-          organizationName: TVNI,
-          workPhone: TVNI,
+          companyInformationEmailAddress: TVNI,
+          companyInformationFormCompletedBy: TVNI,
+          companyInformationMobilePhone: TVNI,
+          companyInformationOrganizationName: TVNI,
+          companyInformationWorkPhone: TVNI,
         },
       );
       const lhcForm = await readJsonFile(
@@ -44,18 +44,19 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
         lhcForm,
       );
       assertEquals({
-        organizationName: "Netspective Communications LLC",
-        formCompletedBy: "Shahid N. Shah",
-        positionTitle: "Principal",
-        emailAddress: "dont-spam@spam.com",
-        workPhone: "+1 123-456-7891",
-        mobilePhone: "+1 123-456-7891",
-        assessmentDate: cii.value.assessmentDate, // since date is dynamic, we just check that it exists
-        industry: "Frontier AI",
-        employeeCount: "50",
-        contractTypes: "Subcontract",
-        cageCode: "12345",
-        dunsNumber: "123456789",
+        companyInformationOrganizationName: "Netspective Communications LLC",
+        companyInformationFormCompletedBy: "Shahid N. Shah",
+        companyInformationPositionTitle: "Principal",
+        companyInformationEmailAddress: "dont-spam@spam.com",
+        companyInformationWorkPhone: "+1 123-456-7891",
+        companyInformationMobilePhone: "+1 123-456-7891",
+        companyInformationAssessmentDate:
+          cii.value.companyInformationAssessmentDate, // since date is dynamic, we just check that it exists
+        companyInformationIndustry: "Frontier AI",
+        companyInformationEmployeeCount: "50",
+        companyInformationContractTypes: "Subcontract",
+        companyInformationCageCode: "12345",
+        companyInformationDunsNumber: "123456789",
       }, cii.value);
     },
   );
@@ -65,69 +66,108 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/access-control-limit-information-system-access-to-authorized-users-and-processes.lhc-form.json")
-        )
+          import.meta.resolve(
+            "../fixtures/responses/access-control-limit-information-system-access-to-authorized-users-and-processes.lhc-form.json",
+          ),
+        ),
       );
-      const cii = mod.accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(lhcForm);
+      const cii = mod
+        .accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(
+          lhcForm,
+        );
       assertEquals({
-        doYouHaveAnAccessControlPolicy: "Yes",
-        implementationStatus: "Partially Implemented",
-        doesYourOrganizationHaveADocumentedAccessControlPolicyThatAddresses: [
+        accessControlPolicyExists: "Yes",
+        accessControlPolicyElementsItems: [
           "Purpose, scope, roles, and responsibilities",
-          "Compliance requirements"
+          "Management commitment",
         ],
-        howManyAccountsAreCurrentlyInYourSystems: undefined,
-        activeUserAccounts: 250,
-        inactiveDisabledUserAccounts: 10,
-        serviceAccounts: 15,
-        sharedAccounts: 3,
-        howIsThePrincipleOfLeastPrivilegeImplemented: "Partially implemented",
-        howAreAccountLifecycleProcessesManaged: [
-          "Automated identity management system",
-          "Integration with HR systems"
+        accessControlPolicyElementsItemsNotes:
+          "The Access Control Policy covers user account management, least privilege, role-based access, authentication requirements, and periodic access reviews.",
+        accessControlCurrentAccounts: undefined,
+        accessControlCountActiveAccounts: 100,
+        accessControlCountInactiveAccounts: 5,
+        accessControlCountServiceAccounts: 20,
+        accessControlCountSharedAccounts: 25,
+        accessControlLeastPrivilegeStatus:
+          "Fully implemented across all systems",
+        accessControlLeastPrivilegeStatusNotes:
+          "Applied to servers, databases, applications, network devices, and cloud resources; enforced through role-based access controls and periodic access reviews.",
+        accessControlAccountLifecycleProcess: [
+          "We use an automated system that creates and removes access for us.",
+          "We handle it manually, but require manager approval before access is given.",
         ],
-        howFrequentlyAreUserAccountsReviewedForValidityAndAppropriateAccess: "Quarterly",
-        implementationStatus2: "Partially Implemented",
-        howDoYouLimitUserAccessToSpecificTransactionsAndFunctions: [
-          "Role-based access control (RBAC)",
-          "Application-level access controls",
-          "Time-based access restrictions"
+        accessControlAccountLifecycleProcessNotes:
+          "Employee access is requested via a ticketing system, approved by management, implemented by IT, and revoked immediately upon role change or termination; documented in an access log.",
+        accessControlAccountReviewFrequencyQuestion: "Monthly",
+        accessControlAccountReviewFrequencyNotes:
+          "User accounts are reviewed every three months to ensure access aligns with current roles; discrepancies are corrected promptly and documented.",
+        accessControlLeastPrivilegeTransactionStatus:
+          "Fully implemented – access is role-based and regularly reviewed.",
+        accessControlLeastPrivilegeTransactionStatusNotes:
+          "Role-based access controls enforce least privilege across systems, ensuring employees have only the permissions necessary for their job functions; regularly reviewed and adjusted as needed.",
+        accessControlLimitEmployeeActions:
+          "By job role (e.g., managers vs. staff have different access).",
+        accessControlLimitEmployeeActionsNotes:
+          "Each role is assigned specific permissions (e.g., read, edit, approve) based on job function; access is granted through a controlled approval process and periodically reviewed.",
+        accessControlRoleLimitedActions: [
+          "Administrative functions (user management, system configuration)",
+          "Report generation and access",
         ],
-        whatTypesOfFunctionsAreRestrictedBasedOnUserRoles: [
-          "Data export and bulk download functions",
-          "System-level commands and utilities"
+        accessControlRoleLimitedActionsNotes:
+          "Actions such as approving transactions, modifying sensitive data, deploying changes, or accessing confidential reports are restricted to managers or designated roles; staff roles are limited to view or read-only access.",
+        accessControlSensitiveActionApprovalProcess: [
+          "Manager approval required",
+          "No special authorization required",
         ],
-        howAreHighRiskTransactionsAuthorized: [
-          "No special authorization required"
+        accessControlSensitiveActionApprovalNotes:
+          "Sensitive actions require managerial or designated role approval before execution; workflows are logged and auditable to ensure accountability and compliance.",
+        accessControlExternalConnectionsStatus:
+          "Fully implemented – Only approved external systems can connect; all activity is monitored.",
+        accessControlExternalConnectionsStatusNotes:
+          "External connections are restricted via firewalls, VPNs, and approved cloud services; personal devices follow a BYOD policy with security controls; network activity is monitored for unauthorized access.",
+        accessControlExternalSystemTypes: [
+          "Cloud services – e.g., Microsoft 365, Google Workspace, Dropbox, Salesforce.",
+          "Business partner networks – e.g., joint project portals, shared databases.",
+          "Vendor/supplier systems – e.g., ERP integrations, supplier ordering platforms.",
         ],
-        implementationStatus3: "Partially Implemented",
-        whatTypesOfExternalSystemsDoesYourOrganizationConnectTo: [
-          "Cloud services (email, file storage, applications)",
-          "No external connections"
+        accessControlExternalSystemTypesNotes:
+          "Includes company-managed laptops and mobile devices, corporate email, cloud collaboration tools (e.g., file sharing, partner portals), and secure VPN connections; all connections are authenticated and monitored.",
+        accessControlExternalSystemSafetyCheck: [
+          "We use digital certificates and PKI to prove identity.",
+          "We require VPN logins with authentication before allowing access.",
         ],
-        howDoYouVerifyExternalSystemConnections: [
-          "VPN connections with authentication",
-          "Signed interconnection agreements"
+        accessControlExternalSystemSafetyCheckNotes:
+          "Devices are scanned for malware, must comply with endpoint security policies, and are authenticated via VPN or MDM; external systems are vetted and only allowed through secure connections.",
+        accessControlConnectionLimitationsList: [
+          "Time-based access restrictions",
+          "Limited to specific user groups",
         ],
-        whatLimitationsArePlacedOnExternalConnections: [
-          "Restrictions on data types that can be shared",
-          "Comprehensive audit trails and logging"
-        ],
-        implementationStatus4: "Partially Implemented",
-        whatPubliclyAccessibleSystemsDoesYourOrganizationOperate: [
+        accessControlConnectionLimitationsNotes:
+          "External connections are limited to approved systems and users, use secure protocols (VPN, HTTPS), enforce least privilege, and are monitored for suspicious activity.",
+        accessControlPublicInfoProcessStatus:
+          "Fully implemented – We have a written approval process, only authorized staff can post, and we review/remove public content regularly.",
+        accessControlPublicInfoProcessStatusNotes:
+          "Policies and procedures prevent posting FCI to public systems; employees are trained on handling sensitive information; content is reviewed before publication to ensure compliance.",
+        accessControlPublicSystemsList: [
           "Company website",
-          "Public forums or discussion boards"
+          "Corporate blog or news site",
         ],
-        howDoYouEnsureFciIsNotPostedOnPublicSystems: [
+        accessControlPublicSystemsListNotes:
+          "Includes marketing website, customer support portal, and approved partner portals; all systems are monitored and secured to prevent unauthorized access to sensitive information.",
+        accessControlFciPostingPreventionProcess: [
           "Pre-publication review and approval process",
-          "Procedures for rapid removal of inappropriate content"
+          "Automated content scanning for sensitive information",
+          "Procedures for rapid removal of inappropriate content",
         ],
-        whoIsAuthorizedToPostContentToPublicSystems: undefined,
-        numberOfAuthorizedPersonnel: 250,
-        chooseAllThatApply: [
+        accessControlFciPostingPreventionNotes:
+          "Sensitive content is reviewed before publication; employees follow FCI handling policies; public systems have restricted access and monitoring to prevent accidental exposure.",
+        accessControlAuthorizedPublicSystems: undefined,
+        accessControlAuthorizedPersonnelCount: 10,
+        accessControlAuthorizedPersonnelDepts: [
           "Marketing department",
-          "Communications/PR team"
+          "Executive leadership",
         ],
+        accessControlAuthorizedPersonnelNotes: undefined,
       }, cii);
     },
   );
@@ -137,22 +177,27 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/media-protection-protect-information-on-digital-and-non-digital-media.lhc-form.json")
-        )
+          import.meta.resolve(
+            "../fixtures/responses/media-protection-protect-information-on-digital-and-non-digital-media.lhc-form.json",
+          ),
+        ),
       );
 
-      const mp = mod.mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(lhcForm);
+      const mp = mod
+        .mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(
+          lhcForm,
+        );
       assertEquals({
-        doYouHaveAMediaDisposalPolicy: "Yes",
-        implementationStatus: "Fully Implemented",
-        confirmThatYourMediaDisposalPolicyIncludesTheFollowingElementsClickAllThatApply: [
-          "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))",
+        mediaProtectionMediaDisposalPolicy: "Yes",
+        mediaProtectionMediaDisposalPolicyNotes: undefined,
+        mediaProtectionImplementationStatus: "Fully Implemented",
+        mediaProtectionImplementationStatusNotes: undefined,
+        mediaProtectionMediaDisposalPolicyElements: [
           "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)",
           "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)",
           "Destruction methods by media type (Specific destruction methods appropriate for each media type)",
-          "Verification requirements (Procedures to verify sanitization or destruction was successful)",
-          "Documentation requirements (Required records of sanitization and destruction activities)"
-        ]
+        ],
+        mediaProtectionMediaDisposalPolicyElementsNotes: undefined,
       }, mp);
     },
   );
@@ -162,57 +207,72 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
     async () => {
       const lhcForm = await readJsonFile(
         fromFileUrl(
-          import.meta.resolve("../fixtures/responses/system-communications-protection-monitor-control-and-protect-organizational-communications.lhc-form.json")
-        )
+          import.meta.resolve(
+            "../fixtures/responses/system-communications-protection-monitor-control-and-protect-organizational-communications.lhc-form.json",
+          ),
+        ),
       );
 
-      const mp = mod.systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(lhcForm);
+      const mp = mod
+        .systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(
+          lhcForm,
+        );
       assertEquals({
-        requirementsImplementNetworkMonitoringAndBoundaryProtectionIncludingFirewallsIntrusionDetectionAndCommunicationControls: undefined,
-        implementationStatus: "Fully Implemented - All boundary protection controls are in place and operational",
-        doYouHaveANetworkDiagramShowingSystemBoundariesKeyComponentsAndDataFlows: "Yes",
-        externalBoundaryComponents: "Palo Alto PA-220, Firmware v10.1.2,Cisco ASA 5515-X, Firmware v9.12.3",
-        keyInternalBoundaryComponents: "Internal VLAN Switches,Segmentation Gateways (VMware NSX v7.1),Internal Web Application Firewall (F5 BIG-IP v16.1)",
-        firewallManufacturerModel: "Cisco ASA 5515-X,Palo Alto PA-220",
-        firewallSoftwareFirmwareVersion: "v10.1.2",
-        defaultDenyPolicyIsImplementedTrafficIsDeniedByDefaultUnlessExplicitlyPermitted: "Yes",
-        explicitlyAllowedServicesProtocols: "HTTP/HTTPS (TCP 80/443),SMTP/IMAP/POP3 (TCP 25/143/110)",
-        explicitlyDeniedServicesProtocols: "Telnet (TCP 23),FTP (TCP 21),NetBIOS/SMB (TCP 137–139, 445)",
-        howDoYouMonitorCommunicationsAtSystemBoundaries: [
+        systemCommunicationsProtectionFrontGateMonitorControl: undefined,
+        systemCommunicationsProtectionStatusNetworkPerimeterSecurity:
+          "Fully implemented – We use firewalls and monitoring tools to control all traffic in and out of the network, and they are actively maintained.",
+        systemCommunicationProtectionNetworkNotesEvidence: undefined,
+        systemCommunicationsProtectionNetworkDiagram: "Yes",
+        systemCommunicationProtectionNetworkDiagramNotesEvidence: undefined,
+        systemCommunicationsProtectionProtectNetworkOutsideWorld:
+          "Network perimeter is protected by firewalls, secure VPNs for remote access, IDS/IPS monitoring, and regular network security reviews to block unauthorized traffic.",
+        systemCommunicationsProtectionProtectSensitiveAreasNetwork:
+          "Sensitive areas are isolated using VLANs, internal firewalls, and role-based access controls; only authorized users and systems can access these segments, and activity is monitored.",
+        systemCommunicationsProtectionFirewallManufacturerModel:
+          "Cisco ASA 5506, Palo Alto PA-220",
+        systemCommunicationsProtectionFirewallSoftwareFirmwareVersion:
+          "v19.2.3",
+        systemCommunicationsProtectionDefaultDenyPolicy: "Yes",
+        systemCommunicationsProtectionSystemCommunicationProtectionComments:
+          undefined,
+        systemCommunicationsProtectionExplicitlyAllowedServicesProtocols:
+          "Examples include HTTPS (443), VPN (IPSec/SSL), and SSH (22) for administrative access; all other services are blocked by default.",
+        systemCommunicationsProtectionExplicitlyDeniedServicesProtocols:
+          "FTP (21), and unused ports; blocked at the firewall and monitored for attempts to access.",
+        systemCommunicationsProtectionMonitorTrafficCrossing: [
           "Firewall logs and analysis",
-          "Intrusion detection/prevention systems",
-          "SIEM system integration"
+          "SIEM system integration",
         ],
-        supportingDocumentation: undefined,
-        additionalNotes: undefined,
-        requirementsCreateDmzOrSeparatedNetworkSegmentsForPublicFacingSystemsToIsolateThemFromInternalNetworks: undefined,
-        implementationStatus2: "Fully Implemented - DMZ/subnetworks properly isolate public systems",
-        whatPubliclyAccessibleSystemComponentsDoesYourOrganizationOperate: [
+        systemCommunicationProtectionMonitoringNotesEvidence: undefined,
+        systemCommunicationsBoundaryProtectionProtectionAdditionalNotes:
+          undefined,
+        systemCommunicationsProtectionDemilitarizedZonePublicSystems: undefined,
+        systemCommunicationsProtectionSeparatingPublicSystems:
+          "Fully implemented – Public systems are kept on their own network (DMZ or subnetwork) and fully isolated from internal systems.",
+        systemCommunicationProtectionSeparatePublicSystemNotesEvidence:
+          undefined,
+        systemCommunicationsProtectionAccessibleSystemComponentsOperate: [
           "Web servers",
-          "Email servers (public-facing)",
-          "DNS servers",
-          "VPN gateways",
-          "API gateways"
+          "Remote access servers",
         ],
-        howArePubliclyAccessibleSystemsSeparatedFromInternalNetworks: [
+        systemCommunicationProtectionPublicAccessibleSystemNotesEvidence:
+          undefined,
+        systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: [
           "Demilitarized Zone (DMZ) implementation",
-          "Virtual LAN (VLAN) segmentation",
-          "Firewall rules and access control lists",
+          "Physical network separation",
         ],
-        whatControlsPreventUnauthorizedAccessFromPublicNetworksToInternalNetworks: [
-          "Default deny policies (all traffic blocked unless explicitly allowed)",
-          "Stateful firewall inspection",
-          "Intrusion detection and prevention systems",
-          "Strong authentication for any allowed connections"
+        systemCommunicationProtectionNetworkSeparationNotesEvidence: undefined,
+        systemCommunicationsProtectionPreventUnauthorizedAccessPublic: [
+          "Application-level proxy filtering",
+          "Continuous network monitoring and logging",
         ],
-        howDoYouMonitorActivityInYourPublicFacingNetworkSegments: [
+        systemCommunicationProtectionAccessControlNotesEvidence: undefined,
+        systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: [
           "Security Information and Event Management (SIEM) system",
-          "Network monitoring tools and dashboards",
-          "Automated log analysis and alerting",
-          "Regular vulnerability scanning"
+          " Automated log analysis and alerting",
         ],
-        supportingDocumentation2: undefined,
-        additionalNotes2: undefined
+        systemCommunicationProtectionPublicNetworkNotesEvidence: undefined,
+        systemCommunicationProtectionPublicNetworkAdditionalNotes: undefined,
       }, mp);
     },
   );
@@ -259,8 +319,8 @@ Deno.test("Generated TypeScript code from ../fixtures/questionnaires", async (t)
       expectType<
         mod.SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
       >({
-        implementationStatus: TVNI,
-        implementationStatus2: TVNI,
+        systemCommunicationsProtectionStatusNetworkPerimeterSecurity: TVNI,
+        systemCommunicationsProtectionSeparatingPublicSystems: TVNI,
       });
     },
   );

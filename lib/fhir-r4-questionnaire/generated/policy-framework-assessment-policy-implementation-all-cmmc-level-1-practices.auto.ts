@@ -10,37 +10,52 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesModuleSignature: rt.ModuleSignature = {
-    title: "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
-    filename: "policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices.auto.ts",
-    titleCamel: "`policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
-    titlePascal: "`PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
-    titleKebab: "`policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices`",
-    lhcFormResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource",
-}
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesModuleSignature:
+  rt.ModuleSignature = {
+    title:
+      "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+    filename:
+      "policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices.auto.ts",
+    titleCamel:
+      "`policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
+    titlePascal:
+      "`PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
+    titleKebab:
+      "`policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices`",
+    lhcFormResponseAdapterFnName:
+      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName:
+      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName:
+      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource",
+  };
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
 /**
  * Form Help (from display/help controls):
- * - Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.
  * - Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.
  * - Implement regular procedures to review and update policies to keep them current and effective.
  * - Provide ongoing training to employees to ensure understanding and compliance with organizational policies.
  * - Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.
  * - Establish a process to document, review, and approve exceptions to policies while managing associated risks.
+ * - Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds = {
-  whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies: "527949557496",
-  howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated: "992068463537",
-  whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies: "472951321809",
-  howIsComplianceWithCmmcRelatedPoliciesMonitored: "758349008850",
-  howAreExceptionsToCmmcRelatedPoliciesManaged: "255836550808",
-  additionalNotes: "795388091631"
-} as const;
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds =
+  {
+    policyFrameworkAssessmentResponsiblePolicyDevelopment: "527949557496",
+    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: "576726184171",
+    policyFrameworkAssessmentPolicyReviewFrequency: "992068463537",
+    policyFrameworkAssessmentPolicyReviewFrequencyNotes: "891438058183",
+    policyFrameworkAssessmentEmployeePolicyTraining: "472951321809",
+    policyFrameworkAssessmentEmployeePolicyTrainingNotes: "948893743049",
+    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: "758349008850",
+    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: "230314073532",
+    policyFrameworkAssessmentPolicyExceptionManagementMethods: "255836550808",
+    policyFrameworkAssessmentPolicyExceptionManagementNotes: "683517806081",
+    policyFrameworkAssessmentAdditionalNotes: "795388091631",
+  } as const;
 
 /** Normalized view of "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)" answers. */
 export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
@@ -48,51 +63,130 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Who is responsible for developing and approving CMMC-related policies?
    * linkId: 527949557496
    * FHIR type: choice
-   * Section: Policy Development and Approval
+   * Section: Policy Framework Assessment > Policy Development and Approval
    * Options: "Chief Information Officer", "Chief Information Security Officer", "Chief Executive Officer", "Legal/Compliance Department", "IT Security Team"
    * Required: no
    */
-  whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies?: ("Chief Information Officer" | "Chief Information Security Officer" | "Chief Executive Officer" | "Legal/Compliance Department" | "IT Security Team")[];
+  policyFrameworkAssessmentResponsiblePolicyDevelopment?: (
+    | "Chief Information Officer"
+    | "Chief Information Security Officer"
+    | "Chief Executive Officer"
+    | "Legal/Compliance Department"
+    | "IT Security Team"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 576726184171
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: Policy Framework Assessment > Policy Development and Approval
+   * Required: no
+   */
+  policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes?: string;
 
   /**
    * How frequently are CMMC-related policies reviewed and updated?
    * linkId: 992068463537
    * FHIR type: choice
-   * Section: Policy Review and Update Procedures
+   * Section: Policy Framework Assessment > Policy Review and Update Procedures
    * Options: "Quarterly", "Bi-annually", "Annually", "When regulations change", "No formal schedule"
    * Required: no
    */
-  howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated?: ("Quarterly" | "Bi-annually" | "Annually" | "When regulations change" | "No formal schedule")[];
+  policyFrameworkAssessmentPolicyReviewFrequency?:
+    | "Quarterly"
+    | "Bi-annually"
+    | "Annually"
+    | "When regulations change"
+    | "No formal schedule";
+
+  /**
+   * Notes / Evidence
+   * linkId: 891438058183
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: Policy Framework Assessment > Policy Review and Update Procedures
+   * Required: no
+   */
+  policyFrameworkAssessmentPolicyReviewFrequencyNotes?: string;
 
   /**
    * What training is provided to employees on CMMC-related policies?
    * linkId: 472951321809
    * FHIR type: choice
-   * Section: Employee Training on Policies
+   * Section: Policy Framework Assessment > Employee Training on Policies
    * Options: "Initial security awareness training", "Role-specific policy training", "Annual refresher training", "just-in-time training for policy changes", "No formal training program"
    * Required: no
    */
-  whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies?: ("Initial security awareness training" | "Role-specific policy training" | "Annual refresher training" | "just-in-time training for policy changes" | "No formal training program")[];
+  policyFrameworkAssessmentEmployeePolicyTraining?: (
+    | "Initial security awareness training"
+    | "Role-specific policy training"
+    | "Annual refresher training"
+    | "just-in-time training for policy changes"
+    | "No formal training program"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 948893743049
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: Policy Framework Assessment > Employee Training on Policies
+   * Required: no
+   */
+  policyFrameworkAssessmentEmployeePolicyTrainingNotes?: string;
 
   /**
    * How is compliance with CMMC-related policies monitored?
    * linkId: 758349008850
    * FHIR type: choice
-   * Section: Policy Compliance Monitoring
-   * Options: "Regular internal audits", "Automated compliance monitoring", "Self-assessment questionnaires", "Manager reviews and attestations", "Third-party assessments"
+   * Section: Policy Framework Assessment > Policy Compliance Monitoring
+   * Options: " Regular internal audits", "Automated compliance monitoring", "Self-assessment questionnaires", "Manager reviews and attestations", "Third-party assessments"
    * Required: no
    */
-  howIsComplianceWithCmmcRelatedPoliciesMonitored?: ("Regular internal audits" | "Automated compliance monitoring" | "Self-assessment questionnaires" | "Manager reviews and attestations" | "Third-party assessments")[];
+  policyFrameworkAssessmentPolicyComplianceMonitoringMethods?: (
+    | " Regular internal audits"
+    | "Automated compliance monitoring"
+    | "Self-assessment questionnaires"
+    | "Manager reviews and attestations"
+    | "Third-party assessments"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 230314073532
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: Policy Framework Assessment > Policy Compliance Monitoring
+   * Required: no
+   */
+  policyFrameworkAssessmentPolicyComplianceMonitoringNotes?: string;
 
   /**
    * How are exceptions to CMMC-related policies managed?
    * linkId: 255836550808
    * FHIR type: choice
-   * Section: Policy Exception Management
-   * Options: "Formal exception request process", "Risk assessment for exceptions", "Compensating controls for exceptions", "Regular review of approved exceptions", "No formal exception process"
+   * Section: Policy Framework Assessment > Policy Exception Management
+   * Options: " Formal exception request process", "Risk assessment for exceptions", "Compensating controls for exceptions", "Regular review of approved exceptions", "No formal exception process"
    * Required: no
    */
-  howAreExceptionsToCmmcRelatedPoliciesManaged?: ("Formal exception request process" | "Risk assessment for exceptions" | "Compensating controls for exceptions" | "Regular review of approved exceptions" | "No formal exception process")[];
+  policyFrameworkAssessmentPolicyExceptionManagementMethods?: (
+    | " Formal exception request process"
+    | "Risk assessment for exceptions"
+    | "Compensating controls for exceptions"
+    | "Regular review of approved exceptions"
+    | "No formal exception process"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 683517806081
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: Policy Framework Assessment > Policy Exception Management
+   * Required: no
+   */
+  policyFrameworkAssessmentPolicyExceptionManagementNotes?: string;
 
   /**
    * Additional Notes
@@ -101,30 +195,106 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Entry format: Any additional information about your policy framework.
    * Required: no
    */
-  additionalNotes?: string;
+  policyFrameworkAssessmentAdditionalNotes?: string;
 }
 
 /** Convert an LHC JSON response into a normalized PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices object. */
-export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(input: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
+export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(
+  input: Any,
+): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
   return {
-  whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "527949557496")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies"],
-  howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "992068463537")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated"],
-  whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "472951321809")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies"],
-  howIsComplianceWithCmmcRelatedPoliciesMonitored: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "758349008850")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howIsComplianceWithCmmcRelatedPoliciesMonitored"],
-  howAreExceptionsToCmmcRelatedPoliciesManaged: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "255836550808")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howAreExceptionsToCmmcRelatedPoliciesManaged"],
-  additionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "795388091631")),
+    policyFrameworkAssessmentResponsiblePolicyDevelopment: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "527949557496"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentResponsiblePolicyDevelopment"
+      ],
+    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "576726184171")),
+    policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "992068463537"),
+    ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+      "policyFrameworkAssessmentPolicyReviewFrequency"
+    ],
+    policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "891438058183")),
+    policyFrameworkAssessmentEmployeePolicyTraining: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "472951321809"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentEmployeePolicyTraining"
+      ],
+    policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "948893743049")),
+    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "758349008850"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentPolicyComplianceMonitoringMethods"
+      ],
+    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "230314073532")),
+    policyFrameworkAssessmentPolicyExceptionManagementMethods: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "255836550808"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentPolicyExceptionManagementMethods"
+      ],
+    policyFrameworkAssessmentPolicyExceptionManagementNotes: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "683517806081")),
+    policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "795388091631"),
+    ),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices object. */
-export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(qr: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
+export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(
+  qr: Any,
+): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
   return {
-  whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "527949557496")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies"],
-  howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "992068463537")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated"],
-  whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "472951321809")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies"],
-  howIsComplianceWithCmmcRelatedPoliciesMonitored: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "758349008850")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howIsComplianceWithCmmcRelatedPoliciesMonitored"],
-  howAreExceptionsToCmmcRelatedPoliciesManaged: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "255836550808")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["howAreExceptionsToCmmcRelatedPoliciesManaged"],
-  additionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "795388091631")),
+    policyFrameworkAssessmentResponsiblePolicyDevelopment: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "527949557496"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentResponsiblePolicyDevelopment"
+      ],
+    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "576726184171")),
+    policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "992068463537"),
+    ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+      "policyFrameworkAssessmentPolicyReviewFrequency"
+    ],
+    policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "891438058183")),
+    policyFrameworkAssessmentEmployeePolicyTraining: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "472951321809"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentEmployeePolicyTraining"
+      ],
+    policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "948893743049")),
+    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "758349008850"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentPolicyComplianceMonitoringMethods"
+      ],
+    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "230314073532")),
+    policyFrameworkAssessmentPolicyExceptionManagementMethods: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "255836550808"),
+      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
+        "policyFrameworkAssessmentPolicyExceptionManagementMethods"
+      ],
+    policyFrameworkAssessmentPolicyExceptionManagementNotes: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "683517806081")),
+    policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "795388091631"),
+    ),
   };
 }
 
@@ -149,22 +319,46 @@ export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practi
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-  constructor(readonly value: PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices) {}
+  constructor(
+    readonly value:
+      PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices,
+  ) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(input: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(input));
+  static fromLhcFormResponse(
+    input: Any,
+  ): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
+    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(
+      policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(
+        input,
+      ),
+    );
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(qr: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(qr));
+  static fromQuestionnaireResponse(
+    qr: Any,
+  ): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
+    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(
+      policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(
+        qr,
+      ),
+    );
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): { ok: boolean; missing: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> } {
-    const missing: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
-    const req: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
+  validateRequiredFields(): {
+    ok: boolean;
+    missing: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    >;
+  } {
+    const missing: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    > = [];
+    const req: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -185,13 +379,33 @@ export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices>;
+    missingRequired: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    >;
   } {
-    const req: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
-    const all: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = ["whoIsResponsibleForDevelopingAndApprovingCmmcRelatedPolicies", "howFrequentlyAreCmmcRelatedPoliciesReviewedAndUpdated", "whatTrainingIsProvidedToEmployeesOnCmmcRelatedPolicies", "howIsComplianceWithCmmcRelatedPoliciesMonitored", "howAreExceptionsToCmmcRelatedPoliciesManaged", "additionalNotes"];
+    const req: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    > = [];
+    const all: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    > = [
+      "policyFrameworkAssessmentResponsiblePolicyDevelopment",
+      "policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes",
+      "policyFrameworkAssessmentPolicyReviewFrequency",
+      "policyFrameworkAssessmentPolicyReviewFrequencyNotes",
+      "policyFrameworkAssessmentEmployeePolicyTraining",
+      "policyFrameworkAssessmentEmployeePolicyTrainingNotes",
+      "policyFrameworkAssessmentPolicyComplianceMonitoringMethods",
+      "policyFrameworkAssessmentPolicyComplianceMonitoringNotes",
+      "policyFrameworkAssessmentPolicyExceptionManagementMethods",
+      "policyFrameworkAssessmentPolicyExceptionManagementNotes",
+      "policyFrameworkAssessmentAdditionalNotes",
+    ];
 
     let reqFilled = 0;
-    const missingReq: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
+    const missingReq: Array<
+      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -204,7 +418,8 @@ export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
     }
 
     return {
-      formTitle: "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+      formTitle:
+        "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,

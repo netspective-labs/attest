@@ -5,177 +5,109 @@
       "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
     ]
   },
-  "title": "Identification & Authentication (Verify identities of users and processes)",
+  "title": "Identification & Authentication",
   "status": "draft",
   "description": "Verify identities of users and processes",
   "item": [
     {
-      "type": "group",
-      "linkId": "228228158249",
-      "text": "IA.L1-3.5.1 - Identify users and authenticate identities",
       "item": [
         {
-          "linkId": "228228158249_helpText",
-          "type": "display",
-          "text": "Identify information system users, processes acting on behalf of users, or devices.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "362061549890",
-      "text": "Implementation Status",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Fully Implemented"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Partially Implemented"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Not Implemented"
-          }
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "139461602895",
-      "text": "User Identification Standards",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "First name + last name (john.smith)"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "First initial + last name (jsmith)"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Employee ID numbers (EMP001234)"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Department codes + names (IT-jsmith)"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "integer",
+          "type": "text",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Enter number"
+              "valueString": "Enter notes or supporting evidence, if any"
             }
           ],
-          "linkId": "179545641231",
-          "text": "Number of service accounts:"
-        },
-        {
-          "type": "choice",
-          "extension": [
+          "linkId": "608483664601",
+          "code": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-section-notes",
+              "display": "Identification Section Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "374872344921",
+              "type": "display",
+              "_text": {
+                "extension": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
                   }
                 ]
-              }
-            }
-          ],
-          "linkId": "753553198622",
-          "text": "Check all that apply:",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Database services"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Web applications"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Backup processes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Monitoring/logging services"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Security scanning tools"
-              }
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
             }
           ]
         },
         {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "281929303054",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-unique-ids-notes",
+                  "display": "Status Unique Ids Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "281929303054_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "type": "choice",
           "extension": [
             {
@@ -191,8 +123,1659 @@
               }
             }
           ],
-          "linkId": "926744954268",
-          "text": "Do you have a device inventory spreadsheet?",
+          "linkId": "362061549890",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-unique-ids",
+              "display": "Status Unique Ids"
+            }
+          ],
+          "text": "What is the status of making sure all employees, devices, and automated tools that use your systems have unique IDs so you can tell them apart?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "243749447566",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-employee-login-id-format-notes",
+                  "display": "Employee Login Id Format Notes"
+                }
+              ],
+              "text": "Notes / Evidence:",
+              "item": [
+                {
+                  "linkId": "243749447566_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "139461602895",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-employee-login-id-format",
+              "display": "Employee Login Id Format"
+            }
+          ],
+          "text": "What format do you use to create employee login IDs?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": " First name + last name (john.smith)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " First initial + last name (jsmith)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " Employee ID numbers (EMP001234)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " Department codes + names (IT-jsmith)"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter number"
+                }
+              ],
+              "linkId": "179545641231",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-number-of-service-accounts",
+                  "display": "Number Of Service Accounts"
+                }
+              ],
+              "text": "Number of service accounts (special logins used by software or automated tools, not people):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "753553198622",
+              "text": "Check all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Database services"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Web applications"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Backup processes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Monitoring/logging services"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Security scanning tools"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "441172825241",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-service-account-management-notes",
+                  "display": "Service Account Management Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "441172825241_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "item": [
+                {
+                  "type": "text",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "279054233268",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "identification-authentication-company-device-inventory-list-notes",
+                      "display": "Company Device Inventory List Notes"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "279054233268_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "926744954268",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-company-device-inventory-list",
+                  "display": "Company Device Inventory List"
+                }
+              ],
+              "text": "Do you keep a list or spreadsheet of all company devices (computers, phones, servers, etc.) that connect to your systems?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "297397401977",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-process",
+                  "display": "User Identity Verification Process"
+                }
+              ],
+              "text": "How do you verify a person’s identity before giving them access to company systems?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "HR verification with employee records"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manager approval with written authorization"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Background check completion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Photo identification verification"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "627017348272",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-notes",
+                  "display": "User Identity Verification Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "627017348272_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "446911811643_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\"> <span style=\"color: #003366;\"><i>Service Accounts</i></span> are special logins used by software or automated tools, not people. Keep them limited to only what’s necessary and review them regularly to prevent misuse. </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "446911811643",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-service-account-management",
+              "display": "Service Account Management"
+            }
+          ],
+          "text": "Service Account Management"
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "linkId": "878410531769",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-workstations",
+                  "display": "Device Count Workstations"
+                }
+              ],
+              "text": "Workstations/laptops:"
+            },
+            {
+              "type": "integer",
+              "linkId": "361034048943",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-servers",
+                  "display": "Device Count Servers"
+                }
+              ],
+              "text": "Servers:"
+            },
+            {
+              "type": "integer",
+              "linkId": "424090205463",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-mobile",
+                  "display": "Device Count Mobile"
+                }
+              ],
+              "text": "Mobile devices:"
+            },
+            {
+              "type": "integer",
+              "linkId": "764441913827",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-network",
+                  "display": "Device Count Network"
+                }
+              ],
+              "text": "Network devices:"
+            },
+            {
+              "linkId": "543189099428_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\"> <span style=\"color: #003366;\"><i>Device Inventory</i></span> tracks every device that connects to your systems — like laptops, desktops, and phones. This helps ensure only approved, secure devices are used for work that involves government contract information. </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "543189099428",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-inventory",
+              "display": "Device Inventory"
+            }
+          ],
+          "text": "Device Inventory"
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "359160217347",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods",
+              "display": "Device Identification Methods"
+            }
+          ],
+          "text": "Every computer, phone, or server should have a unique identifier so you know exactly which device is connecting. How do you uniquely identify each device that connects to your systems?",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "MAC addresses"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "IP addresses (static)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Computer/device names"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Asset tag numbers"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Serial numbers"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Certificates/digital signatures"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "346437919917",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods-notes",
+              "display": "Device Identification Methods Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "598954279320",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "876744570203",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-identification-supporting-docs-notes",
+                  "display": "Identification Supporting Docs Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "534094311747",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "157280172274",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-supporting-docs",
+              "display": "Identification Supporting Docs"
+            }
+          ],
+          "text": "Supporting Documentation",
+          "repeats": false,
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 100
+                }
+              ],
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "linkId": "382279609009",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-additional-notes",
+              "display": "Identification Additional Notes"
+            }
+          ],
+          "text": "Additional Notes"
+        },
+        {
+          "linkId": "228228158249_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Identification (IA)</span></i> requires assigning a unique ID to every user and device so that access to systems and Federal Contract Information (FCI) can always be linked to a specific, authorized individual.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Unique User IDs:</b> Each employee or contractor must have their own login account.<br>\n  &bull; &nbsp; <b>No Shared Accounts:</b> Prevents confusion and makes activity traceable.<br>\n  &bull; &nbsp; <b>Device Identification:</b> Computers, phones, and servers should also have unique identifiers.<br>\n  &bull; &nbsp; <b>Account Lifecycle:</b> Add new IDs only when needed and remove them promptly when no longer in use.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "228228158249",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-identification-overview",
+          "display": "Identification Overview"
+        }
+      ],
+      "text": "IA.L1-B.1.V - Identification"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "linkId": "440326396427",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-authentication-controls-notes",
+                  "display": "Status Authentication Controls Notes"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "type": "text",
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "440326396427_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "676336695824",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-authentication-controls",
+              "display": "Status Authentication Controls"
+            }
+          ],
+          "text": "What is the current status of the controls that verify that users and devices are who they say they are before giving them access?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not Implemented"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not applicable – No systems in scope store or process FCI."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "901079756471",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods",
+              "display": "User Authentication Methods"
+            }
+          ],
+          "text": "What methods do you use to confirm a user’s identity before they can log in?",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Username and password – The most common method; each employee has a unique login and password."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Smart cards / PIV cards – Physical cards employees insert or tap to log in."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Digital certificates – Software-based “ID cards” that prove a device or user is trusted."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Single sign-on (SSO) – One secure login gives access to multiple company applications."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "115035657570",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods-notes",
+              "display": "User Authentication Methods Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "115035657570_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "8"
+                }
+              ],
+              "linkId": "444552965098",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-min-length",
+                  "display": "Password Min Length"
+                }
+              ],
+              "text": "Minimum length (characters):"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "90"
+                }
+              ],
+              "linkId": "499668919305",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-expiration-days",
+                  "display": "Password Expiration Days"
+                }
+              ],
+              "text": "Password expiration (days):"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "5"
+                }
+              ],
+              "linkId": "190124104069",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-history-count",
+                  "display": "Password History Count"
+                }
+              ],
+              "text": "Password history (passwords remembered):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "404025003688",
+              "text": "Click all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Uppercase letters required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Lowercase letters required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Numbers required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Special characters required"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "149539043632",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-requirements-notes",
+                  "display": "Password Requirements Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "149539043632_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "459655669415_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Password Requirements</span></i> define the rules for creating strong passwords so accounts are harder to guess or break.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Length:</b> Require a minimum of 8–12 characters (longer is stronger).<br>\n  &bull; &nbsp; <b>Complexity:</b> Use a mix of uppercase, lowercase, numbers, and symbols.<br>\n  &bull; &nbsp; <b>Uniqueness:</b> Do not reuse old or common passwords.<br>\n  &bull; &nbsp; <b>Protection:</b> Never share passwords or store them in plain text.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "459655669415",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-password-requirements",
+              "display": "Password Requirements"
+            }
+          ],
+          "text": "Password Requirements"
+        },
+        {
+          "linkId": "928879235030",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-mfa-usage",
+              "display": "Mfa Usage"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "choice",
+          "text": "Multi-factor authentication (MFA) means using more than one proof of identity before someone can log in. For example, a password plus a code texted to your phone, or a password plus a fingerprint scan. Do you use MFA?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes, for all users and systems"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for privileged accounts only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for remote access only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for critical systems only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No, not implemented"
+              }
+            }
+          ],
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "496212946934",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-mfa-usage-notes",
+                  "display": "Mfa Usage Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "496212946934_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "273984680811",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-default-credential-handling-notes",
+                  "display": "Default Credential Handling Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "273984680811_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "830887074055",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-default-credential-handling",
+              "display": "Default Credential Handling"
+            }
+          ],
+          "text": "How do you handle default usernames and passwords that come with new systems or software?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Always changed before deployment – IT changes default logins before the system is ever used."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Users required to change on first login – The system forces a password change the first time someone logs in."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No formal process – Default credentials may remain in place, creating a serious security risk."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "341175611920",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-failure-handling",
+              "display": "Authentication Failure Handling"
+            }
+          ],
+          "type": "group",
+          "text": "Authentication Failure Handling",
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "3"
+                }
+              ],
+              "linkId": "647413778355",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-failed-attempts-lockout",
+                  "display": "Failed Attempts Lockout"
+                }
+              ],
+              "text": "Number of failed attempts before lockout:"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "30"
+                }
+              ],
+              "linkId": "552155632772",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-account-lockout-duration",
+                  "display": "Account Lockout Duration"
+                }
+              ],
+              "text": "Account lockout duration (minutes):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "947716241721",
+              "text": "Click all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Administrator notification sent"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Security team alerted"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Logged for review"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "434988961472",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-failure-handling-notes",
+                  "display": "Authentication Failure Handling Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "434988961472_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "341175611920_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Authentication Failure Handling</span></i> defines what happens when someone enters the wrong login credentials multiple times. This prevents attackers from guessing passwords repeatedly.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Account Lockout:</b> Lock accounts after a set number of failed attempts.<br>\n  &bull; &nbsp; <b>Timed Delay:</b> Add a waiting period before more login attempts are allowed.<br>\n  &bull; &nbsp; <b>Alerts:</b> Notify administrators if repeated failures occur.<br>\n  &bull; &nbsp; <b>Reset Process:</b> Provide a secure method for users to unlock or reset their accounts.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "116846260787",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-supporting-docs-notes",
+                  "display": "Authentication Supporting Docs Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "116846260787_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "230111377333",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-supporting-docs",
+              "display": "Authentication Supporting Docs"
+            }
+          ],
+          "text": "Supporting Documentation",
           "repeats": false,
           "answerOption": [
             {
@@ -208,411 +1791,34 @@
           ]
         },
         {
-          "linkId": "446911811643_helpText",
-          "type": "display",
-          "text": "Manage service accounts carefully by assigning minimal privileges and regularly reviewing their usage to prevent misuse.",
+          "type": "text",
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
             }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "446911811643",
-      "text": "Service Account Management"
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "check-box",
-                "display": "Check-box"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "359160217347",
-      "text": "Device Identification",
-      "repeats": true,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "MAC addresses"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "IP addresses (static)"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Computer/device names"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Asset tag numbers"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Serial numbers"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Certificates/digital signatures"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "integer",
-          "linkId": "878410531769",
-          "text": "Workstations/laptops:"
-        },
-        {
-          "type": "integer",
-          "linkId": "361034048943",
-          "text": "Servers:"
-        },
-        {
-          "type": "integer",
-          "linkId": "424090205463",
-          "text": "Mobile devices:"
-        },
-        {
-          "type": "integer",
-          "linkId": "764441913827",
-          "text": "Network devices:"
-        },
-        {
-          "linkId": "543189099428_helpText",
-          "type": "display",
-          "text": "Maintain an up-to-date list of all devices connected to the network to track and manage authorized hardware",
-          "extension": [
+          ],
+          "linkId": "939036015644",
+          "code": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-additional-notes",
+              "display": "Authentication Additional Notes"
             }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "543189099428",
-      "text": "Device Inventory"
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "check-box",
-                "display": "Check-box"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "297397401977",
-      "text": "Identity Verification Process",
-      "repeats": true,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "HR verification with employee records"
-          }
+          ],
+          "text": "Additional Notes"
         },
-        {
-          "valueCoding": {
-            "display": "Manager approval with written authorization"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Background check completion"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Photo identification verification"
-          }
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "210356958517",
-      "text": "Supporting Documentation",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Yes"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional notes, remediation plans, or implementation challenges..."
-        }
-      ],
-      "linkId": "268793244463",
-      "text": "Additional Notes"
-    },
-    {
-      "type": "group",
-      "linkId": "865372145224",
-      "text": "IA.L1-3.5.2 - Authenticate users and processes",
-      "item": [
         {
           "linkId": "865372145224_helpText",
           "type": "display",
-          "text": "Authenticate (or verify) the identities of those users, processes, or devices, as a prerequisite to allowing access to organizational information systems.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
+          "_text": {
+            "extension": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\"margin-bottom: 0px;\">\n  <i><span style=\"color: #003366;\">Authentication (IA)</span></i> ensures that users prove their identity before accessing company systems or Federal Contract Information (FCI). This prevents unauthorized access, even if someone knows a username.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Passwords:</b> Require strong, unique passwords that are not shared between accounts.<br>\n  &bull; &nbsp; <b>Multi-Factor Authentication (MFA):</b> Add extra steps like codes, apps, or tokens for sensitive systems.<br>\n  &bull; &nbsp; <b>Session Controls:</b> Lock accounts after failed login attempts and log users out after inactivity.<br>\n  &bull; &nbsp; <b>Account Security:</b> Change default credentials and disable unused accounts.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
               }
             ]
-          }
-        }
-      ],
-      "linkId": "676336695824",
-      "text": "Implementation Status",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Fully Implemented"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Partially Implemented"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Not Implemented"
-          }
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "check-box",
-                "display": "Check-box"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "901079756471",
-      "text": "User Authentication Methods",
-      "repeats": true,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Username and password"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Multi-factor authentication (MFA)"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Smart cards/PIV cards"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Biometric authentication"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Digital certificates"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Single sign-on (SSO)"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "integer",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "8"
-            }
-          ],
-          "linkId": "444552965098",
-          "text": "Minimum length (characters):"
-        },
-        {
-          "type": "integer",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "90"
-            }
-          ],
-          "linkId": "499668919305",
-          "text": "Password expiration (days):"
-        },
-        {
-          "type": "integer",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "5"
-            }
-          ],
-          "linkId": "190124104069",
-          "text": "Password history (passwords remembered):"
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "404025003688",
-          "text": "Click all that apply:",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Uppercase letters required"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Lowercase letters required"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Numbers required"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Special characters required"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "459655669415_helpText",
-          "type": "display",
-          "text": "Set and enforce strong password rules to ensure users and processes securely verify their identity before accessing systems.",
+          },
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -631,226 +1837,15 @@
         }
       ],
       "type": "group",
-      "linkId": "459655669415",
-      "text": "Password Requirements"
-    },
-    {
-      "type": "choice",
-      "extension": [
+      "linkId": "865372145224",
+      "code": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-authentication-overview",
+          "display": "Authentication Overview"
         }
       ],
-      "linkId": "928879235030",
-      "text": "Multi-Factor Authentication",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Yes, for all users and systems"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Yes, for privileged accounts only"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Yes, for remote access only"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Yes, for critical systems only"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No, not implemented"
-          }
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "830887074055",
-      "text": "Default Credential Management",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Always changed before deployment"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Changed during initial configuration"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Users required to change on first login"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No formal process"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "integer",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "3"
-            }
-          ],
-          "linkId": "647413778355",
-          "text": "Number of failed attempts before lockout:"
-        },
-        {
-          "type": "integer",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "30"
-            }
-          ],
-          "linkId": "552155632772",
-          "text": "Account lockout duration (minutes):"
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "947716241721",
-          "text": "Click all that apply:",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Administrator notification sent"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Security team alerted"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Logged for review"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "341175611920_helpText",
-          "type": "display",
-          "text": "Implement procedures to detect, respond to, and limit the impact of failed authentication attempts to protect against unauthorized access.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "341175611920",
-      "text": "Authentication Failure Handling"
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "230111377333",
-      "text": "Supporting Documentation",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Yes"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional notes, remediation plans, or implementation challenges..."
-        }
-      ],
-      "linkId": "939036015644",
-      "text": "Additional Notes"
+      "text": "IA.L1-B.1.VI - Authentication"
     }
   ]
 }

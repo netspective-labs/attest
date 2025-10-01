@@ -10,500 +10,854 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsModuleSignature: rt.ModuleSignature = {
-    title: "System & Information Integrity (Identify, report, and correct information system flaws)",
-    filename: "system-information-integrity-identify-report-and-correct-information-system-flaws.auto.ts",
-    titleCamel: "`systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws`",
-    titlePascal: "`SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws`",
-    titleKebab: "`system-information-integrity-identify-report-and-correct-information-system-flaws`",
-    lhcFormResponseAdapterFnName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter",
-    sourceTextConstName: "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsSource",
-}
+export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsModuleSignature:
+  rt.ModuleSignature = {
+    title:
+      "System & Information Integrity (Identify, report, and correct information system flaws)",
+    filename:
+      "system-information-integrity-identify-report-and-correct-information-system-flaws.auto.ts",
+    titleCamel:
+      "`systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws`",
+    titlePascal:
+      "`SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws`",
+    titleKebab:
+      "`system-information-integrity-identify-report-and-correct-information-system-flaws`",
+    lhcFormResponseAdapterFnName:
+      "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName:
+      "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter",
+    sourceTextConstName:
+      "systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsSource",
+  };
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
 /**
  * Form Help (from display/help controls):
- * - Identify, report, and correct information and information system flaws in a timely manner
  * - Establish processes to identify, report, and track system flaws and vulnerabilities until they are resolved.
  * - Define and follow timelines to promptly address and fix identified system vulnerabilities to reduce security risks.
  * - Implement procedures to regularly apply updates and patches to systems to protect against known vulnerabilities.
- * - Provide protection from malicious code at appropriate locations within organizational information systems
+ * - All software and systems have flaws these are bugs or weaknesses that hackers can exploit. Flaw remediation means spotting those problems quickly (through vendor alerts, scans, or error reports), reporting them to the right people, and fixing them in a timely manner with patches or updates. For example, applying Microsoft’s monthly security updates or updating antivirus software. Delays in fixing flaws are one of the biggest ways attackers break in.
  * - Identify and secure critical points in systems and networks where integrity controls must be applied to prevent unauthorized changes.
  * - Deploy and maintain tools and processes to detect, prevent, and respond to malware infections in your systems.
+ * - Make sure your systems are protected against harmful software (like viruses, spyware, and ransomware) wherever it could enter such as email, web browsing, file downloads, or removable media (USB drives).
  * - Update malicious code protection mechanisms when new releases are available
- * - Regularly update malware protection tools and definitions to ensure defense against the latest threats.
- * - Establish procedures to manage and verify timely updates to malicious code protection systems.
- * - Perform periodic scans of the information system and real-time scans of files from external sources
- * - Deploy anti-malware solutions to regularly scan systems and files for malicious software and remove threats promptly.
- * - Schedule regular scans of systems and files to detect and address malware or security issues consistently.
- * - Use real-time scanning to detect threats immediately and monitor file integrity to prevent unauthorized changes.
- * - Establish procedures to review scan results, respond to detected threats, and test scanning tools for effectiveness.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLinkIds = {
-  howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities: "758011605310",
-  howAreIdentifiedFlawsReportedAndTracked: "854540559647",
-  criticalSeverityFlaws: "885354230428",
-  highSeverityFlaws: "149460684671",
-  mediumLowSeverityFlaws: "119144494365",
-  howAreSecurityPatchesAndUpdatesManaged: "896010001522",
-  additionalNotesOrComments: "731360730463",
-  supportingDocumentation: "231346071278",
-  doYouHaveAMaliciousCodeProtectionPolicyDocument: "892692932760",
-  selectAllLocationsWhereMaliciousCodeProtectionIsImplemented: "457010911238",
-  primaryAntiMalwareProductSolutionEGMicrosoftDefenderMcAfeeSymantec: "149423997720",
-  antiMalwareVersionReleaseVersionNumberOrReleaseIdentifier: "343942743605",
-  implementationScopeDescribeTheScopeOfYourAntiMalwareImplementationEGAllCompanyEndpointsSpecificServers: "581419297519",
-  realTimeProtectionEnabled: "394557514652",
-  centrallyManaged: "137330973781",
-  additionalNotesOrComments2: "750023247979",
-  supportingDocumentation2: "278751204941",
-  howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated: "830996907328",
-  howAreMaliciousCodeProtectionUpdatesManaged: "733457774453",
-  additionalNotesOrComments3: "660268414578",
-  supportingDocumentation3: "717091491475",
-  doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation: "470606272303",
-  doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems: "189466095401",
-  whatAntivirusAntiMalwareSolutionIsCurrentlyDeployedEGMicrosoftDefenderNortonMcAfeeEtc: "694425083943",
-  howFrequentlyAreFullSystemScansConducted: "508929065591",
-  whatLevelOfThoroughnessIsUsedForPeriodicScans: "889472415570",
-  areFilesFromExternalSourcesScannedInRealTime: "740865411316",
-  whichExternalSourcesAreScanned: "146442608630",
-  doYouEmployFileIntegrityMonitoringForCriticalSystemFiles: "842602142275",
-  howAreScanResultsReviewedAndDocumentedDescribeYourProcessForReviewingAndDocumentingScanResults: "707425868010",
-  whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected: "986030389075",
-  describeYourRemediationProcessForIdentifiedIssuesDescribeYourProcessForRemediatingIssuesDetectedDuringScanning: "164191875680",
-  hasScanningEffectivenessBeenTested: "967054991522",
-  hasScanningEffectivenessBeenTested2: "892462719670",
-  supportingDocumentation4: "901609884580"
-} as const;
+export const systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLinkIds =
+  {
+    systemInformationIntegrityFindWeaknessesInSystem: "758011605310",
+    systemInformationFlawRemediationNotesEvidence: "135467801033",
+    systemInformationIntegrityIdentifiedFlaws: "854540559647",
+    systemInformationFlawReportingNotesEvidence: "924286782806",
+    systemInformationIntegrityCriticalSeverityFlaws: "885354230428",
+    systemInformationIntegrityHighSeverityFlaws: "149460684671",
+    systemInformationIntegrityMediumLowSeverityFlaws: "119144494365",
+    systemInformationFlawCorrectionNotesEvidence: "478326704189",
+    systemInformationIntegritySecurityPatchesUpdatesManaged: "896010001522",
+    systemInformationIntegrityPatchManagementNotesEvidence: "731360730463",
+    systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware:
+      "892692932760",
+    systemInformationIntegrityMaliciousCodeProtectionImplemented:
+      "457010911238",
+    systemInformationIntegrityProtectionLocationNotesEvidence: "388699038922",
+    systemInformationIntegrityPrimaryAntiMalwareProduct: "149423997720",
+    systemInformationIntegrityAntiMalwareReleaseIdentifier: "343942743605",
+    systemInformationIntegrityScopeAntiMalwareImplementation: "581419297519",
+    systemInformationIntegrityRealTimeProtectionEnabled: "394557514652",
+    systemInformationIntegrityCentrallyManaged: "137330973781",
+    systemInformationIntegrityMaliciousCodeAdditionalNotesComments:
+      "750023247979",
+    systemInformationIntegrityFrequentlyMaliciousCodeProtection: "830996907328",
+    systemInformationUpdateFrequencyNotesEvidence: "583208753437",
+    systemInformationIntegrityMaliciousCodeProtectionManaged: "733457774453",
+    systemInformationIntegrityUpdateManagementProcessNotesEvidence:
+      "222629834244",
+    systemInformationIntegrityExternalSourcesScanned: "146442608630",
+    systemInformationExternalSourceNotesEvidence: "692565504391",
+    systemInformationIntegrityWrittenPoliciesProcedures: "470606272303",
+    systemInformationIntegrityAntiMalwareSoftwareInstall: "189466095401",
+    systemInformationIntegrityMalwareDeployed: "694425083943",
+    systemInformationIntegrityScanComputerServer: "508929065591",
+    systemInformationIntegrityThoroughPeriodicScan: "889472415570",
+    systemInformationIntegrityFileAutomaticScan: "740865411316",
+    systemInformationIntegrityMonitorCriticalFile: "842602142275",
+    systemInformationIntegrityReviewDocumentFile: "707425868010",
+    systemInformationIntegrityResponseTimeframe: "986030389075",
+    systemInformationIntegrityRemediationProcess: "164191875680",
+    systemInformationIntegrityScanningEffectiveness: "967054991522",
+    systemInformationIntegrityScanningSupportingDocumentation: "173738693036",
+  } as const;
 
 /** Normalized view of "System & Information Integrity (Identify, report, and correct information system flaws)" answers. */
 export interface SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws {
   /**
-   * How does your organization identify system flaws and vulnerabilities?
+   * How does your company find weaknesses in its systems such as software bugs, missing updates, or security gaps before attackers can exploit them?
    * linkId: 758011605310
    * FHIR type: choice
-   * Section: Flaw Identification Process
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Identification Process
    * Options: "Automated vulnerability scanning", "Vendor security notifications and bulletins", "Penetration testing", "Regular security assessments", "Threat intelligence feeds", "Incident response and forensics"
    * Required: no
    */
-  howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities?: ("Automated vulnerability scanning" | "Vendor security notifications and bulletins" | "Penetration testing" | "Regular security assessments" | "Threat intelligence feeds" | "Incident response and forensics")[];
+  systemInformationIntegrityFindWeaknessesInSystem?: (
+    | "Automated vulnerability scanning"
+    | "Vendor security notifications and bulletins"
+    | "Penetration testing"
+    | "Regular security assessments"
+    | "Threat intelligence feeds"
+    | "Incident response and forensics"
+  )[];
 
   /**
-   * How are identified flaws reported and tracked?
-   * linkId: 854540559647
-   * FHIR type: choice
-   * Section: Flaw Reporting and Tracking
-   * Options: "Formal tracking system or database", "Automatic management notification", "Risk assessment and prioritization", "Communication to affected stakeholders", "Detailed documentation of findings"
+   * Notes / Evidence
+   * linkId: 135467801033
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Identification Process
    * Required: no
    */
-  howAreIdentifiedFlawsReportedAndTracked?: ("Formal tracking system or database" | "Automatic management notification" | "Risk assessment and prioritization" | "Communication to affected stakeholders" | "Detailed documentation of findings")[];
+  systemInformationFlawRemediationNotesEvidence?: string;
+
+  /**
+   * How are identified flaws (bugs, missing updates, security gaps) reported and tracked?
+   * linkId: 854540559647
+   * FHIR type: choice
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Reporting and Tracking
+   * Options: " Formal tracking system or database", "Automatic management notification", "Risk assessment and prioritization", "Communication to affected stakeholders", "Detailed documentation of findings"
+   * Required: no
+   */
+  systemInformationIntegrityIdentifiedFlaws?: (
+    | " Formal tracking system or database"
+    | "Automatic management notification"
+    | "Risk assessment and prioritization"
+    | "Communication to affected stakeholders"
+    | "Detailed documentation of findings"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 924286782806
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Reporting and Tracking
+   * Required: no
+   */
+  systemInformationFlawReportingNotesEvidence?: string;
 
   /**
    * Critical Severity Flaws:
    * linkId: 885354230428
    * FHIR type: choice
-   * Section: Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
-   * Options: "Immediate (within hours)", "Within 24 hours", "Within 72 hours", "Within 1 week"
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
+   * Options: "Immediate (within hours)", "Within 24 hours", "Within 72 hours", " Within 1 week"
    * Required: no
    */
-  criticalSeverityFlaws?: "Immediate (within hours)" | "Within 24 hours" | "Within 72 hours" | "Within 1 week";
+  systemInformationIntegrityCriticalSeverityFlaws?:
+    | "Immediate (within hours)"
+    | "Within 24 hours"
+    | "Within 72 hours"
+    | " Within 1 week";
 
   /**
    * High Severity Flaws:
    * linkId: 149460684671
    * FHIR type: choice
-   * Section: Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
    * Options: "Within 1 week", "Within 2 weeks", "Within 1 month"
    * Required: no
    */
-  highSeverityFlaws?: "Within 1 week" | "Within 2 weeks" | "Within 1 month";
+  systemInformationIntegrityHighSeverityFlaws?:
+    | "Within 1 week"
+    | "Within 2 weeks"
+    | "Within 1 month";
 
   /**
    * Medium/Low Severity Flaws:
    * linkId: 119144494365
    * FHIR type: choice
-   * Section: Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Correction Timeline > What are your target timeframes for correcting identified flaws?
    * Options: "Within 1 month", "Within 1 quarter", "Next scheduled maintenance window"
    * Required: no
    */
-  mediumLowSeverityFlaws?: "Within 1 month" | "Within 1 quarter" | "Next scheduled maintenance window";
+  systemInformationIntegrityMediumLowSeverityFlaws?:
+    | "Within 1 month"
+    | "Within 1 quarter"
+    | "Next scheduled maintenance window";
+
+  /**
+   * Notes / Evidence
+   * linkId: 478326704189
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Flaw Correction Timeline
+   * Required: no
+   */
+  systemInformationFlawCorrectionNotesEvidence?: string;
 
   /**
    * How are security patches and updates managed?
    * linkId: 896010001522
    * FHIR type: choice
-   * Section: Patch Management Process
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Patch Management Process
    * Options: "Testing in non-production environment before deployment", "Formal change control process", "Rollback procedures in case of issues", "Automated patch deployment capabilities", "Emergency patching procedures for critical flaws", "Documentation of all patches applied"
    * Required: no
    */
-  howAreSecurityPatchesAndUpdatesManaged?: "Testing in non-production environment before deployment" | "Formal change control process" | "Rollback procedures in case of issues" | "Automated patch deployment capabilities" | "Emergency patching procedures for critical flaws" | "Documentation of all patches applied";
+  systemInformationIntegritySecurityPatchesUpdatesManaged?: (
+    | "Testing in non-production environment before deployment"
+    | "Formal change control process"
+    | "Rollback procedures in case of issues"
+    | "Automated patch deployment capabilities"
+    | "Emergency patching procedures for critical flaws"
+    | "Documentation of all patches applied"
+  )[];
 
   /**
-   * Additional Notes or Comments
+   * Notes / Evidence
    * linkId: 731360730463
-   * FHIR type: text
-   * Entry format: Any additional context, challenges, or implementation details...
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XII – Flaw Remediation > Patch Management Process
    * Required: no
    */
-  additionalNotesOrComments?: string;
+  systemInformationIntegrityPatchManagementNotesEvidence?: string;
 
   /**
-   * Supporting Documentation
-   * linkId: 231346071278
-   * FHIR type: text
-   * Entry format: List or describe the supporting documentation you have available (policies, procedures, scan reports, etc.)...
-   * Required: no
-   */
-  supportingDocumentation?: string;
-
-  /**
-   * Do you have a malicious code protection policy document?
+   * Do you have a written policy that explains how your company protects against viruses, spyware, ransomware, and other malicious software?
    * linkId: 892692932760
    * FHIR type: choice
-   * Section: SI.L1-3.14.2 - Malicious Code Protection
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection
    * Options: "Yes", "No"
    * Required: no
    */
-  doYouHaveAMaliciousCodeProtectionPolicyDocument?: "Yes" | "No";
+  systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware?:
+    | "Yes"
+    | "No";
 
   /**
    * Select all locations where malicious code protection is implemented:
    * linkId: 457010911238
    * FHIR type: choice
-   * Section: Protection Locations
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Protection Locations
    * Options: "Email Gateway", "Web Proxy/Gateway", "Perimeter Firewall", "VPN Gateway", "Endpoints (Workstations, Laptops)", "Servers", "Mobile Devices"
    * Required: no
    */
-  selectAllLocationsWhereMaliciousCodeProtectionIsImplemented?: ("Email Gateway" | "Web Proxy/Gateway" | "Perimeter Firewall" | "VPN Gateway" | "Endpoints (Workstations, Laptops)" | "Servers" | "Mobile Devices")[];
+  systemInformationIntegrityMaliciousCodeProtectionImplemented?: (
+    | "Email Gateway"
+    | "Web Proxy/Gateway"
+    | "Perimeter Firewall"
+    | "VPN Gateway"
+    | "Endpoints (Workstations, Laptops)"
+    | "Servers"
+    | "Mobile Devices"
+  )[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 388699038922
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Protection Locations
+   * Required: no
+   */
+  systemInformationIntegrityProtectionLocationNotesEvidence?: string;
 
   /**
    * Primary Anti-Malware Product/Solution: e.g., Microsoft Defender, McAfee, Symantec
    * linkId: 149423997720
    * FHIR type: string
    * Entry format: Enter primary anti-malware solution
-   * Section: Implementation Details
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Implementation Details
    * Required: no
    */
-  primaryAntiMalwareProductSolutionEGMicrosoftDefenderMcAfeeSymantec?: string;
+  systemInformationIntegrityPrimaryAntiMalwareProduct?: string;
 
   /**
    * Anti-Malware Version/Release: Version number or release identifier
    * linkId: 343942743605
    * FHIR type: string
    * Entry format: Enter version or release identifier
-   * Section: Implementation Details
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Implementation Details
    * Required: no
    */
-  antiMalwareVersionReleaseVersionNumberOrReleaseIdentifier?: string;
+  systemInformationIntegrityAntiMalwareReleaseIdentifier?: string;
 
   /**
    * Implementation Scope: Describe the scope of your anti-malware implementation (e.g., all company endpoints, specific servers)
    * linkId: 581419297519
    * FHIR type: text
    * Entry format: Describe your anti-malware implementation scope...
-   * Section: Implementation Details
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Implementation Details
    * Required: no
    */
-  implementationScopeDescribeTheScopeOfYourAntiMalwareImplementationEGAllCompanyEndpointsSpecificServers?: string;
+  systemInformationIntegrityScopeAntiMalwareImplementation?: string;
 
   /**
    * Real-Time Protection Enabled:
    * linkId: 394557514652
    * FHIR type: choice
-   * Section: Implementation Details
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Implementation Details
    * Options: "Yes", "No"
    * Required: no
    */
-  realTimeProtectionEnabled?: "Yes" | "No";
+  systemInformationIntegrityRealTimeProtectionEnabled?: "Yes" | "No";
 
   /**
    * Centrally Managed:
    * linkId: 137330973781
    * FHIR type: choice
-   * Section: Implementation Details
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection > Implementation Details
    * Options: "Yes", "No"
    * Required: no
    */
-  centrallyManaged?: "Yes" | "No";
+  systemInformationIntegrityCentrallyManaged?: "Yes" | "No";
 
   /**
    * Additional Notes or Comments
    * linkId: 750023247979
    * FHIR type: text
    * Entry format: Any additional context, challenges, or implementation details...
+   * Section: SI.L1-B.1.XIII – Malicious Code Protection
    * Required: no
    */
-  additionalNotesOrComments2?: string;
-
-  /**
-   * Supporting Documentation
-   * linkId: 278751204941
-   * FHIR type: text
-   * Entry format: List or describe the supporting documentation you have available(policies, configuration guides, deployment records, etc.)...
-   * Required: no
-   */
-  supportingDocumentation2?: string;
+  systemInformationIntegrityMaliciousCodeAdditionalNotesComments?: string;
 
   /**
    * How frequently are malicious code protection mechanisms updated?
    * linkId: 830996907328
    * FHIR type: choice
-   * Section: Update Frequency
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Frequency
    * Options: "Real-time updates (as available)", "Hourly", "Daily", "Weekly", "Manual updates only"
    * Required: no
    */
-  howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated?: "Real-time updates (as available)" | "Hourly" | "Daily" | "Weekly" | "Manual updates only";
+  systemInformationIntegrityFrequentlyMaliciousCodeProtection?:
+    | "Real-time updates (as available)"
+    | "Hourly"
+    | "Daily"
+    | "Weekly"
+    | "Manual updates only";
+
+  /**
+   * Notes / Evidence
+   * linkId: 583208753437
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Frequency
+   * Required: no
+   */
+  systemInformationUpdateFrequencyNotesEvidence?: string;
 
   /**
    * How are malicious code protection updates managed?
    * linkId: 733457774453
    * FHIR type: choice
-   * Section: Update Management Process
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Management Process
    * Options: "Automatic updates enabled", "Centralized update management system", "Verification of successful updates", "Rollback capability for problematic updates", "Testing of updates before deployment", "Notification of update status and failures"
    * Required: no
    */
-  howAreMaliciousCodeProtectionUpdatesManaged?: ("Automatic updates enabled" | "Centralized update management system" | "Verification of successful updates" | "Rollback capability for problematic updates" | "Testing of updates before deployment" | "Notification of update status and failures")[];
+  systemInformationIntegrityMaliciousCodeProtectionManaged?: (
+    | "Automatic updates enabled"
+    | "Centralized update management system"
+    | "Verification of successful updates"
+    | "Rollback capability for problematic updates"
+    | "Testing of updates before deployment"
+    | "Notification of update status and failures"
+  )[];
 
   /**
-   * Additional Notes or Comments
-   * linkId: 660268414578
-   * FHIR type: text
-   * Entry format: Any additional context challenges, or implementation details...
+   * Notes / Evidence
+   * linkId: 222629834244
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Management Process
    * Required: no
    */
-  additionalNotesOrComments3?: string;
+  systemInformationIntegrityUpdateManagementProcessNotesEvidence?: string;
 
   /**
-   * Supporting Documentation
-   * linkId: 717091491475
-   * FHIR type: text
-   * Entry format: List o describe the supporting documentation you have available (update procedures, verification logs, rollback plans, etc.)...
+   * Which external sources are scanned?
+   * linkId: 146442608630
+   * FHIR type: choice
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Management Process
+   * Options: "Internet Downloads", "Email Attachments", "Removable Media", "Cloud Storage", "Network Shares", "Other External Sources"
    * Required: no
    */
-  supportingDocumentation3?: string;
+  systemInformationIntegrityExternalSourcesScanned?: (
+    | "Internet Downloads"
+    | "Email Attachments"
+    | "Removable Media"
+    | "Cloud Storage"
+    | "Network Shares"
+    | "Other External Sources"
+  )[];
 
   /**
-   * Do you have a system scanning policy documentation, file scanning policy, and scanning procedure documentation?
+   * Notes / Evidence
+   * linkId: 692565504391
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: SI.L1-B.1.XIV – Update Malicious Code Protection > Update Management Process
+   * Required: no
+   */
+  systemInformationExternalSourceNotesEvidence?: string;
+
+  /**
+   * Do you have written policies and procedures that explain how your company scans systems and files for viruses and other malicious software?
    * linkId: 470606272303
    * FHIR type: choice
+   * Section: SI.L1-B.1.XV – System & File Scanning
    * Options: "Yes", "No"
    * Required: no
    */
-  doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation?: "Yes" | "No";
+  systemInformationIntegrityWrittenPoliciesProcedures?: "Yes" | "No";
 
   /**
    * Does your organization have antivirus/anti-malware software installed on all systems?
    * linkId: 189466095401
    * FHIR type: choice
-   * Section: Anti-Malware Implementation
+   * Section: SI.L1-B.1.XV – System & File Scanning > Anti-Malware Implementation
    * Options: "Yes", "No", "Partially (some systems only)"
    * Required: no
    */
-  doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems?: "Yes" | "No" | "Partially (some systems only)";
+  systemInformationIntegrityAntiMalwareSoftwareInstall?:
+    | "Yes"
+    | "No"
+    | "Partially (some systems only)";
 
   /**
    * What antivirus/anti-malware solution is currently deployed? e.g., Microsoft Defender, Norton, McAfee, etc.
    * linkId: 694425083943
    * FHIR type: string
    * Entry format: Enter your current antivirus/anti-malware solution
-   * Section: Anti-Malware Implementation
+   * Section: SI.L1-B.1.XV – System & File Scanning > Anti-Malware Implementation
    * Required: no
    */
-  whatAntivirusAntiMalwareSolutionIsCurrentlyDeployedEGMicrosoftDefenderNortonMcAfeeEtc?: string;
+  systemInformationIntegrityMalwareDeployed?: string;
 
   /**
-   * How frequently are full system scans conducted?
+   * How often do you run full scans of your company’s computers and servers to check for hidden viruses or malicious software?
    * linkId: 508929065591
    * FHIR type: choice
    * Entry format: -- Select Frequency --
-   * Section: Periodic Scanning Implementation
+   * Section: SI.L1-B.1.XV – System & File Scanning > Periodic Scanning Implementation
    * Options: "Daily", "Weekily", "Bi-weekly", "Monthly", "Quarterly", "Custom Schedule"
    * Required: no
    */
-  howFrequentlyAreFullSystemScansConducted?: "Daily" | "Weekily" | "Bi-weekly" | "Monthly" | "Quarterly" | "Custom Schedule";
+  systemInformationIntegrityScanComputerServer?:
+    | "Daily"
+    | "Weekily"
+    | "Bi-weekly"
+    | "Monthly"
+    | "Quarterly"
+    | "Custom Schedule";
 
   /**
    * What level of thoroughness is used for periodic scans?
    * linkId: 889472415570
    * FHIR type: choice
    * Entry format: -- Select Scan Depth --
-   * Section: Periodic Scanning Implementation
+   * Section: SI.L1-B.1.XV – System & File Scanning > Periodic Scanning Implementation
    * Options: "Quick Scan (critical files only)", "Standard Scan (system files and common user directories)", "Full Scan (entire file system)", "Custom Scan (specific directories)"
    * Required: no
    */
-  whatLevelOfThoroughnessIsUsedForPeriodicScans?: "Quick Scan (critical files only)" | "Standard Scan (system files and common user directories)" | "Full Scan (entire file system)" | "Custom Scan (specific directories)";
+  systemInformationIntegrityThoroughPeriodicScan?:
+    | "Quick Scan (critical files only)"
+    | "Standard Scan (system files and common user directories)"
+    | "Full Scan (entire file system)"
+    | "Custom Scan (specific directories)";
 
   /**
-   * Are files from external sources scanned in real-time?
+   * When someone brings in a file from outside your company like an email attachment, a download, or a file on a USB drive is it automatically scanned for viruses and malware before it opens?
    * linkId: 740865411316
    * FHIR type: choice
-   * Section: Real-time Scanning & File Integrity
+   * Section: SI.L1-B.1.XV – System & File Scanning > Real-time Scanning & File Integrity
    * Options: "Yes", "No", "Partially (some sources only)"
    * Required: no
    */
-  areFilesFromExternalSourcesScannedInRealTime?: "Yes" | "No" | "Partially (some sources only)";
-
-  /**
-   * Which external sources are scanned?
-   * linkId: 146442608630
-   * FHIR type: choice
-   * Options: "Internet Downloads", "Email Attachments", "Removable Media", "Cloud Storage", "Network Shares", "Other External Sources"
-   * Required: no
-   */
-  whichExternalSourcesAreScanned?: ("Internet Downloads" | "Email Attachments" | "Removable Media" | "Cloud Storage" | "Network Shares" | "Other External Sources")[];
+  systemInformationIntegrityFileAutomaticScan?:
+    | "Yes"
+    | "No"
+    | "Partially (some sources only)";
 
   /**
    * Do you employ file integrity monitoring for critical system files?
    * linkId: 842602142275
    * FHIR type: choice
+   * Section: SI.L1-B.1.XV – System & File Scanning > Real-time Scanning & File Integrity
    * Options: "Yes", "No", "Planned"
    * Required: no
    */
-  doYouEmployFileIntegrityMonitoringForCriticalSystemFiles?: "Yes" | "No" | "Planned";
+  systemInformationIntegrityMonitorCriticalFile?: "Yes" | "No" | "Planned";
 
   /**
    * How are scan results reviewed and documented? Describe your process for reviewing and documenting scan results...
    * linkId: 707425868010
    * FHIR type: text
    * Entry format: Describe your process for reviewing and documenting scan results...
-   * Section: Results Handling & Testing
+   * Section: SI.L1-B.1.XV – System & File Scanning > Results Handling & Testing
    * Required: no
    */
-  howAreScanResultsReviewedAndDocumentedDescribeYourProcessForReviewingAndDocumentingScanResults?: string;
+  systemInformationIntegrityReviewDocumentFile?: string;
 
   /**
    * What is your response timeframe when malware or vulnerabilities are detected?
    * linkId: 986030389075
-   * FHIR type: choice
+   * FHIR type: open-choice
    * Entry format: -- Select Response Timeframe --
-   * Section: Results Handling & Testing
-   * Options: "Immediate (within hours)", "Within 24 hours", "Within 48 hours", "Within a week", "Other (specify in notes)"
+   * Section: SI.L1-B.1.XV – System & File Scanning > Results Handling & Testing
    * Required: no
    */
-  whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected?: "Immediate (within hours)" | "Within 24 hours" | "Within 48 hours" | "Within a week" | "Other (specify in notes)";
+  systemInformationIntegrityResponseTimeframe?: string;
 
   /**
    * Describe your remediation process for identified issues: Describe your process for remediating issues detected during scanning...
    * linkId: 164191875680
    * FHIR type: text
    * Entry format: Describe your process for remediating issues detected during scanning..
-   * Section: Results Handling & Testing
+   * Section: SI.L1-B.1.XV – System & File Scanning > Results Handling & Testing
    * Required: no
    */
-  describeYourRemediationProcessForIdentifiedIssuesDescribeYourProcessForRemediatingIssuesDetectedDuringScanning?: string;
+  systemInformationIntegrityRemediationProcess?: string;
 
   /**
    * Has scanning effectiveness been tested?
    * linkId: 967054991522
    * FHIR type: choice
-   * Section: Results Handling & Testing
+   * Section: SI.L1-B.1.XV – System & File Scanning > Results Handling & Testing
    * Options: "Yes", "No"
    * Required: no
    */
-  hasScanningEffectivenessBeenTested?: "Yes" | "No";
-
-  /**
-   * Has scanning effectiveness been tested?
-   * linkId: 892462719670
-   * FHIR type: text
-   * Entry format: Any additional context, challenges, or implementation details
-   * Required: no
-   */
-  hasScanningEffectivenessBeenTested2?: string;
+  systemInformationIntegrityScanningEffectiveness?: "Yes" | "No";
 
   /**
    * Supporting Documentation
-   * linkId: 901609884580
+   * linkId: 173738693036
    * FHIR type: text
    * Entry format: List or describe the supporting documentation you have available(scanning policies , procedures , scan logs , remediation records, etc.)...
+   * Section: SI.L1-B.1.XV – System & File Scanning > Results Handling & Testing
    * Required: no
    */
-  supportingDocumentation4?: string;
+  systemInformationIntegrityScanningSupportingDocumentation?: string;
 }
 
 /** Convert an LHC JSON response into a normalized SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws object. */
-export function systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter(input: Any): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws {
+export function systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter(
+  input: Any,
+): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws {
   return {
-  howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "758011605310")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities"],
-  howAreIdentifiedFlawsReportedAndTracked: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "854540559647")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreIdentifiedFlawsReportedAndTracked"],
-  criticalSeverityFlaws: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "885354230428")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["criticalSeverityFlaws"],
-  highSeverityFlaws: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "149460684671")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["highSeverityFlaws"],
-  mediumLowSeverityFlaws: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "119144494365")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["mediumLowSeverityFlaws"],
-  howAreSecurityPatchesAndUpdatesManaged: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "896010001522")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreSecurityPatchesAndUpdatesManaged"],
-  additionalNotesOrComments: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "731360730463")),
-  supportingDocumentation: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "231346071278")),
-  doYouHaveAMaliciousCodeProtectionPolicyDocument: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "892692932760")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouHaveAMaliciousCodeProtectionPolicyDocument"],
-  selectAllLocationsWhereMaliciousCodeProtectionIsImplemented: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "457010911238")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["selectAllLocationsWhereMaliciousCodeProtectionIsImplemented"],
-  primaryAntiMalwareProductSolutionEGMicrosoftDefenderMcAfeeSymantec: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "149423997720")),
-  antiMalwareVersionReleaseVersionNumberOrReleaseIdentifier: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "343942743605")),
-  implementationScopeDescribeTheScopeOfYourAntiMalwareImplementationEGAllCompanyEndpointsSpecificServers: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "581419297519")),
-  realTimeProtectionEnabled: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "394557514652")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["realTimeProtectionEnabled"],
-  centrallyManaged: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "137330973781")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["centrallyManaged"],
-  additionalNotesOrComments2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "750023247979")),
-  supportingDocumentation2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "278751204941")),
-  howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "830996907328")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated"],
-  howAreMaliciousCodeProtectionUpdatesManaged: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "733457774453")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreMaliciousCodeProtectionUpdatesManaged"],
-  additionalNotesOrComments3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "660268414578")),
-  supportingDocumentation3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "717091491475")),
-  doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "470606272303")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation"],
-  doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "189466095401")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems"],
-  whatAntivirusAntiMalwareSolutionIsCurrentlyDeployedEGMicrosoftDefenderNortonMcAfeeEtc: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "694425083943")),
-  howFrequentlyAreFullSystemScansConducted: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "508929065591")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howFrequentlyAreFullSystemScansConducted"],
-  whatLevelOfThoroughnessIsUsedForPeriodicScans: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "889472415570")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whatLevelOfThoroughnessIsUsedForPeriodicScans"],
-  areFilesFromExternalSourcesScannedInRealTime: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "740865411316")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["areFilesFromExternalSourcesScannedInRealTime"],
-  whichExternalSourcesAreScanned: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "146442608630")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whichExternalSourcesAreScanned"],
-  doYouEmployFileIntegrityMonitoringForCriticalSystemFiles: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "842602142275")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouEmployFileIntegrityMonitoringForCriticalSystemFiles"],
-  howAreScanResultsReviewedAndDocumentedDescribeYourProcessForReviewingAndDocumentingScanResults: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "707425868010")),
-  whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "986030389075")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected"],
-  describeYourRemediationProcessForIdentifiedIssuesDescribeYourProcessForRemediatingIssuesDetectedDuringScanning: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "164191875680")),
-  hasScanningEffectivenessBeenTested: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "967054991522")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["hasScanningEffectivenessBeenTested"],
-  hasScanningEffectivenessBeenTested2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "892462719670")),
-  supportingDocumentation4: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "901609884580")),
+    systemInformationIntegrityFindWeaknessesInSystem: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "758011605310"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityFindWeaknessesInSystem"
+      ],
+    systemInformationFlawRemediationNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "135467801033"),
+    ),
+    systemInformationIntegrityIdentifiedFlaws: rt.coerceOptionalStringArray(
+      rt.findLhcValueByLinkId(input, "854540559647"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityIdentifiedFlaws"
+    ],
+    systemInformationFlawReportingNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "924286782806"),
+    ),
+    systemInformationIntegrityCriticalSeverityFlaws: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "885354230428"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityCriticalSeverityFlaws"
+    ],
+    systemInformationIntegrityHighSeverityFlaws: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "149460684671"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityHighSeverityFlaws"
+    ],
+    systemInformationIntegrityMediumLowSeverityFlaws: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "119144494365"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityMediumLowSeverityFlaws"
+    ],
+    systemInformationFlawCorrectionNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "478326704189"),
+    ),
+    systemInformationIntegritySecurityPatchesUpdatesManaged: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "896010001522"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegritySecurityPatchesUpdatesManaged"
+      ],
+    systemInformationIntegrityPatchManagementNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "731360730463")),
+    systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware: rt
+      .coerceOptionalString(
+        rt.findLhcValueByLinkId(input, "892692932760"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware"
+      ],
+    systemInformationIntegrityMaliciousCodeProtectionImplemented: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "457010911238"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityMaliciousCodeProtectionImplemented"
+      ],
+    systemInformationIntegrityProtectionLocationNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "388699038922")),
+    systemInformationIntegrityPrimaryAntiMalwareProduct: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "149423997720")),
+    systemInformationIntegrityAntiMalwareReleaseIdentifier: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "343942743605")),
+    systemInformationIntegrityScopeAntiMalwareImplementation: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "581419297519")),
+    systemInformationIntegrityRealTimeProtectionEnabled: rt
+      .coerceOptionalString(
+        rt.findLhcValueByLinkId(input, "394557514652"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityRealTimeProtectionEnabled"
+      ],
+    systemInformationIntegrityCentrallyManaged: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "137330973781"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityCentrallyManaged"
+    ],
+    systemInformationIntegrityMaliciousCodeAdditionalNotesComments: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "750023247979")),
+    systemInformationIntegrityFrequentlyMaliciousCodeProtection: rt
+      .coerceOptionalString(
+        rt.findLhcValueByLinkId(input, "830996907328"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityFrequentlyMaliciousCodeProtection"
+      ],
+    systemInformationUpdateFrequencyNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "583208753437"),
+    ),
+    systemInformationIntegrityMaliciousCodeProtectionManaged: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "733457774453"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityMaliciousCodeProtectionManaged"
+      ],
+    systemInformationIntegrityUpdateManagementProcessNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "222629834244")),
+    systemInformationIntegrityExternalSourcesScanned: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "146442608630"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityExternalSourcesScanned"
+      ],
+    systemInformationExternalSourceNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "692565504391"),
+    ),
+    systemInformationIntegrityWrittenPoliciesProcedures: rt
+      .coerceOptionalString(
+        rt.findLhcValueByLinkId(input, "470606272303"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityWrittenPoliciesProcedures"
+      ],
+    systemInformationIntegrityAntiMalwareSoftwareInstall: rt
+      .coerceOptionalString(
+        rt.findLhcValueByLinkId(input, "189466095401"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityAntiMalwareSoftwareInstall"
+      ],
+    systemInformationIntegrityMalwareDeployed: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "694425083943"),
+    ),
+    systemInformationIntegrityScanComputerServer: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "508929065591"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityScanComputerServer"
+    ],
+    systemInformationIntegrityThoroughPeriodicScan: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "889472415570"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityThoroughPeriodicScan"
+    ],
+    systemInformationIntegrityFileAutomaticScan: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "740865411316"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityFileAutomaticScan"
+    ],
+    systemInformationIntegrityMonitorCriticalFile: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "842602142275"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityMonitorCriticalFile"
+    ],
+    systemInformationIntegrityReviewDocumentFile: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "707425868010"),
+    ),
+    systemInformationIntegrityResponseTimeframe: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "986030389075"),
+    ),
+    systemInformationIntegrityRemediationProcess: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "164191875680"),
+    ),
+    systemInformationIntegrityScanningEffectiveness: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "967054991522"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityScanningEffectiveness"
+    ],
+    systemInformationIntegrityScanningSupportingDocumentation: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "173738693036")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws object. */
-export function systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter(qr: Any): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws {
+export function systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter(
+  qr: Any,
+): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws {
   return {
-  howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "758011605310")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities"],
-  howAreIdentifiedFlawsReportedAndTracked: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "854540559647")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreIdentifiedFlawsReportedAndTracked"],
-  criticalSeverityFlaws: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "885354230428")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["criticalSeverityFlaws"],
-  highSeverityFlaws: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "149460684671")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["highSeverityFlaws"],
-  mediumLowSeverityFlaws: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "119144494365")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["mediumLowSeverityFlaws"],
-  howAreSecurityPatchesAndUpdatesManaged: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "896010001522")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreSecurityPatchesAndUpdatesManaged"],
-  additionalNotesOrComments: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "731360730463")),
-  supportingDocumentation: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "231346071278")),
-  doYouHaveAMaliciousCodeProtectionPolicyDocument: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "892692932760")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouHaveAMaliciousCodeProtectionPolicyDocument"],
-  selectAllLocationsWhereMaliciousCodeProtectionIsImplemented: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "457010911238")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["selectAllLocationsWhereMaliciousCodeProtectionIsImplemented"],
-  primaryAntiMalwareProductSolutionEGMicrosoftDefenderMcAfeeSymantec: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "149423997720")),
-  antiMalwareVersionReleaseVersionNumberOrReleaseIdentifier: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "343942743605")),
-  implementationScopeDescribeTheScopeOfYourAntiMalwareImplementationEGAllCompanyEndpointsSpecificServers: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "581419297519")),
-  realTimeProtectionEnabled: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "394557514652")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["realTimeProtectionEnabled"],
-  centrallyManaged: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "137330973781")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["centrallyManaged"],
-  additionalNotesOrComments2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "750023247979")),
-  supportingDocumentation2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "278751204941")),
-  howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "830996907328")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated"],
-  howAreMaliciousCodeProtectionUpdatesManaged: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "733457774453")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howAreMaliciousCodeProtectionUpdatesManaged"],
-  additionalNotesOrComments3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "660268414578")),
-  supportingDocumentation3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "717091491475")),
-  doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "470606272303")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation"],
-  doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "189466095401")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems"],
-  whatAntivirusAntiMalwareSolutionIsCurrentlyDeployedEGMicrosoftDefenderNortonMcAfeeEtc: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "694425083943")),
-  howFrequentlyAreFullSystemScansConducted: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "508929065591")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["howFrequentlyAreFullSystemScansConducted"],
-  whatLevelOfThoroughnessIsUsedForPeriodicScans: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "889472415570")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whatLevelOfThoroughnessIsUsedForPeriodicScans"],
-  areFilesFromExternalSourcesScannedInRealTime: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "740865411316")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["areFilesFromExternalSourcesScannedInRealTime"],
-  whichExternalSourcesAreScanned: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "146442608630")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whichExternalSourcesAreScanned"],
-  doYouEmployFileIntegrityMonitoringForCriticalSystemFiles: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "842602142275")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["doYouEmployFileIntegrityMonitoringForCriticalSystemFiles"],
-  howAreScanResultsReviewedAndDocumentedDescribeYourProcessForReviewingAndDocumentingScanResults: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "707425868010")),
-  whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "986030389075")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected"],
-  describeYourRemediationProcessForIdentifiedIssuesDescribeYourProcessForRemediatingIssuesDetectedDuringScanning: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "164191875680")),
-  hasScanningEffectivenessBeenTested: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "967054991522")) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws["hasScanningEffectivenessBeenTested"],
-  hasScanningEffectivenessBeenTested2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "892462719670")),
-  supportingDocumentation4: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "901609884580")),
+    systemInformationIntegrityFindWeaknessesInSystem: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "758011605310"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityFindWeaknessesInSystem"
+      ],
+    systemInformationFlawRemediationNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "135467801033"),
+    ),
+    systemInformationIntegrityIdentifiedFlaws: rt.coerceOptionalStringArray(
+      rt.findQrAnswersByLinkId(qr, "854540559647"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityIdentifiedFlaws"
+    ],
+    systemInformationFlawReportingNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "924286782806"),
+    ),
+    systemInformationIntegrityCriticalSeverityFlaws: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "885354230428"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityCriticalSeverityFlaws"
+    ],
+    systemInformationIntegrityHighSeverityFlaws: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "149460684671"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityHighSeverityFlaws"
+    ],
+    systemInformationIntegrityMediumLowSeverityFlaws: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "119144494365"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityMediumLowSeverityFlaws"
+    ],
+    systemInformationFlawCorrectionNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "478326704189"),
+    ),
+    systemInformationIntegritySecurityPatchesUpdatesManaged: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "896010001522"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegritySecurityPatchesUpdatesManaged"
+      ],
+    systemInformationIntegrityPatchManagementNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "731360730463")),
+    systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware: rt
+      .coerceOptionalString(
+        rt.findQrAnswerByLinkId(qr, "892692932760"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware"
+      ],
+    systemInformationIntegrityMaliciousCodeProtectionImplemented: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "457010911238"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityMaliciousCodeProtectionImplemented"
+      ],
+    systemInformationIntegrityProtectionLocationNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "388699038922")),
+    systemInformationIntegrityPrimaryAntiMalwareProduct: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "149423997720")),
+    systemInformationIntegrityAntiMalwareReleaseIdentifier: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "343942743605")),
+    systemInformationIntegrityScopeAntiMalwareImplementation: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "581419297519")),
+    systemInformationIntegrityRealTimeProtectionEnabled: rt
+      .coerceOptionalString(
+        rt.findQrAnswerByLinkId(qr, "394557514652"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityRealTimeProtectionEnabled"
+      ],
+    systemInformationIntegrityCentrallyManaged: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "137330973781"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityCentrallyManaged"
+    ],
+    systemInformationIntegrityMaliciousCodeAdditionalNotesComments: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "750023247979")),
+    systemInformationIntegrityFrequentlyMaliciousCodeProtection: rt
+      .coerceOptionalString(
+        rt.findQrAnswerByLinkId(qr, "830996907328"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityFrequentlyMaliciousCodeProtection"
+      ],
+    systemInformationUpdateFrequencyNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "583208753437"),
+    ),
+    systemInformationIntegrityMaliciousCodeProtectionManaged: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "733457774453"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityMaliciousCodeProtectionManaged"
+      ],
+    systemInformationIntegrityUpdateManagementProcessNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "222629834244")),
+    systemInformationIntegrityExternalSourcesScanned: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "146442608630"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityExternalSourcesScanned"
+      ],
+    systemInformationExternalSourceNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "692565504391"),
+    ),
+    systemInformationIntegrityWrittenPoliciesProcedures: rt
+      .coerceOptionalString(
+        rt.findQrAnswerByLinkId(qr, "470606272303"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityWrittenPoliciesProcedures"
+      ],
+    systemInformationIntegrityAntiMalwareSoftwareInstall: rt
+      .coerceOptionalString(
+        rt.findQrAnswerByLinkId(qr, "189466095401"),
+      ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+        "systemInformationIntegrityAntiMalwareSoftwareInstall"
+      ],
+    systemInformationIntegrityMalwareDeployed: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "694425083943"),
+    ),
+    systemInformationIntegrityScanComputerServer: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "508929065591"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityScanComputerServer"
+    ],
+    systemInformationIntegrityThoroughPeriodicScan: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "889472415570"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityThoroughPeriodicScan"
+    ],
+    systemInformationIntegrityFileAutomaticScan: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "740865411316"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityFileAutomaticScan"
+    ],
+    systemInformationIntegrityMonitorCriticalFile: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "842602142275"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityMonitorCriticalFile"
+    ],
+    systemInformationIntegrityReviewDocumentFile: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "707425868010"),
+    ),
+    systemInformationIntegrityResponseTimeframe: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "986030389075"),
+    ),
+    systemInformationIntegrityRemediationProcess: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "164191875680"),
+    ),
+    systemInformationIntegrityScanningEffectiveness: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "967054991522"),
+    ) as SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws[
+      "systemInformationIntegrityScanningEffectiveness"
+    ],
+    systemInformationIntegrityScanningSupportingDocumentation: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "173738693036")),
   };
 }
 
@@ -528,22 +882,46 @@ export function systemInformationIntegrityIdentifyReportAndCorrectInformationSys
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter {
-  constructor(readonly value: SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws) {}
+  constructor(
+    readonly value:
+      SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws,
+  ) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(input: Any): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter {
-    return new SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter(systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter(input));
+  static fromLhcFormResponse(
+    input: Any,
+  ): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter {
+    return new SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter(
+      systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsLhcFormResponseAdapter(
+        input,
+      ),
+    );
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(qr: Any): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter {
-    return new SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter(systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter(qr));
+  static fromQuestionnaireResponse(
+    qr: Any,
+  ): SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter {
+    return new SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsInterpreter(
+      systemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlawsFhirQuestionnaireResponseAdapter(
+        qr,
+      ),
+    );
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): { ok: boolean; missing: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> } {
-    const missing: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> = [];
-    const req: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> = [];
+  validateRequiredFields(): {
+    ok: boolean;
+    missing: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    >;
+  } {
+    const missing: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    > = [];
+    const req: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -564,13 +942,59 @@ export class SystemInformationIntegrityIdentifyReportAndCorrectInformationSystem
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws>;
+    missingRequired: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    >;
   } {
-    const req: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> = [];
-    const all: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> = ["howDoesYourOrganizationIdentifySystemFlawsAndVulnerabilities", "howAreIdentifiedFlawsReportedAndTracked", "criticalSeverityFlaws", "highSeverityFlaws", "mediumLowSeverityFlaws", "howAreSecurityPatchesAndUpdatesManaged", "additionalNotesOrComments", "supportingDocumentation", "doYouHaveAMaliciousCodeProtectionPolicyDocument", "selectAllLocationsWhereMaliciousCodeProtectionIsImplemented", "primaryAntiMalwareProductSolutionEGMicrosoftDefenderMcAfeeSymantec", "antiMalwareVersionReleaseVersionNumberOrReleaseIdentifier", "implementationScopeDescribeTheScopeOfYourAntiMalwareImplementationEGAllCompanyEndpointsSpecificServers", "realTimeProtectionEnabled", "centrallyManaged", "additionalNotesOrComments2", "supportingDocumentation2", "howFrequentlyAreMaliciousCodeProtectionMechanismsUpdated", "howAreMaliciousCodeProtectionUpdatesManaged", "additionalNotesOrComments3", "supportingDocumentation3", "doYouHaveASystemScanningPolicyDocumentationFileScanningPolicyAndScanningProcedureDocumentation", "doesYourOrganizationHaveAntivirusAntiMalwareSoftwareInstalledOnAllSystems", "whatAntivirusAntiMalwareSolutionIsCurrentlyDeployedEGMicrosoftDefenderNortonMcAfeeEtc", "howFrequentlyAreFullSystemScansConducted", "whatLevelOfThoroughnessIsUsedForPeriodicScans", "areFilesFromExternalSourcesScannedInRealTime", "whichExternalSourcesAreScanned", "doYouEmployFileIntegrityMonitoringForCriticalSystemFiles", "howAreScanResultsReviewedAndDocumentedDescribeYourProcessForReviewingAndDocumentingScanResults", "whatIsYourResponseTimeframeWhenMalwareOrVulnerabilitiesAreDetected", "describeYourRemediationProcessForIdentifiedIssuesDescribeYourProcessForRemediatingIssuesDetectedDuringScanning", "hasScanningEffectivenessBeenTested", "hasScanningEffectivenessBeenTested2", "supportingDocumentation4"];
+    const req: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    > = [];
+    const all: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    > = [
+      "systemInformationIntegrityFindWeaknessesInSystem",
+      "systemInformationFlawRemediationNotesEvidence",
+      "systemInformationIntegrityIdentifiedFlaws",
+      "systemInformationFlawReportingNotesEvidence",
+      "systemInformationIntegrityCriticalSeverityFlaws",
+      "systemInformationIntegrityHighSeverityFlaws",
+      "systemInformationIntegrityMediumLowSeverityFlaws",
+      "systemInformationFlawCorrectionNotesEvidence",
+      "systemInformationIntegritySecurityPatchesUpdatesManaged",
+      "systemInformationIntegrityPatchManagementNotesEvidence",
+      "systemInformationIntegrityCompanyProtectsAgainstMaliciousSoftware",
+      "systemInformationIntegrityMaliciousCodeProtectionImplemented",
+      "systemInformationIntegrityProtectionLocationNotesEvidence",
+      "systemInformationIntegrityPrimaryAntiMalwareProduct",
+      "systemInformationIntegrityAntiMalwareReleaseIdentifier",
+      "systemInformationIntegrityScopeAntiMalwareImplementation",
+      "systemInformationIntegrityRealTimeProtectionEnabled",
+      "systemInformationIntegrityCentrallyManaged",
+      "systemInformationIntegrityMaliciousCodeAdditionalNotesComments",
+      "systemInformationIntegrityFrequentlyMaliciousCodeProtection",
+      "systemInformationUpdateFrequencyNotesEvidence",
+      "systemInformationIntegrityMaliciousCodeProtectionManaged",
+      "systemInformationIntegrityUpdateManagementProcessNotesEvidence",
+      "systemInformationIntegrityExternalSourcesScanned",
+      "systemInformationExternalSourceNotesEvidence",
+      "systemInformationIntegrityWrittenPoliciesProcedures",
+      "systemInformationIntegrityAntiMalwareSoftwareInstall",
+      "systemInformationIntegrityMalwareDeployed",
+      "systemInformationIntegrityScanComputerServer",
+      "systemInformationIntegrityThoroughPeriodicScan",
+      "systemInformationIntegrityFileAutomaticScan",
+      "systemInformationIntegrityMonitorCriticalFile",
+      "systemInformationIntegrityReviewDocumentFile",
+      "systemInformationIntegrityResponseTimeframe",
+      "systemInformationIntegrityRemediationProcess",
+      "systemInformationIntegrityScanningEffectiveness",
+      "systemInformationIntegrityScanningSupportingDocumentation",
+    ];
 
     let reqFilled = 0;
-    const missingReq: Array<keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws> = [];
+    const missingReq: Array<
+      keyof SystemInformationIntegrityIdentifyReportAndCorrectInformationSystemFlaws
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -583,7 +1007,8 @@ export class SystemInformationIntegrityIdentifyReportAndCorrectInformationSystem
     }
 
     return {
-      formTitle: "System & Information Integrity (Identify, report, and correct information system flaws)",
+      formTitle:
+        "System & Information Integrity (Identify, report, and correct information system flaws)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,

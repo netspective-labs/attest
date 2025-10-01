@@ -29,11 +29,11 @@
  */
 
 import {
-    basename,
-    fromFileUrl,
-    join,
-    relative,
-    resolve,
+  basename,
+  fromFileUrl,
+  join,
+  relative,
+  resolve,
 } from "jsr:@std/path@1.1.2";
 import * as r4qr from "./r4q-runtime.ts";
 
@@ -58,10 +58,10 @@ import * as r4qr from "./r4q-runtime.ts";
  * relativeToCWD("", "default/path"); // returns "default/path"
  */
 function relativeToCWD(path: string, defaultIfBlank = ".") {
-    const result = relative(Deno.cwd(), fromFileUrl(import.meta.resolve(path)));
-    return result
-        ? (result.trimEnd().length > 0 ? result : defaultIfBlank)
-        : defaultIfBlank;
+  const result = relative(Deno.cwd(), fromFileUrl(import.meta.resolve(path)));
+  return result
+    ? (result.trimEnd().length > 0 ? result : defaultIfBlank)
+    : defaultIfBlank;
 }
 
 /**
@@ -73,93 +73,91 @@ function relativeToCWD(path: string, defaultIfBlank = ".") {
  * access the error information.
  */
 export class LhcFormResponse {
-    static readonly EXTENSION = ".lhc-form.json";
-    readonly lhcFormInstance?: Record<string, unknown>;
-    readonly lhcFormTitle?: string;
-    readonly lhcFormReadError?: Error;
-    #transformerModule?: QuestionnaireModule;
-    #transformed?: Record<string, unknown>;
-    #transformError?: Error;
+  static readonly EXTENSION = ".lhc-form.json";
+  readonly lhcFormInstance?: Record<string, unknown>;
+  readonly lhcFormTitle?: string;
+  readonly lhcFormReadError?: Error;
+  #transformerModule?: QuestionnaireModule;
+  #transformed?: Record<string, unknown>;
+  #transformError?: Error;
 
-    constructor(readonly srcFile: string) {
-        this.srcFile = srcFile;
-        try {
-            const text = Deno.readTextFileSync(srcFile);
-            this.lhcFormInstance = JSON.parse(text);
-            this.lhcFormTitle = r4qr.lhcFormTitle(this.lhcFormInstance);
-        } catch (e) {
-            this.lhcFormInstance = undefined;
-            this.lhcFormReadError = e instanceof Error ? e : new Error(
-                `Failed to read or parse LHC Form response from ${srcFile}: ${e}`,
-            );
-        }
+  constructor(readonly srcFile: string) {
+    this.srcFile = srcFile;
+    try {
+      const text = Deno.readTextFileSync(srcFile);
+      this.lhcFormInstance = JSON.parse(text);
+      this.lhcFormTitle = r4qr.lhcFormTitle(this.lhcFormInstance);
+    } catch (e) {
+      this.lhcFormInstance = undefined;
+      this.lhcFormReadError = e instanceof Error ? e : new Error(
+        `Failed to read or parse LHC Form response from ${srcFile}: ${e}`,
+      );
+    }
+  }
+
+  get isValidLhcForm() {
+    return this.lhcFormInstance !== undefined &&
+      this.lhcFormTitle !== undefined &&
+      this.lhcFormReadError === undefined;
+  }
+
+  get isValidTransformed() {
+    return this.transformed !== undefined &&
+      this.transformerModule !== undefined &&
+      this.transformError === undefined;
+  }
+
+  get transformerModule() {
+    return this.#transformerModule;
+  }
+
+  get transformed() {
+    return this.#transformed;
+  }
+
+  get transformError() {
+    return this.#transformError;
+  }
+
+  async transform(
+    options: { readonly qModules: Map<string, QuestionnaireModule> },
+  ) {
+    if (!this.lhcFormInstance || !this.lhcFormTitle) return;
+
+    this.#transformerModule = options.qModules.values().find(
+      (m) =>
+        m.isValid &&
+        m.moduleSignature?.title === this.lhcFormTitle,
+    );
+    if (!this.#transformerModule) {
+      this.#transformError = new Error(
+        `No matching questionnaire module found for LHC Form response with title "${this.lhcFormTitle}"`,
+      );
+      return;
     }
 
-    get isValidLhcForm() {
-        return this.lhcFormInstance !== undefined &&
-            this.lhcFormTitle !== undefined &&
-            this.lhcFormReadError === undefined;
-    }
-
-    get isValidTransformed() {
-        return this.transformed !== undefined &&
-            this.transformerModule !== undefined &&
-            this.transformError === undefined;
-    }
-
-    get transformerModule() {
-        return this.#transformerModule;
-    }
-
-    get transformed() {
-        return this.#transformed;
-    }
-
-    get transformError() {
-        return this.#transformError;
-    }
-
-    async transform(
-        options: { readonly qModules: Map<string, QuestionnaireModule> },
+    const lhcFormResponseAdapterFn = this.transformerModule
+      ?.lhcFormResponseAdapterFn;
+    if (
+      lhcFormResponseAdapterFn &&
+      typeof lhcFormResponseAdapterFn ===
+        "function"
     ) {
-        if (!this.lhcFormInstance || !this.lhcFormTitle) return;
-
-        this.#transformerModule = options.qModules.values().find(
-            (m) =>
-                m.isValid &&
-                m.moduleSignature?.title === this.lhcFormTitle,
+      try {
+        this.#transformed = await lhcFormResponseAdapterFn(
+          this.lhcFormInstance,
         );
-        if (!this.#transformerModule) {
-            this.#transformError = new Error(
-                `No matching questionnaire module found for LHC Form response with title "${this.lhcFormTitle}"`,
-            );
-            return;
-        }
-
-        const lhcFormResponseAdapterFn = this.transformerModule
-            ?.lhcFormResponseAdapterFn;
-        if (
-            lhcFormResponseAdapterFn &&
-            typeof lhcFormResponseAdapterFn ===
-                "function"
-        ) {
-            try {
-                this.#transformed = await lhcFormResponseAdapterFn(
-                    this.lhcFormInstance,
-                );
-            } catch (error) {
-                this.#transformError = error instanceof Error
-                    ? error
-                    : new Error(
-                        `Error transforming LHC Form response from ${this.srcFile}: ${error}`,
-                    );
-            }
-        } else {
-            this.#transformError = new Error(
-                `No LHC Form response adapter function found for module with title "${this.transformerModule?.moduleSignature?.title}"`,
-            );
-        }
+      } catch (error) {
+        this.#transformError = error instanceof Error ? error : new Error(
+          `Error transforming LHC Form response from ${this.srcFile}: ${error}`,
+        );
+      }
+    } else {
+      this.#transformError = new Error(
+        `No LHC Form response adapter function found for module with title "${this.transformerModule?.moduleSignature?.title}"`,
+      );
     }
+  }
 }
 
 /**
@@ -171,105 +169,105 @@ export class LhcFormResponse {
  * transform LHC Form responses and FHIR Questionnaire Responses.
  */
 export class QuestionnaireModule {
-    static readonly EXTENSION = ".auto.ts";
-    readonly moduleSourceText: string;
-    private module?: Record<string, unknown>;
-    private moduleError?: Error;
-    private modulaSig?: r4qr.ModuleSignature;
+  static readonly EXTENSION = ".auto.ts";
+  readonly moduleSourceText: string;
+  private module?: Record<string, unknown>;
+  private moduleError?: Error;
+  private modulaSig?: r4qr.ModuleSignature;
 
-    /**
-     * Initializes the QuestionnaireModule by tracking the TypeScript module file.
-     * @param srcFile The path to the TypeScript module file, relative to this module.
-     */
-    constructor(readonly srcFile: string) {
-        this.srcFile = srcFile;
-        this.moduleSourceText = Deno.readTextFileSync(
-            fromFileUrl(import.meta.resolve(srcFile)),
-        );
-        this.module = undefined;
-    }
+  /**
+   * Initializes the QuestionnaireModule by tracking the TypeScript module file.
+   * @param srcFile The path to the TypeScript module file, relative to this module.
+   */
+  constructor(readonly srcFile: string) {
+    this.srcFile = srcFile;
+    this.moduleSourceText = Deno.readTextFileSync(
+      fromFileUrl(import.meta.resolve(srcFile)),
+    );
+    this.module = undefined;
+  }
 
-    /**
-     * Checks if the module is valid by ensuring it has been imported successfully,
-     * has no errors, and has a valid module signature.
-     * @returns True if the module is valid, otherwise false.
-     */
-    get isValid() {
-        return this.module !== undefined && this.moduleError === undefined &&
-            this.modulaSig !== undefined;
-    }
+  /**
+   * Checks if the module is valid by ensuring it has been imported successfully,
+   * has no errors, and has a valid module signature.
+   * @returns True if the module is valid, otherwise false.
+   */
+  get isValid() {
+    return this.module !== undefined && this.moduleError === undefined &&
+      this.modulaSig !== undefined;
+  }
 
-    /**
-     * Returns the module "signature" of the questionnaire module so we can reflect
-     * the content. The module signature includes the title, source text constant name,
-     * and function names for transforming LHC Form responses and FHIR Questionnaire Responses.
-     * @returns The module signature if the module is valid, otherwise undefined.
-     */
-    get moduleSignature() {
-        return this.modulaSig;
-    }
+  /**
+   * Returns the module "signature" of the questionnaire module so we can reflect
+   * the content. The module signature includes the title, source text constant name,
+   * and function names for transforming LHC Form responses and FHIR Questionnaire Responses.
+   * @returns The module signature if the module is valid, otherwise undefined.
+   */
+  get moduleSignature() {
+    return this.modulaSig;
+  }
 
-    /**
-     * Returns the function that adapts a LHC Form response to a typed data transfer object.
-     */
-    get lhcFormResponseAdapterFn() {
-        if (this.module && this.modulaSig) {
-            return this.module[this.modulaSig.lhcFormResponseAdapterFnName];
-        }
-        return undefined;
+  /**
+   * Returns the function that adapts a LHC Form response to a typed data transfer object.
+   */
+  get lhcFormResponseAdapterFn() {
+    if (this.module && this.modulaSig) {
+      return this.module[this.modulaSig.lhcFormResponseAdapterFnName];
     }
+    return undefined;
+  }
 
-    /**
-     * Returns the function that adapts a FHIR Questionnaire Response to a data transfer object.
-     */
-    get fhirQuestionnaireResponseAdapterFn() {
-        if (this.module && this.modulaSig) {
-            return this
-                .module[this.modulaSig.fhirQuestionnaireResponseAdapterFnName];
-        }
-        return undefined;
+  /**
+   * Returns the function that adapts a FHIR Questionnaire Response to a data transfer object.
+   */
+  get fhirQuestionnaireResponseAdapterFn() {
+    if (this.module && this.modulaSig) {
+      return this
+        .module[this.modulaSig.fhirQuestionnaireResponseAdapterFnName];
     }
+    return undefined;
+  }
 
-    /**
-     * If --include-src was used when TypeScript was generated, this will be
-     * the original source text of the .fhir-R4-questionnaire.json file that
-     * the module was generated from (it's stored as a constant in the generated
-     * TypeScript).
-     */
-    get originalSourceText() {
-        if (this.module && this.modulaSig) {
-            return this
-                .module[this.modulaSig.sourceTextConstName] as
-                    | string
-                    | undefined;
-        }
-        return undefined;
+  /**
+   * If --include-src was used when TypeScript was generated, this will be
+   * the original source text of the .fhir-R4-questionnaire.json file that
+   * the module was generated from (it's stored as a constant in the generated
+   * TypeScript).
+   */
+  get originalSourceText() {
+    if (this.module && this.modulaSig) {
+      return this
+        .module[this.modulaSig.sourceTextConstName] as
+          | string
+          | undefined;
     }
+    return undefined;
+  }
 
-    /**
-     * Initializes the QuestionnaireModule by dynamically importing the TypeScript module
-     * and extracting the module signature.
-     * If the module cannot be imported, it captures the error and provides a way to access
-     * the error information.
-     * @returns A promise that resolves when the module is successfully imported and initialized.
-     * @throws An error if the module cannot be imported or if the module signature is not valid.
-     */
-    async init() {
-        try {
-            // Dynamically import the module (this.srcFile must be relative to this script not
-            // the current working directory).
-            this.module = await import(this.srcFile);
-            if (this.module) {
-                // Extract the module "signature" from the imported module to allow reflection
-                // of the content.
-                this.modulaSig = r4qr.moduleSignature(this.module);
-            }
-        } catch (error) {
-            this.moduleError = error instanceof Error ? error : new Error(
-                `Failed to import module from ${this.srcFile}: ${error}`,
-            );
-        }
+  /**
+   * Initializes the QuestionnaireModule by dynamically importing the TypeScript module
+   * and extracting the module signature.
+   * If the module cannot be imported, it captures the error and provides a way to access
+   * the error information.
+   * @returns A promise that resolves when the module is successfully imported and initialized.
+   * @throws An error if the module cannot be imported or if the module signature is not valid.
+   */
+  async init() {
+    try {
+      // Dynamically import the module (this.srcFile must be relative to this script not
+      // the current working directory).
+      this.module = await import(this.srcFile);
+      if (this.module) {
+        // Extract the module "signature" from the imported module to allow reflection
+        // of the content.
+        this.modulaSig = r4qr.moduleSignature(this.module);
+      }
+    } catch (error) {
+      this.moduleError = error instanceof Error ? error : new Error(
+        `Failed to import module from ${this.srcFile}: ${error}`,
+      );
     }
+  }
 }
 
 /**
@@ -278,54 +276,54 @@ export class QuestionnaireModule {
  * and provides methods to check if a file is a response file for the questionnaire.
  */
 export class Questionnaire {
-    static readonly EXTENSION = ".fhir-R4-questionnaire.json";
-    #module?: QuestionnaireModule;
-    readonly responses: LhcFormResponse[];
+  static readonly EXTENSION = ".fhir-R4-questionnaire.json";
+  #module?: QuestionnaireModule;
+  readonly responses: LhcFormResponse[];
 
-    constructor(readonly srcFile: string) {
-        this.srcFile = srcFile;
-        this.responses = [];
-    }
+  constructor(readonly srcFile: string) {
+    this.srcFile = srcFile;
+    this.responses = [];
+  }
 
-    async init(
-        options: {
-            readonly workDir: string;
-            readonly respHome: string;
-            readonly qModules: Map<string, QuestionnaireModule>;
-        },
-    ) {
-        await this.discoverResponses(options);
-    }
+  async init(
+    options: {
+      readonly workDir: string;
+      readonly respHome: string;
+      readonly qModules: Map<string, QuestionnaireModule>;
+    },
+  ) {
+    await this.discoverResponses(options);
+  }
 
-    get transformerModule() {
-        return this.#module;
-    }
+  get transformerModule() {
+    return this.#module;
+  }
 
-    isResponseFileForQuestionnaire(fileName: string) {
-        return fileName.endsWith(LhcFormResponse.EXTENSION) &&
-            basename(fileName).replace(
-                    new RegExp(`${LhcFormResponse.EXTENSION}$`),
-                    Questionnaire.EXTENSION,
-                ) === basename(this.srcFile);
-    }
+  isResponseFileForQuestionnaire(fileName: string) {
+    return fileName.endsWith(LhcFormResponse.EXTENSION) &&
+      basename(fileName).replace(
+          new RegExp(`${LhcFormResponse.EXTENSION}$`),
+          Questionnaire.EXTENSION,
+        ) === basename(this.srcFile);
+  }
 
-    async discoverResponses(
-        options: {
-            readonly respHome: string;
-            readonly qModules: Map<string, QuestionnaireModule>;
-        },
-    ) {
-        for await (const r of Deno.readDir(options.respHome)) {
-            if (r.isFile && r.name.endsWith(LhcFormResponse.EXTENSION)) {
-                if (this.isResponseFileForQuestionnaire(r.name)) {
-                    const response = new LhcFormResponse(
-                        join(options.respHome, r.name),
-                    );
-                    this.responses.push(response);
-                }
-            }
+  async discoverResponses(
+    options: {
+      readonly respHome: string;
+      readonly qModules: Map<string, QuestionnaireModule>;
+    },
+  ) {
+    for await (const r of Deno.readDir(options.respHome)) {
+      if (r.isFile && r.name.endsWith(LhcFormResponse.EXTENSION)) {
+        if (this.isResponseFileForQuestionnaire(r.name)) {
+          const response = new LhcFormResponse(
+            join(options.respHome, r.name),
+          );
+          this.responses.push(response);
         }
+      }
     }
+  }
 }
 
 /**
@@ -336,158 +334,158 @@ export class Questionnaire {
  * The `walk` method orchestrates the entire process, discovering questionnaires, preparing modules, transforming responses, and cleaning up the working directory.
  */
 export class Walker {
-    readonly workDir: string;
-    readonly questionnairesHome: string;
-    readonly respHome: string;
-    readonly questionnaires: Map<string, Questionnaire>;
-    readonly qModules: Map<string, QuestionnaireModule>;
+  readonly workDir: string;
+  readonly questionnairesHome: string;
+  readonly respHome: string;
+  readonly questionnaires: Map<string, Questionnaire>;
+  readonly qModules: Map<string, QuestionnaireModule>;
 
-    /**
-     * Initializes the Walker with the specified directories.
-     * @param init - An object containing the working directory, questionnaires home directory, and responses home directory.
-     * @param init.workDir - The directory where the walker will operate.
-     * @param init.questionnairesHome - The directory containing FHIR R4 questionnaires.
-     * @param init.respHome - The directory containing LHC Form responses.
-     * @example
-     * const walker = new Walker({
-     *     workDir: "./work",
-     *     questionnairesHome: "./questionnaires",
-     *     respHome: "./responses",
-     * });
-     * @returns A new instance of the Walker class.
-     */
-    constructor(
-        init: {
-            readonly workDir: string;
-            readonly questionnairesHome: string;
-            readonly respHome: string;
-        },
-    ) {
-        this.workDir = init.workDir;
-        this.questionnairesHome = init.questionnairesHome;
-        this.respHome = init.respHome;
-        this.questionnaires = new Map<string, Questionnaire>();
-        this.qModules = new Map<string, QuestionnaireModule>();
-    }
+  /**
+   * Initializes the Walker with the specified directories.
+   * @param init - An object containing the working directory, questionnaires home directory, and responses home directory.
+   * @param init.workDir - The directory where the walker will operate.
+   * @param init.questionnairesHome - The directory containing FHIR R4 questionnaires.
+   * @param init.respHome - The directory containing LHC Form responses.
+   * @example
+   * const walker = new Walker({
+   *     workDir: "./work",
+   *     questionnairesHome: "./questionnaires",
+   *     respHome: "./responses",
+   * });
+   * @returns A new instance of the Walker class.
+   */
+  constructor(
+    init: {
+      readonly workDir: string;
+      readonly questionnairesHome: string;
+      readonly respHome: string;
+    },
+  ) {
+    this.workDir = init.workDir;
+    this.questionnairesHome = init.questionnairesHome;
+    this.respHome = init.respHome;
+    this.questionnaires = new Map<string, Questionnaire>();
+    this.qModules = new Map<string, QuestionnaireModule>();
+  }
 
-    async cleanup() {
-        // Cleanup the work directory if needed
-        try {
-            await Deno.remove(this.workDir, { recursive: true });
-        } catch (error) {
-            if (error instanceof Deno.errors.NotFound) {
-                console.warn(
-                    `Work directory ${this.workDir} not found, nothing to clean up.`,
-                );
-            } else {
-                console.error(
-                    `Error cleaning up work directory ${this.workDir}:`,
-                    error,
-                );
-            }
-        }
-    }
-
-    get responses() {
-        return Array.from(
-            this.questionnaires.values().flatMap((q) => q.responses),
+  async cleanup() {
+    // Cleanup the work directory if needed
+    try {
+      await Deno.remove(this.workDir, { recursive: true });
+    } catch (error) {
+      if (error instanceof Deno.errors.NotFound) {
+        console.warn(
+          `Work directory ${this.workDir} not found, nothing to clean up.`,
         );
+      } else {
+        console.error(
+          `Error cleaning up work directory ${this.workDir}:`,
+          error,
+        );
+      }
     }
+  }
 
-    async registerQuestionnaireSrcFile(srcFile: string) {
-        const mapKey = basename(srcFile);
-        const questionnaire = new Questionnaire(srcFile);
-        await questionnaire.init(this);
-        this.questionnaires.set(mapKey, questionnaire);
-        return questionnaire;
-    }
+  get responses() {
+    return Array.from(
+      this.questionnaires.values().flatMap((q) => q.responses),
+    );
+  }
 
-    async registerQuestionnaireModuleSrcFile(srcFile: string) {
-        const mapKey = basename(srcFile);
-        const module = new QuestionnaireModule("./" + srcFile);
-        await module.init();
-        this.qModules.set(mapKey, module);
-        return module;
-    }
+  async registerQuestionnaireSrcFile(srcFile: string) {
+    const mapKey = basename(srcFile);
+    const questionnaire = new Questionnaire(srcFile);
+    await questionnaire.init(this);
+    this.questionnaires.set(mapKey, questionnaire);
+    return questionnaire;
+  }
 
-    async discoverQuestionnaires() {
-        for await (const q of Deno.readDir(this.questionnairesHome)) {
-            if (q.isFile && q.name.endsWith(Questionnaire.EXTENSION)) {
-                await this.registerQuestionnaireSrcFile(
-                    join(this.questionnairesHome, q.name),
-                );
-            }
-        }
-    }
+  async registerQuestionnaireModuleSrcFile(srcFile: string) {
+    const mapKey = basename(srcFile);
+    const module = new QuestionnaireModule("./" + srcFile);
+    await module.init();
+    this.qModules.set(mapKey, module);
+    return module;
+  }
 
-    async prepareTypeScriptModules() {
-        if (this.questionnaires.size > 0) {
-            const gen = new Deno.Command(Deno.execPath(), {
-                args: [
-                    "run",
-                    "-A",
-                    relativeToCWD("./r4qctl.ts"),
-                    ...this.questionnaires.values().map((q) => q.srcFile),
-                    "--out-dir",
-                    this.workDir,
-                    "--force",
-                    "--include-src",
-                ],
-                stdin: "inherit",
-                stdout: "inherit",
-                stderr: "inherit",
-            });
-            const { code } = await gen.output();
-            if (code !== 0) Deno.exit(code);
-        }
-        for await (const m of Deno.readDir(this.workDir)) {
-            if (m.isFile && m.name.endsWith(QuestionnaireModule.EXTENSION)) {
-                await this.registerQuestionnaireModuleSrcFile(
-                    join(
-                        relative(
-                            fromFileUrl(import.meta.resolve("./")),
-                            resolve(this.workDir),
-                        ),
-                        m.name,
-                    ),
-                );
-            }
-        }
-        // TODO: map the questionnaire modules to the questionnaires
+  async discoverQuestionnaires() {
+    for await (const q of Deno.readDir(this.questionnairesHome)) {
+      if (q.isFile && q.name.endsWith(Questionnaire.EXTENSION)) {
+        await this.registerQuestionnaireSrcFile(
+          join(this.questionnairesHome, q.name),
+        );
+      }
     }
+  }
 
-    async transformResponses() {
-        for (const r of this.responses) {
-            await r.transform({
-                qModules: this.qModules,
-            });
-        }
+  async prepareTypeScriptModules() {
+    if (this.questionnaires.size > 0) {
+      const gen = new Deno.Command(Deno.execPath(), {
+        args: [
+          "run",
+          "-A",
+          relativeToCWD("./r4qctl.ts"),
+          ...this.questionnaires.values().map((q) => q.srcFile),
+          "--out-dir",
+          this.workDir,
+          "--force",
+          "--include-src",
+        ],
+        stdin: "inherit",
+        stdout: "inherit",
+        stderr: "inherit",
+      });
+      const { code } = await gen.output();
+      if (code !== 0) Deno.exit(code);
     }
+    for await (const m of Deno.readDir(this.workDir)) {
+      if (m.isFile && m.name.endsWith(QuestionnaireModule.EXTENSION)) {
+        await this.registerQuestionnaireModuleSrcFile(
+          join(
+            relative(
+              fromFileUrl(import.meta.resolve("./")),
+              resolve(this.workDir),
+            ),
+            m.name,
+          ),
+        );
+      }
+    }
+    // TODO: map the questionnaire modules to the questionnaires
+  }
 
-    /**
-     * Walks through the FHIR R4 questionnaires and their associated responses.
-     * This method orchestrates the entire process of discovering questionnaires,
-     * preparing TypeScript modules, transforming responses, and cleaning up the working directory.
-     * It initializes the walker, discovers questionnaires, prepares modules, transforms responses,
-     * and finally cleans up the working directory.
-     *
-     * @returns A promise that resolves when the walk is complete.
-     * The walk process includes discovering questionnaires, preparing TypeScript modules,
-     * transforming responses, and cleaning up the working directory.
-     *
-     * @example
-     * const walker = new Walker({
-     *     workDir: "./work",
-     *     questionnairesHome: "./questionnaires",
-     *     respHome: "./responses",
-     * });
-     * await walker.walk();
-     */
-    async walk(cleanup: "cleanup" | "leave-work-dir" = "cleanup") {
-        await this.discoverQuestionnaires();
-        await this.prepareTypeScriptModules();
-        await this.transformResponses();
-        if (cleanup === "cleanup") await this.cleanup();
-        return this;
+  async transformResponses() {
+    for (const r of this.responses) {
+      await r.transform({
+        qModules: this.qModules,
+      });
     }
+  }
+
+  /**
+   * Walks through the FHIR R4 questionnaires and their associated responses.
+   * This method orchestrates the entire process of discovering questionnaires,
+   * preparing TypeScript modules, transforming responses, and cleaning up the working directory.
+   * It initializes the walker, discovers questionnaires, prepares modules, transforms responses,
+   * and finally cleans up the working directory.
+   *
+   * @returns A promise that resolves when the walk is complete.
+   * The walk process includes discovering questionnaires, preparing TypeScript modules,
+   * transforming responses, and cleaning up the working directory.
+   *
+   * @example
+   * const walker = new Walker({
+   *     workDir: "./work",
+   *     questionnairesHome: "./questionnaires",
+   *     respHome: "./responses",
+   * });
+   * await walker.walk();
+   */
+  async walk(cleanup: "cleanup" | "leave-work-dir" = "cleanup") {
+    await this.discoverQuestionnaires();
+    await this.prepareTypeScriptModules();
+    await this.transformResponses();
+    if (cleanup === "cleanup") await this.cleanup();
+    return this;
+  }
 }

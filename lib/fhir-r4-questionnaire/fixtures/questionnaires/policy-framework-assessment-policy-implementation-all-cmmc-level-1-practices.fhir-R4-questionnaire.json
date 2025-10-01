@@ -9,10 +9,686 @@
   "status": "draft",
   "item": [
     {
-      "type": "group",
-      "linkId": "364455629781",
-      "text": "Policy Framework Assessment",
       "item": [
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "527949557496",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development",
+                  "display": "Responsible For Developing Approving Cmmc Related Policies"
+                }
+              ],
+              "text": "Who is responsible for developing and approving CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Chief Information Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Chief Information Security Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Chief Executive Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Legal/Compliance Department"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "IT Security Team"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "576726184171",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "576726184171_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "590810573907_helpText",
+              "type": "display",
+              "text": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "590810573907",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-development-approval",
+              "display": "Policy Development And Approval"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Policy Development and Approval"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "992068463537",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency",
+                  "display": "Frequently Are Cmmc Related Policies Reviewed Updated"
+                }
+              ],
+              "text": "How frequently are CMMC-related policies reviewed and updated?",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Quarterly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Bi-annually"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Annually"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "When regulations change"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal schedule"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "891438058183",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "891438058183_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "441079114846_helpText",
+              "type": "display",
+              "text": "Implement regular procedures to review and update policies to keep them current and effective.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "441079114846",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-review-procedures",
+              "display": "Policy Review Update Procedures"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Policy Review and Update Procedures"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "472951321809",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training",
+                  "display": "Training Is Provided Employees On Cmmc Related Policies"
+                }
+              ],
+              "text": "What training is provided to employees on CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Initial security awareness training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Role-specific policy training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Annual refresher training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "just-in-time training for policy changes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal training program"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "948893743049",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "948893743049_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "401642968533_helpText",
+              "type": "display",
+              "text": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "401642968533",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-employee-training",
+              "display": "Employee Training On Policies"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Employee Training on Policies"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "758349008850",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-methods",
+                  "display": "Compliance Cmmc Related Policies Monitored"
+                }
+              ],
+              "text": "How is compliance with CMMC-related policies monitored?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Regular internal audits"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automated compliance monitoring"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Self-assessment questionnaires"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manager reviews and attestations"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Third-party assessments"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "230314073532",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "230314073532_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "237023742748_helpText",
+              "type": "display",
+              "text": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "237023742748",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-compliance-monitoring",
+              "display": "Policy Compliance Monitoring"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Policy Compliance Monitoring"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "255836550808",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-methods",
+                  "display": "Exceptions To Cmmc Related Policies Managed"
+                }
+              ],
+              "text": "How are exceptions to CMMC-related policies managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Formal exception request process"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Risk assessment for exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Compensating controls for exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Regular review of approved exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal exception process"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "683517806081",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "683517806081_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "260429244098_helpText",
+              "type": "display",
+              "text": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "260429244098",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-exception-management",
+              "display": "Policy Exception Management"
+            }
+          ],
+          "prefix": "5.",
+          "text": "Policy Exception Management"
+        },
         {
           "linkId": "364455629781_helpText",
           "type": "display",
@@ -33,386 +709,17 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ],
-                "text": "Check-box"
-              }
-            }
-          ],
-          "repeats": true,
-          "linkId": "527949557496",
-          "text": "Who is responsible for developing and approving CMMC-related policies?",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Chief Information Officer"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Chief Information Security Officer"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Chief Executive Officer"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Legal/Compliance Department"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "IT Security Team"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "590810573907_helpText",
-          "type": "display",
-          "text": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
       ],
       "type": "group",
-      "linkId": "590810573907",
-      "prefix": "1.",
-      "text": "Policy Development and Approval"
-    },
-    {
-      "item": [
+      "linkId": "364455629781",
+      "code": [
         {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ],
-                "text": "Check-box"
-              }
-            }
-          ],
-          "repeats": true,
-          "linkId": "992068463537",
-          "text": "How frequently are CMMC-related policies reviewed and updated?",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Quarterly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Bi-annually"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Annually"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "When regulations change"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No formal schedule"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "441079114846_helpText",
-          "type": "display",
-          "text": "Implement regular procedures to review and update policies to keep them current and effective.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-overview",
+          "display": "Policy Framework Assessment"
         }
       ],
-      "type": "group",
-      "linkId": "441079114846",
-      "prefix": "2.",
-      "text": "Policy Review and Update Procedures"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ],
-                "text": "Check-box"
-              }
-            }
-          ],
-          "repeats": true,
-          "linkId": "472951321809",
-          "text": "What training is provided to employees on CMMC-related policies?",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Initial security awareness training"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Role-specific policy training"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Annual refresher training"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "just-in-time training for policy changes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No formal training program"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "401642968533_helpText",
-          "type": "display",
-          "text": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "401642968533",
-      "prefix": "3.",
-      "text": "Employee Training on Policies"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ],
-                "text": "Check-box"
-              }
-            }
-          ],
-          "repeats": true,
-          "linkId": "758349008850",
-          "text": "How is compliance with CMMC-related policies monitored?",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Regular internal audits"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Automated compliance monitoring"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Self-assessment questionnaires"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Manager reviews and attestations"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Third-party assessments"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "237023742748_helpText",
-          "type": "display",
-          "text": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "237023742748",
-      "prefix": "4.",
-      "text": "Policy Compliance Monitoring"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "255836550808",
-          "text": "How are exceptions to CMMC-related policies managed?",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Formal exception request process"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Risk assessment for exceptions"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Compensating controls for exceptions"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Regular review of approved exceptions"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No formal exception process"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "260429244098_helpText",
-          "type": "display",
-          "text": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "260429244098",
-      "prefix": "5.",
-      "text": "Policy Exception Management"
+      "text": "Policy Framework Assessment"
     },
     {
       "type": "text",
@@ -423,6 +730,13 @@
         }
       ],
       "linkId": "795388091631",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-additional-notes",
+          "display": "Additional Notes"
+        }
+      ],
       "text": "Additional Notes"
     }
   ]

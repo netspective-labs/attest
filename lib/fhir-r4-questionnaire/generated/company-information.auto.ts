@@ -11,15 +11,16 @@ import * as rt from "../r4q-runtime.ts";
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
 export const companyInformationModuleSignature: rt.ModuleSignature = {
-    title: "Company Information",
-    filename: "company-information.auto.ts",
-    titleCamel: "`companyInformation`",
-    titlePascal: "`CompanyInformation`",
-    titleKebab: "`company-information`",
-    lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "companyInformationFhirQuestionnaireResponseAdapter",
-    sourceTextConstName: "companyInformationSource",
-}
+  title: "Company Information",
+  filename: "company-information.auto.ts",
+  titleCamel: "`companyInformation`",
+  titlePascal: "`CompanyInformation`",
+  titleKebab: "`company-information`",
+  lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
+  fhirQuestionnaireResponseAdapterFnName:
+    "companyInformationFhirQuestionnaireResponseAdapter",
+  sourceTextConstName: "companyInformationSource",
+};
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -29,18 +30,18 @@ type Any = any;
  */
 /** Map of normalized property names to their source `linkId`. */
 export const companyInformationLinkIds = {
-  organizationName: "715544477968",
-  formCompletedBy: "655141523763",
-  positionTitle: "761144039651",
-  emailAddress: "441278853405",
-  workPhone: "375736159279",
-  mobilePhone: "948589414714",
-  assessmentDate: "276403539223",
-  industry: "789286873476",
-  employeeCount: "697235963218",
-  contractTypes: "863463230823",
-  cageCode: "805221373063",
-  dunsNumber: "374784155003"
+  companyInformationOrganizationName: "715544477968",
+  companyInformationFormCompletedBy: "655141523763",
+  companyInformationPositionTitle: "761144039651",
+  companyInformationEmailAddress: "441278853405",
+  companyInformationWorkPhone: "375736159279",
+  companyInformationMobilePhone: "948589414714",
+  companyInformationAssessmentDate: "276403539223",
+  companyInformationIndustry: "789286873476",
+  companyInformationEmployeeCount: "697235963218",
+  companyInformationContractTypes: "863463230823",
+  companyInformationCageCode: "805221373063",
+  companyInformationDunsNumber: "374784155003",
 } as const;
 
 /** Normalized view of "Company Information" answers. */
@@ -52,7 +53,7 @@ export interface CompanyInformation {
    * Entry format: Enter your organization name
    * Required: yes
    */
-  organizationName: string;
+  companyInformationOrganizationName: string;
 
   /**
    * Form Completed By
@@ -61,7 +62,7 @@ export interface CompanyInformation {
    * Entry format: Your full name
    * Required: yes
    */
-  formCompletedBy: string;
+  companyInformationFormCompletedBy: string;
 
   /**
    * Position/Title
@@ -70,7 +71,7 @@ export interface CompanyInformation {
    * Entry format: Your job title
    * Required: no
    */
-  positionTitle?: string;
+  companyInformationPositionTitle?: string;
 
   /**
    * Email Address
@@ -79,7 +80,7 @@ export interface CompanyInformation {
    * Entry format: your.email@company.com
    * Required: yes
    */
-  emailAddress: string;
+  companyInformationEmailAddress: string;
 
   /**
    * Work Phone
@@ -88,7 +89,7 @@ export interface CompanyInformation {
    * Entry format: (555) 121-2345
    * Required: yes
    */
-  workPhone: string;
+  companyInformationWorkPhone: string;
 
   /**
    * Mobile Phone
@@ -97,7 +98,7 @@ export interface CompanyInformation {
    * Entry format: (555) 987-4756
    * Required: yes
    */
-  mobilePhone: string;
+  companyInformationMobilePhone: string;
 
   /**
    * Assessment Date
@@ -105,7 +106,7 @@ export interface CompanyInformation {
    * FHIR type: date
    * Required: no
    */
-  assessmentDate?: Date;
+  companyInformationAssessmentDate?: Date;
 
   /**
    * Industry
@@ -114,7 +115,7 @@ export interface CompanyInformation {
    * Entry format: Defense, Technology, etc.
    * Required: no
    */
-  industry?: string;
+  companyInformationIndustry?: string;
 
   /**
    * Employee Count
@@ -123,7 +124,7 @@ export interface CompanyInformation {
    * Entry format: 1-10, 11-50, 51-200, etc.
    * Required: no
    */
-  employeeCount?: string;
+  companyInformationEmployeeCount?: string;
 
   /**
    * Contract Types
@@ -132,7 +133,7 @@ export interface CompanyInformation {
    * Entry format: Prime contracts, subcontracts, etc. (comma-separated)
    * Required: no
    */
-  contractTypes?: string;
+  companyInformationContractTypes?: string;
 
   /**
    * CAGE Code
@@ -142,7 +143,7 @@ export interface CompanyInformation {
    * Section: Organization Identifiers
    * Required: no
    */
-  cageCode?: string;
+  companyInformationCageCode?: string;
 
   /**
    * DUNS Number
@@ -152,42 +153,94 @@ export interface CompanyInformation {
    * Section: Organization Identifiers
    * Required: no
    */
-  dunsNumber?: string;
+  companyInformationDunsNumber?: string;
 }
 
 /** Convert an LHC JSON response into a normalized CompanyInformation object. */
-export function companyInformationLhcFormResponseAdapter(input: Any): CompanyInformation {
+export function companyInformationLhcFormResponseAdapter(
+  input: Any,
+): CompanyInformation {
   return {
-  organizationName: rt.coerceString(rt.findLhcValueByLinkId(input, "715544477968")),
-  formCompletedBy: rt.coerceString(rt.findLhcValueByLinkId(input, "655141523763")),
-  positionTitle: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "761144039651")),
-  emailAddress: rt.coerceString(rt.findLhcValueByLinkId(input, "441278853405")),
-  workPhone: rt.coerceString(rt.findLhcValueByLinkId(input, "375736159279")),
-  mobilePhone: rt.coerceString(rt.findLhcValueByLinkId(input, "948589414714")),
-  assessmentDate: rt.coerceOptionalDate(rt.findLhcValueByLinkId(input, "276403539223")),
-  industry: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "789286873476")),
-  employeeCount: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "697235963218")),
-  contractTypes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "863463230823")),
-  cageCode: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "805221373063")),
-  dunsNumber: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "374784155003")),
+    companyInformationOrganizationName: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "715544477968"),
+    ),
+    companyInformationFormCompletedBy: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "655141523763"),
+    ),
+    companyInformationPositionTitle: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "761144039651"),
+    ),
+    companyInformationEmailAddress: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "441278853405"),
+    ),
+    companyInformationWorkPhone: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "375736159279"),
+    ),
+    companyInformationMobilePhone: rt.coerceString(
+      rt.findLhcValueByLinkId(input, "948589414714"),
+    ),
+    companyInformationAssessmentDate: rt.coerceOptionalDate(
+      rt.findLhcValueByLinkId(input, "276403539223"),
+    ),
+    companyInformationIndustry: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "789286873476"),
+    ),
+    companyInformationEmployeeCount: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "697235963218"),
+    ),
+    companyInformationContractTypes: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "863463230823"),
+    ),
+    companyInformationCageCode: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "805221373063"),
+    ),
+    companyInformationDunsNumber: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "374784155003"),
+    ),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized CompanyInformation object. */
-export function companyInformationFhirQuestionnaireResponseAdapter(qr: Any): CompanyInformation {
+export function companyInformationFhirQuestionnaireResponseAdapter(
+  qr: Any,
+): CompanyInformation {
   return {
-  organizationName: rt.coerceString(rt.findQrAnswerByLinkId(qr, "715544477968")),
-  formCompletedBy: rt.coerceString(rt.findQrAnswerByLinkId(qr, "655141523763")),
-  positionTitle: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "761144039651")),
-  emailAddress: rt.coerceString(rt.findQrAnswerByLinkId(qr, "441278853405")),
-  workPhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "375736159279")),
-  mobilePhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "948589414714")),
-  assessmentDate: rt.coerceOptionalDate(rt.findQrAnswerByLinkId(qr, "276403539223")),
-  industry: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "789286873476")),
-  employeeCount: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "697235963218")),
-  contractTypes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "863463230823")),
-  cageCode: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "805221373063")),
-  dunsNumber: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "374784155003")),
+    companyInformationOrganizationName: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "715544477968"),
+    ),
+    companyInformationFormCompletedBy: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "655141523763"),
+    ),
+    companyInformationPositionTitle: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "761144039651"),
+    ),
+    companyInformationEmailAddress: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "441278853405"),
+    ),
+    companyInformationWorkPhone: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "375736159279"),
+    ),
+    companyInformationMobilePhone: rt.coerceString(
+      rt.findQrAnswerByLinkId(qr, "948589414714"),
+    ),
+    companyInformationAssessmentDate: rt.coerceOptionalDate(
+      rt.findQrAnswerByLinkId(qr, "276403539223"),
+    ),
+    companyInformationIndustry: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "789286873476"),
+    ),
+    companyInformationEmployeeCount: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "697235963218"),
+    ),
+    companyInformationContractTypes: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "863463230823"),
+    ),
+    companyInformationCageCode: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "805221373063"),
+    ),
+    companyInformationDunsNumber: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "374784155003"),
+    ),
   };
 }
 
@@ -216,18 +269,31 @@ export class CompanyInformationInterpreter {
 
   /** Factory: build from LHC JSON. */
   static fromLhcFormResponse(input: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(companyInformationLhcFormResponseAdapter(input));
+    return new CompanyInformationInterpreter(
+      companyInformationLhcFormResponseAdapter(input),
+    );
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
   static fromQuestionnaireResponse(qr: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(companyInformationFhirQuestionnaireResponseAdapter(qr));
+    return new CompanyInformationInterpreter(
+      companyInformationFhirQuestionnaireResponseAdapter(qr),
+    );
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): { ok: boolean; missing: Array<keyof CompanyInformation> } {
+  validateRequiredFields(): {
+    ok: boolean;
+    missing: Array<keyof CompanyInformation>;
+  } {
     const missing: Array<keyof CompanyInformation> = [];
-    const req: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "emailAddress", "workPhone", "mobilePhone"];
+    const req: Array<keyof CompanyInformation> = [
+      "companyInformationOrganizationName",
+      "companyInformationFormCompletedBy",
+      "companyInformationEmailAddress",
+      "companyInformationWorkPhone",
+      "companyInformationMobilePhone",
+    ];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -250,8 +316,27 @@ export class CompanyInformationInterpreter {
     totalFields: number;
     missingRequired: Array<keyof CompanyInformation>;
   } {
-    const req: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "emailAddress", "workPhone", "mobilePhone"];
-    const all: Array<keyof CompanyInformation> = ["organizationName", "formCompletedBy", "positionTitle", "emailAddress", "workPhone", "mobilePhone", "assessmentDate", "industry", "employeeCount", "contractTypes", "cageCode", "dunsNumber"];
+    const req: Array<keyof CompanyInformation> = [
+      "companyInformationOrganizationName",
+      "companyInformationFormCompletedBy",
+      "companyInformationEmailAddress",
+      "companyInformationWorkPhone",
+      "companyInformationMobilePhone",
+    ];
+    const all: Array<keyof CompanyInformation> = [
+      "companyInformationOrganizationName",
+      "companyInformationFormCompletedBy",
+      "companyInformationPositionTitle",
+      "companyInformationEmailAddress",
+      "companyInformationWorkPhone",
+      "companyInformationMobilePhone",
+      "companyInformationAssessmentDate",
+      "companyInformationIndustry",
+      "companyInformationEmployeeCount",
+      "companyInformationContractTypes",
+      "companyInformationCageCode",
+      "companyInformationDunsNumber",
+    ];
 
     let reqFilled = 0;
     const missingReq: Array<keyof CompanyInformation> = [];

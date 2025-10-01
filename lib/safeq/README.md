@@ -29,9 +29,9 @@ const compiled = compileQuestionnaire(qDef);
 import { emitZodTs } from "./mod.ts";
 
 const { tsCode } = emitZodTs(compiled, {
-    schemaTsIdentifier: "patientIntakeSchema", // export const name
-    includeZodImport: true, // emit `import { z } from "..."`
-    openRoot: false, // strict root by default
+  schemaTsIdentifier: "patientIntakeSchema", // export const name
+  includeZodImport: true, // emit `import { z } from "..."`
+  openRoot: false, // strict root by default
 });
 await Deno.writeTextFile("auto/patient-intake.auto.ts", tsCode.join("\n"));
 ```
@@ -83,9 +83,9 @@ import qDef from "../questionnaires/patient-intake.json" with { type: "json" };
 
 const compiled = compileQuestionnaire(qDef);
 const { tsCode } = emitZodTs(compiled, {
-    schemaTsIdentifier: "patientIntakeSchema",
-    includeZodImport: true,
-    openRoot: false,
+  schemaTsIdentifier: "patientIntakeSchema",
+  includeZodImport: true,
+  openRoot: false,
 });
 
 await Deno.mkdir("auto", { recursive: true });
@@ -109,15 +109,15 @@ import { patientIntakeSchema } from "./auto/patient-intake.auto.ts";
 type PatientIntake = z.infer<typeof patientIntakeSchema>;
 
 const dto: PatientIntake = patientIntakeSchema.parse({
-    demographics: {
-        firstName: "Alice",
-        age: 30,
-    },
-    symptoms: [
-        { primarySymptom: "Cough" }, // choice → enum
-        { primarySymptom: "Fever" },
-    ],
-    homepage: "https://example.org",
+  demographics: {
+    firstName: "Alice",
+    age: 30,
+  },
+  symptoms: [
+    { primarySymptom: "Cough" }, // choice → enum
+    { primarySymptom: "Fever" },
+  ],
+  homepage: "https://example.org",
 });
 console.log(dto);
 ```
@@ -147,27 +147,27 @@ Example (excerpt of an emitted file):
 import { z } from "npm:zod@4.1.1";
 
 export const patientIntakeSchema = z.object({
-    demographics: z.object({
-        firstName: z.string()
-            .brand<`linkId:q1a` | `text:First Name` | `type:string`>()
-            .describe("First Name [linkId=q1a]"),
-        age: z.number().int()
-            .brand<`linkId:q2` | `text:Age` | `type:integer`>()
-            .describe("Age [linkId=q2]"),
-    }).describe("Demographics [linkId=grp1]"),
+  demographics: z.object({
+    firstName: z.string()
+      .brand<`linkId:q1a` | `text:First Name` | `type:string`>()
+      .describe("First Name [linkId=q1a]"),
+    age: z.number().int()
+      .brand<`linkId:q2` | `text:Age` | `type:integer`>()
+      .describe("Age [linkId=q2]"),
+  }).describe("Demographics [linkId=grp1]"),
 
-    symptoms: z.array(
-        z.object({
-            primarySymptom: z.enum(["Cough", "Fever", "Headache"])
-                .brand<`linkId:s1` | `text:Primary Symptom` | `type:choice`>()
-                .describe("Primary Symptom [linkId=s1]"),
-            otherSymptom: z.union([
-                z.enum(["Sneezing", "Itchy eyes"]),
-                z.string(),
-            ]).brand<`linkId:s2` | `text:Other Symptom` | `type:open-choice`>()
-                .describe("Other Symptom [linkId=s2]"),
-        }).describe("Symptoms [linkId=grp2]"),
-    ),
+  symptoms: z.array(
+    z.object({
+      primarySymptom: z.enum(["Cough", "Fever", "Headache"])
+        .brand<`linkId:s1` | `text:Primary Symptom` | `type:choice`>()
+        .describe("Primary Symptom [linkId=s1]"),
+      otherSymptom: z.union([
+        z.enum(["Sneezing", "Itchy eyes"]),
+        z.string(),
+      ]).brand<`linkId:s2` | `text:Other Symptom` | `type:open-choice`>()
+        .describe("Other Symptom [linkId=s2]"),
+    }).describe("Symptoms [linkId=grp2]"),
+  ),
 });
 ```
 
@@ -196,24 +196,24 @@ const validated = patientIntakeSchema.parse(dto);
 
 ```ts
 type CompiledQuestionnaire = {
-    identifier: (
-        nature:
-            | "human-friendly"
-            | "camel-case"
-            | "kebab-case"
-            | "pascal-case"
-            | "snake-case",
-    ) => string;
-    schema: z.ZodTypeAny; // runtime schema for DTO (built programmatically)
-    introspect: {
-        keyByPath: Record<string, string>; // "grp1.q1a" -> "firstName"
-        pathByKey: Record<string, string>; // "firstName" -> "grp1.q1a"
-    };
-    provenance: {
-        src: unknown; // original Questionnaire JSON
-        srcHash: string; // stable digest (FNV-1a of stable JSON)
-    };
-    parse: (answers: unknown) => unknown; // LHC or QuestionnaireResponse -> DTO
+  identifier: (
+    nature:
+      | "human-friendly"
+      | "camel-case"
+      | "kebab-case"
+      | "pascal-case"
+      | "snake-case",
+  ) => string;
+  schema: z.ZodTypeAny; // runtime schema for DTO (built programmatically)
+  introspect: {
+    keyByPath: Record<string, string>; // "grp1.q1a" -> "firstName"
+    pathByKey: Record<string, string>; // "firstName" -> "grp1.q1a"
+  };
+  provenance: {
+    src: unknown; // original Questionnaire JSON
+    srcHash: string; // stable digest (FNV-1a of stable JSON)
+  };
+  parse: (answers: unknown) => unknown; // LHC or QuestionnaireResponse -> DTO
 };
 ```
 
@@ -223,14 +223,14 @@ The emitter produces a standalone TS file that depends only on Zod.
 
 ```ts
 type EmitInstructions = {
-    schemaTsIdentifier: string; // required: export const name
+  schemaTsIdentifier: string; // required: export const name
 
-    includeZodImport?: boolean; // default: true
-    zImportLine?: string; // default: import { z } from "npm:zod@4.1.1";
+  includeZodImport?: boolean; // default: true
+  zImportLine?: string; // default: import { z } from "npm:zod@4.1.1";
 
-    includeHeaderComment?: boolean; // default: true
-    openRoot?: boolean; // default: false (strict root)
-    omitEmptyGroups?: boolean; // default: true
+  includeHeaderComment?: boolean; // default: true
+  openRoot?: boolean; // default: false (strict root)
+  omitEmptyGroups?: boolean; // default: true
 };
 ```
 
@@ -252,11 +252,11 @@ Override property naming:
 
 ```ts
 const compiled = compileQuestionnaire(qDef, {
-    // use the first code (e.g., LOINC) when present, else linkId
-    propNameResolver: (item) => {
-        const loinc = item.code?.[0]?.code ?? item.linkId ?? "field";
-        return loinc.replace(/[^\w$]/g, "_"); // keep identifier-safe
-    },
+  // use the first code (e.g., LOINC) when present, else linkId
+  propNameResolver: (item) => {
+    const loinc = item.code?.[0]?.code ?? item.linkId ?? "field";
+    return loinc.replace(/[^\w$]/g, "_"); // keep identifier-safe
+  },
 });
 ```
 
@@ -340,8 +340,7 @@ This gives you friendly errors _and_ a hardened final object.
 
 ```ts
 const compiled = compileQuestionnaire(qDef, {
-    propNameResolver: (item) =>
-        (item.linkId ?? "field").replace(/[^\w$]/g, "_"),
+  propNameResolver: (item) => (item.linkId ?? "field").replace(/[^\w$]/g, "_"),
 });
 ```
 
@@ -353,8 +352,8 @@ const compiled = compileQuestionnaire(qDef, {
 ```ts
 const compiled = compileQuestionnaire(qDef, { omitEmptyGroups: false });
 const { tsCode } = emitZodTs(compiled, {
-    schemaTsIdentifier: "schema",
-    omitEmptyGroups: false,
+  schemaTsIdentifier: "schema",
+  omitEmptyGroups: false,
 });
 ```
 
@@ -397,17 +396,17 @@ emitZodTs(compiled, { schemaTsIdentifier: "schema", openRoot: true });
 ```ts
 // emitter.ts (core surface)
 export type EmitInstructions = {
-    schemaTsIdentifier: string;
-    includeZodImport?: boolean;
-    zImportLine?: string;
-    includeHeaderComment?: boolean;
-    openRoot?: boolean;
-    omitEmptyGroups?: boolean;
+  schemaTsIdentifier: string;
+  includeZodImport?: boolean;
+  zImportLine?: string;
+  includeHeaderComment?: boolean;
+  openRoot?: boolean;
+  omitEmptyGroups?: boolean;
 };
 
 export function emitZodTs(
-    compiled: CompiledQuestionnaire,
-    instructions: EmitInstructions,
+  compiled: CompiledQuestionnaire,
+  instructions: EmitInstructions,
 ): { tsCode: string[] };
 ```
 
@@ -428,12 +427,12 @@ import qDef from "./questionnaires/minimal.json" with { type: "json" };
 
 const compiled = compileQuestionnaire(qDef);
 const { tsCode } = emitZodTs(compiled, {
-    schemaTsIdentifier: "minimalSchema",
+  schemaTsIdentifier: "minimalSchema",
 });
 
 await Deno.writeTextFile("auto/minimal.auto.ts", tsCode.join("\n"));
 const mod = await import(
-    new URL("./auto/minimal.auto.ts", import.meta.url).href
+  new URL("./auto/minimal.auto.ts", import.meta.url).href
 );
 
 const schema = mod.minimalSchema;

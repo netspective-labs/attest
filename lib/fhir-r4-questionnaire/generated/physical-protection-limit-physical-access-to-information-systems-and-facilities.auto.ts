@@ -10,368 +10,902 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesModuleSignature: rt.ModuleSignature = {
-    title: "Physical Protection (Limit physical access to information systems and facilities)",
-    filename: "physical-protection-limit-physical-access-to-information-systems-and-facilities.auto.ts",
-    titleCamel: "`physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
-    titlePascal: "`PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
-    titleKebab: "`physical-protection-limit-physical-access-to-information-systems-and-facilities`",
-    lhcFormResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource",
-}
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesModuleSignature:
+  rt.ModuleSignature = {
+    title:
+      "Physical Protection (Limit physical access to information systems and facilities)",
+    filename:
+      "physical-protection-limit-physical-access-to-information-systems-and-facilities.auto.ts",
+    titleCamel:
+      "`physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
+    titlePascal:
+      "`PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
+    titleKebab:
+      "`physical-protection-limit-physical-access-to-information-systems-and-facilities`",
+    lhcFormResponseAdapterFnName:
+      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName:
+      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName:
+      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource",
+  };
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
 /**
  * Form Help (from display/help controls):
  * - Maintain an updated list of individuals authorized to access secure physical areas to ensure proper access control.
- * - Control and restrict access to sensitive physical locations to prevent unauthorized entry and protect assets.
- * - Establish formal procedures to grant, review, and revoke physical access permissions for personnel.
- * - Issue and manage secure access credentials to verify and control entry to restricted physical areas.
- * - Limit physical access to authorized areas during specific times to reduce security risks outside business hours.
  * - Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals
- * - Require authorized personnel to accompany visitors while they are in secure areas to ensure safety and security.
- * - Implement procedures to verify and record visitor identities before granting physical access to facilities.
- * - Track and record visitor movements within facilities to detect and prevent unauthorized activities.
- * - Define who is permitted to escort visitors and ensure they understand their responsibilities for security and supervision.
- * - Escort visitors and monitor visitor activity
- * - Implement methods to accurately record entry and exit activities in secure areas for audit and investigation purposes.
- * - Record key details such as date, time, personnel identity, and access points to ensure comprehensive tracking of physical access events.
- * - Maintain and regularly review access logs to detect anomalies and support security investigations.
- * - Keep an up-to-date inventory of all devices used to control physical access, such as card readers and locks, to ensure proper management and security.
- * - Implement procedures to configure, monitor, and maintain physical access devices to prevent unauthorized use or tampering.
- * - Apply security controls to protect physical access devices from damage, tampering, or unauthorized modification.
- * - Regularly perform maintenance and apply updates to physical access devices to ensure their reliability and security.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds = {
-  howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach: "324592389560",
-  fullTimeEmployees: "436045572485",
-  contractors: "857782926958",
-  partTimeEmployees: "944400994758",
-  visitorsWithEscort: "571574306369",
-  whatAreasRequireControlledPhysicalAccess: "702794466613",
-  whoAuthorizesPhysicalAccessToControlledAreas: "784352573703",
-  whatTypesOfPhysicalAccessCredentialsAreIssued: "773851219827",
-  areThereTimeBasedRestrictionsOnPhysicalAccess: "208747627440",
-  implementationStatus: "660777712272",
-  doesYourOrganizationRequireAllVisitorsToBeEscorted: "684131391577",
-  howAreVisitorsIdentifiedAndDistinguishedFromEmployees: "400470675855",
-  howIsVisitorActivityMonitoredWhileOnPremises: "829474009766",
-  whoIsAuthorizedToEscortVisitors: "422650784362",
-  implementationStatus2: "231843690847",
-  howDoYouLogPhysicalAccessToYourFacilities: "734633292283",
-  whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs: "174905707594",
-  howLongArePhysicalAccessLogsRetained: "245305278102",
-  howFrequentlyAreAccessLogsReviewed: "741567851452",
-  whoReviewsThePhysicalAccessLogs: "745836226925",
-  implementationStatus3: "320438032270",
-  whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse: "903629274308",
-  howArePhysicalAccessDevicesControlledAndManaged: "173451266066",
-  whatSecurityMeasuresProtectPhysicalAccessDevices: "911514884520",
-  howFrequentlyAreElectronicAccessSystemsUpdated: "466342459779",
-  implementationStatus4: "294892506040"
-} as const;
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds =
+  {
+    physicalProtectionStoreProcessHandlePhysicalProtection: "242760824142",
+    physicalProtectionAuthorizePhysicalAccess: "324592389560",
+    physicalProtectionFullTimeEmployeesAuthorized: "436045572485",
+    physicalProtectionContractorsAuthorized: "857782926958",
+    physicalProtectionPartTimeEmployeesAuthorized: "944400994758",
+    physicalProtectionVisitorsEscortsAuthorized: "571574306369",
+    physicalProtectionAreasControlledPhysicalAccess: "702794466613",
+    physicalProtectionAccessNotesEvidence: "279391143609",
+    physicalProtectionAuthorizePhysicalAccessControlAreas: "784352573703",
+    physicalProtectionAuthorizationNotesEvidence: "159961192967",
+    physicalProtectionTypeAccessCredentialsIssued: "773851219827",
+    physicalProtectionCredentialsNotesEvidence: "614664633852",
+    physicalProtectionTimeBasedRestrictionsPhysicalAccess: "208747627440",
+    physicalProtectionTimeBasedAccessNotesEvidence: "864878261078",
+    physicalProtectionImplementationStatus: "660777712272",
+    physicalProtectionTimeBasedNotesEvidence: "158505675327",
+    physicalProtectionRequireVisitorsEscort: "684131391577",
+    physicalProtectionNotesVisitorEscortEvidence: "372121837424",
+    physicalProtectionVisitorsIdentifyDistinguished: "400470675855",
+    physicalProtectionVisitorIdentificationNotesEvidence: "739299710732",
+    physicalProtectionVisitorActivityMonitoredPremises: "829474009766",
+    physicalProtectionVisitorActivityNotesEvidence: "398473749950",
+    physicalProtectionAuthorizeEscortVisitors: "422650784362",
+    physicalProtectionEscortAuthorizationNotesEvidence: "766282850057",
+    physicalProtectionImplementationStatus2: "231843690847",
+    physicalProtectionImplementationNotesEvidence: "972038317766",
+    physicalProtectionLogPhysicalAccessFacilities: "734633292283",
+    physicalProtectionAccessLoggingNotesEvidence: "325061856971",
+    physicalProtectionInformationPhysicalAccessLogs: "174905707594",
+    physicalProtectionInformationCaptureNotesEvidence: "750143252884",
+    physicalProtectionPhysicalAccessLogsRetained: "245305278102",
+    physicalProtectionLogRetentionNotesEvidence: "571727427731",
+    physicalProtectionFrequentAccessLogReviewed: "741567851452",
+    physicalProtectionFrequencyLogsNotesEvidence: "910408738855",
+    physicalProtectionReviewPhysicalAccessLogs: "745836226925",
+    physicalProtectionReviewAccessNotesEvidence: "361446942388",
+    physicalProtectionImplementationStatus3: "320438032270",
+    physicalProtectionImplementationNotesEvidence2: "724862600014",
+    physicalProtectionTypesPhysicalAccessDevices: "903629274308",
+    physicalProtectionDeviceInventoryNotesEvidence: "896964575016",
+    physicalProtectionPhysicalAccessDevicesControlled: "173451266066",
+    physicalProtectionDeviceControlNotesEvidence: "164071724457",
+    physicalProtectionMeasuresProtectPhysicalAccessDevices: "911514884520",
+    physicalProtectionDeviceSecurityNotesEvidence: "653480882123",
+    physicalProtectionElectronicAccessSystemsUpdated: "466342459779",
+    physicalProtectionDeviceMaintenanceNotesEvidence: "951698714660",
+    physicalProtectionImplementationStatus4: "294892506040",
+    physicalProtectionImplementationNotesEvidence3: "140603351800",
+  } as const;
 
 /** Normalized view of "Physical Protection (Limit physical access to information systems and facilities)" answers. */
 export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
   /**
+   * Do you store, process, or handle Federal Contract Information (FCI) on physical media or in on-site locations?
+   * linkId: 242760824142
+   * FHIR type: string
+   * Required: no
+   */
+  physicalProtectionStoreProcessHandlePhysicalProtection?: string;
+
+  /**
    * How many individuals are authorized for physical access to FCI areas (fill in the total for each)?
    * linkId: 324592389560
    * FHIR type: display
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 1. Authorized Personnel Inventory
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 1. Authorized Personnel Inventory
    * Required: no
    */
-  howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach?: string;
+  physicalProtectionAuthorizePhysicalAccess?: string;
 
   /**
    * Full-time employees:
    * linkId: 436045572485
    * FHIR type: integer
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 1. Authorized Personnel Inventory
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 1. Authorized Personnel Inventory
    * Required: no
    */
-  fullTimeEmployees?: number;
+  physicalProtectionFullTimeEmployeesAuthorized?: number;
 
   /**
    * Contractors:
    * linkId: 857782926958
    * FHIR type: integer
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 1. Authorized Personnel Inventory
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 1. Authorized Personnel Inventory
    * Required: no
    */
-  contractors?: number;
+  physicalProtectionContractorsAuthorized?: number;
 
   /**
    * Part-time employees:
    * linkId: 944400994758
    * FHIR type: integer
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 1. Authorized Personnel Inventory
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 1. Authorized Personnel Inventory
    * Required: no
    */
-  partTimeEmployees?: number;
+  physicalProtectionPartTimeEmployeesAuthorized?: number;
 
   /**
    * Visitors (with escort):
    * linkId: 571574306369
    * FHIR type: integer
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 1. Authorized Personnel Inventory
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 1. Authorized Personnel Inventory
    * Required: no
    */
-  visitorsWithEscort?: number;
+  physicalProtectionVisitorsEscortsAuthorized?: number;
 
   /**
    * What areas require controlled physical access?
    * linkId: 702794466613
    * FHIR type: string
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 2. Physical Access Areas
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 2. Physical Access Areas
    * Required: no
    */
-  whatAreasRequireControlledPhysicalAccess?: string[];
+  physicalProtectionAreasControlledPhysicalAccess?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 279391143609
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 2. Physical Access Areas
+   * Required: no
+   */
+  physicalProtectionAccessNotesEvidence?: string;
 
   /**
    * Who authorizes physical access to controlled areas?
    * linkId: 784352573703
    * FHIR type: string
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 3. Authorization Process
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 3. Authorization Process
    * Required: no
    */
-  whoAuthorizesPhysicalAccessToControlledAreas?: string[];
+  physicalProtectionAuthorizePhysicalAccessControlAreas?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 159961192967
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 3. Authorization Process
+   * Required: no
+   */
+  physicalProtectionAuthorizationNotesEvidence?: string;
 
   /**
    * What types of physical access credentials are issued?
    * linkId: 773851219827
    * FHIR type: string
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 4. Access Credentials
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 4. Access Credentials
    * Required: no
    */
-  whatTypesOfPhysicalAccessCredentialsAreIssued?: string[];
+  physicalProtectionTypeAccessCredentialsIssued?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 614664633852
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 4. Access Credentials
+   * Required: no
+   */
+  physicalProtectionCredentialsNotesEvidence?: string;
 
   /**
    * Are there time-based restrictions on physical access?
    * linkId: 208747627440
    * FHIR type: string
-   * Section: PE.L1-3.10.1 - Physical Access Authorization > 5. Time-Based Access Restrictions
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 5. Time-Based Access Restrictions
    * Required: no
    */
-  areThereTimeBasedRestrictionsOnPhysicalAccess?: string[];
+  physicalProtectionTimeBasedRestrictionsPhysicalAccess?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 864878261078
+   * FHIR type: string
+   * Entry format: Type your comments here...
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization > 5. Time-Based Access Restrictions
+   * Required: no
+   */
+  physicalProtectionTimeBasedAccessNotesEvidence?: string;
 
   /**
    * Implementation Status
    * linkId: 660777712272
    * FHIR type: string
-   * Section: PE.L1-3.10.1 - Physical Access Authorization
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization
    * Required: no
    */
-  implementationStatus?: string;
+  physicalProtectionImplementationStatus?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 158505675327
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.VIII - Physical Access Authorization
+   * Required: no
+   */
+  physicalProtectionTimeBasedNotesEvidence?: string;
 
   /**
    * Does your organization require all visitors to be escorted?
    * linkId: 684131391577
    * FHIR type: string
-   * Section: PE.L1-3.10.3 - Escort Visitors > 1. Visitor Escort Policy
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 1. Visitor Escort Policy
    * Required: no
    */
-  doesYourOrganizationRequireAllVisitorsToBeEscorted?: string[];
+  physicalProtectionRequireVisitorsEscort?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 372121837424
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 1. Visitor Escort Policy
+   * Required: no
+   */
+  physicalProtectionNotesVisitorEscortEvidence?: string;
 
   /**
    * How are visitors identified and distinguished from employees?
    * linkId: 400470675855
    * FHIR type: string
-   * Section: PE.L1-3.10.3 - Escort Visitors > 2. Visitor Identification
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 2. Visitor Identification
    * Required: no
    */
-  howAreVisitorsIdentifiedAndDistinguishedFromEmployees?: string[];
+  physicalProtectionVisitorsIdentifyDistinguished?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 739299710732
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 2. Visitor Identification
+   * Required: no
+   */
+  physicalProtectionVisitorIdentificationNotesEvidence?: string;
 
   /**
    * How is visitor activity monitored while on premises?
    * linkId: 829474009766
    * FHIR type: string
-   * Section: PE.L1-3.10.3 - Escort Visitors > 3. Visitor Activity Monitoring
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 3. Visitor Activity Monitoring
    * Required: no
    */
-  howIsVisitorActivityMonitoredWhileOnPremises?: string[];
+  physicalProtectionVisitorActivityMonitoredPremises?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 398473749950
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 3. Visitor Activity Monitoring
+   * Required: no
+   */
+  physicalProtectionVisitorActivityNotesEvidence?: string;
 
   /**
    * Who is authorized to escort visitors?
    * linkId: 422650784362
    * FHIR type: string
-   * Section: PE.L1-3.10.3 - Escort Visitors > 4. Escort Authorization
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 4. Escort Authorization
    * Required: no
    */
-  whoIsAuthorizedToEscortVisitors?: string[];
+  physicalProtectionAuthorizeEscortVisitors?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 766282850057
+   * FHIR type: string
+   * Entry format: Type your comments here...
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access > 4. Escort Authorization
+   * Required: no
+   */
+  physicalProtectionEscortAuthorizationNotesEvidence?: string;
 
   /**
    * Implementation Status
    * linkId: 231843690847
    * FHIR type: string
-   * Section: PE.L1-3.10.3 - Escort Visitors
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access
    * Required: no
    */
-  implementationStatus2?: string;
+  physicalProtectionImplementationStatus2?: string;
 
   /**
-   * How do you log physical access to your facilities?
+   * Notes / Evidence
+   * linkId: 972038317766
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX – Manage Visitors & Physical Access
+   * Required: no
+   */
+  physicalProtectionImplementationNotesEvidence?: string;
+
+  /**
+   *  How do you log physical access to your facilities?
    * linkId: 734633292283
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs > 1. Access Logging Methods
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 1. Access Logging Methods
    * Required: no
    */
-  howDoYouLogPhysicalAccessToYourFacilities?: string[];
+  physicalProtectionLogPhysicalAccessFacilities?: string[];
 
   /**
-   * What information is captured in your physical access logs Information Captured in Logs?
-   * linkId: 174905707594
+   * Notes / Evidence
+   * linkId: 325061856971
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs > 2. Information Captured in Logs
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 1. Access Logging Methods
    * Required: no
    */
-  whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs?: string[];
+  physicalProtectionAccessLoggingNotesEvidence?: string;
+
+  /**
+   *  What information is captured in your physical access logs Information Captured in Logs?
+   * linkId: 174905707594
+   * FHIR type: string
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 2. Information Captured in Logs
+   * Required: no
+   */
+  physicalProtectionInformationPhysicalAccessLogs?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 750143252884
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 2. Information Captured in Logs
+   * Required: no
+   */
+  physicalProtectionInformationCaptureNotesEvidence?: string;
 
   /**
    * How long are physical access logs retained?
    * linkId: 245305278102
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs > 3. Log Retention and Review 
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
    * Required: no
    */
-  howLongArePhysicalAccessLogsRetained?: string;
+  physicalProtectionPhysicalAccessLogsRetained?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 571727427731
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Required: no
+   */
+  physicalProtectionLogRetentionNotesEvidence?: string;
 
   /**
    * How frequently are access logs reviewed?
    * linkId: 741567851452
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs > 3. Log Retention and Review 
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
    * Required: no
    */
-  howFrequentlyAreAccessLogsReviewed?: string;
+  physicalProtectionFrequentAccessLogReviewed?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 910408738855
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Required: no
+   */
+  physicalProtectionFrequencyLogsNotesEvidence?: string;
 
   /**
    * Who reviews the physical access logs?
    * linkId: 745836226925
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs > 3. Log Retention and Review 
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
    * Required: no
    */
-  whoReviewsThePhysicalAccessLogs?: string[];
+  physicalProtectionReviewPhysicalAccessLogs?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 361446942388
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Required: no
+   */
+  physicalProtectionReviewAccessNotesEvidence?: string;
 
   /**
    * Implementation Status
    * linkId: 320438032270
    * FHIR type: string
-   * Section: PE.L1-3.10.4 - Physical Access Logs
+   * Section: PE.L1-B.1.IX –Physical Access Logs
    * Required: no
    */
-  implementationStatus3?: string;
+  physicalProtectionImplementationStatus3?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 724862600014
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Physical Access Logs
+   * Required: no
+   */
+  physicalProtectionImplementationNotesEvidence2?: string;
 
   /**
    * What types of physical access devices does your organization use?
    * linkId: 903629274308
    * FHIR type: string
-   * Section: PE.L1-3.10.5 - Manage Physical Access Devices > 1. Physical Access Device Inventory 
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory
    * Required: no
    */
-  whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse?: string[];
+  physicalProtectionTypesPhysicalAccessDevices?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 896964575016
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory
+   * Required: no
+   */
+  physicalProtectionDeviceInventoryNotesEvidence?: string;
 
   /**
    * How are physical access devices controlled and managed?
    * linkId: 173451266066
    * FHIR type: string
-   * Section: PE.L1-3.10.5 - Manage Physical Access Devices > 2. Device Control and Management 
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management
    * Required: no
    */
-  howArePhysicalAccessDevicesControlledAndManaged?: string[];
+  physicalProtectionPhysicalAccessDevicesControlled?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 164071724457
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management
+   * Required: no
+   */
+  physicalProtectionDeviceControlNotesEvidence?: string;
 
   /**
    * What security measures protect physical access devices?
    * linkId: 911514884520
    * FHIR type: string
-   * Section: PE.L1-3.10.5 - Manage Physical Access Devices > 3. Device Security Measures 
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures
    * Required: no
    */
-  whatSecurityMeasuresProtectPhysicalAccessDevices?: string[];
+  physicalProtectionMeasuresProtectPhysicalAccessDevices?: string[];
+
+  /**
+   * Notes / Evidence
+   * linkId: 653480882123
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures
+   * Required: no
+   */
+  physicalProtectionDeviceSecurityNotesEvidence?: string;
 
   /**
    * How frequently are electronic access systems updated?
    * linkId: 466342459779
    * FHIR type: string
-   * Section: PE.L1-3.10.5 - Manage Physical Access Devices > 4. Device Maintenance and Updates
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 4. Device Maintenance and Updates
    * Required: no
    */
-  howFrequentlyAreElectronicAccessSystemsUpdated?: string;
+  physicalProtectionElectronicAccessSystemsUpdated?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 951698714660
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 4. Device Maintenance and Updates
+   * Required: no
+   */
+  physicalProtectionDeviceMaintenanceNotesEvidence?: string;
 
   /**
    * Implementation Status
    * linkId: 294892506040
    * FHIR type: string
-   * Section: PE.L1-3.10.5 - Manage Physical Access Devices
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices
    * Required: no
    */
-  implementationStatus4?: string;
+  physicalProtectionImplementationStatus4?: string;
+
+  /**
+   * Notes / Evidence
+   * linkId: 140603351800
+   * FHIR type: string
+   * Entry format: Enter notes or supporting evidence, if any
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices
+   * Required: no
+   */
+  physicalProtectionImplementationNotesEvidence3?: string;
 }
 
 /** Convert an LHC JSON response into a normalized PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities object. */
-export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(input: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
+export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(
+  input: Any,
+): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
   return {
-  howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "324592389560")),
-  fullTimeEmployees: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "436045572485")),
-  contractors: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "857782926958")),
-  partTimeEmployees: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "944400994758")),
-  visitorsWithEscort: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "571574306369")),
-  whatAreasRequireControlledPhysicalAccess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "702794466613")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatAreasRequireControlledPhysicalAccess"],
-  whoAuthorizesPhysicalAccessToControlledAreas: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "784352573703")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoAuthorizesPhysicalAccessToControlledAreas"],
-  whatTypesOfPhysicalAccessCredentialsAreIssued: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "773851219827")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatTypesOfPhysicalAccessCredentialsAreIssued"],
-  areThereTimeBasedRestrictionsOnPhysicalAccess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "208747627440")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["areThereTimeBasedRestrictionsOnPhysicalAccess"],
-  implementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "660777712272")),
-  doesYourOrganizationRequireAllVisitorsToBeEscorted: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "684131391577")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["doesYourOrganizationRequireAllVisitorsToBeEscorted"],
-  howAreVisitorsIdentifiedAndDistinguishedFromEmployees: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "400470675855")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howAreVisitorsIdentifiedAndDistinguishedFromEmployees"],
-  howIsVisitorActivityMonitoredWhileOnPremises: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "829474009766")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howIsVisitorActivityMonitoredWhileOnPremises"],
-  whoIsAuthorizedToEscortVisitors: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "422650784362")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoIsAuthorizedToEscortVisitors"],
-  implementationStatus2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "231843690847")),
-  howDoYouLogPhysicalAccessToYourFacilities: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "734633292283")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howDoYouLogPhysicalAccessToYourFacilities"],
-  whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "174905707594")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs"],
-  howLongArePhysicalAccessLogsRetained: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "245305278102")),
-  howFrequentlyAreAccessLogsReviewed: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "741567851452")),
-  whoReviewsThePhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "745836226925")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoReviewsThePhysicalAccessLogs"],
-  implementationStatus3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "320438032270")),
-  whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "903629274308")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse"],
-  howArePhysicalAccessDevicesControlledAndManaged: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "173451266066")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howArePhysicalAccessDevicesControlledAndManaged"],
-  whatSecurityMeasuresProtectPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "911514884520")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatSecurityMeasuresProtectPhysicalAccessDevices"],
-  howFrequentlyAreElectronicAccessSystemsUpdated: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "466342459779")),
-  implementationStatus4: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "294892506040")),
+    physicalProtectionStoreProcessHandlePhysicalProtection: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "242760824142")),
+    physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "324592389560"),
+    ),
+    physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(
+      rt.findLhcValueByLinkId(input, "436045572485"),
+    ),
+    physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(
+      rt.findLhcValueByLinkId(input, "857782926958"),
+    ),
+    physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(
+      rt.findLhcValueByLinkId(input, "944400994758"),
+    ),
+    physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(
+      rt.findLhcValueByLinkId(input, "571574306369"),
+    ),
+    physicalProtectionAreasControlledPhysicalAccess: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "702794466613"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionAreasControlledPhysicalAccess"
+      ],
+    physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "279391143609"),
+    ),
+    physicalProtectionAuthorizePhysicalAccessControlAreas: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "784352573703"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionAuthorizePhysicalAccessControlAreas"
+      ],
+    physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "159961192967"),
+    ),
+    physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(
+      rt.findLhcValueByLinkId(input, "773851219827"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionTypeAccessCredentialsIssued"
+    ],
+    physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "614664633852"),
+    ),
+    physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "208747627440"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionTimeBasedRestrictionsPhysicalAccess"
+      ],
+    physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "864878261078"),
+    ),
+    physicalProtectionImplementationStatus: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "660777712272"),
+    ),
+    physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "158505675327"),
+    ),
+    physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "684131391577"),
+    ),
+    physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "372121837424"),
+    ),
+    physicalProtectionVisitorsIdentifyDistinguished: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "400470675855"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionVisitorsIdentifyDistinguished"
+      ],
+    physicalProtectionVisitorIdentificationNotesEvidence: rt
+      .coerceOptionalString(rt.findLhcValueByLinkId(input, "739299710732")),
+    physicalProtectionVisitorActivityMonitoredPremises: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "829474009766"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionVisitorActivityMonitoredPremises"
+      ],
+    physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "398473749950"),
+    ),
+    physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "422650784362"),
+    ),
+    physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "766282850057"),
+    ),
+    physicalProtectionImplementationStatus2: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "231843690847"),
+    ),
+    physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "972038317766"),
+    ),
+    physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(
+      rt.findLhcValueByLinkId(input, "734633292283"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionLogPhysicalAccessFacilities"
+    ],
+    physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "325061856971"),
+    ),
+    physicalProtectionInformationPhysicalAccessLogs: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "174905707594"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionInformationPhysicalAccessLogs"
+      ],
+    physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "750143252884"),
+    ),
+    physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "245305278102"),
+    ),
+    physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "571727427731"),
+    ),
+    physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "741567851452"),
+    ),
+    physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "910408738855"),
+    ),
+    physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(
+      rt.findLhcValueByLinkId(input, "745836226925"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionReviewPhysicalAccessLogs"
+    ],
+    physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "361446942388"),
+    ),
+    physicalProtectionImplementationStatus3: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "320438032270"),
+    ),
+    physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "724862600014"),
+    ),
+    physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(
+      rt.findLhcValueByLinkId(input, "903629274308"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionTypesPhysicalAccessDevices"
+    ],
+    physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "896964575016"),
+    ),
+    physicalProtectionPhysicalAccessDevicesControlled: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "173451266066"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionPhysicalAccessDevicesControlled"
+      ],
+    physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "164071724457"),
+    ),
+    physicalProtectionMeasuresProtectPhysicalAccessDevices: rt
+      .coerceOptionalStringArray(
+        rt.findLhcValueByLinkId(input, "911514884520"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionMeasuresProtectPhysicalAccessDevices"
+      ],
+    physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "653480882123"),
+    ),
+    physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "466342459779"),
+    ),
+    physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "951698714660"),
+    ),
+    physicalProtectionImplementationStatus4: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "294892506040"),
+    ),
+    physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(
+      rt.findLhcValueByLinkId(input, "140603351800"),
+    ),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities object. */
-export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(qr: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
+export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(
+  qr: Any,
+): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
   return {
-  howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "324592389560")),
-  fullTimeEmployees: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "436045572485")),
-  contractors: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "857782926958")),
-  partTimeEmployees: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "944400994758")),
-  visitorsWithEscort: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "571574306369")),
-  whatAreasRequireControlledPhysicalAccess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "702794466613")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatAreasRequireControlledPhysicalAccess"],
-  whoAuthorizesPhysicalAccessToControlledAreas: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "784352573703")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoAuthorizesPhysicalAccessToControlledAreas"],
-  whatTypesOfPhysicalAccessCredentialsAreIssued: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "773851219827")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatTypesOfPhysicalAccessCredentialsAreIssued"],
-  areThereTimeBasedRestrictionsOnPhysicalAccess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "208747627440")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["areThereTimeBasedRestrictionsOnPhysicalAccess"],
-  implementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "660777712272")),
-  doesYourOrganizationRequireAllVisitorsToBeEscorted: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "684131391577")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["doesYourOrganizationRequireAllVisitorsToBeEscorted"],
-  howAreVisitorsIdentifiedAndDistinguishedFromEmployees: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "400470675855")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howAreVisitorsIdentifiedAndDistinguishedFromEmployees"],
-  howIsVisitorActivityMonitoredWhileOnPremises: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "829474009766")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howIsVisitorActivityMonitoredWhileOnPremises"],
-  whoIsAuthorizedToEscortVisitors: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "422650784362")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoIsAuthorizedToEscortVisitors"],
-  implementationStatus2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "231843690847")),
-  howDoYouLogPhysicalAccessToYourFacilities: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "734633292283")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howDoYouLogPhysicalAccessToYourFacilities"],
-  whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "174905707594")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs"],
-  howLongArePhysicalAccessLogsRetained: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "245305278102")),
-  howFrequentlyAreAccessLogsReviewed: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "741567851452")),
-  whoReviewsThePhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "745836226925")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whoReviewsThePhysicalAccessLogs"],
-  implementationStatus3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "320438032270")),
-  whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "903629274308")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse"],
-  howArePhysicalAccessDevicesControlledAndManaged: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "173451266066")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["howArePhysicalAccessDevicesControlledAndManaged"],
-  whatSecurityMeasuresProtectPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "911514884520")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["whatSecurityMeasuresProtectPhysicalAccessDevices"],
-  howFrequentlyAreElectronicAccessSystemsUpdated: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "466342459779")),
-  implementationStatus4: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "294892506040")),
+    physicalProtectionStoreProcessHandlePhysicalProtection: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "242760824142")),
+    physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "324592389560"),
+    ),
+    physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(
+      rt.findQrAnswerByLinkId(qr, "436045572485"),
+    ),
+    physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(
+      rt.findQrAnswerByLinkId(qr, "857782926958"),
+    ),
+    physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(
+      rt.findQrAnswerByLinkId(qr, "944400994758"),
+    ),
+    physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(
+      rt.findQrAnswerByLinkId(qr, "571574306369"),
+    ),
+    physicalProtectionAreasControlledPhysicalAccess: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "702794466613"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionAreasControlledPhysicalAccess"
+      ],
+    physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "279391143609"),
+    ),
+    physicalProtectionAuthorizePhysicalAccessControlAreas: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "784352573703"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionAuthorizePhysicalAccessControlAreas"
+      ],
+    physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "159961192967"),
+    ),
+    physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(
+      rt.findQrAnswersByLinkId(qr, "773851219827"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionTypeAccessCredentialsIssued"
+    ],
+    physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "614664633852"),
+    ),
+    physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "208747627440"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionTimeBasedRestrictionsPhysicalAccess"
+      ],
+    physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "864878261078"),
+    ),
+    physicalProtectionImplementationStatus: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "660777712272"),
+    ),
+    physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "158505675327"),
+    ),
+    physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "684131391577"),
+    ),
+    physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "372121837424"),
+    ),
+    physicalProtectionVisitorsIdentifyDistinguished: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "400470675855"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionVisitorsIdentifyDistinguished"
+      ],
+    physicalProtectionVisitorIdentificationNotesEvidence: rt
+      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "739299710732")),
+    physicalProtectionVisitorActivityMonitoredPremises: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "829474009766"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionVisitorActivityMonitoredPremises"
+      ],
+    physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "398473749950"),
+    ),
+    physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "422650784362"),
+    ),
+    physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "766282850057"),
+    ),
+    physicalProtectionImplementationStatus2: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "231843690847"),
+    ),
+    physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "972038317766"),
+    ),
+    physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(
+      rt.findQrAnswersByLinkId(qr, "734633292283"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionLogPhysicalAccessFacilities"
+    ],
+    physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "325061856971"),
+    ),
+    physicalProtectionInformationPhysicalAccessLogs: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "174905707594"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionInformationPhysicalAccessLogs"
+      ],
+    physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "750143252884"),
+    ),
+    physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "245305278102"),
+    ),
+    physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "571727427731"),
+    ),
+    physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "741567851452"),
+    ),
+    physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "910408738855"),
+    ),
+    physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(
+      rt.findQrAnswersByLinkId(qr, "745836226925"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionReviewPhysicalAccessLogs"
+    ],
+    physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "361446942388"),
+    ),
+    physicalProtectionImplementationStatus3: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "320438032270"),
+    ),
+    physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "724862600014"),
+    ),
+    physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(
+      rt.findQrAnswersByLinkId(qr, "903629274308"),
+    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+      "physicalProtectionTypesPhysicalAccessDevices"
+    ],
+    physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "896964575016"),
+    ),
+    physicalProtectionPhysicalAccessDevicesControlled: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "173451266066"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionPhysicalAccessDevicesControlled"
+      ],
+    physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "164071724457"),
+    ),
+    physicalProtectionMeasuresProtectPhysicalAccessDevices: rt
+      .coerceOptionalStringArray(
+        rt.findQrAnswersByLinkId(qr, "911514884520"),
+      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
+        "physicalProtectionMeasuresProtectPhysicalAccessDevices"
+      ],
+    physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "653480882123"),
+    ),
+    physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "466342459779"),
+    ),
+    physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "951698714660"),
+    ),
+    physicalProtectionImplementationStatus4: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "294892506040"),
+    ),
+    physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(
+      rt.findQrAnswerByLinkId(qr, "140603351800"),
+    ),
   };
 }
 
@@ -396,22 +930,46 @@ export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFaci
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-  constructor(readonly value: PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities) {}
+  constructor(
+    readonly value:
+      PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities,
+  ) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(input: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(input));
+  static fromLhcFormResponse(
+    input: Any,
+  ): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
+    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(
+      physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(
+        input,
+      ),
+    );
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(qr: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(qr));
+  static fromQuestionnaireResponse(
+    qr: Any,
+  ): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
+    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(
+      physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(
+        qr,
+      ),
+    );
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): { ok: boolean; missing: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> } {
-    const missing: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
-    const req: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
+  validateRequiredFields(): {
+    ok: boolean;
+    missing: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    >;
+  } {
+    const missing: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    > = [];
+    const req: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -432,13 +990,70 @@ export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities>;
+    missingRequired: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    >;
   } {
-    const req: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
-    const all: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = ["howManyIndividualsAreAuthorizedForPhysicalAccessToFciAreasFillInTheTotalForEach", "fullTimeEmployees", "contractors", "partTimeEmployees", "visitorsWithEscort", "whatAreasRequireControlledPhysicalAccess", "whoAuthorizesPhysicalAccessToControlledAreas", "whatTypesOfPhysicalAccessCredentialsAreIssued", "areThereTimeBasedRestrictionsOnPhysicalAccess", "implementationStatus", "doesYourOrganizationRequireAllVisitorsToBeEscorted", "howAreVisitorsIdentifiedAndDistinguishedFromEmployees", "howIsVisitorActivityMonitoredWhileOnPremises", "whoIsAuthorizedToEscortVisitors", "implementationStatus2", "howDoYouLogPhysicalAccessToYourFacilities", "whatInformationIsCapturedInYourPhysicalAccessLogsInformationCapturedInLogs", "howLongArePhysicalAccessLogsRetained", "howFrequentlyAreAccessLogsReviewed", "whoReviewsThePhysicalAccessLogs", "implementationStatus3", "whatTypesOfPhysicalAccessDevicesDoesYourOrganizationUse", "howArePhysicalAccessDevicesControlledAndManaged", "whatSecurityMeasuresProtectPhysicalAccessDevices", "howFrequentlyAreElectronicAccessSystemsUpdated", "implementationStatus4"];
+    const req: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    > = [];
+    const all: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    > = [
+      "physicalProtectionStoreProcessHandlePhysicalProtection",
+      "physicalProtectionAuthorizePhysicalAccess",
+      "physicalProtectionFullTimeEmployeesAuthorized",
+      "physicalProtectionContractorsAuthorized",
+      "physicalProtectionPartTimeEmployeesAuthorized",
+      "physicalProtectionVisitorsEscortsAuthorized",
+      "physicalProtectionAreasControlledPhysicalAccess",
+      "physicalProtectionAccessNotesEvidence",
+      "physicalProtectionAuthorizePhysicalAccessControlAreas",
+      "physicalProtectionAuthorizationNotesEvidence",
+      "physicalProtectionTypeAccessCredentialsIssued",
+      "physicalProtectionCredentialsNotesEvidence",
+      "physicalProtectionTimeBasedRestrictionsPhysicalAccess",
+      "physicalProtectionTimeBasedAccessNotesEvidence",
+      "physicalProtectionImplementationStatus",
+      "physicalProtectionTimeBasedNotesEvidence",
+      "physicalProtectionRequireVisitorsEscort",
+      "physicalProtectionNotesVisitorEscortEvidence",
+      "physicalProtectionVisitorsIdentifyDistinguished",
+      "physicalProtectionVisitorIdentificationNotesEvidence",
+      "physicalProtectionVisitorActivityMonitoredPremises",
+      "physicalProtectionVisitorActivityNotesEvidence",
+      "physicalProtectionAuthorizeEscortVisitors",
+      "physicalProtectionEscortAuthorizationNotesEvidence",
+      "physicalProtectionImplementationStatus2",
+      "physicalProtectionImplementationNotesEvidence",
+      "physicalProtectionLogPhysicalAccessFacilities",
+      "physicalProtectionAccessLoggingNotesEvidence",
+      "physicalProtectionInformationPhysicalAccessLogs",
+      "physicalProtectionInformationCaptureNotesEvidence",
+      "physicalProtectionPhysicalAccessLogsRetained",
+      "physicalProtectionLogRetentionNotesEvidence",
+      "physicalProtectionFrequentAccessLogReviewed",
+      "physicalProtectionFrequencyLogsNotesEvidence",
+      "physicalProtectionReviewPhysicalAccessLogs",
+      "physicalProtectionReviewAccessNotesEvidence",
+      "physicalProtectionImplementationStatus3",
+      "physicalProtectionImplementationNotesEvidence2",
+      "physicalProtectionTypesPhysicalAccessDevices",
+      "physicalProtectionDeviceInventoryNotesEvidence",
+      "physicalProtectionPhysicalAccessDevicesControlled",
+      "physicalProtectionDeviceControlNotesEvidence",
+      "physicalProtectionMeasuresProtectPhysicalAccessDevices",
+      "physicalProtectionDeviceSecurityNotesEvidence",
+      "physicalProtectionElectronicAccessSystemsUpdated",
+      "physicalProtectionDeviceMaintenanceNotesEvidence",
+      "physicalProtectionImplementationStatus4",
+      "physicalProtectionImplementationNotesEvidence3",
+    ];
 
     let reqFilled = 0;
-    const missingReq: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
+    const missingReq: Array<
+      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
+    > = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -451,7 +1066,8 @@ export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
     }
 
     return {
-      formTitle: "Physical Protection (Limit physical access to information systems and facilities)",
+      formTitle:
+        "Physical Protection (Limit physical access to information systems and facilities)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,

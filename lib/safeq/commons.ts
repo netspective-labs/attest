@@ -5,7 +5,7 @@ import { zod as z } from "./deps.ts";
  * ────────────────────────────────────────────────────────────────────────── */
 
 export const open = <T extends z.ZodRawShape>(shape: T) =>
-    z.object(shape).catchall(z.unknown());
+  z.object(shape).catchall(z.unknown());
 
 export const strict = <T extends z.ZodRawShape>(shape: T) =>
-    z.object(shape).strict();
+  z.object(shape).strict();

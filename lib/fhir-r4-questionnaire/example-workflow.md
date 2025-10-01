@@ -26,97 +26,97 @@ realistic; includes required fields and a date)
 
 ```json
 {
-    "resourceType": "Questionnaire",
-    "meta": {
-        "profile": ["http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"]
-    },
-    "title": "Company Information",
-    "status": "draft",
-    "item": [
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": ["http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"]
+  },
+  "title": "Company Information",
+  "status": "draft",
+  "item": [
+    {
+      "type": "group",
+      "linkId": "org-details",
+      "text": "Organization Details",
+      "item": [
         {
-            "type": "group",
-            "linkId": "org-details",
-            "text": "Organization Details",
-            "item": [
-                {
-                    "linkId": "help-org-details",
-                    "type": "display",
-                    "text": "Provide essential information about your organization.",
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "coding": [
-                                    {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "help"
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "string",
-            "linkId": "715544477968",
-            "text": "Organization Name",
-            "required": true,
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Enter your organization name"
-                }
-            ]
-        },
-        {
-            "type": "string",
-            "linkId": "655141523763",
-            "text": "Form Completed By",
-            "required": true,
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Your full name"
-                }
-            ]
-        },
-        {
-            "type": "date",
-            "linkId": "276403539223",
-            "text": "Assessment Date"
-        },
-        {
-            "type": "group",
-            "linkId": "identifiers",
-            "text": "Organization Identifiers",
-            "item": [
-                {
-                    "type": "string",
-                    "linkId": "805221373063",
-                    "text": "CAGE Code",
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "5-character CAGE code"
-                        }
-                    ]
-                },
-                {
-                    "type": "string",
-                    "linkId": "374784155003",
-                    "text": "DUNS Number",
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                            "valueString": "9-digit DUNS number"
-                        }
-                    ]
-                }
-            ]
+          "linkId": "help-org-details",
+          "type": "display",
+          "text": "Provide essential information about your organization.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help"
+                  }
+                ]
+              }
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "type": "string",
+      "linkId": "715544477968",
+      "text": "Organization Name",
+      "required": true,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Enter your organization name"
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "linkId": "655141523763",
+      "text": "Form Completed By",
+      "required": true,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Your full name"
+        }
+      ]
+    },
+    {
+      "type": "date",
+      "linkId": "276403539223",
+      "text": "Assessment Date"
+    },
+    {
+      "type": "group",
+      "linkId": "identifiers",
+      "text": "Organization Identifiers",
+      "item": [
+        {
+          "type": "string",
+          "linkId": "805221373063",
+          "text": "CAGE Code",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "5-character CAGE code"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "374784155003",
+          "text": "DUNS Number",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "9-digit DUNS number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -138,57 +138,57 @@ for more information.
 
 ```json
 {
-    "lformsVersion": "38.2.0",
-    "name": "Company Information",
-    "items": [
+  "lformsVersion": "38.2.0",
+  "name": "Company Information",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "Organization Details",
+      "linkId": "org-details",
+      "items": []
+    },
+    {
+      "dataType": "ST",
+      "question": "Organization Name",
+      "linkId": "715544477968",
+      "answerCardinality": { "min": "1" },
+      "value": "Netspective Communications LLC"
+    },
+    {
+      "dataType": "ST",
+      "question": "Form Completed By",
+      "linkId": "655141523763",
+      "answerCardinality": { "min": "1" },
+      "value": "Shahid N. Shah"
+    },
+    {
+      "dataType": "DT",
+      "question": "Assessment Date",
+      "linkId": "276403539223",
+      "value": "2025-08-16"
+    },
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "Organization Identifiers",
+      "linkId": "identifiers",
+      "items": [
         {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Organization Details",
-            "linkId": "org-details",
-            "items": []
+          "dataType": "ST",
+          "question": "CAGE Code",
+          "linkId": "805221373063",
+          "value": "12345"
         },
         {
-            "dataType": "ST",
-            "question": "Organization Name",
-            "linkId": "715544477968",
-            "answerCardinality": { "min": "1" },
-            "value": "Netspective Communications LLC"
-        },
-        {
-            "dataType": "ST",
-            "question": "Form Completed By",
-            "linkId": "655141523763",
-            "answerCardinality": { "min": "1" },
-            "value": "Shahid N. Shah"
-        },
-        {
-            "dataType": "DT",
-            "question": "Assessment Date",
-            "linkId": "276403539223",
-            "value": "2025-08-16"
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Organization Identifiers",
-            "linkId": "identifiers",
-            "items": [
-                {
-                    "dataType": "ST",
-                    "question": "CAGE Code",
-                    "linkId": "805221373063",
-                    "value": "12345"
-                },
-                {
-                    "dataType": "ST",
-                    "question": "DUNS Number",
-                    "linkId": "374784155003",
-                    "value": "123456789"
-                }
-            ]
+          "dataType": "ST",
+          "question": "DUNS Number",
+          "linkId": "374784155003",
+          "value": "123456789"
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
@@ -199,32 +199,32 @@ appear in `item[].answer[].value*`)
 
 ```json
 {
-    "resourceType": "QuestionnaireResponse",
-    "status": "completed",
-    "item": [
+  "resourceType": "QuestionnaireResponse",
+  "status": "completed",
+  "item": [
+    {
+      "linkId": "715544477968",
+      "answer": [{ "valueString": "Netspective Communications LLC" }]
+    },
+    {
+      "linkId": "655141523763",
+      "answer": [{ "valueString": "Shahid N. Shah" }]
+    },
+    { "linkId": "276403539223", "answer": [{ "valueDate": "2025-08-16" }] },
+    {
+      "linkId": "identifiers",
+      "item": [
         {
-            "linkId": "715544477968",
-            "answer": [{ "valueString": "Netspective Communications LLC" }]
+          "linkId": "805221373063",
+          "answer": [{ "valueString": "12345" }]
         },
         {
-            "linkId": "655141523763",
-            "answer": [{ "valueString": "Shahid N. Shah" }]
-        },
-        { "linkId": "276403539223", "answer": [{ "valueDate": "2025-08-16" }] },
-        {
-            "linkId": "identifiers",
-            "item": [
-                {
-                    "linkId": "805221373063",
-                    "answer": [{ "valueString": "12345" }]
-                },
-                {
-                    "linkId": "374784155003",
-                    "answer": [{ "valueString": "123456789" }]
-                }
-            ]
+          "linkId": "374784155003",
+          "answer": [{ "valueString": "123456789" }]
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
@@ -257,55 +257,55 @@ will look like:
 
 ```ts
 export const CompanyInformationLinkIds = {
-    organizationName: "715544477968",
-    formCompletedBy: "655141523763",
-    assessmentDate: "276403539223",
-    cageCode: "805221373063",
-    dunsNumber: "374784155003",
+  organizationName: "715544477968",
+  formCompletedBy: "655141523763",
+  assessmentDate: "276403539223",
+  cageCode: "805221373063",
+  dunsNumber: "374784155003",
 } as const;
 
 export interface CompanyInformation {
-    /** Organization Name
-     * linkId: 715544477968
-     * FHIR type: string
-     * Entry format: Enter your organization name
-     * Section: Organization Details
-     * Required: yes
-     */
-    organizationName: string;
+  /** Organization Name
+   * linkId: 715544477968
+   * FHIR type: string
+   * Entry format: Enter your organization name
+   * Section: Organization Details
+   * Required: yes
+   */
+  organizationName: string;
 
-    /** Form Completed By
-     * linkId: 655141523763
-     * FHIR type: string
-     * Entry format: Your full name
-     * Required: yes
-     */
-    formCompletedBy: string;
+  /** Form Completed By
+   * linkId: 655141523763
+   * FHIR type: string
+   * Entry format: Your full name
+   * Required: yes
+   */
+  formCompletedBy: string;
 
-    /** Assessment Date
-     * linkId: 276403539223
-     * FHIR type: date
-     * Required: no
-     */
-    assessmentDate?: Date;
+  /** Assessment Date
+   * linkId: 276403539223
+   * FHIR type: date
+   * Required: no
+   */
+  assessmentDate?: Date;
 
-    /** CAGE Code
-     * linkId: 805221373063
-     * FHIR type: string
-     * Entry format: 5-character CAGE code
-     * Section: Organization Identifiers
-     * Required: no
-     */
-    cageCode?: string;
+  /** CAGE Code
+   * linkId: 805221373063
+   * FHIR type: string
+   * Entry format: 5-character CAGE code
+   * Section: Organization Identifiers
+   * Required: no
+   */
+  cageCode?: string;
 
-    /** DUNS Number
-     * linkId: 374784155003
-     * FHIR type: string
-     * Entry format: 9-digit DUNS number
-     * Section: Organization Identifiers
-     * Required: no
-     */
-    dunsNumber?: string;
+  /** DUNS Number
+   * linkId: 374784155003
+   * FHIR type: string
+   * Entry format: 9-digit DUNS number
+   * Section: Organization Identifiers
+   * Required: no
+   */
+  dunsNumber?: string;
 }
 ```
 
@@ -346,19 +346,19 @@ your own codebase.
 ```ts
 #!/usr/bin/env -S deno run --allow-read
 import {
-    CompanyInformationInterpreter,
+  CompanyInformationInterpreter,
 } from "../fixtures/company-information.auto.ts"; // adjust path as needed
 
 // Load example payloads (simulating post-UI collection)
 const lhc = JSON.parse(
-    await Deno.readTextFile(
-        "../fixtures/company-information.lhc-form-response.json",
-    ),
+  await Deno.readTextFile(
+    "../fixtures/company-information.lhc-form-response.json",
+  ),
 );
 const qr = JSON.parse(
-    await Deno.readTextFile(
-        "../fixtures/company-information.fhir-r4-questionnaire-response.json",
-    ),
+  await Deno.readTextFile(
+    "../fixtures/company-information.fhir-r4-questionnaire-response.json",
+  ),
 );
 
 // Normalize from LHC using the sample interpreter
@@ -375,19 +375,19 @@ console.log("[fromQr] readiness:", fromQr.assessReadiness());
 
 // Simple equality check for demonstration (ignoring Date identity vs. value)
 function snapshot(v: unknown) {
-    // convert Dates to ISO strings for comparison
-    return JSON.parse(
-        JSON.stringify(
-            v,
-            (_k, val) => val instanceof Date ? val.toISOString() : val,
-        ),
-    );
+  // convert Dates to ISO strings for comparison
+  return JSON.parse(
+    JSON.stringify(
+      v,
+      (_k, val) => val instanceof Date ? val.toISOString() : val,
+    ),
+  );
 }
 
 console.log(
-    "[equivalent normalized?]",
-    JSON.stringify(snapshot(fromLhc.value)) ===
-        JSON.stringify(snapshot(fromQr.value)),
+  "[equivalent normalized?]",
+  JSON.stringify(snapshot(fromLhc.value)) ===
+    JSON.stringify(snapshot(fromQr.value)),
 );
 ```
 
@@ -415,53 +415,53 @@ import { assert, assertEquals } from "jsr:@std/assert@^1.0.0";
 import { CompanyInformationInterpreter } from "../fixtures/company-information.auto.ts";
 
 Deno.test("Company Information: LHC and QR normalize equivalently", async () => {
-    const lhc = JSON.parse(
-        await Deno.readTextFile(
-            "../fixtures/company-information.lhc-form-response.json",
-        ),
-    );
-    const qr = JSON.parse(
-        await Deno.readTextFile(
-            "../fixtures/company-information.fhir-r4-questionnaire-response.json",
-        ),
-    );
+  const lhc = JSON.parse(
+    await Deno.readTextFile(
+      "../fixtures/company-information.lhc-form-response.json",
+    ),
+  );
+  const qr = JSON.parse(
+    await Deno.readTextFile(
+      "../fixtures/company-information.fhir-r4-questionnaire-response.json",
+    ),
+  );
 
-    const a = CompanyInformationInterpreter.fromLhc(lhc);
-    const b = CompanyInformationInterpreter.fromQuestionnaireResponse(qr);
+  const a = CompanyInformationInterpreter.fromLhc(lhc);
+  const b = CompanyInformationInterpreter.fromQuestionnaireResponse(qr);
 
-    const va = a.value;
-    const vb = b.value;
+  const va = a.value;
+  const vb = b.value;
 
-    // Dates -> ISO for structural equality
-    const iso = (x: any) =>
-        JSON.parse(
-            JSON.stringify(
-                x,
-                (_k, v) => v instanceof Date ? v.toISOString() : v,
-            ),
-        );
-
-    assertEquals(iso(va), iso(vb), "normalized objects should match");
-
-    const ra = a.validateRequiredFields();
-    const rb = b.validateRequiredFields();
-
-    assert(
-        ra.ok,
-        `LHC required fields should be present: ${JSON.stringify(ra)}`,
-    );
-    assert(
-        rb.ok,
-        `QR required fields should be present: ${JSON.stringify(rb)}`,
+  // Dates -> ISO for structural equality
+  const iso = (x: any) =>
+    JSON.parse(
+      JSON.stringify(
+        x,
+        (_k, v) => v instanceof Date ? v.toISOString() : v,
+      ),
     );
 
-    const sa = a.assessReadiness();
-    const sb = b.assessReadiness();
+  assertEquals(iso(va), iso(vb), "normalized objects should match");
 
-    assertEquals(sa.totalRequired, 2);
-    assertEquals(sb.totalRequired, 2);
-    assertEquals(sa.missingRequired.length, 0);
-    assertEquals(sb.missingRequired.length, 0);
+  const ra = a.validateRequiredFields();
+  const rb = b.validateRequiredFields();
+
+  assert(
+    ra.ok,
+    `LHC required fields should be present: ${JSON.stringify(ra)}`,
+  );
+  assert(
+    rb.ok,
+    `QR required fields should be present: ${JSON.stringify(rb)}`,
+  );
+
+  const sa = a.assessReadiness();
+  const sb = b.assessReadiness();
+
+  assertEquals(sa.totalRequired, 2);
+  assertEquals(sb.totalRequired, 2);
+  assertEquals(sa.missingRequired.length, 0);
+  assertEquals(sb.missingRequired.length, 0);
 });
 ```
 

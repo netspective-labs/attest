@@ -1,10 +1,10 @@
 ---
 id: task-0003
-title: 'Use Zod 4 for validation, composition and type-safety'
+title: "Use Zod 4 for validation, composition and type-safety"
 status: To Do
 assignee: []
-created_date: '2025-08-24 01:06'
-updated_date: '2025-08-24 01:54'
+created_date: "2025-08-24 01:06"
+updated_date: "2025-08-24 01:54"
 labels: []
 dependencies: []
 priority: medium

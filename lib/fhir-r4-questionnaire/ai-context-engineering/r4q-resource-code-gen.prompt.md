@@ -74,181 +74,181 @@ files as input and generates, for each, a fully typed, self-contained
      hardcoded):**
      ```json
      {
-         "resourceType": "Questionnaire",
-         "meta": {
-             "profile": [
-                 "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
-             ]
-         },
-         "title": "Company Information",
-         "status": "draft",
-         "item": [
-             {
-                 "type": "group",
-                 "linkId": "158032884208",
-                 "text": "Organization Details",
-                 "item": [
-                     {
-                         "linkId": "158032884208_helpText",
-                         "type": "display",
-                         "text": "Provide essential information about your organization for CMMC compliance tracking.",
-                         "extension": [
-                             {
-                                 "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                 "valueCodeableConcept": {
-                                     "coding": [
-                                         {
-                                             "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                             "code": "help",
-                                             "display": "Help-Button"
-                                         }
-                                     ],
-                                     "text": "Help-Button"
-                                 }
-                             }
-                         ]
-                     }
-                 ]
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Enter your organization name"
-                     }
-                 ],
-                 "linkId": "715544477968",
-                 "text": "Organization Name",
-                 "required": true
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Your full name"
-                     }
-                 ],
-                 "linkId": "655141523763",
-                 "text": "Form Completed By",
-                 "required": true
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Your job title"
-                     }
-                 ],
-                 "linkId": "761144039651",
-                 "text": "Position/Title"
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "your.email@company.com"
-                     }
-                 ],
-                 "linkId": "441278853405",
-                 "text": "Email Address",
-                 "required": true
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "(555) 121-2345"
-                     }
-                 ],
-                 "linkId": "375736159279",
-                 "text": "Work Phone",
-                 "required": true
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "(555) 987-4756"
-                     }
-                 ],
-                 "linkId": "948589414714",
-                 "text": "Mobile Phone",
-                 "required": true
-             },
-             {
-                 "type": "date",
-                 "linkId": "276403539223",
-                 "text": "Assessment Date"
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Defense, Technology, etc."
-                     }
-                 ],
-                 "linkId": "789286873476",
-                 "text": "Industry"
-             },
-             {
-                 "type": "string",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "1-10, 11-50, 51-200, etc."
-                     }
-                 ],
-                 "linkId": "697235963218",
-                 "text": "Employee Count"
-             },
-             {
-                 "type": "text",
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Prime contracts, subcontracts, etc. (comma-separated)"
-                     }
-                 ],
-                 "linkId": "863463230823",
-                 "text": "Contract Types"
-             },
-             {
-                 "item": [
-                     {
-                         "type": "string",
-                         "extension": [
-                             {
-                                 "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                                 "valueString": "5-character CAGE code"
-                             }
-                         ],
-                         "linkId": "805221373063",
-                         "text": "CAGE Code"
-                     },
-                     {
-                         "type": "string",
-                         "extension": [
-                             {
-                                 "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                                 "valueString": "9-digit DUNS number"
-                             }
-                         ],
-                         "linkId": "374784155003",
-                         "text": "DUNS Number"
-                     }
-                 ],
-                 "type": "group",
-                 "linkId": "127163950314",
-                 "text": "Organization Identifiers"
-             }
+       "resourceType": "Questionnaire",
+       "meta": {
+         "profile": [
+           "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
          ]
+       },
+       "title": "Company Information",
+       "status": "draft",
+       "item": [
+         {
+           "type": "group",
+           "linkId": "158032884208",
+           "text": "Organization Details",
+           "item": [
+             {
+               "linkId": "158032884208_helpText",
+               "type": "display",
+               "text": "Provide essential information about your organization for CMMC compliance tracking.",
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                   "valueCodeableConcept": {
+                     "coding": [
+                       {
+                         "system": "http://hl7.org/fhir/questionnaire-item-control",
+                         "code": "help",
+                         "display": "Help-Button"
+                       }
+                     ],
+                     "text": "Help-Button"
+                   }
+                 }
+               ]
+             }
+           ]
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Enter your organization name"
+             }
+           ],
+           "linkId": "715544477968",
+           "text": "Organization Name",
+           "required": true
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Your full name"
+             }
+           ],
+           "linkId": "655141523763",
+           "text": "Form Completed By",
+           "required": true
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Your job title"
+             }
+           ],
+           "linkId": "761144039651",
+           "text": "Position/Title"
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "your.email@company.com"
+             }
+           ],
+           "linkId": "441278853405",
+           "text": "Email Address",
+           "required": true
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "(555) 121-2345"
+             }
+           ],
+           "linkId": "375736159279",
+           "text": "Work Phone",
+           "required": true
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "(555) 987-4756"
+             }
+           ],
+           "linkId": "948589414714",
+           "text": "Mobile Phone",
+           "required": true
+         },
+         {
+           "type": "date",
+           "linkId": "276403539223",
+           "text": "Assessment Date"
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Defense, Technology, etc."
+             }
+           ],
+           "linkId": "789286873476",
+           "text": "Industry"
+         },
+         {
+           "type": "string",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "1-10, 11-50, 51-200, etc."
+             }
+           ],
+           "linkId": "697235963218",
+           "text": "Employee Count"
+         },
+         {
+           "type": "text",
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Prime contracts, subcontracts, etc. (comma-separated)"
+             }
+           ],
+           "linkId": "863463230823",
+           "text": "Contract Types"
+         },
+         {
+           "item": [
+             {
+               "type": "string",
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                   "valueString": "5-character CAGE code"
+                 }
+               ],
+               "linkId": "805221373063",
+               "text": "CAGE Code"
+             },
+             {
+               "type": "string",
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                   "valueString": "9-digit DUNS number"
+                 }
+               ],
+               "linkId": "374784155003",
+               "text": "DUNS Number"
+             }
+           ],
+           "type": "group",
+           "linkId": "127163950314",
+           "text": "Organization Identifiers"
+         }
+       ]
      }
      ```
 
@@ -261,351 +261,351 @@ files as input and generates, for each, a fully typed, self-contained
      Questionnaire):**
      ```json
      {
-         "lformsVersion": "38.2.0",
-         "PATH_DELIMITER": "/",
-         "code": null,
-         "codeList": null,
-         "identifier": null,
-         "name": "Company Information",
-         "template": "table",
-         "items": [
-             {
-                 "header": true,
-                 "dataType": "SECTION",
-                 "question": "Organization Details",
-                 "questionCode": "158032884208",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "158032884208",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "items": [],
-                 "codingInstructions": "Provide essential information about your organization for CMMC compliance tracking.",
-                 "codingInstructionsFormat": "text",
-                 "codingInstructionsPlain": "Provide essential information about your organization for CMMC compliance tracking.",
-                 "codingInstructionsLinkId": "158032884208_helpText",
-                 "codeList": [],
-                 "displayControl": {
-                     "questionLayout": "vertical"
-                 },
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 }
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Enter your organization name"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Organization Name",
-                 "questionCode": "715544477968",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "715544477968",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "answerCardinality": {
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "value": "Netspective Communications LLC"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Your full name"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Form Completed By",
-                 "questionCode": "655141523763",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "655141523763",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "answerCardinality": {
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "value": "Shahid N. Shah"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Your job title"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Position/Title",
-                 "questionCode": "761144039651",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "761144039651",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 },
-                 "value": "Principal"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "your.email@company.com"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Email Address",
-                 "questionCode": "441278853405",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "441278853405",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "answerCardinality": {
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "value": "dont-spam@spam.com"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "(555) 121-2345"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Work Phone",
-                 "questionCode": "375736159279",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "375736159279",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "answerCardinality": {
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "value": "+1 123-456-7891"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "(555) 987-4756"
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Mobile Phone",
-                 "questionCode": "948589414714",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "948589414714",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "answerCardinality": {
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "value": "+1 123-456-7891"
-             },
-             {
-                 "dataType": "DT",
-                 "question": "Assessment Date",
-                 "questionCode": "276403539223",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "276403539223",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 },
-                 "value": "2025-08-16"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Defense, Technology, etc."
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Industry",
-                 "questionCode": "789286873476",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "789286873476",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 },
-                 "value": "Frontier AI"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "1-10, 11-50, 51-200, etc."
-                     }
-                 ],
-                 "dataType": "ST",
-                 "question": "Employee Count",
-                 "questionCode": "697235963218",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "697235963218",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 },
-                 "value": "50"
-             },
-             {
-                 "extension": [
-                     {
-                         "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                         "valueString": "Prime contracts, subcontracts, etc. (comma-separated)"
-                     }
-                 ],
-                 "dataType": "TX",
-                 "question": "Contract Types",
-                 "questionCode": "863463230823",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "863463230823",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "codeList": [],
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 },
-                 "value": "Subcontract"
-             },
-             {
-                 "header": true,
-                 "dataType": "SECTION",
-                 "question": "Organization Identifiers",
-                 "questionCode": "127163950314",
-                 "questionCodeSystem": "LinkId",
-                 "linkId": "127163950314",
-                 "questionCardinality": {
-                     "max": "1",
-                     "min": "1"
-                 },
-                 "items": [
-                     {
-                         "extension": [
-                             {
-                                 "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                                 "valueString": "5-character CAGE code"
-                             }
-                         ],
-                         "dataType": "ST",
-                         "question": "CAGE Code",
-                         "questionCode": "805221373063",
-                         "questionCodeSystem": "LinkId",
-                         "linkId": "805221373063",
-                         "questionCardinality": {
-                             "max": "1",
-                             "min": "1"
-                         },
-                         "codeList": [],
-                         "answerCardinality": {
-                             "min": "0",
-                             "max": "1"
-                         },
-                         "value": "12345"
-                     },
-                     {
-                         "extension": [
-                             {
-                                 "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                                 "valueString": "9-digit DUNS number"
-                             }
-                         ],
-                         "dataType": "ST",
-                         "question": "DUNS Number",
-                         "questionCode": "374784155003",
-                         "questionCodeSystem": "LinkId",
-                         "linkId": "374784155003",
-                         "questionCardinality": {
-                             "max": "1",
-                             "min": "1"
-                         },
-                         "codeList": [],
-                         "answerCardinality": {
-                             "min": "0",
-                             "max": "1"
-                         },
-                         "value": "123456789"
-                     }
-                 ],
-                 "codeList": [],
-                 "displayControl": {
-                     "questionLayout": "vertical"
-                 },
-                 "answerCardinality": {
-                     "min": "0",
-                     "max": "1"
-                 }
-             }
-         ],
-         "templateOptions": {
-             "showQuestionCode": false,
-             "showCodingInstruction": false,
-             "allowMultipleEmptyRepeatingItems": false,
-             "allowHTML": true,
-             "displayControl": {
-                 "questionLayout": "vertical"
-             },
-             "viewMode": "auto",
-             "defaultAnswerLayout": {
-                 "answerLayout": {
-                     "type": "COMBO_BOX",
-                     "columns": "0"
-                 }
-             },
-             "hideTreeLine": false,
-             "hideIndentation": false,
-             "hideRepetitionNumber": false,
-             "displayScoreWithAnswerText": true,
-             "displayInvalidHTML": false,
-             "messageLevel": "error"
+       "lformsVersion": "38.2.0",
+       "PATH_DELIMITER": "/",
+       "code": null,
+       "codeList": null,
+       "identifier": null,
+       "name": "Company Information",
+       "template": "table",
+       "items": [
+         {
+           "header": true,
+           "dataType": "SECTION",
+           "question": "Organization Details",
+           "questionCode": "158032884208",
+           "questionCodeSystem": "LinkId",
+           "linkId": "158032884208",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "items": [],
+           "codingInstructions": "Provide essential information about your organization for CMMC compliance tracking.",
+           "codingInstructionsFormat": "text",
+           "codingInstructionsPlain": "Provide essential information about your organization for CMMC compliance tracking.",
+           "codingInstructionsLinkId": "158032884208_helpText",
+           "codeList": [],
+           "displayControl": {
+             "questionLayout": "vertical"
+           },
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           }
          },
-         "hasSavedData": true,
-         "fhirVersion": "R4"
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Enter your organization name"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Organization Name",
+           "questionCode": "715544477968",
+           "questionCodeSystem": "LinkId",
+           "linkId": "715544477968",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "answerCardinality": {
+             "min": "1"
+           },
+           "codeList": [],
+           "value": "Netspective Communications LLC"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Your full name"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Form Completed By",
+           "questionCode": "655141523763",
+           "questionCodeSystem": "LinkId",
+           "linkId": "655141523763",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "answerCardinality": {
+             "min": "1"
+           },
+           "codeList": [],
+           "value": "Shahid N. Shah"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Your job title"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Position/Title",
+           "questionCode": "761144039651",
+           "questionCodeSystem": "LinkId",
+           "linkId": "761144039651",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "codeList": [],
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           },
+           "value": "Principal"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "your.email@company.com"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Email Address",
+           "questionCode": "441278853405",
+           "questionCodeSystem": "LinkId",
+           "linkId": "441278853405",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "answerCardinality": {
+             "min": "1"
+           },
+           "codeList": [],
+           "value": "dont-spam@spam.com"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "(555) 121-2345"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Work Phone",
+           "questionCode": "375736159279",
+           "questionCodeSystem": "LinkId",
+           "linkId": "375736159279",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "answerCardinality": {
+             "min": "1"
+           },
+           "codeList": [],
+           "value": "+1 123-456-7891"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "(555) 987-4756"
+             }
+           ],
+           "dataType": "ST",
+           "question": "Mobile Phone",
+           "questionCode": "948589414714",
+           "questionCodeSystem": "LinkId",
+           "linkId": "948589414714",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "answerCardinality": {
+             "min": "1"
+           },
+           "codeList": [],
+           "value": "+1 123-456-7891"
+         },
+         {
+           "dataType": "DT",
+           "question": "Assessment Date",
+           "questionCode": "276403539223",
+           "questionCodeSystem": "LinkId",
+           "linkId": "276403539223",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "codeList": [],
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           },
+           "value": "2025-08-16"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Defense, Technology, etc."
+             }
+           ],
+           "dataType": "ST",
+           "question": "Industry",
+           "questionCode": "789286873476",
+           "questionCodeSystem": "LinkId",
+           "linkId": "789286873476",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "codeList": [],
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           },
+           "value": "Frontier AI"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "1-10, 11-50, 51-200, etc."
+             }
+           ],
+           "dataType": "ST",
+           "question": "Employee Count",
+           "questionCode": "697235963218",
+           "questionCodeSystem": "LinkId",
+           "linkId": "697235963218",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "codeList": [],
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           },
+           "value": "50"
+         },
+         {
+           "extension": [
+             {
+               "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+               "valueString": "Prime contracts, subcontracts, etc. (comma-separated)"
+             }
+           ],
+           "dataType": "TX",
+           "question": "Contract Types",
+           "questionCode": "863463230823",
+           "questionCodeSystem": "LinkId",
+           "linkId": "863463230823",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "codeList": [],
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           },
+           "value": "Subcontract"
+         },
+         {
+           "header": true,
+           "dataType": "SECTION",
+           "question": "Organization Identifiers",
+           "questionCode": "127163950314",
+           "questionCodeSystem": "LinkId",
+           "linkId": "127163950314",
+           "questionCardinality": {
+             "max": "1",
+             "min": "1"
+           },
+           "items": [
+             {
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                   "valueString": "5-character CAGE code"
+                 }
+               ],
+               "dataType": "ST",
+               "question": "CAGE Code",
+               "questionCode": "805221373063",
+               "questionCodeSystem": "LinkId",
+               "linkId": "805221373063",
+               "questionCardinality": {
+                 "max": "1",
+                 "min": "1"
+               },
+               "codeList": [],
+               "answerCardinality": {
+                 "min": "0",
+                 "max": "1"
+               },
+               "value": "12345"
+             },
+             {
+               "extension": [
+                 {
+                   "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                   "valueString": "9-digit DUNS number"
+                 }
+               ],
+               "dataType": "ST",
+               "question": "DUNS Number",
+               "questionCode": "374784155003",
+               "questionCodeSystem": "LinkId",
+               "linkId": "374784155003",
+               "questionCardinality": {
+                 "max": "1",
+                 "min": "1"
+               },
+               "codeList": [],
+               "answerCardinality": {
+                 "min": "0",
+                 "max": "1"
+               },
+               "value": "123456789"
+             }
+           ],
+           "codeList": [],
+           "displayControl": {
+             "questionLayout": "vertical"
+           },
+           "answerCardinality": {
+             "min": "0",
+             "max": "1"
+           }
+         }
+       ],
+       "templateOptions": {
+         "showQuestionCode": false,
+         "showCodingInstruction": false,
+         "allowMultipleEmptyRepeatingItems": false,
+         "allowHTML": true,
+         "displayControl": {
+           "questionLayout": "vertical"
+         },
+         "viewMode": "auto",
+         "defaultAnswerLayout": {
+           "answerLayout": {
+             "type": "COMBO_BOX",
+             "columns": "0"
+           }
+         },
+         "hideTreeLine": false,
+         "hideIndentation": false,
+         "hideRepetitionNumber": false,
+         "displayScoreWithAnswerText": true,
+         "displayInvalidHTML": false,
+         "messageLevel": "error"
+       },
+       "hasSavedData": true,
+       "fhirVersion": "R4"
      }
      ```
 
@@ -718,20 +718,20 @@ never copy/paste helpers.
 import { Command } from "jsr:@cliffy/command@^1.0.0-rc.8";
 import * as path from "jsr:@std/path@^1.1.2";
 import {
-    // (named imports from r4q-runtime.ts used by the generator)
-    FhirQuestionnaire,
-    FieldMeta,
-    flattenItems,
-    renderFormHelpsBlock,
-    renderHeaderBanner,
-    renderInterface,
-    renderInterpreter,
-    renderLhcAdapter,
-    renderLinkIdMap,
-    renderQrAdapter,
-    renderSharedImports,
-    toKebabCase,
-    toPascalCase,
+  // (named imports from r4q-runtime.ts used by the generator)
+  FhirQuestionnaire,
+  FieldMeta,
+  flattenItems,
+  renderFormHelpsBlock,
+  renderHeaderBanner,
+  renderInterface,
+  renderInterpreter,
+  renderLhcAdapter,
+  renderLinkIdMap,
+  renderQrAdapter,
+  renderSharedImports,
+  toKebabCase,
+  toPascalCase,
 } from "./r4q-runtime.ts";
 ```
 
@@ -745,17 +745,17 @@ Each generated file must begin with:
 
   ```ts
   import {
-      coerceBoolean,
-      coerceDate,
-      coerceNumber,
-      coerceString,
-      coerceOptionalBoolean,
-      coerceOptionalDate,
-      coerceOptionalNumber,
-      coerceOptionalString,
-      findLhcValueByLinkId,
-      findQrAnswerByLinkId,
-      // ...any additional helpers the file relies on
+    coerceBoolean,
+    coerceDate,
+    coerceNumber,
+    coerceOptionalBoolean,
+    coerceOptionalDate,
+    coerceOptionalNumber,
+    coerceOptionalString,
+    coerceString,
+    findLhcValueByLinkId,
+    findQrAnswerByLinkId,
+    // ...any additional helpers the file relies on
   } from "./r4q-runtime.ts";
   ```
 - Followed by the emitted `LinkIds`, `interface`, adapters, interpreter.
@@ -844,6 +844,7 @@ loop inputs; generate per file; support `--stdout`, `--outDir`, `--force`.)
 6. LHC/QR adapters:
 
    - Using the provided LHC example and a synthetically crafted
-     QuestionnaireResponse, `fromLhcFormResponse()` and `fromQuestionnaireResponse()` both
-     produce the same normalized object (modulo types), and
-     `validateRequiredFields()` reports missing fields correctly.
+     QuestionnaireResponse, `fromLhcFormResponse()` and
+     `fromQuestionnaireResponse()` both produce the same normalized object
+     (modulo types), and `validateRequiredFields()` reports missing fields
+     correctly.

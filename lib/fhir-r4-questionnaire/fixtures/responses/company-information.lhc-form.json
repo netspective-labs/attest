@@ -1,5 +1,5 @@
 {
-  "lformsVersion": "38.2.0",
+  "lformsVersion": "34.0.0",
   "PATH_DELIMITER": "/",
   "code": null,
   "codeList": null,
@@ -11,8 +11,15 @@
       "header": true,
       "dataType": "SECTION",
       "question": "Organization Details",
-      "questionCode": "158032884208",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-details",
+          "display": "Organization Details"
+        }
+      ],
+      "questionCode": "company-information-organization-details",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "158032884208",
       "questionCardinality": {
         "max": "1",
@@ -22,8 +29,6 @@
       "codingInstructions": "Provide essential information about your organization for CMMC compliance tracking.",
       "codingInstructionsFormat": "text",
       "codingInstructionsPlain": "Provide essential information about your organization for CMMC compliance tracking.",
-      "codingInstructionsLinkId": "158032884208_helpText",
-      "codeList": [],
       "displayControl": {
         "questionLayout": "vertical"
       },
@@ -41,8 +46,15 @@
       ],
       "dataType": "ST",
       "question": "Organization Name",
-      "questionCode": "715544477968",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-name",
+          "display": "Organization Name"
+        }
+      ],
+      "questionCode": "company-information-organization-name",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "715544477968",
       "questionCardinality": {
         "max": "1",
@@ -51,7 +63,6 @@
       "answerCardinality": {
         "min": "1"
       },
-      "codeList": [],
       "value": "Netspective Communications LLC"
     },
     {
@@ -63,8 +74,15 @@
       ],
       "dataType": "ST",
       "question": "Form Completed By",
-      "questionCode": "655141523763",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-form-completed-by",
+          "display": "Form Completed By"
+        }
+      ],
+      "questionCode": "company-information-form-completed-by",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "655141523763",
       "questionCardinality": {
         "max": "1",
@@ -73,7 +91,6 @@
       "answerCardinality": {
         "min": "1"
       },
-      "codeList": [],
       "value": "Shahid N. Shah"
     },
     {
@@ -85,14 +102,20 @@
       ],
       "dataType": "ST",
       "question": "Position/Title",
-      "questionCode": "761144039651",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-position-title",
+          "display": "Position Title"
+        }
+      ],
+      "questionCode": "company-information-position-title",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "761144039651",
       "questionCardinality": {
         "max": "1",
         "min": "1"
       },
-      "codeList": [],
       "answerCardinality": {
         "min": "0",
         "max": "1"
@@ -108,8 +131,15 @@
       ],
       "dataType": "ST",
       "question": "Email Address",
-      "questionCode": "441278853405",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-email-address",
+          "display": "Email Address"
+        }
+      ],
+      "questionCode": "company-information-email-address",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "441278853405",
       "questionCardinality": {
         "max": "1",
@@ -118,7 +148,6 @@
       "answerCardinality": {
         "min": "1"
       },
-      "codeList": [],
       "value": "dont-spam@spam.com"
     },
     {
@@ -130,8 +159,15 @@
       ],
       "dataType": "ST",
       "question": "Work Phone",
-      "questionCode": "375736159279",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-work-phone",
+          "display": "Work Phone"
+        }
+      ],
+      "questionCode": "company-information-work-phone",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "375736159279",
       "questionCardinality": {
         "max": "1",
@@ -140,7 +176,6 @@
       "answerCardinality": {
         "min": "1"
       },
-      "codeList": [],
       "value": "+1 123-456-7891"
     },
     {
@@ -152,8 +187,15 @@
       ],
       "dataType": "ST",
       "question": "Mobile Phone",
-      "questionCode": "948589414714",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-mobile-phone",
+          "display": "Mobile Phone"
+        }
+      ],
+      "questionCode": "company-information-mobile-phone",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "948589414714",
       "questionCardinality": {
         "max": "1",
@@ -162,20 +204,25 @@
       "answerCardinality": {
         "min": "1"
       },
-      "codeList": [],
       "value": "+1 123-456-7891"
     },
     {
       "dataType": "DT",
       "question": "Assessment Date",
-      "questionCode": "276403539223",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-assessment-date",
+          "display": "Assessment Date"
+        }
+      ],
+      "questionCode": "company-information-assessment-date",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "276403539223",
       "questionCardinality": {
         "max": "1",
         "min": "1"
       },
-      "codeList": [],
       "answerCardinality": {
         "min": "0",
         "max": "1"
@@ -191,14 +238,20 @@
       ],
       "dataType": "ST",
       "question": "Industry",
-      "questionCode": "789286873476",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-industry",
+          "display": "Industry"
+        }
+      ],
+      "questionCode": "company-information-industry",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "789286873476",
       "questionCardinality": {
         "max": "1",
         "min": "1"
       },
-      "codeList": [],
       "answerCardinality": {
         "min": "0",
         "max": "1"
@@ -214,14 +267,20 @@
       ],
       "dataType": "ST",
       "question": "Employee Count",
-      "questionCode": "697235963218",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-employee-count",
+          "display": "Employee Count"
+        }
+      ],
+      "questionCode": "company-information-employee-count",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "697235963218",
       "questionCardinality": {
         "max": "1",
         "min": "1"
       },
-      "codeList": [],
       "answerCardinality": {
         "min": "0",
         "max": "1"
@@ -237,14 +296,20 @@
       ],
       "dataType": "TX",
       "question": "Contract Types",
-      "questionCode": "863463230823",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-contract-types",
+          "display": "Contract Types"
+        }
+      ],
+      "questionCode": "company-information-contract-types",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "863463230823",
       "questionCardinality": {
         "max": "1",
         "min": "1"
       },
-      "codeList": [],
       "answerCardinality": {
         "min": "0",
         "max": "1"
@@ -255,8 +320,15 @@
       "header": true,
       "dataType": "SECTION",
       "question": "Organization Identifiers",
-      "questionCode": "127163950314",
-      "questionCodeSystem": "LinkId",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-identifiers",
+          "display": "Organization Identifiers"
+        }
+      ],
+      "questionCode": "company-information-organization-identifiers",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
       "linkId": "127163950314",
       "questionCardinality": {
         "max": "1",
@@ -272,14 +344,20 @@
           ],
           "dataType": "ST",
           "question": "CAGE Code",
-          "questionCode": "805221373063",
-          "questionCodeSystem": "LinkId",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-cage-code",
+              "display": "Cage Code"
+            }
+          ],
+          "questionCode": "company-information-cage-code",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
           "linkId": "805221373063",
           "questionCardinality": {
             "max": "1",
             "min": "1"
           },
-          "codeList": [],
           "answerCardinality": {
             "min": "0",
             "max": "1"
@@ -295,14 +373,20 @@
           ],
           "dataType": "ST",
           "question": "DUNS Number",
-          "questionCode": "374784155003",
-          "questionCodeSystem": "LinkId",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-duns-number",
+              "display": "Duns Number"
+            }
+          ],
+          "questionCode": "company-information-duns-number",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
           "linkId": "374784155003",
           "questionCardinality": {
             "max": "1",
             "min": "1"
           },
-          "codeList": [],
           "answerCardinality": {
             "min": "0",
             "max": "1"
@@ -310,7 +394,6 @@
           "value": "123456789"
         }
       ],
-      "codeList": [],
       "displayControl": {
         "questionLayout": "vertical"
       },
@@ -324,7 +407,7 @@
     "showQuestionCode": false,
     "showCodingInstruction": false,
     "allowMultipleEmptyRepeatingItems": false,
-    "allowHTML": true,
+    "allowHTMLInInstructions": false,
     "displayControl": {
       "questionLayout": "vertical"
     },
@@ -339,8 +422,7 @@
     "hideIndentation": false,
     "hideRepetitionNumber": false,
     "displayScoreWithAnswerText": true,
-    "displayInvalidHTML": false,
-    "messageLevel": "error"
+    "allowHTML": true
   },
   "hasSavedData": true,
   "fhirVersion": "R4"

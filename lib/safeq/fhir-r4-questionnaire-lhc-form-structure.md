@@ -21,15 +21,15 @@ a powerful, recursive `item` array.
 
 ```json
 {
-    "resourceType": "Questionnaire",
-    "id": "health-assessment-2025",
-    "url": "http://example.org/Questionnaire/health-assessment-2025",
-    "title": "2025 Annual Health Assessment",
-    "status": "active",
-    "item": [
-        // This is where the questions and groups go.
-        // Each element in this array is an 'item'.
-    ]
+  "resourceType": "Questionnaire",
+  "id": "health-assessment-2025",
+  "url": "http://example.org/Questionnaire/health-assessment-2025",
+  "title": "2025 Annual Health Assessment",
+  "status": "active",
+  "item": [
+    // This is where the questions and groups go.
+    // Each element in this array is an 'item'.
+  ]
 }
 ```
 
@@ -92,9 +92,9 @@ Here's an example `item` for a question and its corresponding answer:
 
 ```json
 {
-    "linkId": "dob",
-    "text": "What is your date of birth?",
-    "type": "date"
+  "linkId": "dob",
+  "text": "What is your date of birth?",
+  "type": "date"
 }
 ```
 
@@ -102,12 +102,12 @@ Here's an example `item` for a question and its corresponding answer:
 
 ```json
 {
-    "linkId": "dob",
-    "answer": [
-        {
-            "valueDate": "1990-05-15"
-        }
-    ]
+  "linkId": "dob",
+  "answer": [
+    {
+      "valueDate": "1990-05-15"
+    }
+  ]
 }
 ```
 
@@ -161,9 +161,9 @@ For example, a question about a patient's weight would be defined like this:
 
 ```json
 {
-    "linkId": "weight",
-    "text": "What is your weight (in kilograms)?",
-    "type": "quantity"
+  "linkId": "weight",
+  "text": "What is your weight (in kilograms)?",
+  "type": "quantity"
 }
 ```
 
@@ -208,10 +208,10 @@ like this:
 
 ```json
 {
-    "weight": {
-        "value": 75,
-        "unit": "kg"
-    }
+  "weight": {
+    "value": 75,
+    "unit": "kg"
+  }
 }
 ```
 

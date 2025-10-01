@@ -1,6 +1,6 @@
 {
-    "recommendations": [
-        "denoland.vscode-deno",
-        "yoavbls.pretty-ts-errors"
-    ]
+  "recommendations": [
+    "denoland.vscode-deno",
+    "yoavbls.pretty-ts-errors"
+  ]
 }

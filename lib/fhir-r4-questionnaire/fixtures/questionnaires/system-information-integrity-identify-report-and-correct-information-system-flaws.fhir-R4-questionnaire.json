@@ -9,168 +9,6 @@
   "status": "draft",
   "item": [
     {
-      "type": "group",
-      "linkId": "350961856234",
-      "text": "SI.L1-3.14.1 - Flaw Remediation",
-      "item": [
-        {
-          "linkId": "350961856234_helpText",
-          "type": "display",
-          "text": "Identify, report, and correct information and information system flaws in a timely manner",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "758011605310",
-          "text": "How does your organization identify system flaws and vulnerabilities?",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Automated vulnerability scanning"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Vendor security notifications and bulletins"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Penetration testing"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Regular security assessments"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Threat intelligence feeds"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Incident response and forensics"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "544004255685",
-      "prefix": "1.",
-      "text": "Flaw Identification Process"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "854540559647",
-          "text": "How are identified flaws reported and tracked?",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Formal tracking system or database"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Automatic management notification"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Risk assessment and prioritization"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Communication to affected stakeholders"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Detailed documentation of findings"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "603452357063_helpText",
-          "type": "display",
-          "text": "Establish processes to identify, report, and track system flaws and vulnerabilities until they are resolved.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "603452357063",
-      "prefix": "2.",
-      "text": "Flaw Reporting and Tracking"
-    },
-    {
       "item": [
         {
           "item": [
@@ -183,41 +21,114 @@
                     "coding": [
                       {
                         "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "radio-button",
-                        "display": "Radio Button"
+                        "code": "check-box",
+                        "display": "Check-box"
                       }
                     ]
                   }
                 }
               ],
-              "linkId": "885354230428",
-              "text": "Critical Severity Flaws:",
-              "repeats": false,
+              "linkId": "758011605310",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-find-weaknesses-in-system",
+                  "display": "Find-Weaknesses-In-System"
+                }
+              ],
+              "text": "How does your company find weaknesses in its systems such as software bugs, missing updates, or security gaps before attackers can exploit them?",
+              "repeats": true,
               "answerOption": [
                 {
                   "valueCoding": {
-                    "display": "Immediate (within hours)"
+                    "display": "Automated vulnerability scanning"
                   }
                 },
                 {
                   "valueCoding": {
-                    "display": "Within 24 hours"
+                    "display": "Vendor security notifications and bulletins"
                   }
                 },
                 {
                   "valueCoding": {
-                    "display": "Within 72 hours"
+                    "display": "Penetration testing"
                   }
                 },
                 {
                   "valueCoding": {
-                    "display": "Within 1 week"
+                    "display": "Regular security assessments"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Threat intelligence feeds"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Incident response and forensics"
                   }
                 }
               ]
             },
             {
-              "type": "choice",
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "135467801033",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-flaw-remediation-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "135467801033_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "544004255685_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n<span style=\"color: #003366;\"><i>Flaw Identification Process</i></span> The policy for identifying system flaws and vulnerabilities includes the following methods:\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Automated Vulnerability Scanning:</b> Regular checks are conducted automatically to identify weaknesses in the system.<br>\n  &bull; &nbsp; <b>Vendor Security Notifications and Bulletins:</b> Updates from vendors are monitored to stay informed about any security issues or flaws.<br>\n  &bull; &nbsp; <b>Penetration Testing:</b> Security experts perform simulated attacks to uncover potential weaknesses before they can be exploited.<br>\n  &bull; &nbsp; <b>Regular Security Assessments:</b> Ongoing reviews are done to assess and identify any flaws or vulnerabilities.<br>\n  &bull; &nbsp; <b>Threat Intelligence Feeds:</b> Information is gathered from trusted external sources to stay aware of emerging threats.<br>\n  &bull; &nbsp; <b>Incident Response and Forensics:</b> If a security incident occurs, it is analyzed to determine the cause and prevent similar issues in the future.\n</div>\n\n<p style=\"margin-top: -50px;\"> \n<span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -225,160 +136,542 @@
                     "coding": [
                       {
                         "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "radio-button",
-                        "display": "Radio Button"
+                        "code": "help",
+                        "display": "Help-Button"
                       }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "149460684671",
-              "text": "High Severity Flaws:",
-              "repeats": false,
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "display": "Within 1 week"
-                  }
-                },
-                {
-                  "valueCoding": {
-                    "display": "Within 2 weeks"
-                  }
-                },
-                {
-                  "valueCoding": {
-                    "display": "Within 1 month"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "choice",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "radio-button",
-                        "display": "Radio Button"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "119144494365",
-              "text": "Medium/Low Severity Flaws:",
-              "repeats": false,
-              "answerOption": [
-                {
-                  "valueCoding": {
-                    "display": "Within 1 month"
-                  }
-                },
-                {
-                  "valueCoding": {
-                    "display": "Within 1 quarter"
-                  }
-                },
-                {
-                  "valueCoding": {
-                    "display": "Next scheduled maintenance window"
+                    ],
+                    "text": "Help-Button"
                   }
                 }
               ]
             }
           ],
           "type": "group",
-          "linkId": "802989461197",
-          "text": "What are your target timeframes for correcting identified flaws?"
-        },
-        {
-          "linkId": "702845194175_helpText",
-          "type": "display",
-          "text": "Define and follow timelines to promptly address and fix identified system vulnerabilities to reduce security risks.",
-          "extension": [
+          "linkId": "544004255685",
+          "code": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "702845194175",
-      "prefix": "3.",
-      "text": "Flaw Correction Timeline"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-flaw-identification-process",
+              "display": "Flaw Identification Process"
             }
           ],
-          "linkId": "896010001522",
-          "text": "How are security patches and updates managed?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Testing in non-production environment before deployment"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Formal change control process"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Rollback procedures in case of issues"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Automated patch deployment capabilities"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Emergency patching procedures for critical flaws"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Documentation of all patches applied"
-              }
-            }
-          ]
+          "prefix": "1.",
+          "text": "Flaw Identification Process"
         },
         {
-          "linkId": "535096646220_helpText",
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "854540559647",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-identified-flaws",
+                  "display": "Identified Flaws"
+                }
+              ],
+              "text": "How are identified flaws (bugs, missing updates, security gaps) reported and tracked?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Formal tracking system or database"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automatic management notification"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Risk assessment and prioritization"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Communication to affected stakeholders"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Detailed documentation of findings"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "924286782806",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-flaw-reporting-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "924286782806_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "603452357063_helpText",
+              "type": "display",
+              "text": "Establish processes to identify, report, and track system flaws and vulnerabilities until they are resolved.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "603452357063",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-flaw-reporting-tracking",
+              "display": "Flaw Reporting Tracking"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Flaw Reporting and Tracking"
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "radio-button",
+                            "display": "Radio Button"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "885354230428",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-critical-severity-flaws",
+                      "display": "Critical Severity Flaws"
+                    }
+                  ],
+                  "text": "Critical Severity Flaws:",
+                  "repeats": false,
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "Immediate (within hours)"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Within 24 hours"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Within 72 hours"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": " Within 1 week"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "radio-button",
+                            "display": "Radio Button"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "149460684671",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-high-severity-flaws",
+                      "display": "High Severity Flaws"
+                    }
+                  ],
+                  "text": "High Severity Flaws:",
+                  "repeats": false,
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "Within 1 week"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Within 2 weeks"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Within 1 month"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "choice",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "radio-button",
+                            "display": "Radio Button"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "119144494365",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-medium-low-severity-flaws",
+                      "display": "Medium Low Severity Flaws"
+                    }
+                  ],
+                  "text": "Medium/Low Severity Flaws:",
+                  "repeats": false,
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "Within 1 month"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Within 1 quarter"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Next scheduled maintenance window"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "type": "group",
+              "linkId": "802989461197",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-target-timeframes-correcting-flaws",
+                  "display": "Target-Timeframes-Correcting-Flaws"
+                }
+              ],
+              "text": "What are your target timeframes for correcting identified flaws?"
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "478326704189",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-flaw-correction-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "478326704189_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "702845194175_helpText",
+              "type": "display",
+              "text": "Define and follow timelines to promptly address and fix identified system vulnerabilities to reduce security risks.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "702845194175",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-flaw-correction-timeline",
+              "display": "Flaw Correction Timeline"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Flaw Correction Timeline"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "896010001522",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-security-patches-updates-managed",
+                  "display": "Security-Patches-Updates-Managed"
+                }
+              ],
+              "text": "How are security patches and updates managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Testing in non-production environment before deployment"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Formal change control process"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Rollback procedures in case of issues"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automated patch deployment capabilities"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Emergency patching procedures for critical flaws"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Documentation of all patches applied"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "731360730463",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-patch-management-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "731360730463_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "535096646220_helpText",
+              "type": "display",
+              "text": "Implement procedures to regularly apply updates and patches to systems to protect against known vulnerabilities.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "535096646220",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-patch-management-process",
+              "display": "Patch Management Process"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Patch Management Process"
+        },
+        {
+          "linkId": "350961856234_helpText",
           "type": "display",
-          "text": "Implement procedures to regularly apply updates and patches to systems to protect against known vulnerabilities.",
+          "text": "All software and systems have flaws these are bugs or weaknesses that hackers can exploit. Flaw remediation means spotting those problems quickly (through vendor alerts, scans, or error reports), reporting them to the right people, and fixing them in a timely manner with patches or updates. For example, applying Microsoft’s monthly security updates or updating antivirus software. Delays in fixing flaws are one of the biggest ways attackers break in.",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -397,57 +690,68 @@
         }
       ],
       "type": "group",
-      "linkId": "535096646220",
-      "prefix": "4.",
-      "text": "Patch Management Process"
-    },
-    {
-      "type": "text",
-      "extension": [
+      "linkId": "350961856234",
+      "code": [
         {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional context, challenges, or implementation details..."
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-information-integrity-flaw-remediation",
+          "display": "Flaw Remediation"
         }
       ],
-      "linkId": "731360730463",
-      "text": "Additional Notes or Comments"
+      "text": "SI.L1-B.1.XII – Flaw Remediation"
     },
     {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "List or describe the supporting documentation you have available (policies, procedures, scan reports, etc.)..."
-        }
-      ],
-      "linkId": "231346071278",
-      "text": "Supporting Documentation",
       "item": [
         {
-          "linkId": "231346071278_helpText",
-          "type": "display",
-          "text": "Note: Have documentation available that demonstrates your flaw remediation processes, vulnerability scanning procedures, and patch management policies.",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "514312894888",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-malicious-code-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "514312894888_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "item": [
-        {
+          ],
           "type": "choice",
           "extension": [
             {
@@ -464,7 +768,14 @@
             }
           ],
           "linkId": "892692932760",
-          "text": "Do you have a malicious code protection policy document?",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-company-protects-against-malicious-software",
+              "display": "Company Protects Against Malicious-Software"
+            }
+          ],
+          "text": "Do you have a written policy that explains how your company protects against viruses, spyware, ransomware, and other malicious software?",
           "repeats": false,
           "answerOption": [
             {
@@ -477,10 +788,261 @@
                 "display": "No"
               }
             }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "457010911238",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-malicious-code-protection-implemented",
+                  "display": "Malicious Code Protection Implemented"
+                }
+              ],
+              "text": "Select all locations where malicious code protection is implemented:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Email Gateway"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Web Proxy/Gateway"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Perimeter Firewall"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "VPN Gateway"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Endpoints (Workstations, Laptops)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Servers"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Mobile Devices"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "388699038922",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-protection-location-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "388699038922_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "120577885697_helpText",
+              "type": "display",
+              "text": "Identify and secure critical points in systems and networks where integrity controls must be applied to prevent unauthorized changes.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
           ],
+          "type": "group",
+          "linkId": "120577885697",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-protection-Locations",
+              "display": "Protection Locations"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Protection Locations"
+        },
+        {
           "item": [
             {
               "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter primary anti-malware solution"
+                }
+              ],
+              "linkId": "149423997720",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-primary-anti-malware-product",
+                  "display": "Primary Anti-Malware Product"
+                }
+              ],
+              "text": "Primary Anti-Malware Product/Solution: e.g., Microsoft Defender, McAfee, Symantec"
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter version or release identifier"
+                }
+              ],
+              "linkId": "343942743605",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-anti-malware-release-identifier",
+                  "display": "Anti Malware Release Identifier"
+                }
+              ],
+              "text": "Anti-Malware Version/Release: Version number or release identifier"
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your anti-malware implementation scope..."
+                }
+              ],
+              "linkId": "581419297519",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-scope-anti-malware-implementation",
+                  "display": "Scope Anti Malware Implementation"
+                }
+              ],
+              "text": "Implementation Scope: Describe the scope of your anti-malware implementation (e.g., all company endpoints, specific servers)"
+            },
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "466807023155",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-anti-malware-notes-evidence",
+                      "display": "System-Information-Notes-Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "466807023155_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -495,24 +1057,187 @@
                   }
                 }
               ],
-              "linkId": "942706169228",
-              "text": "Do you need assistance?",
+              "linkId": "394557514652",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-real-time-protection-enabled",
+                  "display": "Real Time Protection Enabled"
+                }
+              ],
+              "text": "Real-Time Protection Enabled:",
               "repeats": false,
               "answerOption": [
                 {
-                  "valueString": "Yes"
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
                 },
                 {
-                  "valueString": "No"
+                  "valueCoding": {
+                    "display": "No"
+                  }
                 }
               ]
+            },
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "266083093634",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-central-manage-notes-evidence",
+                      "display": "System-Information-Notes-Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "266083093634_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "137330973781",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-centrally-managed",
+                  "display": "Centrally Managed"
+                }
+              ],
+              "text": "Centrally Managed:",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "123297792461_helpText",
+              "type": "display",
+              "text": "Deploy and maintain tools and processes to detect, prevent, and respond to malware infections in your systems.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter primary anti-malware solution"
+            }
+          ],
+          "linkId": "123297792461",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-implementation-details",
+              "display": "Implementation Details"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Implementation Details"
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional context, challenges, or implementation details..."
+            }
+          ],
+          "linkId": "750023247979",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-malicious-code-additional-notes-comments",
+              "display": "Additional Notes Comments"
+            }
+          ],
+          "text": "Additional Notes or Comments",
+          "enableWhen": [
+            {
+              "question": "892692932760",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
             }
           ]
         },
         {
           "linkId": "340771388729_helpText",
           "type": "display",
-          "text": "Provide protection from malicious code at appropriate locations within organizational information systems",
+          "text": "Make sure your systems are protected against harmful software (like viruses, spyware, and ransomware) wherever it could enter such as email, web browsing, file downloads, or removable media (USB drives).",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -532,273 +1257,414 @@
       ],
       "type": "group",
       "linkId": "340771388729",
-      "text": "SI.L1-3.14.2 - Malicious Code Protection"
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-information-integrity-malicious-code-protection",
+          "display": "Malicious Code Protection"
+        }
+      ],
+      "text": "SI.L1-B.1.XIII – Malicious Code Protection"
     },
     {
       "item": [
         {
-          "type": "choice",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "830996907328",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-frequently-malicious-code-protection",
+                  "display": "Frequently Malicious Mode Protection"
+                }
+              ],
+              "text": "How frequently are malicious code protection mechanisms updated?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Real-time updates (as available)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hourly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Daily"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Weekly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manual updates only"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "583208753437",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-update-frequency-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "583208753437_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "370529733824_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n<span style=\"color: #003366;\"><i>Update Frequency</i></span> – Regularly update malware protection tools and definitions to ensure defense against the latest threats. The following update frequencies are considered:\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Real-time updates (as available):</b> Updates are applied immediately as new information becomes available.<br>\n  &bull; &nbsp; <b>Hourly:</b> Updates are performed every hour to ensure systems remain protected.<br>\n  &bull; &nbsp; <b>Daily:</b> Updates are applied once a day to keep security measures up-to-date.<br>\n  &bull; &nbsp; <b>Weekly:</b> Updates are conducted on a weekly basis to ensure ongoing protection.<br>\n  &bull; &nbsp; <b>Manual updates only:</b> Updates are applied manually when needed.\n</div>\n\n<p style=\"margin-top: -50px;\"> \n<span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
                   }
                 ]
-              }
-            }
-          ],
-          "linkId": "457010911238",
-          "text": "Select all locations where malicious code protection is implemented:",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Email Gateway"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Web Proxy/Gateway"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Perimeter Firewall"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "VPN Gateway"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Endpoints (Workstations, Laptops)"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Servers"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Mobile Devices"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "120577885697_helpText",
-          "type": "display",
-          "text": "Identify and secure critical points in systems and networks where integrity controls must be applied to prevent unauthorized changes.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
                   }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "120577885697",
-      "prefix": "1.",
-      "text": "Protection Locations"
-    },
-    {
-      "item": [
-        {
-          "type": "string",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Enter primary anti-malware solution"
+                }
+              ]
             }
           ],
-          "linkId": "149423997720",
-          "text": "Primary Anti-Malware Product/Solution: e.g., Microsoft Defender, McAfee, Symantec"
-        },
-        {
-          "type": "string",
-          "extension": [
+          "type": "group",
+          "linkId": "370529733824",
+          "code": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Enter version or release identifier"
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-update-frequency",
+              "display": "Update Frequency"
             }
           ],
-          "linkId": "343942743605",
-          "text": "Anti-Malware Version/Release: Version number or release identifier"
+          "prefix": "1.",
+          "text": "Update Frequency"
         },
         {
-          "type": "text",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Describe your anti-malware implementation scope..."
-            }
-          ],
-          "linkId": "581419297519",
-          "text": "Implementation Scope: Describe the scope of your anti-malware implementation (e.g., all company endpoints, specific servers)"
-        },
-        {
-          "type": "choice",
-          "extension": [
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "733457774453",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-malicious-code-protection-managed",
+                  "display": "Malicious-Code-Protection-Managed"
+                }
+              ],
+              "text": "How are malicious code protection updates managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Automatic updates enabled"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Centralized update management system"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Verification of successful updates"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Rollback capability for problematic updates"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Testing of updates before deployment"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Notification of update status and failures"
+                  }
+                }
+              ]
+            },
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "222629834244",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-update-management-process-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "222629834244_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "146442608630",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-external-sources-scanned",
+                  "display": "External Sources Scanned"
+                }
+              ],
+              "text": "Which external sources are scanned?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Internet Downloads"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Email Attachments"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Removable Media"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Cloud Storage"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Network Shares"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Other External Sources"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "692565504391",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-external-source-notes-evidence",
+                  "display": "System-Information-Notes-Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "692565504391_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "400782620614_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <span style=\"color: #003366;\"><i>Update Management Process</i></span> is the formal procedure for ensuring our malicious code protection systems are always current. It involves the controlled testing, deployment, and verification of updates to defend against the latest threats.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Automatic Updates:</b> The system is configured to apply critical security updates automatically as they become available.<br>\n  &bull; &nbsp; <b>Centralized Management:</b> A central system manages and deploys updates to all devices, ensuring consistent protection.<br>\n  &bull; &nbsp; <b>Update Verification:</b> A process is in place to verify that updates have been successfully installed across all systems.<br>\n  &bull; &nbsp; <b>Rollback Plan:</b> A procedure exists to safely roll back or uninstall a problematic update if it causes system issues.<br>\n  &bull; &nbsp; <b>Status Notifications:</b> Administrators are automatically notified of update deployments, especially if any failures occur.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
                   }
                 ]
-              }
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
             }
           ],
-          "linkId": "394557514652",
-          "text": "Real-Time Protection Enabled:",
-          "repeats": false,
-          "answerOption": [
+          "type": "group",
+          "linkId": "400782620614",
+          "code": [
             {
-              "valueCoding": {
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No"
-              }
-            }
-          ]
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-update-management-process",
+              "display": "Update Management Process"
             }
           ],
-          "linkId": "137330973781",
-          "text": "Centrally Managed:",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No"
-              }
-            }
-          ]
+          "prefix": "2.",
+          "text": "Update Management Process"
         },
-        {
-          "linkId": "123297792461_helpText",
-          "type": "display",
-          "text": "Deploy and maintain tools and processes to detect, prevent, and respond to malware infections in your systems.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Enter primary anti-malware solution"
-        }
-      ],
-      "linkId": "123297792461",
-      "prefix": "2.",
-      "text": "Implementation Details"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional context, challenges, or implementation details..."
-        }
-      ],
-      "linkId": "750023247979",
-      "text": "Additional Notes or Comments"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "List or describe the supporting documentation you have available(policies, configuration guides, deployment records, etc.)..."
-        }
-      ],
-      "linkId": "278751204941",
-      "text": "Supporting Documentation",
-      "item": [
-        {
-          "linkId": "278751204941_helpText",
-          "type": "display",
-          "text": "Note: Have documentation available that demonstrates your malicious code protection policies, anti-malware configurations, and deployment procedures.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "linkId": "363972470334",
-      "text": "SI.L1-3.14.4 - Update Malicious Code Protection",
-      "item": [
         {
           "linkId": "363972470334_helpText",
           "type": "display",
@@ -819,11 +1685,97 @@
             }
           ]
         }
-      ]
+      ],
+      "type": "group",
+      "linkId": "363972470334",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-information-integrity-update-malicious-code-protection",
+          "display": "Update Malicious Code Protection"
+        }
+      ],
+      "text": "SI.L1-B.1.XIV – Update Malicious Code Protection"
     },
     {
       "item": [
         {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "646475656187",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-policies-procedures-notes-evidence",
+                  "display": "Written Policies Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "646475656187_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "470606272303_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "This refers to having official documents — not just informal practices — that spell out:\n\nSystem scanning policy – how often company computers and servers are scanned for malware (e.g., daily, weekly).\n\nFile scanning policy – rules for automatically scanning new files from email, downloads, or USB drives before they are opened.\n\nScanning procedure – step-by-step instructions for IT staff or employees on how scans are run, monitored, and acted on if threats are found.\n\nHaving written documents proves the process is consistent, not left to chance, and is key for compliance."
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
           "type": "choice",
           "extension": [
             {
@@ -839,300 +1791,1083 @@
               }
             }
           ],
-          "linkId": "830996907328",
-          "text": "How frequently are malicious code protection mechanisms updated?",
+          "linkId": "470606272303",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-written-policies-procedures",
+              "display": "Written Policies Procedures"
+            }
+          ],
+          "text": "Do you have written policies and procedures that explain how your company scans systems and files for viruses and other malicious software?",
           "repeats": false,
           "answerOption": [
             {
               "valueCoding": {
-                "display": "Real-time updates (as available)"
+                "display": "Yes"
               }
             },
             {
               "valueCoding": {
-                "display": "Hourly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Daily"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Weekly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Manual updates only"
+                "display": "No"
               }
             }
           ]
         },
         {
-          "linkId": "370529733824_helpText",
-          "type": "display",
-          "text": "Regularly update malware protection tools and definitions to ensure defense against the latest threats.",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "720788097516",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-anti-malware-notes-evidence",
+                      "display": "Anti-Malware-Notes-Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "720788097516_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
                   }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "370529733824",
-      "prefix": "1.",
-      "text": "Update Frequency"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
+                }
+              ],
+              "linkId": "189466095401",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-anti-malware-software-install",
+                  "display": "Anti Malware Software Install"
+                }
+              ],
+              "text": "Does your organization have antivirus/anti-malware software installed on all systems?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Partially (some systems only)"
+                  }
+                }
+              ]
+            },
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "790957504944",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-anti-malware-notes-evidence",
+                      "display": "Anti Malware Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "790957504944_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter your current antivirus/anti-malware solution"
+                }
+              ],
+              "linkId": "694425083943",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-malware-deployed",
+                  "display": "Malware Deployed"
+                }
+              ],
+              "text": "What antivirus/anti-malware solution is currently deployed? e.g., Microsoft Defender, Norton, McAfee, etc."
+            },
+            {
+              "linkId": "359679551926_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
                   {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <span style=\"color: #003366;\"><i>Anti-Malware Implementation</i></span> is the process of installing and managing software that protects our systems from malicious software (malware), such as viruses, ransomware, and spyware. These tools are designed to actively detect, block, and remove any harmful code that could damage the system or steal data.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Anti-Malware Software Installation:</b> Protective anti-malware software is installed and active on all company systems and devices.<br>\n  &bull; &nbsp; <b>Real-time Protection:</b> The software continuously runs in the background, scanning files and activities to block threats as they occur.<br>\n  &bull; &nbsp; <b>Automatic Updates:</b> The software automatically updates its threat definitions to protect against the latest malware variants.<br>\n  &bull; &nbsp; <b>Scheduled Full Scans:</b> Regular, in-depth scans of the entire system are scheduled to find any dormant or hidden threats.<br>\n  &bull; &nbsp; <b>Automated Threat Removal:</b> When malware is detected, it is automatically removed or quarantined by the software to neutralize the threat.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
                   }
                 ]
-              }
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
             }
           ],
-          "linkId": "733457774453",
-          "text": "How are malicious code protection updates managed?",
-          "repeats": true,
-          "answerOption": [
+          "type": "group",
+          "linkId": "359679551926",
+          "code": [
             {
-              "valueCoding": {
-                "display": "Automatic updates enabled"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Centralized update management system"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Verification of successful updates"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Rollback capability for problematic updates"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Testing of updates before deployment"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Notification of update status and failures"
-              }
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-anti-malware-implementation",
+              "display": "Anti Malware Implementation"
             }
-          ]
+          ],
+          "prefix": "1.",
+          "text": "Anti-Malware Implementation"
         },
         {
-          "linkId": "400782620614_helpText",
-          "type": "display",
-          "text": "Establish procedures to manage and verify timely updates to malicious code protection systems.",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "112297593264",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-periodic-scanning-notes-evidence",
+                      "display": "Periodic Scanning Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "112297593264_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Frequency --"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
                   }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "400782620614",
-      "prefix": "2.",
-      "text": "Update Management Process"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional context challenges, or implementation details..."
-        }
-      ],
-      "linkId": "660268414578",
-      "text": "Additional Notes or Comments"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "List o describe the supporting documentation you have available (update procedures, verification logs, rollback plans, etc.)..."
-        }
-      ],
-      "linkId": "717091491475",
-      "text": "Supporting Documentation",
-      "item": [
-        {
-          "linkId": "717091491475_helpText",
-          "type": "display",
-          "text": "Note: Have documentation available that demonstrates your update management procedures, verification processes, and rollback capabilities.",
-          "extension": [
+                }
+              ],
+              "linkId": "508929065591",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-scan-computer-server",
+                  "display": "Scan Computer Server"
+                }
+              ],
+              "text": "How often do you run full scans of your company’s computers and servers to check for hidden viruses or malicious software?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Daily"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Weekily"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Bi-weekly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Monthly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Quarterly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Custom Schedule"
+                  }
+                }
+              ]
+            },
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "119870353096",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-periodic-scan-notes-evidence",
+                      "display": "Periodic Scan Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "119870353096_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Scan Depth --"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
                   }
-                ],
-                "text": "Help-Button"
-              }
+                }
+              ],
+              "linkId": "889472415570",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-thorough periodic-scan",
+                  "display": "Thorough Periodic Scan"
+                }
+              ],
+              "text": "What level of thoroughness is used for periodic scans?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Quick Scan (critical files only)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Standard Scan (system files and common user directories)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Full Scan (entire file system)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Custom Scan (specific directories)"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "558460360931_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <span style=\"color: #003366;\"><i>Periodic Scanning Implementation</i></span> is the process of scheduling automatic, regular security checks on your system. Unlike real-time scanning which is always on, periodic scans perform a deep, comprehensive review at set intervals (e.g., daily or weekly) to find any hidden or dormant threats.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Scheduled Scans:</b> Scans are scheduled to run automatically at regular intervals, such as daily, weekly, or monthly, to proactively find hidden threats.<br>\n  &bull; &nbsp; <b>Full System Scans:</b> The scan is comprehensive, performing a deep check of all files, programs, and system areas for malicious activity.<br>\n  &bull; &nbsp; <b>Automatic Actions:</b> If threats are found, they are automatically quarantined (isolated) or removed by the system to prevent damage.<br>\n  &bull; &nbsp; <b>Reporting:</b> A report is generated after each scan, summarizing the results, any threats that were found, and the actions taken.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "linkId": "237888898879",
-      "text": "SI.L1-3.14.5 - System & File Scanning",
-      "item": [
+          ],
+          "type": "group",
+          "linkId": "558460360931",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-periodic-scanning-implementation",
+              "display": "Periodic Scanning Implementation"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Periodic Scanning Implementation"
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "499524923589",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-real-time-scan-notes-evidence",
+                      "display": "Real Time Scan Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "499524923589_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "740865411316",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-file-automatic-scan",
+                  "display": "File Automatic Scan"
+                }
+              ],
+              "text": "When someone brings in a file from outside your company like an email attachment, a download, or a file on a USB drive is it automatically scanned for viruses and malware before it opens?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Partially (some sources only)"
+                  }
+                }
+              ]
+            },
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "658767359751",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-monitor-file-notes-evidence",
+                      "display": "Monitor File Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "658767359751_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "linkId": "842602142275_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "File integrity monitoring is like a security alarm for your most important system files. It watches critical files (such as system settings, configurations, or security controls) and raises an alert if someone — or something — tries to change them without approval. This helps detect tampering, malware, or insider threats before serious damage is done. For example, if a hacker tries to alter a security file to bypass protections, monitoring would flag it immediately."
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "842602142275",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-monitor-critical-file",
+                  "display": "Monitor Critical File"
+                }
+              ],
+              "text": "Do you employ file integrity monitoring for critical system files?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Planned"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "527252274149_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <span style=\"color: #003366;\"><i>Anti-Malware Implementation</i></span> is the process of installing and managing software that protects our systems from malicious software (malware), such as viruses, ransomware, and spyware. These tools are designed to actively detect, block, and remove any harmful code that could damage the system or steal data.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n\n  &bull; &nbsp; <b>Anti-Malware Software Installation:</b> Protective anti-malware software is installed and active on all company systems and devices.<br>\n  &bull; &nbsp; <b>Real-time Protection:</b> The software continuously runs in the background, scanning files and activities to block threats as they occur.<br>\n  &bull; &nbsp; <b>Automatic Updates:</b> The software automatically updates its threat definitions to protect against the latest malware variants.<br>\n  &bull; &nbsp; <b>Scheduled Full Scans:</b> Regular, in-depth scans of the entire system are scheduled to find any dormant or hidden threats.<br>\n  &bull; &nbsp; <b>Automated Threat Removal:</b> When malware is detected, it is automatically removed or quarantined by the software to neutralize the threat.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "527252274149",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-scanning-file-integrity",
+              "display": "Scanning File Integrity"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Real-time Scanning & File Integrity"
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your process for reviewing and documenting scan results..."
+                }
+              ],
+              "linkId": "707425868010",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-review-document-file",
+                  "display": "Review Document File"
+                }
+              ],
+              "text": "How are scan results reviewed and documented? Describe your process for reviewing and documenting scan results..."
+            },
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "936289816171",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-response-timeframe-notes-evidence",
+                      "display": "Response Timeframe Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "936289816171_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "open-choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "-- Select Response Timeframe --"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "986030389075",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-response-timeframe",
+                  "display": "Response Timeframe"
+                }
+              ],
+              "text": "What is your response timeframe when malware or vulnerabilities are detected?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Immediate (within hours)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Within 24 hours"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Within 48 hours"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Within a week"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Describe your process for remediating issues detected during scanning.."
+                }
+              ],
+              "linkId": "164191875680",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-remediation-process",
+                  "display": "Remediation Process"
+                }
+              ],
+              "text": "Describe your remediation process for identified issues: Describe your process for remediating issues detected during scanning...",
+              "item": [
+                {
+                  "linkId": "164191875680_helpText",
+                  "type": "display",
+                  "text": "Remediation means fixing problems found during scans like applying software patches, updating antivirus, or removing malware. Your process should explain who reviews scan results, how quickly issues must be fixed, and how you confirm the fix worked. This ensures vulnerabilities don’t linger and expose your systems to risk.",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "145622130157",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "system-information-integrity-scanning-notes-evidence",
+                      "display": "Scanning Notes Evidence"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "145622130157_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "967054991522",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-scanning-effectiveness",
+                  "display": "Scanning Effectiveness"
+                }
+              ],
+              "text": "Has scanning effectiveness been tested?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "List or describe the supporting documentation you have available(scanning policies , procedures , scan logs , remediation records, etc.)..."
+                }
+              ],
+              "linkId": "173738693036",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-information-integrity-scanning-supporting-documentation",
+                  "display": "Scanning Supporting Documentation"
+                }
+              ],
+              "text": "Supporting Documentation",
+              "item": [
+                {
+                  "linkId": "742963910056",
+                  "type": "display",
+                  "text": "Note: Have documentation available that demonstrates your scanning policies, procedures, scan results, and remediation processes.",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "123247885877_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\"margin-bottom: 0px;\">\n  <span style=\"color: #003366;\"><i>Results Handling & Testing</i></span> refers to the critical process of analyzing scan results and verifying system security. This ensures that any identified threats are dealt with effectively and that security measures are working as intended.\n</p>\n\n<div style=\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\">\n  &bull; &nbsp; <b>Handling Scan Results:</b> After a scan, the system must automatically take action, such as removing harmful files, blocking threats, or alerting administrators.<br>\n  &bull; &nbsp; <b>Quarantine and Removal:</b> Threats are either quarantined (isolated) to prevent damage or deleted entirely from the system.<br>\n  &bull; &nbsp; <b>Reporting:</b> A report is generated after each scan to summarize the findings, actions taken, and the overall security status.<br>\n  &bull; &nbsp; <b>Testing Security Measures:</b> Regular, automated tests are run to verify that security tools are configured correctly and effectively defending against threats.<br>\n  &bull; &nbsp; <b>Follow-up Actions:</b> When vulnerabilities are found, a clear process must exist for follow-up actions like applying patches, updating software, or strengthening security configurations.\n</div>\n\n<p style=\"margin-top: -50px;\">\n  <span style=\"color: #003366;\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "123247885877",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-information-integrity-results-handling-testing",
+              "display": "Results Handling Testing"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Results Handling & Testing"
+        },
         {
           "linkId": "237888898879_helpText",
           "type": "display",
-          "text": "Perform periodic scans of the information system and real-time scans of files from external sources",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
+          "_text": {
+            "extension": [
               {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "Regularly scan your systems for viruses and other malicious software, and automatically check any new files (like email attachments, downloads, or files from USB drives) before they can be opened or used."
               }
             ]
-          }
-        }
-      ],
-      "linkId": "470606272303",
-      "text": "Do you have a system scanning policy documentation, file scanning policy, and scanning procedure documentation?",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Yes"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "189466095401",
-          "text": "Does your organization have antivirus/anti-malware software installed on all systems?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Partially (some systems only)"
-              }
-            }
-          ]
-        },
-        {
-          "type": "string",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Enter your current antivirus/anti-malware solution"
-            }
-          ],
-          "linkId": "694425083943",
-          "text": "What antivirus/anti-malware solution is currently deployed? e.g., Microsoft Defender, Norton, McAfee, etc."
-        },
-        {
-          "linkId": "359679551926_helpText",
-          "type": "display",
-          "text": "Deploy anti-malware solutions to regularly scan systems and files for malicious software and remove threats promptly.",
+          },
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -1151,458 +2886,15 @@
         }
       ],
       "type": "group",
-      "linkId": "359679551926",
-      "prefix": "1.",
-      "text": "Anti-Malware Implementation"
-    },
-    {
-      "item": [
+      "linkId": "237888898879",
+      "code": [
         {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "-- Select Frequency --"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "drop-down",
-                    "display": "Drop down"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "508929065591",
-          "text": "How frequently are full system scans conducted?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Daily"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Weekily"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Bi-weekly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Monthly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Quarterly"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Custom Schedule"
-              }
-            }
-          ]
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "-- Select Scan Depth --"
-            }
-          ],
-          "linkId": "889472415570",
-          "text": "What level of thoroughness is used for periodic scans?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Quick Scan (critical files only)"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Standard Scan (system files and common user directories)"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Full Scan (entire file system)"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Custom Scan (specific directories)"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "558460360931_helpText",
-          "type": "display",
-          "text": "Schedule regular scans of systems and files to detect and address malware or security issues consistently.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-information-integrity-system-file-scanning",
+          "display": "System-File-Scanning"
         }
       ],
-      "type": "group",
-      "linkId": "558460360931",
-      "prefix": "2.",
-      "text": "Periodic Scanning Implementation"
-    },
-    {
-      "item": [
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "740865411316",
-          "text": "Are files from external sources scanned in real-time?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Partially (some sources only)"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "527252274149_helpText",
-          "type": "display",
-          "text": "Use real-time scanning to detect threats immediately and monitor file integrity to prevent unauthorized changes.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "527252274149",
-      "prefix": "3.",
-      "text": "Real-time Scanning & File Integrity"
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "check-box",
-                "display": "Check-box"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "146442608630",
-      "text": "Which external sources are scanned?",
-      "repeats": true,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Internet Downloads"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Email Attachments"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Removable Media"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Cloud Storage"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Network Shares"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Other External Sources"
-          }
-        }
-      ]
-    },
-    {
-      "type": "choice",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                "code": "radio-button",
-                "display": "Radio Button"
-              }
-            ]
-          }
-        }
-      ],
-      "linkId": "842602142275",
-      "text": "Do you employ file integrity monitoring for critical system files?",
-      "repeats": false,
-      "answerOption": [
-        {
-          "valueCoding": {
-            "display": "Yes"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "No"
-          }
-        },
-        {
-          "valueCoding": {
-            "display": "Planned"
-          }
-        }
-      ]
-    },
-    {
-      "item": [
-        {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Describe your process for reviewing and documenting scan results..."
-            }
-          ],
-          "linkId": "707425868010",
-          "text": "How are scan results reviewed and documented? Describe your process for reviewing and documenting scan results..."
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "-- Select Response Timeframe --"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "drop-down",
-                    "display": "Drop down"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "986030389075",
-          "text": "What is your response timeframe when malware or vulnerabilities are detected?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Immediate (within hours)"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Within 24 hours"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Within 48 hours"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Within a week"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "Other (specify in notes)"
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-              "valueString": "Describe your process for remediating issues detected during scanning.."
-            }
-          ],
-          "linkId": "164191875680",
-          "text": "Describe your remediation process for identified issues: Describe your process for remediating issues detected during scanning..."
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "967054991522",
-          "text": "Has scanning effectiveness been tested?",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "display": "No"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "123247885877_helpText",
-          "type": "display",
-          "text": "Establish procedures to review scan results, respond to detected threats, and test scanning tools for effectiveness.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ],
-      "type": "group",
-      "linkId": "123247885877",
-      "prefix": "4.",
-      "text": "Results Handling & Testing"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "Any additional context, challenges, or implementation details"
-        }
-      ],
-      "linkId": "892462719670",
-      "text": "Has scanning effectiveness been tested?"
-    },
-    {
-      "type": "text",
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-          "valueString": "List or describe the supporting documentation you have available(scanning policies , procedures , scan logs , remediation records, etc.)..."
-        }
-      ],
-      "linkId": "901609884580",
-      "text": "Supporting Documentation",
-      "item": [
-        {
-          "linkId": "901609884580_helpText",
-          "type": "display",
-          "text": "Note: Have documentation available that demonstrates your scanning policies, procedures, scan results, and remediation processes.",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
-              }
-            }
-          ]
-        }
-      ]
+      "text": "SI.L1-B.1.XV – System & File Scanning"
     }
   ]
 }

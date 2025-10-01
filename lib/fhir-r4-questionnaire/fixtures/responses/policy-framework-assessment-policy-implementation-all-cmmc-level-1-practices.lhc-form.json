@@ -1,465 +1,663 @@
 {
-    "lformsVersion": "38.2.0",
-    "PATH_DELIMITER": "/",
-    "code": null,
-    "codeList": null,
-    "identifier": null,
-    "name": "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
-    "template": "table",
-    "items": [
+  "lformsVersion": "34.0.0",
+  "PATH_DELIMITER": "/",
+  "code": null,
+  "codeList": null,
+  "identifier": null,
+  "name": "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+  "template": "table",
+  "items": [
+    {
+      "header": true,
+      "dataType": "SECTION",
+      "question": "Policy Framework Assessment",
+      "codeList": [
         {
-            "header": true,
-            "dataType": "SECTION",
-            "question": "Policy Framework Assessment",
-            "questionCode": "364455629781",
-            "questionCodeSystem": "LinkId",
-            "linkId": "364455629781",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [],
-            "codingInstructions": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
-            "codingInstructionsLinkId": "364455629781_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "prefix": "1.",
-            "question": "Policy Development and Approval",
-            "questionCode": "590810573907",
-            "questionCodeSystem": "LinkId",
-            "linkId": "590810573907",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "CODING",
-                    "question": "Who is responsible for developing and approving CMMC-related policies?",
-                    "questionCode": "527949557496",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "527949557496",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Chief Information Officer"
-                        },
-                        {
-                            "text": "Chief Information Security Officer"
-                        },
-                        {
-                            "text": "Chief Executive Officer"
-                        },
-                        {
-                            "text": "Legal/Compliance Department"
-                        },
-                        {
-                            "text": "IT Security Team"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Chief Information Security Officer"
-                        },
-                        {
-                            "text": "Legal/Compliance Department"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
-            "codingInstructionsLinkId": "590810573907_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "prefix": "2.",
-            "question": "Policy Review and Update Procedures",
-            "questionCode": "441079114846",
-            "questionCodeSystem": "LinkId",
-            "linkId": "441079114846",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "CODING",
-                    "question": "How frequently are CMMC-related policies reviewed and updated?",
-                    "questionCode": "992068463537",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "992068463537",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Quarterly"
-                        },
-                        {
-                            "text": "Bi-annually"
-                        },
-                        {
-                            "text": "Annually"
-                        },
-                        {
-                            "text": "When regulations change"
-                        },
-                        {
-                            "text": "No formal schedule"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Annually"
-                        },
-                        {
-                            "text": "When regulations change"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Implement regular procedures to review and update policies to keep them current and effective.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Implement regular procedures to review and update policies to keep them current and effective.",
-            "codingInstructionsLinkId": "441079114846_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "prefix": "3.",
-            "question": "Employee Training on Policies",
-            "questionCode": "401642968533",
-            "questionCodeSystem": "LinkId",
-            "linkId": "401642968533",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "CODING",
-                    "question": "What training is provided to employees on CMMC-related policies?",
-                    "questionCode": "472951321809",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "472951321809",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Initial security awareness training"
-                        },
-                        {
-                            "text": "Role-specific policy training"
-                        },
-                        {
-                            "text": "Annual refresher training"
-                        },
-                        {
-                            "text": "just-in-time training for policy changes"
-                        },
-                        {
-                            "text": "No formal training program"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Initial security awareness training"
-                        },
-                        {
-                            "text": "Role-specific policy training"
-                        },
-                        {
-                            "text": "Annual refresher training"
-                        },
-                        {
-                            "text": "just-in-time training for policy changes"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
-            "codingInstructionsLinkId": "401642968533_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "prefix": "4.",
-            "question": "Policy Compliance Monitoring",
-            "questionCode": "237023742748",
-            "questionCodeSystem": "LinkId",
-            "linkId": "237023742748",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "CODING",
-                    "question": "How is compliance with CMMC-related policies monitored?",
-                    "questionCode": "758349008850",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "758349008850",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Regular internal audits"
-                        },
-                        {
-                            "text": "Automated compliance monitoring"
-                        },
-                        {
-                            "text": "Self-assessment questionnaires"
-                        },
-                        {
-                            "text": "Manager reviews and attestations"
-                        },
-                        {
-                            "text": "Third-party assessments"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Regular internal audits"
-                        },
-                        {
-                            "text": "Automated compliance monitoring"
-                        },
-                        {
-                            "text": "Manager reviews and attestations"
-                        },
-                        {
-                            "text": "Third-party assessments"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
-            "codingInstructionsLinkId": "237023742748_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "header": true,
-            "dataType": "SECTION",
-            "prefix": "5.",
-            "question": "Policy Exception Management",
-            "questionCode": "260429244098",
-            "questionCodeSystem": "LinkId",
-            "linkId": "260429244098",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "items": [
-                {
-                    "dataType": "CODING",
-                    "question": "How are exceptions to CMMC-related policies managed?",
-                    "questionCode": "255836550808",
-                    "questionCodeSystem": "LinkId",
-                    "linkId": "255836550808",
-                    "answerCardinality": {
-                        "max": "*",
-                        "min": "0"
-                    },
-                    "displayControl": {
-                        "answerLayout": {
-                            "type": "RADIO_CHECKBOX"
-                        }
-                    },
-                    "answers": [
-                        {
-                            "text": "Formal exception request process"
-                        },
-                        {
-                            "text": "Risk assessment for exceptions"
-                        },
-                        {
-                            "text": "Compensating controls for exceptions"
-                        },
-                        {
-                            "text": "Regular review of approved exceptions"
-                        },
-                        {
-                            "text": "No formal exception process"
-                        }
-                    ],
-                    "codeList": [],
-                    "questionCardinality": {
-                        "min": "1",
-                        "max": "1"
-                    },
-                    "value": [
-                        {
-                            "text": "Formal exception request process"
-                        },
-                        {
-                            "text": "Risk assessment for exceptions"
-                        },
-                        {
-                            "text": "Compensating controls for exceptions"
-                        },
-                        {
-                            "text": "Regular review of approved exceptions"
-                        }
-                    ]
-                }
-            ],
-            "codingInstructions": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
-            "codingInstructionsFormat": "text",
-            "codingInstructionsPlain": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
-            "codingInstructionsLinkId": "260429244098_helpText",
-            "codeList": [],
-            "displayControl": {
-                "questionLayout": "vertical"
-            },
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-                    "valueString": "Any additional information about your policy framework."
-                }
-            ],
-            "dataType": "TX",
-            "question": "Additional Notes",
-            "questionCode": "795388091631",
-            "questionCodeSystem": "LinkId",
-            "linkId": "795388091631",
-            "questionCardinality": {
-                "max": "1",
-                "min": "1"
-            },
-            "codeList": [],
-            "answerCardinality": {
-                "min": "0",
-                "max": "1"
-            }
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-overview",
+          "display": "Policy Framework Assessment"
         }
-    ],
-    "templateOptions": {
-        "showQuestionCode": false,
-        "showCodingInstruction": false,
-        "allowMultipleEmptyRepeatingItems": false,
-        "allowHTML": true,
-        "displayControl": {
-            "questionLayout": "vertical"
-        },
-        "viewMode": "auto",
-        "defaultAnswerLayout": {
-            "answerLayout": {
-                "type": "COMBO_BOX",
-                "columns": "0"
+      ],
+      "questionCode": "policy-framework-assessment-overview",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+      "linkId": "364455629781",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "items": [
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "1.",
+          "question": "Policy Development and Approval",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-development-approval",
+              "display": "Policy Development And Approval"
             }
+          ],
+          "questionCode": "policy-framework-assessment-policy-development-approval",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "590810573907",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "Who is responsible for developing and approving CMMC-related policies?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development",
+                  "display": "Responsible For Developing Approving Cmmc Related Policies"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-responsible-policy-development",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "527949557496",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Chief Information Officer"
+                },
+                {
+                  "text": "Chief Information Security Officer"
+                },
+                {
+                  "text": "Chief Executive Officer"
+                },
+                {
+                  "text": "Legal/Compliance Department"
+                },
+                {
+                  "text": "IT Security Team"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Chief Information Officer"
+                },
+                {
+                  "text": "Legal/Compliance Department"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-responsible-policy-development-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "576726184171",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
         },
-        "hideTreeLine": false,
-        "hideIndentation": false,
-        "hideRepetitionNumber": false,
-        "displayScoreWithAnswerText": true,
-        "displayInvalidHTML": false,
-        "messageLevel": "error"
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "2.",
+          "question": "Policy Review and Update Procedures",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-review-procedures",
+              "display": "Policy Review Update Procedures"
+            }
+          ],
+          "questionCode": "policy-framework-assessment-policy-review-procedures",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "441079114846",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "How frequently are CMMC-related policies reviewed and updated?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency",
+                  "display": "Frequently Are Cmmc Related Policies Reviewed Updated"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-review-frequency",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "992068463537",
+              "answerCardinality": {
+                "max": "1",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Quarterly"
+                },
+                {
+                  "text": "Bi-annually"
+                },
+                {
+                  "text": "Annually"
+                },
+                {
+                  "text": "When regulations change"
+                },
+                {
+                  "text": "No formal schedule"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": {
+                "text": "Quarterly"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-review-frequency-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "891438058183",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Implement regular procedures to review and update policies to keep them current and effective.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Implement regular procedures to review and update policies to keep them current and effective.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "3.",
+          "question": "Employee Training on Policies",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-employee-training",
+              "display": "Employee Training On Policies"
+            }
+          ],
+          "questionCode": "policy-framework-assessment-employee-training",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "401642968533",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "What training is provided to employees on CMMC-related policies?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training",
+                  "display": "Training Is Provided Employees On Cmmc Related Policies"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-employee-policy-training",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "472951321809",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": "Initial security awareness training"
+                },
+                {
+                  "text": "Role-specific policy training"
+                },
+                {
+                  "text": "Annual refresher training"
+                },
+                {
+                  "text": "just-in-time training for policy changes"
+                },
+                {
+                  "text": "No formal training program"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": "Initial security awareness training"
+                },
+                {
+                  "text": "just-in-time training for policy changes"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-employee-policy-training-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "948893743049",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "4.",
+          "question": "Policy Compliance Monitoring",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-compliance-monitoring",
+              "display": "Policy Compliance Monitoring"
+            }
+          ],
+          "questionCode": "policy-framework-assessment-policy-compliance-monitoring",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "237023742748",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "How is compliance with CMMC-related policies monitored?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-methods",
+                  "display": "Compliance Cmmc Related Policies Monitored"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-compliance-monitoring-methods",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "758349008850",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Regular internal audits"
+                },
+                {
+                  "text": "Automated compliance monitoring"
+                },
+                {
+                  "text": "Self-assessment questionnaires"
+                },
+                {
+                  "text": "Manager reviews and attestations"
+                },
+                {
+                  "text": "Third-party assessments"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Regular internal audits"
+                },
+                {
+                  "text": "Manager reviews and attestations"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-compliance-monitoring-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "230314073532",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        },
+        {
+          "header": true,
+          "dataType": "SECTION",
+          "prefix": "5.",
+          "question": "Policy Exception Management",
+          "codeList": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-exception-management",
+              "display": "Policy Exception Management"
+            }
+          ],
+          "questionCode": "policy-framework-assessment-policy-exception-management",
+          "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "linkId": "260429244098",
+          "questionCardinality": {
+            "max": "1",
+            "min": "1"
+          },
+          "items": [
+            {
+              "dataType": "CNE",
+              "question": "How are exceptions to CMMC-related policies managed?",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-methods",
+                  "display": "Exceptions To Cmmc Related Policies Managed"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-exception-management-methods",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "255836550808",
+              "answerCardinality": {
+                "max": "*",
+                "min": "0"
+              },
+              "displayControl": {
+                "answerLayout": {
+                  "type": "RADIO_CHECKBOX"
+                }
+              },
+              "answers": [
+                {
+                  "text": " Formal exception request process"
+                },
+                {
+                  "text": "Risk assessment for exceptions"
+                },
+                {
+                  "text": "Compensating controls for exceptions"
+                },
+                {
+                  "text": "Regular review of approved exceptions"
+                },
+                {
+                  "text": "No formal exception process"
+                }
+              ],
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "value": [
+                {
+                  "text": " Formal exception request process"
+                },
+                {
+                  "text": "Compensating controls for exceptions"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "dataType": "ST",
+              "question": "Notes / Evidence ",
+              "codeList": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "questionCode": "policy-framework-assessment-policy-exception-management-notes",
+              "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "linkId": "683517806081",
+              "questionCardinality": {
+                "max": "1",
+                "min": "1"
+              },
+              "items": [],
+              "codingInstructions": "<p><span style=\"color: #003366;\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>",
+              "codingInstructionsFormat": "html",
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              }
+            }
+          ],
+          "codingInstructions": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
+          "codingInstructionsFormat": "text",
+          "codingInstructionsPlain": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
+          "displayControl": {
+            "questionLayout": "vertical"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          }
+        }
+      ],
+      "codingInstructions": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
+      "codingInstructionsFormat": "text",
+      "codingInstructionsPlain": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
+      "displayControl": {
+        "questionLayout": "vertical"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
     },
-    "hasSavedData": true,
-    "fhirVersion": "R4"
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Any additional information about your policy framework."
+        }
+      ],
+      "dataType": "TX",
+      "question": "Additional Notes",
+      "codeList": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-additional-notes",
+          "display": "Additional Notes"
+        }
+      ],
+      "questionCode": "policy-framework-assessment-additional-notes",
+      "questionCodeSystem": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+      "linkId": "795388091631",
+      "questionCardinality": {
+        "max": "1",
+        "min": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      }
+    }
+  ],
+  "templateOptions": {
+    "showQuestionCode": false,
+    "showCodingInstruction": false,
+    "allowMultipleEmptyRepeatingItems": false,
+    "allowHTMLInInstructions": false,
+    "displayControl": {
+      "questionLayout": "vertical"
+    },
+    "viewMode": "auto",
+    "defaultAnswerLayout": {
+      "answerLayout": {
+        "type": "COMBO_BOX",
+        "columns": "0"
+      }
+    },
+    "hideTreeLine": false,
+    "hideIndentation": false,
+    "hideRepetitionNumber": false,
+    "displayScoreWithAnswerText": true,
+    "allowHTML": true
+  },
+  "hasSavedData": true,
+  "fhirVersion": "R4"
 }
