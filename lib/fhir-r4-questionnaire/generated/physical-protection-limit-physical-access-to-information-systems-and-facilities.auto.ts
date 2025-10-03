@@ -10,25 +10,16 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "Physical Protection (Limit physical access to information systems and facilities)",
-    filename:
-      "physical-protection-limit-physical-access-to-information-systems-and-facilities.auto.ts",
-    titleCamel:
-      "`physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
-    titlePascal:
-      "`PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
-    titleKebab:
-      "`physical-protection-limit-physical-access-to-information-systems-and-facilities`",
-    lhcFormResponseAdapterFnName:
-      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource",
-  };
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesModuleSignature: rt.ModuleSignature = {
+    title: "Physical Protection (Limit physical access to information systems and facilities)",
+    filename: "physical-protection-limit-physical-access-to-information-systems-and-facilities.auto.ts",
+    titleCamel: "`physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
+    titlePascal: "`PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities`",
+    titleKebab: "`physical-protection-limit-physical-access-to-information-systems-and-facilities`",
+    lhcFormResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -38,57 +29,56 @@ type Any = any;
  * - Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals
  */
 /** Map of normalized property names to their source `linkId`. */
-export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds =
-  {
-    physicalProtectionStoreProcessHandlePhysicalProtection: "242760824142",
-    physicalProtectionAuthorizePhysicalAccess: "324592389560",
-    physicalProtectionFullTimeEmployeesAuthorized: "436045572485",
-    physicalProtectionContractorsAuthorized: "857782926958",
-    physicalProtectionPartTimeEmployeesAuthorized: "944400994758",
-    physicalProtectionVisitorsEscortsAuthorized: "571574306369",
-    physicalProtectionAreasControlledPhysicalAccess: "702794466613",
-    physicalProtectionAccessNotesEvidence: "279391143609",
-    physicalProtectionAuthorizePhysicalAccessControlAreas: "784352573703",
-    physicalProtectionAuthorizationNotesEvidence: "159961192967",
-    physicalProtectionTypeAccessCredentialsIssued: "773851219827",
-    physicalProtectionCredentialsNotesEvidence: "614664633852",
-    physicalProtectionTimeBasedRestrictionsPhysicalAccess: "208747627440",
-    physicalProtectionTimeBasedAccessNotesEvidence: "864878261078",
-    physicalProtectionImplementationStatus: "660777712272",
-    physicalProtectionTimeBasedNotesEvidence: "158505675327",
-    physicalProtectionRequireVisitorsEscort: "684131391577",
-    physicalProtectionNotesVisitorEscortEvidence: "372121837424",
-    physicalProtectionVisitorsIdentifyDistinguished: "400470675855",
-    physicalProtectionVisitorIdentificationNotesEvidence: "739299710732",
-    physicalProtectionVisitorActivityMonitoredPremises: "829474009766",
-    physicalProtectionVisitorActivityNotesEvidence: "398473749950",
-    physicalProtectionAuthorizeEscortVisitors: "422650784362",
-    physicalProtectionEscortAuthorizationNotesEvidence: "766282850057",
-    physicalProtectionImplementationStatus2: "231843690847",
-    physicalProtectionImplementationNotesEvidence: "972038317766",
-    physicalProtectionLogPhysicalAccessFacilities: "734633292283",
-    physicalProtectionAccessLoggingNotesEvidence: "325061856971",
-    physicalProtectionInformationPhysicalAccessLogs: "174905707594",
-    physicalProtectionInformationCaptureNotesEvidence: "750143252884",
-    physicalProtectionPhysicalAccessLogsRetained: "245305278102",
-    physicalProtectionLogRetentionNotesEvidence: "571727427731",
-    physicalProtectionFrequentAccessLogReviewed: "741567851452",
-    physicalProtectionFrequencyLogsNotesEvidence: "910408738855",
-    physicalProtectionReviewPhysicalAccessLogs: "745836226925",
-    physicalProtectionReviewAccessNotesEvidence: "361446942388",
-    physicalProtectionImplementationStatus3: "320438032270",
-    physicalProtectionImplementationNotesEvidence2: "724862600014",
-    physicalProtectionTypesPhysicalAccessDevices: "903629274308",
-    physicalProtectionDeviceInventoryNotesEvidence: "896964575016",
-    physicalProtectionPhysicalAccessDevicesControlled: "173451266066",
-    physicalProtectionDeviceControlNotesEvidence: "164071724457",
-    physicalProtectionMeasuresProtectPhysicalAccessDevices: "911514884520",
-    physicalProtectionDeviceSecurityNotesEvidence: "653480882123",
-    physicalProtectionElectronicAccessSystemsUpdated: "466342459779",
-    physicalProtectionDeviceMaintenanceNotesEvidence: "951698714660",
-    physicalProtectionImplementationStatus4: "294892506040",
-    physicalProtectionImplementationNotesEvidence3: "140603351800",
-  } as const;
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLinkIds = {
+  physicalProtectionStoreProcessHandlePhysicalProtection: "242760824142",
+  physicalProtectionAuthorizePhysicalAccess: "324592389560",
+  physicalProtectionFullTimeEmployeesAuthorized: "436045572485",
+  physicalProtectionContractorsAuthorized: "857782926958",
+  physicalProtectionPartTimeEmployeesAuthorized: "944400994758",
+  physicalProtectionVisitorsEscortsAuthorized: "571574306369",
+  physicalProtectionAreasControlledPhysicalAccess: "702794466613",
+  physicalProtectionAccessNotesEvidence: "279391143609",
+  physicalProtectionAuthorizePhysicalAccessControlAreas: "784352573703",
+  physicalProtectionAuthorizationNotesEvidence: "159961192967",
+  physicalProtectionTypeAccessCredentialsIssued: "773851219827",
+  physicalProtectionCredentialsNotesEvidence: "614664633852",
+  physicalProtectionTimeBasedRestrictionsPhysicalAccess: "208747627440",
+  physicalProtectionTimeBasedAccessNotesEvidence: "864878261078",
+  physicalProtectionImplementationStatus: "660777712272",
+  physicalProtectionTimeBasedNotesEvidence: "158505675327",
+  physicalProtectionRequireVisitorsEscort: "684131391577",
+  physicalProtectionNotesVisitorEscortEvidence: "372121837424",
+  physicalProtectionVisitorsIdentifyDistinguished: "400470675855",
+  physicalProtectionVisitorIdentificationNotesEvidence: "739299710732",
+  physicalProtectionVisitorActivityMonitoredPremises: "829474009766",
+  physicalProtectionVisitorActivityNotesEvidence: "398473749950",
+  physicalProtectionAuthorizeEscortVisitors: "422650784362",
+  physicalProtectionEscortAuthorizationNotesEvidence: "766282850057",
+  physicalProtectionImplementationStatus2: "231843690847",
+  physicalProtectionImplementationNotesEvidence: "972038317766",
+  physicalProtectionLogPhysicalAccessFacilities: "734633292283",
+  physicalProtectionAccessLoggingNotesEvidence: "325061856971",
+  physicalProtectionInformationPhysicalAccessLogs: "174905707594",
+  physicalProtectionInformationCaptureNotesEvidence: "750143252884",
+  physicalProtectionPhysicalAccessLogsRetained: "245305278102",
+  physicalProtectionLogRetentionNotesEvidence: "571727427731",
+  physicalProtectionFrequentAccessLogReviewed: "741567851452",
+  physicalProtectionFrequencyLogsNotesEvidence: "910408738855",
+  physicalProtectionReviewPhysicalAccessLogs: "745836226925",
+  physicalProtectionReviewAccessNotesEvidence: "361446942388",
+  physicalProtectionImplementationStatus3: "320438032270",
+  physicalProtectionImplementationNotesEvidence2: "724862600014",
+  physicalProtectionTypesPhysicalAccessDevices: "903629274308",
+  physicalProtectionDeviceInventoryNotesEvidence: "896964575016",
+  physicalProtectionPhysicalAccessDevicesControlled: "173451266066",
+  physicalProtectionDeviceControlNotesEvidence: "164071724457",
+  physicalProtectionMeasuresProtectPhysicalAccessDevices: "911514884520",
+  physicalProtectionDeviceSecurityNotesEvidence: "653480882123",
+  physicalProtectionElectronicAccessSystemsUpdated: "466342459779",
+  physicalProtectionDeviceMaintenanceNotesEvidence: "951698714660",
+  physicalProtectionImplementationStatus4: "294892506040",
+  physicalProtectionImplementationNotesEvidence3: "140603351800"
+} as const;
 
 /** Normalized view of "Physical Protection (Limit physical access to information systems and facilities)" answers. */
 export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
@@ -307,7 +297,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
   physicalProtectionAuthorizeEscortVisitors?: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 766282850057
    * FHIR type: string
    * Entry format: Type your comments here...
@@ -345,7 +335,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
   physicalProtectionLogPhysicalAccessFacilities?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 325061856971
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -364,7 +354,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
   physicalProtectionInformationPhysicalAccessLogs?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 750143252884
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -377,17 +367,17 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * How long are physical access logs retained?
    * linkId: 245305278102
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionPhysicalAccessLogsRetained?: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 571727427731
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionLogRetentionNotesEvidence?: string;
@@ -396,17 +386,17 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * How frequently are access logs reviewed?
    * linkId: 741567851452
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionFrequentAccessLogReviewed?: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 910408738855
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionFrequencyLogsNotesEvidence?: string;
@@ -415,17 +405,17 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * Who reviews the physical access logs?
    * linkId: 745836226925
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionReviewPhysicalAccessLogs?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 361446942388
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review
+   * Section: PE.L1-B.1.IX –Physical Access Logs > 3. Log Retention and Review 
    * Required: no
    */
   physicalProtectionReviewAccessNotesEvidence?: string;
@@ -453,7 +443,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * What types of physical access devices does your organization use?
    * linkId: 903629274308
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory 
    * Required: no
    */
   physicalProtectionTypesPhysicalAccessDevices?: string[];
@@ -463,7 +453,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * linkId: 896964575016
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 1. Physical Access Device Inventory 
    * Required: no
    */
   physicalProtectionDeviceInventoryNotesEvidence?: string;
@@ -472,7 +462,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * How are physical access devices controlled and managed?
    * linkId: 173451266066
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management 
    * Required: no
    */
   physicalProtectionPhysicalAccessDevicesControlled?: string[];
@@ -482,7 +472,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * linkId: 164071724457
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 2. Device Control and Management 
    * Required: no
    */
   physicalProtectionDeviceControlNotesEvidence?: string;
@@ -491,7 +481,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * What security measures protect physical access devices?
    * linkId: 911514884520
    * FHIR type: string
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures 
    * Required: no
    */
   physicalProtectionMeasuresProtectPhysicalAccessDevices?: string[];
@@ -501,7 +491,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
    * linkId: 653480882123
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
-   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures
+   * Section: PE.L1-B.1.IX –Manage Physical Access Devices > 3. Device Security Measures 
    * Required: no
    */
   physicalProtectionDeviceSecurityNotesEvidence?: string;
@@ -535,7 +525,7 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
   physicalProtectionImplementationStatus4?: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 140603351800
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -546,366 +536,110 @@ export interface PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFac
 }
 
 /** Convert an LHC JSON response into a normalized PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities object. */
-export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(
-  input: Any,
-): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
+export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(input: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
   return {
-    physicalProtectionStoreProcessHandlePhysicalProtection: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "242760824142")),
-    physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "324592389560"),
-    ),
-    physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "436045572485"),
-    ),
-    physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "857782926958"),
-    ),
-    physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "944400994758"),
-    ),
-    physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "571574306369"),
-    ),
-    physicalProtectionAreasControlledPhysicalAccess: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "702794466613"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionAreasControlledPhysicalAccess"
-      ],
-    physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "279391143609"),
-    ),
-    physicalProtectionAuthorizePhysicalAccessControlAreas: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "784352573703"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionAuthorizePhysicalAccessControlAreas"
-      ],
-    physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "159961192967"),
-    ),
-    physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "773851219827"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionTypeAccessCredentialsIssued"
-    ],
-    physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "614664633852"),
-    ),
-    physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "208747627440"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionTimeBasedRestrictionsPhysicalAccess"
-      ],
-    physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "864878261078"),
-    ),
-    physicalProtectionImplementationStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "660777712272"),
-    ),
-    physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "158505675327"),
-    ),
-    physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "684131391577"),
-    ),
-    physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "372121837424"),
-    ),
-    physicalProtectionVisitorsIdentifyDistinguished: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "400470675855"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionVisitorsIdentifyDistinguished"
-      ],
-    physicalProtectionVisitorIdentificationNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "739299710732")),
-    physicalProtectionVisitorActivityMonitoredPremises: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "829474009766"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionVisitorActivityMonitoredPremises"
-      ],
-    physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "398473749950"),
-    ),
-    physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "422650784362"),
-    ),
-    physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "766282850057"),
-    ),
-    physicalProtectionImplementationStatus2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "231843690847"),
-    ),
-    physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "972038317766"),
-    ),
-    physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "734633292283"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionLogPhysicalAccessFacilities"
-    ],
-    physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "325061856971"),
-    ),
-    physicalProtectionInformationPhysicalAccessLogs: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "174905707594"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionInformationPhysicalAccessLogs"
-      ],
-    physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "750143252884"),
-    ),
-    physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "245305278102"),
-    ),
-    physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "571727427731"),
-    ),
-    physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "741567851452"),
-    ),
-    physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "910408738855"),
-    ),
-    physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "745836226925"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionReviewPhysicalAccessLogs"
-    ],
-    physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "361446942388"),
-    ),
-    physicalProtectionImplementationStatus3: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "320438032270"),
-    ),
-    physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "724862600014"),
-    ),
-    physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "903629274308"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionTypesPhysicalAccessDevices"
-    ],
-    physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "896964575016"),
-    ),
-    physicalProtectionPhysicalAccessDevicesControlled: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "173451266066"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionPhysicalAccessDevicesControlled"
-      ],
-    physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "164071724457"),
-    ),
-    physicalProtectionMeasuresProtectPhysicalAccessDevices: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "911514884520"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionMeasuresProtectPhysicalAccessDevices"
-      ],
-    physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "653480882123"),
-    ),
-    physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "466342459779"),
-    ),
-    physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "951698714660"),
-    ),
-    physicalProtectionImplementationStatus4: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "294892506040"),
-    ),
-    physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "140603351800"),
-    ),
+  physicalProtectionStoreProcessHandlePhysicalProtection: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "242760824142")),
+  physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "324592389560")),
+  physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "436045572485")),
+  physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "857782926958")),
+  physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "944400994758")),
+  physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "571574306369")),
+  physicalProtectionAreasControlledPhysicalAccess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "702794466613")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionAreasControlledPhysicalAccess"],
+  physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "279391143609")),
+  physicalProtectionAuthorizePhysicalAccessControlAreas: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "784352573703")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionAuthorizePhysicalAccessControlAreas"],
+  physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "159961192967")),
+  physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "773851219827")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTypeAccessCredentialsIssued"],
+  physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "614664633852")),
+  physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "208747627440")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTimeBasedRestrictionsPhysicalAccess"],
+  physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "864878261078")),
+  physicalProtectionImplementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "660777712272")),
+  physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "158505675327")),
+  physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "684131391577")),
+  physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "372121837424")),
+  physicalProtectionVisitorsIdentifyDistinguished: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "400470675855")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionVisitorsIdentifyDistinguished"],
+  physicalProtectionVisitorIdentificationNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "739299710732")),
+  physicalProtectionVisitorActivityMonitoredPremises: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "829474009766")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionVisitorActivityMonitoredPremises"],
+  physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "398473749950")),
+  physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "422650784362")),
+  physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "766282850057")),
+  physicalProtectionImplementationStatus2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "231843690847")),
+  physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "972038317766")),
+  physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "734633292283")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionLogPhysicalAccessFacilities"],
+  physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "325061856971")),
+  physicalProtectionInformationPhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "174905707594")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionInformationPhysicalAccessLogs"],
+  physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "750143252884")),
+  physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "245305278102")),
+  physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "571727427731")),
+  physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "741567851452")),
+  physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "910408738855")),
+  physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "745836226925")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionReviewPhysicalAccessLogs"],
+  physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "361446942388")),
+  physicalProtectionImplementationStatus3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "320438032270")),
+  physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "724862600014")),
+  physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "903629274308")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTypesPhysicalAccessDevices"],
+  physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "896964575016")),
+  physicalProtectionPhysicalAccessDevicesControlled: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "173451266066")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionPhysicalAccessDevicesControlled"],
+  physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "164071724457")),
+  physicalProtectionMeasuresProtectPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "911514884520")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionMeasuresProtectPhysicalAccessDevices"],
+  physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "653480882123")),
+  physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "466342459779")),
+  physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "951698714660")),
+  physicalProtectionImplementationStatus4: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "294892506040")),
+  physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "140603351800")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities object. */
-export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
+export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(qr: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities {
   return {
-    physicalProtectionStoreProcessHandlePhysicalProtection: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "242760824142")),
-    physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "324592389560"),
-    ),
-    physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "436045572485"),
-    ),
-    physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "857782926958"),
-    ),
-    physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "944400994758"),
-    ),
-    physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "571574306369"),
-    ),
-    physicalProtectionAreasControlledPhysicalAccess: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "702794466613"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionAreasControlledPhysicalAccess"
-      ],
-    physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "279391143609"),
-    ),
-    physicalProtectionAuthorizePhysicalAccessControlAreas: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "784352573703"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionAuthorizePhysicalAccessControlAreas"
-      ],
-    physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "159961192967"),
-    ),
-    physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "773851219827"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionTypeAccessCredentialsIssued"
-    ],
-    physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "614664633852"),
-    ),
-    physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "208747627440"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionTimeBasedRestrictionsPhysicalAccess"
-      ],
-    physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "864878261078"),
-    ),
-    physicalProtectionImplementationStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "660777712272"),
-    ),
-    physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "158505675327"),
-    ),
-    physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "684131391577"),
-    ),
-    physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "372121837424"),
-    ),
-    physicalProtectionVisitorsIdentifyDistinguished: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "400470675855"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionVisitorsIdentifyDistinguished"
-      ],
-    physicalProtectionVisitorIdentificationNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "739299710732")),
-    physicalProtectionVisitorActivityMonitoredPremises: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "829474009766"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionVisitorActivityMonitoredPremises"
-      ],
-    physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "398473749950"),
-    ),
-    physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "422650784362"),
-    ),
-    physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "766282850057"),
-    ),
-    physicalProtectionImplementationStatus2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "231843690847"),
-    ),
-    physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "972038317766"),
-    ),
-    physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "734633292283"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionLogPhysicalAccessFacilities"
-    ],
-    physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "325061856971"),
-    ),
-    physicalProtectionInformationPhysicalAccessLogs: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "174905707594"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionInformationPhysicalAccessLogs"
-      ],
-    physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "750143252884"),
-    ),
-    physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "245305278102"),
-    ),
-    physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "571727427731"),
-    ),
-    physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "741567851452"),
-    ),
-    physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "910408738855"),
-    ),
-    physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "745836226925"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionReviewPhysicalAccessLogs"
-    ],
-    physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "361446942388"),
-    ),
-    physicalProtectionImplementationStatus3: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "320438032270"),
-    ),
-    physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "724862600014"),
-    ),
-    physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "903629274308"),
-    ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-      "physicalProtectionTypesPhysicalAccessDevices"
-    ],
-    physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "896964575016"),
-    ),
-    physicalProtectionPhysicalAccessDevicesControlled: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "173451266066"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionPhysicalAccessDevicesControlled"
-      ],
-    physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "164071724457"),
-    ),
-    physicalProtectionMeasuresProtectPhysicalAccessDevices: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "911514884520"),
-      ) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities[
-        "physicalProtectionMeasuresProtectPhysicalAccessDevices"
-      ],
-    physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "653480882123"),
-    ),
-    physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "466342459779"),
-    ),
-    physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "951698714660"),
-    ),
-    physicalProtectionImplementationStatus4: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "294892506040"),
-    ),
-    physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "140603351800"),
-    ),
+  physicalProtectionStoreProcessHandlePhysicalProtection: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "242760824142")),
+  physicalProtectionAuthorizePhysicalAccess: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "324592389560")),
+  physicalProtectionFullTimeEmployeesAuthorized: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "436045572485")),
+  physicalProtectionContractorsAuthorized: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "857782926958")),
+  physicalProtectionPartTimeEmployeesAuthorized: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "944400994758")),
+  physicalProtectionVisitorsEscortsAuthorized: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "571574306369")),
+  physicalProtectionAreasControlledPhysicalAccess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "702794466613")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionAreasControlledPhysicalAccess"],
+  physicalProtectionAccessNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "279391143609")),
+  physicalProtectionAuthorizePhysicalAccessControlAreas: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "784352573703")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionAuthorizePhysicalAccessControlAreas"],
+  physicalProtectionAuthorizationNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "159961192967")),
+  physicalProtectionTypeAccessCredentialsIssued: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "773851219827")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTypeAccessCredentialsIssued"],
+  physicalProtectionCredentialsNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "614664633852")),
+  physicalProtectionTimeBasedRestrictionsPhysicalAccess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "208747627440")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTimeBasedRestrictionsPhysicalAccess"],
+  physicalProtectionTimeBasedAccessNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "864878261078")),
+  physicalProtectionImplementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "660777712272")),
+  physicalProtectionTimeBasedNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "158505675327")),
+  physicalProtectionRequireVisitorsEscort: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "684131391577")),
+  physicalProtectionNotesVisitorEscortEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "372121837424")),
+  physicalProtectionVisitorsIdentifyDistinguished: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "400470675855")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionVisitorsIdentifyDistinguished"],
+  physicalProtectionVisitorIdentificationNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "739299710732")),
+  physicalProtectionVisitorActivityMonitoredPremises: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "829474009766")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionVisitorActivityMonitoredPremises"],
+  physicalProtectionVisitorActivityNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "398473749950")),
+  physicalProtectionAuthorizeEscortVisitors: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "422650784362")),
+  physicalProtectionEscortAuthorizationNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "766282850057")),
+  physicalProtectionImplementationStatus2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "231843690847")),
+  physicalProtectionImplementationNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "972038317766")),
+  physicalProtectionLogPhysicalAccessFacilities: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "734633292283")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionLogPhysicalAccessFacilities"],
+  physicalProtectionAccessLoggingNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "325061856971")),
+  physicalProtectionInformationPhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "174905707594")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionInformationPhysicalAccessLogs"],
+  physicalProtectionInformationCaptureNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "750143252884")),
+  physicalProtectionPhysicalAccessLogsRetained: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "245305278102")),
+  physicalProtectionLogRetentionNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "571727427731")),
+  physicalProtectionFrequentAccessLogReviewed: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "741567851452")),
+  physicalProtectionFrequencyLogsNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "910408738855")),
+  physicalProtectionReviewPhysicalAccessLogs: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "745836226925")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionReviewPhysicalAccessLogs"],
+  physicalProtectionReviewAccessNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "361446942388")),
+  physicalProtectionImplementationStatus3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "320438032270")),
+  physicalProtectionImplementationNotesEvidence2: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "724862600014")),
+  physicalProtectionTypesPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "903629274308")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionTypesPhysicalAccessDevices"],
+  physicalProtectionDeviceInventoryNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "896964575016")),
+  physicalProtectionPhysicalAccessDevicesControlled: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "173451266066")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionPhysicalAccessDevicesControlled"],
+  physicalProtectionDeviceControlNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "164071724457")),
+  physicalProtectionMeasuresProtectPhysicalAccessDevices: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "911514884520")) as PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities["physicalProtectionMeasuresProtectPhysicalAccessDevices"],
+  physicalProtectionDeviceSecurityNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "653480882123")),
+  physicalProtectionElectronicAccessSystemsUpdated: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "466342459779")),
+  physicalProtectionDeviceMaintenanceNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "951698714660")),
+  physicalProtectionImplementationStatus4: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "294892506040")),
+  physicalProtectionImplementationNotesEvidence3: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "140603351800")),
   };
 }
 
@@ -930,46 +664,22 @@ export function physicalProtectionLimitPhysicalAccessToInformationSystemsAndFaci
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-  constructor(
-    readonly value:
-      PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities,
-  ) {}
+  constructor(readonly value: PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(
-      physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
+    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
-    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(
-      physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter {
+    return new PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesInterpreter(physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    >;
-  } {
-    const missing: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    > = [];
-    const req: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> } {
+    const missing: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
+    const req: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -990,70 +700,13 @@ export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    >;
+    missingRequired: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities>;
   } {
-    const req: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    > = [];
-    const all: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    > = [
-      "physicalProtectionStoreProcessHandlePhysicalProtection",
-      "physicalProtectionAuthorizePhysicalAccess",
-      "physicalProtectionFullTimeEmployeesAuthorized",
-      "physicalProtectionContractorsAuthorized",
-      "physicalProtectionPartTimeEmployeesAuthorized",
-      "physicalProtectionVisitorsEscortsAuthorized",
-      "physicalProtectionAreasControlledPhysicalAccess",
-      "physicalProtectionAccessNotesEvidence",
-      "physicalProtectionAuthorizePhysicalAccessControlAreas",
-      "physicalProtectionAuthorizationNotesEvidence",
-      "physicalProtectionTypeAccessCredentialsIssued",
-      "physicalProtectionCredentialsNotesEvidence",
-      "physicalProtectionTimeBasedRestrictionsPhysicalAccess",
-      "physicalProtectionTimeBasedAccessNotesEvidence",
-      "physicalProtectionImplementationStatus",
-      "physicalProtectionTimeBasedNotesEvidence",
-      "physicalProtectionRequireVisitorsEscort",
-      "physicalProtectionNotesVisitorEscortEvidence",
-      "physicalProtectionVisitorsIdentifyDistinguished",
-      "physicalProtectionVisitorIdentificationNotesEvidence",
-      "physicalProtectionVisitorActivityMonitoredPremises",
-      "physicalProtectionVisitorActivityNotesEvidence",
-      "physicalProtectionAuthorizeEscortVisitors",
-      "physicalProtectionEscortAuthorizationNotesEvidence",
-      "physicalProtectionImplementationStatus2",
-      "physicalProtectionImplementationNotesEvidence",
-      "physicalProtectionLogPhysicalAccessFacilities",
-      "physicalProtectionAccessLoggingNotesEvidence",
-      "physicalProtectionInformationPhysicalAccessLogs",
-      "physicalProtectionInformationCaptureNotesEvidence",
-      "physicalProtectionPhysicalAccessLogsRetained",
-      "physicalProtectionLogRetentionNotesEvidence",
-      "physicalProtectionFrequentAccessLogReviewed",
-      "physicalProtectionFrequencyLogsNotesEvidence",
-      "physicalProtectionReviewPhysicalAccessLogs",
-      "physicalProtectionReviewAccessNotesEvidence",
-      "physicalProtectionImplementationStatus3",
-      "physicalProtectionImplementationNotesEvidence2",
-      "physicalProtectionTypesPhysicalAccessDevices",
-      "physicalProtectionDeviceInventoryNotesEvidence",
-      "physicalProtectionPhysicalAccessDevicesControlled",
-      "physicalProtectionDeviceControlNotesEvidence",
-      "physicalProtectionMeasuresProtectPhysicalAccessDevices",
-      "physicalProtectionDeviceSecurityNotesEvidence",
-      "physicalProtectionElectronicAccessSystemsUpdated",
-      "physicalProtectionDeviceMaintenanceNotesEvidence",
-      "physicalProtectionImplementationStatus4",
-      "physicalProtectionImplementationNotesEvidence3",
-    ];
+    const req: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
+    const all: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = ["physicalProtectionStoreProcessHandlePhysicalProtection", "physicalProtectionAuthorizePhysicalAccess", "physicalProtectionFullTimeEmployeesAuthorized", "physicalProtectionContractorsAuthorized", "physicalProtectionPartTimeEmployeesAuthorized", "physicalProtectionVisitorsEscortsAuthorized", "physicalProtectionAreasControlledPhysicalAccess", "physicalProtectionAccessNotesEvidence", "physicalProtectionAuthorizePhysicalAccessControlAreas", "physicalProtectionAuthorizationNotesEvidence", "physicalProtectionTypeAccessCredentialsIssued", "physicalProtectionCredentialsNotesEvidence", "physicalProtectionTimeBasedRestrictionsPhysicalAccess", "physicalProtectionTimeBasedAccessNotesEvidence", "physicalProtectionImplementationStatus", "physicalProtectionTimeBasedNotesEvidence", "physicalProtectionRequireVisitorsEscort", "physicalProtectionNotesVisitorEscortEvidence", "physicalProtectionVisitorsIdentifyDistinguished", "physicalProtectionVisitorIdentificationNotesEvidence", "physicalProtectionVisitorActivityMonitoredPremises", "physicalProtectionVisitorActivityNotesEvidence", "physicalProtectionAuthorizeEscortVisitors", "physicalProtectionEscortAuthorizationNotesEvidence", "physicalProtectionImplementationStatus2", "physicalProtectionImplementationNotesEvidence", "physicalProtectionLogPhysicalAccessFacilities", "physicalProtectionAccessLoggingNotesEvidence", "physicalProtectionInformationPhysicalAccessLogs", "physicalProtectionInformationCaptureNotesEvidence", "physicalProtectionPhysicalAccessLogsRetained", "physicalProtectionLogRetentionNotesEvidence", "physicalProtectionFrequentAccessLogReviewed", "physicalProtectionFrequencyLogsNotesEvidence", "physicalProtectionReviewPhysicalAccessLogs", "physicalProtectionReviewAccessNotesEvidence", "physicalProtectionImplementationStatus3", "physicalProtectionImplementationNotesEvidence2", "physicalProtectionTypesPhysicalAccessDevices", "physicalProtectionDeviceInventoryNotesEvidence", "physicalProtectionPhysicalAccessDevicesControlled", "physicalProtectionDeviceControlNotesEvidence", "physicalProtectionMeasuresProtectPhysicalAccessDevices", "physicalProtectionDeviceSecurityNotesEvidence", "physicalProtectionElectronicAccessSystemsUpdated", "physicalProtectionDeviceMaintenanceNotesEvidence", "physicalProtectionImplementationStatus4", "physicalProtectionImplementationNotesEvidence3"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities
-    > = [];
+    const missingReq: Array<keyof PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilities> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -1066,8 +719,7 @@ export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
     }
 
     return {
-      formTitle:
-        "Physical Protection (Limit physical access to information systems and facilities)",
+      formTitle: "Physical Protection (Limit physical access to information systems and facilities)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -1077,4 +729,2935 @@ export class PhysicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilit
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const physicalProtectionLimitPhysicalAccessToInformationSystemsAndFacilitiesSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Physical Protection (Limit physical access to information systems and facilities)",
+  "status": "draft",
+  "item": [
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "radio-button",
+                "display": "Radio Button"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "242760824142",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "physical-protection-store- process-handle-physical-protection",
+          "display": "Store  Process Handle Physical Protection"
+        }
+      ],
+      "text": "Do you store, process, or handle Federal Contract Information (FCI) on physical media or in on-site locations?",
+      "repeats": false,
+      "answerOption": [
+        {
+          "valueString": "Yes"
+        },
+        {
+          "valueString": "No"
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "display",
+              "linkId": "324592389560",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-authorize-physical-access",
+                  "display": "Authorize Physical Access"
+                }
+              ],
+              "text": "How many individuals are authorized for physical access to FCI areas (fill in the total for each)?"
+            },
+            {
+              "type": "integer",
+              "linkId": "436045572485",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-full-time-employees-authorized",
+                  "display": "Full Time Employees Authorized"
+                }
+              ],
+              "text": "Full-time employees:"
+            },
+            {
+              "type": "integer",
+              "linkId": "857782926958",
+              "code": [
+                {
+                  "system": "CMMC-level1-Physical-Protection",
+                  "code": "physical-protection-contractors-authorized",
+                  "display": "Contractors Authorized"
+                }
+              ],
+              "text": "Contractors:"
+            },
+            {
+              "type": "integer",
+              "linkId": "944400994758",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-part-time-employees-authorized",
+                  "display": "Part Time EmployeesAuthorized"
+                }
+              ],
+              "text": "Part-time employees:"
+            },
+            {
+              "type": "integer",
+              "linkId": "571574306369",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-visitors-escorts-authorized",
+                  "display": "Visitors Escorts Authorized"
+                }
+              ],
+              "text": "Visitors (with escort):"
+            },
+            {
+              "linkId": "296125947947_helpText",
+              "type": "display",
+              "text": "Maintain an updated list of individuals authorized to access secure physical areas to ensure proper access control.",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Authorized Personnel Inventory</span></i> lists all employees, contractors, or other individuals who are approved to access areas containing Federal Contract Information (FCI) or sensitive systems. The inventory should:\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Identify Individuals:</b> Include names and roles of all authorized personnel.<br>\\n  &bull; &nbsp; <b>Specify Access Levels:</b> Document which areas or systems each person is allowed to enter.<br>\\n  &bull; &nbsp; <b>Be Updated Regularly:</b> Remove people who no longer require access and add new personnel as needed.<br>\\n  &bull; &nbsp; <b>Support Audits:</b> Ensure the list can be used to verify compliance during reviews or inspections.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "296125947947",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-authorized-personal-inventory",
+              "display": "Authorized Personal Inventory"
+            }
+          ],
+          "text": "1. Authorized Personnel Inventory",
+          "enableWhen": [
+            {
+              "question": "242760824142",
+              "operator": "=",
+              "answerString": "Yes"
+            }
+          ],
+          "required": false,
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "702794466613",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-areas-controlled-physical-access",
+                  "display": "Areas Controlled Physical Access"
+                }
+              ],
+              "text": "What areas require controlled physical access?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": " Server rooms/data centers"
+                },
+                {
+                  "valueString": "Workstation areas processing FCI"
+                },
+                {
+                  "valueString": "Executive offices"
+                },
+                {
+                  "valueString": "Mail/shipping areas"
+                },
+                {
+                  "valueString": "Network equipment rooms"
+                },
+                {
+                  "valueString": "Storage areas for FCI media"
+                },
+                {
+                  "valueString": "Conference rooms used for FCI discussions"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "279391143609",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-access-notes-evidence",
+                  "display": "Physical Protection Access Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "279391143609_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "209389086115_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Physical Access Areas</span></i> identify all locations where Federal Contract Information (FCI) or sensitive information systems are stored, processed, or used. These areas must have controlled access to prevent unauthorized entry.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Server Rooms or Data Centers:</b> Physical rooms containing servers, networking equipment, or other IT infrastructure.<br>\\n  &bull; &nbsp; <b>Storage Areas:</b> Rooms or cabinets storing backups, media, or printed FCI.<br>\\n  &bull; &nbsp; <b>Workspaces:</b> Areas where employees handle sensitive data directly, if applicable.<br>\\n  &bull; &nbsp; <b>Other Restricted Areas:</b> Any other locations that require monitoring or authorization to protect FCI.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "209389086115",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-physical-access-areas",
+              "display": "Physical Access Areas"
+            }
+          ],
+          "text": "2. Physical Access Areas",
+          "enableWhen": [
+            {
+              "question": "242760824142",
+              "operator": "=",
+              "answerString": "Yes"
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "784352573703",
+              "code": [
+                {
+                  "system": "CMMC-level1-Physical-Protection",
+                  "code": "physical-protection-authorize-physical-access-control-areas",
+                  "display": "Authorize Physical Access Control Areas"
+                }
+              ],
+              "text": "Who authorizes physical access to controlled areas?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Facility manager"
+                },
+                {
+                  "valueString": "Department supervisor"
+                },
+                {
+                  "valueString": "IT security team"
+                },
+                {
+                  "valueString": "Security manager"
+                },
+                {
+                  "valueString": "HR department"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "159961192967",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-authorization-notes-evidence",
+                  "display": "Physical Protection Authorization Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "159961192967_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "869992586185_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Authorization Process</span></i> defines how individuals are granted permission to access areas containing Federal Contract Information (FCI) or sensitive information systems. The process must ensure only approved personnel gain access.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Request and Approval:</b> Employees or contractors must request access, which is reviewed and approved by management.<br>\\n  &bull; &nbsp; <b>Verification:</b> Confirm the identity and role of each individual before granting access.<br>\\n  &bull; &nbsp; <b>Access Levels:</b> Assign permissions based on job responsibilities and need-to-know.<br>\\n  &bull; &nbsp; <b>Review and Revocation:</b> Periodically review access rights and revoke them when no longer required.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "869992586185",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-physical-protection-authorization-process",
+              "display": "Physical Protection Authorization Process"
+            }
+          ],
+          "text": "3. Authorization Process",
+          "enableWhen": [
+            {
+              "question": "242760824142",
+              "operator": "=",
+              "answerString": "Yes"
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "773851219827",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-type-access-credentials-issued",
+                  "display": "Type Access Credentials Issued"
+                }
+              ],
+              "text": "What types of physical access credentials are issued?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Photo ID badges"
+                },
+                {
+                  "valueString": "Physical keys"
+                },
+                {
+                  "valueString": "Biometric scanners"
+                },
+                {
+                  "valueString": "Proximity cards/key fobs"
+                },
+                {
+                  "valueString": "PIN codes"
+                },
+                {
+                  "valueString": "Visitor badges"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "614664633852",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-credentials-notes-evidence",
+                  "display": "Physical Protection Credentials Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "614664633852_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "263666472314_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Access Credentials</span></i> define the login information or identification used to access areas containing Federal Contract Information (FCI) or sensitive information systems. Credentials must be issued only to authorized personnel.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Unique IDs:</b> Each individual receives a unique username or ID to track access.<br>\\n  &bull; &nbsp; <b>Authentication Methods:</b> Include passwords, badges, key cards, or multi-factor authentication (MFA) as applicable.<br>\\n  &bull; &nbsp; <b>Controlled Distribution:</b> Ensure credentials are only provided to personnel who require access.<br>\\n  &bull; &nbsp; <b>Revocation:</b> Remove or disable credentials promptly when no longer needed.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "263666472314",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-access-credentials",
+              "display": "Access Credentials"
+            }
+          ],
+          "text": "4. Access Credentials"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "208747627440",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-time-based-restrictions-physical-access",
+                  "display": "Time Based Restrictions Physical Access"
+                }
+              ],
+              "text": "Are there time-based restrictions on physical access?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Yes, business hours only"
+                },
+                {
+                  "valueString": "Yes, specific hours by role"
+                },
+                {
+                  "valueString": "Yes, weekdays only"
+                },
+                {
+                  "valueString": "No time restrictions"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "864878261078",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-time-based-access-notes-evidence",
+                  "display": "Physical Protection Time Based Access Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "864878261078_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "409121643490_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Time-Based Access Restrictions</span></i> define specific time periods during which authorized personnel are allowed to access areas containing Federal Contract Information (FCI) or sensitive information systems.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Access Windows:</b> Grant entry only during approved working hours or scheduled shifts.<br>\\n  &bull; &nbsp; <b>After-Hours Control:</b> Require additional approvals or supervision for access outside standard hours.<br>\\n  &bull; &nbsp; <b>Monitoring:</b> Track and log access times to ensure compliance.<br>\\n  &bull; &nbsp; <b>Revocation or Adjustment:</b> Update access schedules when personnel roles or responsibilities change.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "409121643490",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-time-based-access-restrictions",
+              "display": "Time Based Access Restrictions"
+            }
+          ],
+          "text": "5. Time-Based Access Restrictions",
+          "repeats": false
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "660777712272",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully Implemented"
+            },
+            {
+              "valueString": "Partially Implemented"
+            },
+            {
+              "valueString": "Not Implemented"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "158505675327",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-time-based-notes-evidence",
+              "display": "Physical Protection Time Based Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "158505675327_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "624769621183_helpText",
+          "type": "display",
+          "text": "Limit physical access to organizational information systems, equipment, and the respective operating environments to authorized individuals",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Physical Access Authorization (PE)</span></i> ensures that only authorized personnel can enter areas where Federal Contract Information (FCI) or information systems are stored or processed. Access must be:\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Restricted:</b> Only employees or contractors with a business need are allowed entry.<br>\\n  &bull; &nbsp; <b>Controlled:</b> Access points are monitored, and entry is recorded.<br>\\n  &bull; &nbsp; <b>Reviewed:</b> Permissions are periodically checked and updated to remove unauthorized access.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "624769621183",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "physical-protection-physical-access-authorization",
+          "display": "Physical Access Authorization"
+        }
+      ],
+      "text": "PE.L1-B.1.VIII - Physical Access Authorization",
+      "enableWhen": [
+        {
+          "question": "242760824142",
+          "operator": "=",
+          "answerString": "Yes"
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "684131391577",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-require-visitors-escort",
+                  "display": "Require Visitors Escort"
+                }
+              ],
+              "text": "Does your organization require all visitors to be escorted?",
+              "answerOption": [
+                {
+                  "valueString": " Yes, all visitors must be escorted at all times"
+                },
+                {
+                  "valueString": "Yes, but only in restricted areas"
+                },
+                {
+                  "valueString": " No formal escort requirement"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "372121837424",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-notes-visitor-escort-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "372121837424_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "984680126159_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Visitor Escort Policy</span></i> defines the rules for escorting visitors while they are in areas containing Federal Contract Information (FCI) or sensitive information systems. All visitors must be supervised to prevent unauthorized access.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Mandatory Escort:</b> Visitors must be accompanied by authorized personnel at all times.<br>\\n  &bull; &nbsp; <b>Access Limits:</b> Escort ensures visitors only enter areas necessary for their purpose.<br>\\n  &bull; &nbsp; <b>Accountability:</b> The escort is responsible for monitoring visitor behavior and adherence to security policies.<br>\\n  &bull; &nbsp; <b>Documentation:</b> Record visitor arrival, departure, and escort details for auditing purposes.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "984680126159",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-visitor-escort",
+              "display": "Visitor Escort"
+            }
+          ],
+          "text": "1. Visitor Escort Policy",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "400470675855",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-visitors-identify-distinguished",
+                  "display": "Visitors Identify Distinguished"
+                }
+              ],
+              "text": "How are visitors identified and distinguished from employees?",
+              "required": false,
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Distinctive visitor badges or lanyards"
+                },
+                {
+                  "valueString": "Visitor sign-in log at reception"
+                },
+                {
+                  "valueString": " Photo identification requirement"
+                },
+                {
+                  "valueString": "Advance visitor approval and notification"
+                },
+                {
+                  "valueString": "Temporary access cards or badges"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "739299710732",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-visitor-identification-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "739299710732_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "896661213301_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Visitor Identification</span></i> defines how visitors are verified before being granted access to areas containing Federal Contract Information (FCI) or sensitive information systems.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>ID Verification:</b> Require visitors to present government-issued ID or company-issued credentials.<br>\\n  &bull; &nbsp; <b>Registration:</b> Log visitor name, organization, purpose, and entry/exit times.<br>\\n  &bull; &nbsp; <b>Badge Issuance:</b> Provide temporary visitor badges to clearly identify authorized visitors.<br>\\n  &bull; &nbsp; <b>Access Limitations:</b> Ensure badges restrict access to only the areas necessary for the visit.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "896661213301",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-visitor-identification",
+              "display": "Visitor Identification"
+            }
+          ],
+          "text": "2. Visitor Identification",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "829474009766",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-visitor-activity-monitored-premises",
+                  "display": "Visitor Activity Monitored Premises"
+                }
+              ],
+              "text": "How is visitor activity monitored while on premises?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": " Continuous escort by authorized personnel"
+                },
+                {
+                  "valueString": "Security camera surveillance"
+                },
+                {
+                  "valueString": "Physical access restrictions to sensitive areas"
+                },
+                {
+                  "valueString": "Time limits on visitor access"
+                },
+                {
+                  "valueString": "Activity logs maintained by escorts"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "398473749950",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-visitor-activity-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "398473749950_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "588293653185_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Visitor Activity Monitoring</span></i> ensures that the actions of visitors in areas containing Federal Contract Information (FCI) or sensitive information systems are observed and recorded to prevent unauthorized access or misuse.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Supervision:</b> Visitors must be accompanied by authorized personnel at all times.<br>\\n  &bull; &nbsp; <b>Observation:</b> Monitor visitor movements and activities within restricted areas.<br>\\n  &bull; &nbsp; <b>Recording:</b> Maintain logs or surveillance records to track visitor interactions and locations.<br>\\n  &bull; &nbsp; <b>Incident Response:</b> Immediately address any suspicious or unauthorized behavior by visitors.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "588293653185",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-visitor-activity-monitoring",
+              "display": "Visitor Activity Monitoring"
+            }
+          ],
+          "text": "3. Visitor Activity Monitoring",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "422650784362",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-authorize-escort-visitors",
+                  "display": "Authorize Escort Visitors"
+                }
+              ],
+              "text": "Who is authorized to escort visitors?",
+              "answerOption": [
+                {
+                  "valueString": "Any employee"
+                },
+                {
+                  "valueString": "Security staff only"
+                },
+                {
+                  "valueString": "Trained escort personnel"
+                },
+                {
+                  "valueString": " Designated personnel only"
+                },
+                {
+                  "valueString": "Managers and supervisors only"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "766282850057",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-escort-authorization-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "766282850057_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "286167746672_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Escort Authorization</span></i> defines who is permitted to escort visitors in areas containing Federal Contract Information (FCI) or sensitive information systems, ensuring visitors are properly supervised at all times.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Authorized Personnel:</b> Only designated employees or contractors may act as escorts.<br>\\n  &bull; &nbsp; <b>Role Verification:</b> Confirm that the escort understands responsibilities and security policies.<br>\\n  &bull; &nbsp; <b>Supervision Duties:</b> Escort is responsible for monitoring visitor movements and preventing unauthorized access.<br>\\n  &bull; &nbsp; <b>Training & Accountability:</b> Provide training for escorts and maintain records of authorized personnel.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "286167746672",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-escort-authorization",
+              "display": "Escort Authorization"
+            }
+          ],
+          "text": "4. Escort Authorization",
+          "repeats": false
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "231843690847",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully Implemented"
+            },
+            {
+              "valueString": "Partially Implemented"
+            },
+            {
+              "valueString": " Not Implemented"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "972038317766",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-notes-evidence",
+              "display": "Physical Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "972038317766_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "197390251867_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Manage Visitors & Physical Access (PE)</span></i> ensures that all visitors and temporary personnel are properly controlled when entering areas containing Federal Contract Information (FCI) or sensitive information systems. Access must be monitored and documented.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Visitor Registration:</b> Record visitor names, purpose, and entry/exit times.<br>\\n  &bull; &nbsp; <b>Escort Requirements:</b> Require visitors to be accompanied by authorized personnel at all times.<br>\\n  &bull; &nbsp; <b>Access Permissions:</b> Grant temporary access only to areas necessary for the visitor's purpose.<br>\\n  &bull; &nbsp; <b>Review & Audit:</b> Periodically review visitor logs to ensure compliance with physical access policies.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "197390251867",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "physical-protection-manage-visitors-physical-access",
+          "display": "Manage Visitors Physical Access"
+        }
+      ],
+      "text": "PE.L1-B.1.IX – Manage Visitors & Physical Access",
+      "enableWhen": [
+        {
+          "question": "242760824142",
+          "operator": "=",
+          "answerString": "Yes"
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "734633292283",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-log-physical-access-facilities",
+                  "display": "Log Physical Access Facilities"
+                }
+              ],
+              "text": " How do you log physical access to your facilities?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Electronic badge readers with automatic logging"
+                },
+                {
+                  "valueString": "Manual sign-in/sign-out sheets"
+                },
+                {
+                  "valueString": "Security camera recordings"
+                },
+                {
+                  "valueString": " Security guard logs and reports"
+                },
+                {
+                  "valueString": "Physical key assignment and tracking logs"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "325061856971",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-access-logging-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "325061856971_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "492440543443_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Access Logging Methods</span></i> define how entries and exits to areas containing Federal Contract Information (FCI) or sensitive information systems are recorded. Proper logging helps track and monitor access for security and compliance purposes.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Manual Logs:</b> Sign-in sheets or visitor books documenting personnel and visitors.<br>\\n  &bull; &nbsp; <b>Electronic Logs:</b> Badge readers, key card systems, or biometric systems capturing entry and exit times.<br>\\n  &bull; &nbsp; <b>Automated Monitoring:</b> Systems that track and alert on unusual access patterns.<br>\\n  &bull; &nbsp; <b>Integration:</b> Ensure logs are stored securely and can be reviewed during audits or investigations.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "492440543443",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-access-logging-methods",
+              "display": "Access Logging Methods"
+            }
+          ],
+          "text": "1. Access Logging Methods"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "174905707594",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-information-physical-access-logs",
+                  "display": " Information Physical Access Logs"
+                }
+              ],
+              "text": " What information is captured in your physical access logs Information Captured in Logs?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Person's identity (name, employee ID, visitor ID)"
+                },
+                {
+                  "valueString": "Date and time of access"
+                },
+                {
+                  "valueString": "Entry and exit times"
+                },
+                {
+                  "valueString": "Specific location or area accessed"
+                },
+                {
+                  "valueString": "Purpose of visit or access"
+                },
+                {
+                  "valueString": "Escort information (if applicable)"
+                },
+                {
+                  "valueString": "Failed access attempts"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "750143252884",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-information-capture-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "750143252884_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "349759491673_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Information Captured in Logs</span></i> specifies the data that must be recorded when personnel or visitors access areas containing Federal Contract Information (FCI) or sensitive information systems.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Identity of Personnel:</b> Name, role, or unique ID of the individual accessing the area.<br>\\n  &bull; &nbsp; <b>Date and Time:</b> Record entry and exit times for each visit.<br>\\n  &bull; &nbsp; <b>Access Method:</b> Note whether entry was via key card, badge, manual log, or other method.<br>\\n  &bull; &nbsp; <b>Purpose of Access:</b> Optional field to specify reason for entry, if required by policy.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "349759491673",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-information-capture-logs",
+              "display": "Information Capture Logs"
+            }
+          ],
+          "text": "2. Information Captured in Logs"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "245305278102",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-physical-access-logs-retained",
+                  "display": "Physical Access Logs Retained"
+                }
+              ],
+              "text": "How long are physical access logs retained?",
+              "answerOption": [
+                {
+                  "valueString": "30 Days"
+                },
+                {
+                  "valueString": "90 Days"
+                },
+                {
+                  "valueString": "6 Months"
+                },
+                {
+                  "valueString": "1 Year"
+                },
+                {
+                  "valueString": "Longer than 1 year"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "571727427731",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-log-retention-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "571727427731_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "741567851452",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-frequent-access-log-reviewed",
+                  "display": "Frequent Access Logs Reviewed"
+                }
+              ],
+              "text": "How frequently are access logs reviewed?",
+              "answerOption": [
+                {
+                  "valueString": "Daily"
+                },
+                {
+                  "valueString": "Weekly"
+                },
+                {
+                  "valueString": "Monthly"
+                },
+                {
+                  "valueString": "Quaterly"
+                },
+                {
+                  "valueString": "Only when incidents occur"
+                },
+                {
+                  "valueString": "Never formally reviewed"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "910408738855",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-frequency-logs-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "910408738855_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "745836226925",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-review-physical-access-logs",
+                  "display": "Review Physical Access Logs"
+                }
+              ],
+              "text": "Who reviews the physical access logs?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Security manager"
+                },
+                {
+                  "valueString": "IT security team"
+                },
+                {
+                  "valueString": "Facility manager"
+                },
+                {
+                  "valueString": "HR department"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "361446942388",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-review-access-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "361446942388_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "831615420801_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Log Retention and Review</span></i> ensures that physical access logs for areas containing Federal Contract Information (FCI) or sensitive information systems are kept for a defined period and reviewed regularly to detect unauthorized access or unusual activity.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Retention Period:</b> Maintain logs for the time period required by policy, contract, or regulatory obligations.<br>\\n  &bull; &nbsp; <b>Periodic Review:</b> Regularly examine logs to identify anomalies, security incidents, or access violations.<br>\\n  &bull; &nbsp; <b>Audit Support:</b> Ensure logs are accessible and organized for internal or external audits.<br>\\n  &bull; &nbsp; <b>Secure Storage:</b> Protect logs from tampering, deletion, or unauthorized access.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "831615420801",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-log-retention-review",
+              "display": "Log Retention Review"
+            }
+          ],
+          "text": "3. Log Retention and Review "
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "320438032270",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully Implemented"
+            },
+            {
+              "valueString": "Partially Implemented"
+            },
+            {
+              "valueString": " Not Implemented"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "724862600014",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-notes-evidence",
+              "display": "Physical Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "724862600014_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "430398414481_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Physical Access Logs (PE)</span></i> ensure that all entries and exits to areas containing Federal Contract Information (FCI) or sensitive information systems are recorded and monitored. Logs help track who accessed restricted areas and when.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Record Entries and Exits:</b> Capture the name, role, date, and time of all personnel and visitors.<br>\\n  &bull; &nbsp; <b>Temporary Access:</b> Log temporary credentials or visitor access.<br>\\n  &bull; &nbsp; <b>Review and Audit:</b> Periodically review logs to detect unauthorized access or unusual activity.<br>\\n  &bull; &nbsp; <b>Retention:</b> Keep logs for a defined period as required by policy or contract.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "430398414481",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "physical-protection-physical-access-logs",
+          "display": "Physical Access Logs"
+        }
+      ],
+      "text": "PE.L1-B.1.IX –Physical Access Logs",
+      "enableWhen": [
+        {
+          "question": "242760824142",
+          "operator": "=",
+          "answerString": "Yes"
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "903629274308",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-types-physical-access-devices",
+                  "display": "Types Physical Access Devices"
+                }
+              ],
+              "text": "What types of physical access devices does your organization use?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Physical keys"
+                },
+                {
+                  "valueString": "Proximity cards or fobs"
+                },
+                {
+                  "valueString": "Keypad entry systems"
+                },
+                {
+                  "valueString": "Electronic key cards or badges"
+                },
+                {
+                  "valueString": "Biometric scanners (fingerprint, retina, etc.) Smart cards with embedded chips"
+                },
+                {
+                  "valueString": "Mobile phone apps for access control"
+                },
+                {
+                  "valueString": "Smart cards with embedded chips"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "896964575016",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-device-inventory-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "896964575016_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "621187042559_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Physical Access Device Inventory</span></i> maintains a record of all devices used to control access to areas containing Federal Contract Information (FCI) or sensitive information systems.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>List of Devices:</b> Include key cards, badges, locks, biometric readers, and other access devices.<br>\\n  &bull; &nbsp; <b>Assigned Users:</b> Document which personnel or visitors have been issued each device.<br>\\n  &bull; &nbsp; <b>Status Tracking:</b> Track active, inactive, lost, or decommissioned devices.<br>\\n  &bull; &nbsp; <b>Update Frequency:</b> Keep the inventory current with regular reviews and updates.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "621187042559",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-physical-access-device-inventory",
+              "display": "Physical Access Device Inventory "
+            }
+          ],
+          "text": "1. Physical Access Device Inventory "
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "173451266066",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-physical-access-devices-controlled",
+                  "display": "Physical Access Devices Controlled "
+                }
+              ],
+              "text": "How are physical access devices controlled and managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Formal inventory tracking system"
+                },
+                {
+                  "valueString": "Device assignment records maintained"
+                },
+                {
+                  "valueString": "Device return procedures for departing employees"
+                },
+                {
+                  "valueString": "Regular audits of device assignment"
+                },
+                {
+                  "valueString": "Procedures for lost or stolen devices"
+                },
+                {
+                  "valueString": "Ability to quickly revoke device access"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "164071724457",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-device-control-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "164071724457_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "250263340197_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Device Control and Management</span></i> ensures that all physical access devices used for areas containing Federal Contract Information (FCI) or sensitive information systems are properly managed throughout their lifecycle.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Issuance:</b> Assign devices only to authorized personnel based on role and need-to-know.<br>\\n  &bull; &nbsp; <b>Tracking:</b> Maintain records of who has each device and when it was issued.<br>\\n  &bull; &nbsp; <b>Maintenance:</b> Regularly inspect, test, and update devices to ensure proper operation.<br>\\n  &bull; &nbsp; <b>Recovery and Deactivation:</b> Promptly deactivate or collect devices when personnel leave, change roles, or no longer require access.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "250263340197",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-device-control-management",
+              "display": "Device Control Management "
+            }
+          ],
+          "text": "2. Device Control and Management "
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "911514884520",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-measures-protect-physical-access-devices",
+                  "display": "Measures Protect Physical Access Devices"
+                }
+              ],
+              "text": "What security measures protect physical access devices?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Secure storage for unassigned devices"
+                },
+                {
+                  "valueString": "Encrypted data on electronic devices"
+                },
+                {
+                  "valueString": "Device expiration dates and automatic deactivation"
+                },
+                {
+                  "valueString": "Protection against unauthorized duplication"
+                },
+                {
+                  "valueString": "Tamper-resistant design"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "653480882123",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-device-security-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "653480882123_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "703507215918_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Device Security Measures</span></i> ensures that all physical access devices controlling entry to areas containing Federal Contract Information (FCI) or sensitive information systems are protected against misuse, loss, or unauthorized access.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Physical Protection:</b> Store devices securely when not in use to prevent theft or tampering.<br>\\n  &bull; &nbsp; <b>Authentication Controls:</b> Use PINs, passwords, or multi-factor authentication where applicable.<br>\\n  &bull; &nbsp; <b>Monitoring:</b> Track device usage and detect suspicious activity.<br>\\n  &bull; &nbsp; <b>Incident Response:</b> Immediately report and respond to lost, stolen, or compromised devices.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "703507215918",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-device-security-measures",
+              "display": "Device Security Measures "
+            }
+          ],
+          "text": "3. Device Security Measures "
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "check-box",
+                            "display": "Check-box"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "944580322601",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "physical-protection-check-all-applicable",
+                      "display": "Check All Applicable"
+                    }
+                  ],
+                  "text": "Check all that apply:",
+                  "repeats": true,
+                  "answerOption": [
+                    {
+                      "valueString": "Regular testing of device functionality"
+                    },
+                    {
+                      "valueString": "Battery monitoring and replacement"
+                    },
+                    {
+                      "valueString": "Regular software/firmware updates"
+                    },
+                    {
+                      "valueString": "Calibration of biometric devices"
+                    },
+                    {
+                      "valueString": "Backup systems for device failures"
+                    }
+                  ]
+                }
+              ],
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "466342459779",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-electronic-access-systems-updated",
+                  "display": "Electronic Access Systems Updated"
+                }
+              ],
+              "text": "How frequently are electronic access systems updated?",
+              "answerOption": [
+                {
+                  "valueString": "Real-time update"
+                },
+                {
+                  "valueString": "Daily"
+                },
+                {
+                  "valueString": "Weekly"
+                },
+                {
+                  "valueString": "Monthly"
+                },
+                {
+                  "valueString": "As Needed Basis"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "951698714660",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "physical-protection-device-maintenance-notes-evidence",
+                  "display": "Physical Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "951698714660_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "130535369896_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Device Maintenance and Updates</span></i> ensures that all physical access devices controlling entry to areas containing Federal Contract Information (FCI) or sensitive information systems remain functional, secure, and up-to-date.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Regular Inspections:</b> Periodically check devices for wear, damage, or malfunction.<br>\\n  &bull; &nbsp; <b>Software/Firmware Updates:</b> Apply updates or patches to devices as needed to maintain security and functionality.<br>\\n  &bull; &nbsp; <b>Testing:</b> Confirm that devices operate correctly after maintenance or updates.<br>\\n  &bull; &nbsp; <b>Documentation:</b> Record maintenance activities, updates, and test results for audit purposes.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "130535369896",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-device-maintenance-updates",
+              "display": "Device Maintenance Updates"
+            }
+          ],
+          "text": "4. Device Maintenance and Updates"
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "294892506040",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "text": "Implementation Status",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully Implemented"
+            },
+            {
+              "valueString": "Partially Implemented"
+            },
+            {
+              "valueString": " Not Implemented"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "140603351800",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "physical-protection-implementation-notes-evidence",
+              "display": "Physical Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "140603351800_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "806534035552_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Manage Physical Access Devices (PE)</span></i> ensures that all devices used to control access to areas containing Federal Contract Information (FCI) or sensitive information systems are properly managed, secured, and maintained.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Device Inventory:</b> Maintain a list of all access control devices, including key cards, badges, locks, and biometric readers.<br>\\n  &bull; &nbsp; <b>Issuance and Assignment:</b> Assign devices only to authorized personnel based on their roles.<br>\\n  &bull; &nbsp; <b>Maintenance:</b> Regularly inspect and test devices to ensure proper functionality.<br>\\n  &bull; &nbsp; <b>Deactivation & Recovery:</b> Promptly deactivate or recover devices when personnel leave or no longer require access.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "806534035552",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "physical-protection-manage-physical-access-devices",
+          "display": "Manage Physical Access Devices"
+        }
+      ],
+      "text": "PE.L1-B.1.IX –Manage Physical Access Devices",
+      "enableWhen": [
+        {
+          "question": "242760824142",
+          "operator": "=",
+          "answerString": "Yes"
+        }
+      ]
+    }
+  ]
+}
+`;

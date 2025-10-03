@@ -10,25 +10,16 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
-    filename:
-      "policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices.auto.ts",
-    titleCamel:
-      "`policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
-    titlePascal:
-      "`PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
-    titleKebab:
-      "`policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices`",
-    lhcFormResponseAdapterFnName:
-      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource",
-  };
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesModuleSignature: rt.ModuleSignature = {
+    title: "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+    filename: "policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices.auto.ts",
+    titleCamel: "`policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
+    titlePascal: "`PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices`",
+    titleKebab: "`policy-framework-assessment-policy-implementation-all-cmmc-level-1-practices`",
+    lhcFormResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -42,20 +33,19 @@ type Any = any;
  * - Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds =
-  {
-    policyFrameworkAssessmentResponsiblePolicyDevelopment: "527949557496",
-    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: "576726184171",
-    policyFrameworkAssessmentPolicyReviewFrequency: "992068463537",
-    policyFrameworkAssessmentPolicyReviewFrequencyNotes: "891438058183",
-    policyFrameworkAssessmentEmployeePolicyTraining: "472951321809",
-    policyFrameworkAssessmentEmployeePolicyTrainingNotes: "948893743049",
-    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: "758349008850",
-    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: "230314073532",
-    policyFrameworkAssessmentPolicyExceptionManagementMethods: "255836550808",
-    policyFrameworkAssessmentPolicyExceptionManagementNotes: "683517806081",
-    policyFrameworkAssessmentAdditionalNotes: "795388091631",
-  } as const;
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLinkIds = {
+  policyFrameworkAssessmentResponsiblePolicyDevelopment: "527949557496",
+  policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: "576726184171",
+  policyFrameworkAssessmentPolicyReviewFrequency: "992068463537",
+  policyFrameworkAssessmentPolicyReviewFrequencyNotes: "891438058183",
+  policyFrameworkAssessmentEmployeePolicyTraining: "472951321809",
+  policyFrameworkAssessmentEmployeePolicyTrainingNotes: "948893743049",
+  policyFrameworkAssessmentPolicyComplianceMonitoringMethods: "758349008850",
+  policyFrameworkAssessmentPolicyComplianceMonitoringNotes: "230314073532",
+  policyFrameworkAssessmentPolicyExceptionManagementMethods: "255836550808",
+  policyFrameworkAssessmentPolicyExceptionManagementNotes: "683517806081",
+  policyFrameworkAssessmentAdditionalNotes: "795388091631"
+} as const;
 
 /** Normalized view of "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)" answers. */
 export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
@@ -67,16 +57,10 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Options: "Chief Information Officer", "Chief Information Security Officer", "Chief Executive Officer", "Legal/Compliance Department", "IT Security Team"
    * Required: no
    */
-  policyFrameworkAssessmentResponsiblePolicyDevelopment?: (
-    | "Chief Information Officer"
-    | "Chief Information Security Officer"
-    | "Chief Executive Officer"
-    | "Legal/Compliance Department"
-    | "IT Security Team"
-  )[];
+  policyFrameworkAssessmentResponsiblePolicyDevelopment?: ("Chief Information Officer" | "Chief Information Security Officer" | "Chief Executive Officer" | "Legal/Compliance Department" | "IT Security Team")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 576726184171
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -93,15 +77,10 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Options: "Quarterly", "Bi-annually", "Annually", "When regulations change", "No formal schedule"
    * Required: no
    */
-  policyFrameworkAssessmentPolicyReviewFrequency?:
-    | "Quarterly"
-    | "Bi-annually"
-    | "Annually"
-    | "When regulations change"
-    | "No formal schedule";
+  policyFrameworkAssessmentPolicyReviewFrequency?: "Quarterly" | "Bi-annually" | "Annually" | "When regulations change" | "No formal schedule";
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 891438058183
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -118,16 +97,10 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Options: "Initial security awareness training", "Role-specific policy training", "Annual refresher training", "just-in-time training for policy changes", "No formal training program"
    * Required: no
    */
-  policyFrameworkAssessmentEmployeePolicyTraining?: (
-    | "Initial security awareness training"
-    | "Role-specific policy training"
-    | "Annual refresher training"
-    | "just-in-time training for policy changes"
-    | "No formal training program"
-  )[];
+  policyFrameworkAssessmentEmployeePolicyTraining?: ("Initial security awareness training" | "Role-specific policy training" | "Annual refresher training" | "just-in-time training for policy changes" | "No formal training program")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 948893743049
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -144,16 +117,10 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Options: " Regular internal audits", "Automated compliance monitoring", "Self-assessment questionnaires", "Manager reviews and attestations", "Third-party assessments"
    * Required: no
    */
-  policyFrameworkAssessmentPolicyComplianceMonitoringMethods?: (
-    | " Regular internal audits"
-    | "Automated compliance monitoring"
-    | "Self-assessment questionnaires"
-    | "Manager reviews and attestations"
-    | "Third-party assessments"
-  )[];
+  policyFrameworkAssessmentPolicyComplianceMonitoringMethods?: (" Regular internal audits" | "Automated compliance monitoring" | "Self-assessment questionnaires" | "Manager reviews and attestations" | "Third-party assessments")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 230314073532
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -170,16 +137,10 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
    * Options: " Formal exception request process", "Risk assessment for exceptions", "Compensating controls for exceptions", "Regular review of approved exceptions", "No formal exception process"
    * Required: no
    */
-  policyFrameworkAssessmentPolicyExceptionManagementMethods?: (
-    | " Formal exception request process"
-    | "Risk assessment for exceptions"
-    | "Compensating controls for exceptions"
-    | "Regular review of approved exceptions"
-    | "No formal exception process"
-  )[];
+  policyFrameworkAssessmentPolicyExceptionManagementMethods?: (" Formal exception request process" | "Risk assessment for exceptions" | "Compensating controls for exceptions" | "Regular review of approved exceptions" | "No formal exception process")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 683517806081
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -199,102 +160,36 @@ export interface PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Pract
 }
 
 /** Convert an LHC JSON response into a normalized PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices object. */
-export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(
-  input: Any,
-): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
+export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(input: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
   return {
-    policyFrameworkAssessmentResponsiblePolicyDevelopment: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "527949557496"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentResponsiblePolicyDevelopment"
-      ],
-    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "576726184171")),
-    policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "992068463537"),
-    ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-      "policyFrameworkAssessmentPolicyReviewFrequency"
-    ],
-    policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "891438058183")),
-    policyFrameworkAssessmentEmployeePolicyTraining: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "472951321809"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentEmployeePolicyTraining"
-      ],
-    policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "948893743049")),
-    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "758349008850"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentPolicyComplianceMonitoringMethods"
-      ],
-    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "230314073532")),
-    policyFrameworkAssessmentPolicyExceptionManagementMethods: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "255836550808"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentPolicyExceptionManagementMethods"
-      ],
-    policyFrameworkAssessmentPolicyExceptionManagementNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "683517806081")),
-    policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "795388091631"),
-    ),
+  policyFrameworkAssessmentResponsiblePolicyDevelopment: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "527949557496")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentResponsiblePolicyDevelopment"],
+  policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "576726184171")),
+  policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "992068463537")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyReviewFrequency"],
+  policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "891438058183")),
+  policyFrameworkAssessmentEmployeePolicyTraining: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "472951321809")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentEmployeePolicyTraining"],
+  policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "948893743049")),
+  policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "758349008850")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyComplianceMonitoringMethods"],
+  policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "230314073532")),
+  policyFrameworkAssessmentPolicyExceptionManagementMethods: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "255836550808")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyExceptionManagementMethods"],
+  policyFrameworkAssessmentPolicyExceptionManagementNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "683517806081")),
+  policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "795388091631")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices object. */
-export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
+export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(qr: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices {
   return {
-    policyFrameworkAssessmentResponsiblePolicyDevelopment: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "527949557496"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentResponsiblePolicyDevelopment"
-      ],
-    policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "576726184171")),
-    policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "992068463537"),
-    ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-      "policyFrameworkAssessmentPolicyReviewFrequency"
-    ],
-    policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "891438058183")),
-    policyFrameworkAssessmentEmployeePolicyTraining: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "472951321809"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentEmployeePolicyTraining"
-      ],
-    policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "948893743049")),
-    policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "758349008850"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentPolicyComplianceMonitoringMethods"
-      ],
-    policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "230314073532")),
-    policyFrameworkAssessmentPolicyExceptionManagementMethods: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "255836550808"),
-      ) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices[
-        "policyFrameworkAssessmentPolicyExceptionManagementMethods"
-      ],
-    policyFrameworkAssessmentPolicyExceptionManagementNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "683517806081")),
-    policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "795388091631"),
-    ),
+  policyFrameworkAssessmentResponsiblePolicyDevelopment: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "527949557496")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentResponsiblePolicyDevelopment"],
+  policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "576726184171")),
+  policyFrameworkAssessmentPolicyReviewFrequency: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "992068463537")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyReviewFrequency"],
+  policyFrameworkAssessmentPolicyReviewFrequencyNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "891438058183")),
+  policyFrameworkAssessmentEmployeePolicyTraining: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "472951321809")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentEmployeePolicyTraining"],
+  policyFrameworkAssessmentEmployeePolicyTrainingNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "948893743049")),
+  policyFrameworkAssessmentPolicyComplianceMonitoringMethods: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "758349008850")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyComplianceMonitoringMethods"],
+  policyFrameworkAssessmentPolicyComplianceMonitoringNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "230314073532")),
+  policyFrameworkAssessmentPolicyExceptionManagementMethods: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "255836550808")) as PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices["policyFrameworkAssessmentPolicyExceptionManagementMethods"],
+  policyFrameworkAssessmentPolicyExceptionManagementNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "683517806081")),
+  policyFrameworkAssessmentAdditionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "795388091631")),
   };
 }
 
@@ -319,46 +214,22 @@ export function policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practi
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-  constructor(
-    readonly value:
-      PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices,
-  ) {}
+  constructor(readonly value: PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(
-      policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
+    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
-    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(
-      policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter {
+    return new PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesInterpreter(policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    >;
-  } {
-    const missing: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    > = [];
-    const req: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> } {
+    const missing: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
+    const req: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -379,33 +250,13 @@ export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    >;
+    missingRequired: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices>;
   } {
-    const req: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    > = [];
-    const all: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    > = [
-      "policyFrameworkAssessmentResponsiblePolicyDevelopment",
-      "policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes",
-      "policyFrameworkAssessmentPolicyReviewFrequency",
-      "policyFrameworkAssessmentPolicyReviewFrequencyNotes",
-      "policyFrameworkAssessmentEmployeePolicyTraining",
-      "policyFrameworkAssessmentEmployeePolicyTrainingNotes",
-      "policyFrameworkAssessmentPolicyComplianceMonitoringMethods",
-      "policyFrameworkAssessmentPolicyComplianceMonitoringNotes",
-      "policyFrameworkAssessmentPolicyExceptionManagementMethods",
-      "policyFrameworkAssessmentPolicyExceptionManagementNotes",
-      "policyFrameworkAssessmentAdditionalNotes",
-    ];
+    const req: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
+    const all: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = ["policyFrameworkAssessmentResponsiblePolicyDevelopment", "policyFrameworkAssessmentResponsiblePolicyDevelopmentNotes", "policyFrameworkAssessmentPolicyReviewFrequency", "policyFrameworkAssessmentPolicyReviewFrequencyNotes", "policyFrameworkAssessmentEmployeePolicyTraining", "policyFrameworkAssessmentEmployeePolicyTrainingNotes", "policyFrameworkAssessmentPolicyComplianceMonitoringMethods", "policyFrameworkAssessmentPolicyComplianceMonitoringNotes", "policyFrameworkAssessmentPolicyExceptionManagementMethods", "policyFrameworkAssessmentPolicyExceptionManagementNotes", "policyFrameworkAssessmentAdditionalNotes"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
-    > = [];
+    const missingReq: Array<keyof PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -418,8 +269,7 @@ export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
     }
 
     return {
-      formTitle:
-        "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+      formTitle: "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -429,4 +279,749 @@ export class PolicyFrameworkAssessmentPolicyImplementationAllCmmcLevel1Practices
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const policyFrameworkAssessmentPolicyImplementationAllCmmcLevel1PracticesSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Policy Framework Assessment (Policy Implementation - All CMMC Level 1 Practices)",
+  "status": "draft",
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "527949557496",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development",
+                  "display": "Responsible For Developing Approving Cmmc Related Policies"
+                }
+              ],
+              "text": "Who is responsible for developing and approving CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Chief Information Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Chief Information Security Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Chief Executive Officer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Legal/Compliance Department"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "IT Security Team"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "576726184171",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-responsible-policy-development-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "576726184171_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "590810573907_helpText",
+              "type": "display",
+              "text": "Establish a formal process to create, review, and approve policies to ensure they align with organizational goals and compliance requirements.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "590810573907",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-development-approval",
+              "display": "Policy Development And Approval"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Policy Development and Approval"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "992068463537",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency",
+                  "display": "Frequently Are Cmmc Related Policies Reviewed Updated"
+                }
+              ],
+              "text": "How frequently are CMMC-related policies reviewed and updated?",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Quarterly"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Bi-annually"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Annually"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "When regulations change"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal schedule"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "891438058183",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-review-frequency-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "891438058183_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "441079114846_helpText",
+              "type": "display",
+              "text": "Implement regular procedures to review and update policies to keep them current and effective.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "441079114846",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-review-procedures",
+              "display": "Policy Review Update Procedures"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Policy Review and Update Procedures"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "472951321809",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training",
+                  "display": "Training Is Provided Employees On Cmmc Related Policies"
+                }
+              ],
+              "text": "What training is provided to employees on CMMC-related policies?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Initial security awareness training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Role-specific policy training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Annual refresher training"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "just-in-time training for policy changes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal training program"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "948893743049",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-employee-policy-training-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "948893743049_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "401642968533_helpText",
+              "type": "display",
+              "text": "Provide ongoing training to employees to ensure understanding and compliance with organizational policies.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "401642968533",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-employee-training",
+              "display": "Employee Training On Policies"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Employee Training on Policies"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "758349008850",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-methods",
+                  "display": "Compliance Cmmc Related Policies Monitored"
+                }
+              ],
+              "text": "How is compliance with CMMC-related policies monitored?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Regular internal audits"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automated compliance monitoring"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Self-assessment questionnaires"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manager reviews and attestations"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Third-party assessments"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "230314073532",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-compliance-monitoring-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "230314073532_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "237023742748_helpText",
+              "type": "display",
+              "text": "Regularly monitor and assess adherence to policies to identify gaps and enforce compliance.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "237023742748",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-compliance-monitoring",
+              "display": "Policy Compliance Monitoring"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Policy Compliance Monitoring"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "255836550808",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-methods",
+                  "display": "Exceptions To Cmmc Related Policies Managed"
+                }
+              ],
+              "text": "How are exceptions to CMMC-related policies managed?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Formal exception request process"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Risk assessment for exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Compensating controls for exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Regular review of approved exceptions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No formal exception process"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "683517806081",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "policy-framework-assessment-policy-exception-management-notes",
+                  "display": "Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "683517806081_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "260429244098_helpText",
+              "type": "display",
+              "text": "Establish a process to document, review, and approve exceptions to policies while managing associated risks.",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "260429244098",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "policy-framework-assessment-policy-exception-management",
+              "display": "Policy Exception Management"
+            }
+          ],
+          "prefix": "5.",
+          "text": "Policy Exception Management"
+        },
+        {
+          "linkId": "364455629781_helpText",
+          "type": "display",
+          "text": "Comprehensive assessment of your organization's policy management framework covering all CMMC Level 1 practices.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "364455629781",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-overview",
+          "display": "Policy Framework Assessment"
+        }
+      ],
+      "text": "Policy Framework Assessment"
+    },
+    {
+      "type": "text",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Any additional information about your policy framework."
+        }
+      ],
+      "linkId": "795388091631",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "policy-framework-assessment-additional-notes",
+          "display": "Additional Notes"
+        }
+      ],
+      "text": "Additional Notes"
+    }
+  ]
+}
+`;

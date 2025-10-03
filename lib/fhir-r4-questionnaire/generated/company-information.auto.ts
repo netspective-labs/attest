@@ -11,16 +11,15 @@ import * as rt from "../r4q-runtime.ts";
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
 export const companyInformationModuleSignature: rt.ModuleSignature = {
-  title: "Company Information",
-  filename: "company-information.auto.ts",
-  titleCamel: "`companyInformation`",
-  titlePascal: "`CompanyInformation`",
-  titleKebab: "`company-information`",
-  lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
-  fhirQuestionnaireResponseAdapterFnName:
-    "companyInformationFhirQuestionnaireResponseAdapter",
-  sourceTextConstName: "companyInformationSource",
-};
+    title: "Company Information",
+    filename: "company-information.auto.ts",
+    titleCamel: "`companyInformation`",
+    titlePascal: "`CompanyInformation`",
+    titleKebab: "`company-information`",
+    lhcFormResponseAdapterFnName: "companyInformationLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "companyInformationFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "companyInformationSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -41,7 +40,7 @@ export const companyInformationLinkIds = {
   companyInformationEmployeeCount: "697235963218",
   companyInformationContractTypes: "863463230823",
   companyInformationCageCode: "805221373063",
-  companyInformationDunsNumber: "374784155003",
+  companyInformationDunsNumber: "374784155003"
 } as const;
 
 /** Normalized view of "Company Information" answers. */
@@ -157,90 +156,38 @@ export interface CompanyInformation {
 }
 
 /** Convert an LHC JSON response into a normalized CompanyInformation object. */
-export function companyInformationLhcFormResponseAdapter(
-  input: Any,
-): CompanyInformation {
+export function companyInformationLhcFormResponseAdapter(input: Any): CompanyInformation {
   return {
-    companyInformationOrganizationName: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "715544477968"),
-    ),
-    companyInformationFormCompletedBy: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "655141523763"),
-    ),
-    companyInformationPositionTitle: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "761144039651"),
-    ),
-    companyInformationEmailAddress: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "441278853405"),
-    ),
-    companyInformationWorkPhone: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "375736159279"),
-    ),
-    companyInformationMobilePhone: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "948589414714"),
-    ),
-    companyInformationAssessmentDate: rt.coerceOptionalDate(
-      rt.findLhcValueByLinkId(input, "276403539223"),
-    ),
-    companyInformationIndustry: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "789286873476"),
-    ),
-    companyInformationEmployeeCount: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "697235963218"),
-    ),
-    companyInformationContractTypes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "863463230823"),
-    ),
-    companyInformationCageCode: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "805221373063"),
-    ),
-    companyInformationDunsNumber: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "374784155003"),
-    ),
+  companyInformationOrganizationName: rt.coerceString(rt.findLhcValueByLinkId(input, "715544477968")),
+  companyInformationFormCompletedBy: rt.coerceString(rt.findLhcValueByLinkId(input, "655141523763")),
+  companyInformationPositionTitle: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "761144039651")),
+  companyInformationEmailAddress: rt.coerceString(rt.findLhcValueByLinkId(input, "441278853405")),
+  companyInformationWorkPhone: rt.coerceString(rt.findLhcValueByLinkId(input, "375736159279")),
+  companyInformationMobilePhone: rt.coerceString(rt.findLhcValueByLinkId(input, "948589414714")),
+  companyInformationAssessmentDate: rt.coerceOptionalDate(rt.findLhcValueByLinkId(input, "276403539223")),
+  companyInformationIndustry: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "789286873476")),
+  companyInformationEmployeeCount: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "697235963218")),
+  companyInformationContractTypes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "863463230823")),
+  companyInformationCageCode: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "805221373063")),
+  companyInformationDunsNumber: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "374784155003")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized CompanyInformation object. */
-export function companyInformationFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): CompanyInformation {
+export function companyInformationFhirQuestionnaireResponseAdapter(qr: Any): CompanyInformation {
   return {
-    companyInformationOrganizationName: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "715544477968"),
-    ),
-    companyInformationFormCompletedBy: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "655141523763"),
-    ),
-    companyInformationPositionTitle: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "761144039651"),
-    ),
-    companyInformationEmailAddress: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "441278853405"),
-    ),
-    companyInformationWorkPhone: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "375736159279"),
-    ),
-    companyInformationMobilePhone: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "948589414714"),
-    ),
-    companyInformationAssessmentDate: rt.coerceOptionalDate(
-      rt.findQrAnswerByLinkId(qr, "276403539223"),
-    ),
-    companyInformationIndustry: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "789286873476"),
-    ),
-    companyInformationEmployeeCount: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "697235963218"),
-    ),
-    companyInformationContractTypes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "863463230823"),
-    ),
-    companyInformationCageCode: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "805221373063"),
-    ),
-    companyInformationDunsNumber: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "374784155003"),
-    ),
+  companyInformationOrganizationName: rt.coerceString(rt.findQrAnswerByLinkId(qr, "715544477968")),
+  companyInformationFormCompletedBy: rt.coerceString(rt.findQrAnswerByLinkId(qr, "655141523763")),
+  companyInformationPositionTitle: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "761144039651")),
+  companyInformationEmailAddress: rt.coerceString(rt.findQrAnswerByLinkId(qr, "441278853405")),
+  companyInformationWorkPhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "375736159279")),
+  companyInformationMobilePhone: rt.coerceString(rt.findQrAnswerByLinkId(qr, "948589414714")),
+  companyInformationAssessmentDate: rt.coerceOptionalDate(rt.findQrAnswerByLinkId(qr, "276403539223")),
+  companyInformationIndustry: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "789286873476")),
+  companyInformationEmployeeCount: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "697235963218")),
+  companyInformationContractTypes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "863463230823")),
+  companyInformationCageCode: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "805221373063")),
+  companyInformationDunsNumber: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "374784155003")),
   };
 }
 
@@ -269,31 +216,18 @@ export class CompanyInformationInterpreter {
 
   /** Factory: build from LHC JSON. */
   static fromLhcFormResponse(input: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(
-      companyInformationLhcFormResponseAdapter(input),
-    );
+    return new CompanyInformationInterpreter(companyInformationLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
   static fromQuestionnaireResponse(qr: Any): CompanyInformationInterpreter {
-    return new CompanyInformationInterpreter(
-      companyInformationFhirQuestionnaireResponseAdapter(qr),
-    );
+    return new CompanyInformationInterpreter(companyInformationFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<keyof CompanyInformation>;
-  } {
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof CompanyInformation> } {
     const missing: Array<keyof CompanyInformation> = [];
-    const req: Array<keyof CompanyInformation> = [
-      "companyInformationOrganizationName",
-      "companyInformationFormCompletedBy",
-      "companyInformationEmailAddress",
-      "companyInformationWorkPhone",
-      "companyInformationMobilePhone",
-    ];
+    const req: Array<keyof CompanyInformation> = ["companyInformationOrganizationName", "companyInformationFormCompletedBy", "companyInformationEmailAddress", "companyInformationWorkPhone", "companyInformationMobilePhone"];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -316,27 +250,8 @@ export class CompanyInformationInterpreter {
     totalFields: number;
     missingRequired: Array<keyof CompanyInformation>;
   } {
-    const req: Array<keyof CompanyInformation> = [
-      "companyInformationOrganizationName",
-      "companyInformationFormCompletedBy",
-      "companyInformationEmailAddress",
-      "companyInformationWorkPhone",
-      "companyInformationMobilePhone",
-    ];
-    const all: Array<keyof CompanyInformation> = [
-      "companyInformationOrganizationName",
-      "companyInformationFormCompletedBy",
-      "companyInformationPositionTitle",
-      "companyInformationEmailAddress",
-      "companyInformationWorkPhone",
-      "companyInformationMobilePhone",
-      "companyInformationAssessmentDate",
-      "companyInformationIndustry",
-      "companyInformationEmployeeCount",
-      "companyInformationContractTypes",
-      "companyInformationCageCode",
-      "companyInformationDunsNumber",
-    ];
+    const req: Array<keyof CompanyInformation> = ["companyInformationOrganizationName", "companyInformationFormCompletedBy", "companyInformationEmailAddress", "companyInformationWorkPhone", "companyInformationMobilePhone"];
+    const all: Array<keyof CompanyInformation> = ["companyInformationOrganizationName", "companyInformationFormCompletedBy", "companyInformationPositionTitle", "companyInformationEmailAddress", "companyInformationWorkPhone", "companyInformationMobilePhone", "companyInformationAssessmentDate", "companyInformationIndustry", "companyInformationEmployeeCount", "companyInformationContractTypes", "companyInformationCageCode", "companyInformationDunsNumber"];
 
     let reqFilled = 0;
     const missingReq: Array<keyof CompanyInformation> = [];
@@ -362,4 +277,281 @@ export class CompanyInformationInterpreter {
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const companyInformationSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Company Information",
+  "status": "draft",
+  "item": [
+    {
+      "type": "group",
+      "linkId": "158032884208",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-details",
+          "display": "Organization Details"
+        }
+      ],
+      "text": "Organization Details",
+      "item": [
+        {
+          "linkId": "158032884208_helpText",
+          "type": "display",
+          "text": "Provide essential information about your organization for CMMC compliance tracking.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Enter your organization name"
+        }
+      ],
+      "linkId": "715544477968",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-name",
+          "display": "Organization Name"
+        }
+      ],
+      "text": "Organization Name",
+      "required": true
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Your full name"
+        }
+      ],
+      "linkId": "655141523763",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-form-completed-by",
+          "display": "Form Completed By"
+        }
+      ],
+      "text": "Form Completed By",
+      "required": true
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Your job title"
+        }
+      ],
+      "linkId": "761144039651",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-position-title",
+          "display": "Position Title"
+        }
+      ],
+      "text": "Position/Title"
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "your.email@company.com"
+        }
+      ],
+      "linkId": "441278853405",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-email-address",
+          "display": "Email Address"
+        }
+      ],
+      "text": "Email Address",
+      "required": true
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "(555) 121-2345"
+        }
+      ],
+      "linkId": "375736159279",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-work-phone",
+          "display": "Work Phone"
+        }
+      ],
+      "text": "Work Phone",
+      "required": true
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "(555) 987-4756"
+        }
+      ],
+      "linkId": "948589414714",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-mobile-phone",
+          "display": "Mobile Phone"
+        }
+      ],
+      "text": "Mobile Phone",
+      "required": true
+    },
+    {
+      "type": "date",
+      "linkId": "276403539223",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-assessment-date",
+          "display": "Assessment Date"
+        }
+      ],
+      "text": "Assessment Date"
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Defense, Technology, etc."
+        }
+      ],
+      "linkId": "789286873476",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-industry",
+          "display": "Industry"
+        }
+      ],
+      "text": "Industry"
+    },
+    {
+      "type": "string",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "1-10, 11-50, 51-200, etc."
+        }
+      ],
+      "linkId": "697235963218",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-employee-count",
+          "display": "Employee Count"
+        }
+      ],
+      "text": "Employee Count"
+    },
+    {
+      "type": "text",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "Prime contracts, subcontracts, etc. (comma-separated)"
+        }
+      ],
+      "linkId": "863463230823",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-contract-types",
+          "display": "Contract Types"
+        }
+      ],
+      "text": "Contract Types"
+    },
+    {
+      "item": [
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "5-character CAGE code"
+            }
+          ],
+          "linkId": "805221373063",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-cage-code",
+              "display": "Cage Code"
+            }
+          ],
+          "text": "CAGE Code"
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "9-digit DUNS number"
+            }
+          ],
+          "linkId": "374784155003",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "company-information-duns-number",
+              "display": "Duns Number"
+            }
+          ],
+          "text": "DUNS Number"
+        }
+      ],
+      "type": "group",
+      "linkId": "127163950314",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "company-information-organization-identifiers",
+          "display": "Organization Identifiers"
+        }
+      ],
+      "text": "Organization Identifiers"
+    }
+  ]
+}
+`;

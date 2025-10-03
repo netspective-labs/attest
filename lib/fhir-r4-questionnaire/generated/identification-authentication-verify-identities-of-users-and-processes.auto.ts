@@ -10,67 +10,55 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "Identification Authentication Verify Identities Of Users And Processes",
-    filename:
-      "identification-authentication-verify-identities-of-users-and-processes.auto.ts",
-    titleCamel:
-      "`identificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
-    titlePascal:
-      "`IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
-    titleKebab:
-      "`identification-authentication-verify-identities-of-users-and-processes`",
-    lhcFormResponseAdapterFnName:
-      "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource",
-  };
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesModuleSignature: rt.ModuleSignature = {
+    title: "Identification Authentication Verify Identities Of Users And Processes",
+    filename: "identification-authentication-verify-identities-of-users-and-processes.auto.ts",
+    titleCamel: "`identificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
+    titlePascal: "`IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses`",
+    titleKebab: "`identification-authentication-verify-identities-of-users-and-processes`",
+    lhcFormResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
 /** Map of normalized property names to their source `linkId`. */
-export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds =
-  {
-    identificationAuthenticationIdentificationSectionNotes: "608483664601",
-    identificationAuthenticationStatusUniqueIds: "362061549890",
-    identificationAuthenticationEmployeeLoginIdFormat: "139461602895",
-    identificationAuthenticationNumberOfServiceAccounts: "179545641231",
-    checkAllThatApply: "753553198622",
-    identificationAuthenticationServiceAccountManagementNotes: "441172825241",
-    identificationAuthenticationCompanyDeviceInventoryList: "926744954268",
-    identificationAuthenticationUserIdentityVerificationProcess: "297397401977",
-    identificationAuthenticationUserIdentityVerificationNotes: "627017348272",
-    identificationAuthenticationDeviceCountWorkstations: "878410531769",
-    identificationAuthenticationDeviceCountServers: "361034048943",
-    identificationAuthenticationDeviceCountMobile: "424090205463",
-    identificationAuthenticationDeviceCountNetwork: "764441913827",
-    identificationAuthenticationDeviceIdentificationMethods: "359160217347",
-    identificationAuthenticationDeviceIdentificationMethodsNotes:
-      "346437919917",
-    identificationAuthenticationIdentificationSupportingDocs: "157280172274",
-    identificationAuthenticationIdentificationAdditionalNotes: "382279609009",
-    identificationAuthenticationStatusAuthenticationControls: "676336695824",
-    identificationAuthenticationUserAuthenticationMethods: "901079756471",
-    identificationAuthenticationUserAuthenticationMethodsNotes: "115035657570",
-    identificationAuthenticationPasswordMinLength: "444552965098",
-    identificationAuthenticationPasswordExpirationDays: "499668919305",
-    identificationAuthenticationPasswordHistoryCount: "190124104069",
-    clickAllThatApply: "404025003688",
-    identificationAuthenticationPasswordRequirementsNotes: "149539043632",
-    identificationAuthenticationMfaUsage: "928879235030",
-    identificationAuthenticationDefaultCredentialHandling: "830887074055",
-    identificationAuthenticationFailedAttemptsLockout: "647413778355",
-    identificationAuthenticationAccountLockoutDuration: "552155632772",
-    clickAllThatApply2: "947716241721",
-    identificationAuthenticationAuthenticationFailureHandlingNotes:
-      "434988961472",
-    identificationAuthenticationAuthenticationSupportingDocs: "230111377333",
-    identificationAuthenticationAuthenticationAdditionalNotes: "939036015644",
-  } as const;
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLinkIds = {
+  identificationAuthenticationIdentificationSectionNotes: "608483664601",
+  identificationAuthenticationStatusUniqueIds: "362061549890",
+  identificationAuthenticationEmployeeLoginIdFormat: "139461602895",
+  identificationAuthenticationNumberOfServiceAccounts: "179545641231",
+  checkAllThatApply: "753553198622",
+  identificationAuthenticationServiceAccountManagementNotes: "441172825241",
+  identificationAuthenticationCompanyDeviceInventoryList: "926744954268",
+  identificationAuthenticationUserIdentityVerificationProcess: "297397401977",
+  identificationAuthenticationUserIdentityVerificationNotes: "627017348272",
+  identificationAuthenticationDeviceCountWorkstations: "878410531769",
+  identificationAuthenticationDeviceCountServers: "361034048943",
+  identificationAuthenticationDeviceCountMobile: "424090205463",
+  identificationAuthenticationDeviceCountNetwork: "764441913827",
+  identificationAuthenticationDeviceIdentificationMethods: "359160217347",
+  identificationAuthenticationDeviceIdentificationMethodsNotes: "346437919917",
+  identificationAuthenticationIdentificationSupportingDocs: "157280172274",
+  identificationAuthenticationIdentificationAdditionalNotes: "382279609009",
+  identificationAuthenticationStatusAuthenticationControls: "676336695824",
+  identificationAuthenticationUserAuthenticationMethods: "901079756471",
+  identificationAuthenticationUserAuthenticationMethodsNotes: "115035657570",
+  identificationAuthenticationPasswordMinLength: "444552965098",
+  identificationAuthenticationPasswordExpirationDays: "499668919305",
+  identificationAuthenticationPasswordHistoryCount: "190124104069",
+  clickAllThatApply: "404025003688",
+  identificationAuthenticationPasswordRequirementsNotes: "149539043632",
+  identificationAuthenticationMfaUsage: "928879235030",
+  identificationAuthenticationDefaultCredentialHandling: "830887074055",
+  identificationAuthenticationFailedAttemptsLockout: "647413778355",
+  identificationAuthenticationAccountLockoutDuration: "552155632772",
+  clickAllThatApply2: "947716241721",
+  identificationAuthenticationAuthenticationFailureHandlingNotes: "434988961472",
+  identificationAuthenticationAuthenticationSupportingDocs: "230111377333",
+  identificationAuthenticationAuthenticationAdditionalNotes: "939036015644"
+} as const;
 
 /** Normalized view of "Identification Authentication Verify Identities Of Users And Processes" answers. */
 export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
@@ -92,10 +80,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked.", "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified.", "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems."
    * Required: no
    */
-  identificationAuthenticationStatusUniqueIds?:
-    | "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked."
-    | "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified."
-    | "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems.";
+  identificationAuthenticationStatusUniqueIds?: "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked." | "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified." | "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems.";
 
   /**
    * What format do you use to create employee login IDs?
@@ -105,11 +90,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: " First name + last name (john.smith)", " First initial + last name (jsmith)", " Employee ID numbers (EMP001234)", " Department codes + names (IT-jsmith)"
    * Required: no
    */
-  identificationAuthenticationEmployeeLoginIdFormat?:
-    | " First name + last name (john.smith)"
-    | " First initial + last name (jsmith)"
-    | " Employee ID numbers (EMP001234)"
-    | " Department codes + names (IT-jsmith)";
+  identificationAuthenticationEmployeeLoginIdFormat?: " First name + last name (john.smith)" | " First initial + last name (jsmith)" | " Employee ID numbers (EMP001234)" | " Department codes + names (IT-jsmith)";
 
   /**
    * Number of service accounts (special logins used by software or automated tools, not people):
@@ -129,13 +110,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: " Database services", " Web applications", " Backup processes", " Monitoring/logging services", "Security scanning tools"
    * Required: no
    */
-  checkAllThatApply?: (
-    | " Database services"
-    | " Web applications"
-    | " Backup processes"
-    | " Monitoring/logging services"
-    | "Security scanning tools"
-  )[];
+  checkAllThatApply?: (" Database services" | " Web applications" | " Backup processes" | " Monitoring/logging services" | "Security scanning tools")[];
 
   /**
    * Notes / Evidence
@@ -165,12 +140,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "HR verification with employee records", "Manager approval with written authorization", "Background check completion", "Photo identification verification"
    * Required: no
    */
-  identificationAuthenticationUserIdentityVerificationProcess?: (
-    | "HR verification with employee records"
-    | "Manager approval with written authorization"
-    | "Background check completion"
-    | "Photo identification verification"
-  )[];
+  identificationAuthenticationUserIdentityVerificationProcess?: ("HR verification with employee records" | "Manager approval with written authorization" | "Background check completion" | "Photo identification verification")[];
 
   /**
    * Notes / Evidence
@@ -226,14 +196,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "MAC addresses", "IP addresses (static)", "Computer/device names", "Asset tag numbers", "Serial numbers", "Certificates/digital signatures"
    * Required: no
    */
-  identificationAuthenticationDeviceIdentificationMethods?: (
-    | "MAC addresses"
-    | "IP addresses (static)"
-    | "Computer/device names"
-    | "Asset tag numbers"
-    | "Serial numbers"
-    | "Certificates/digital signatures"
-  )[];
+  identificationAuthenticationDeviceIdentificationMethods?: ("MAC addresses" | "IP addresses (static)" | "Computer/device names" | "Asset tag numbers" | "Serial numbers" | "Certificates/digital signatures")[];
 
   /**
    * Notes / Evidence
@@ -273,11 +236,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access.", "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use.", "Not Implemented", "Not applicable – No systems in scope store or process FCI."
    * Required: no
    */
-  identificationAuthenticationStatusAuthenticationControls?:
-    | "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access."
-    | "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use."
-    | "Not Implemented"
-    | "Not applicable – No systems in scope store or process FCI.";
+  identificationAuthenticationStatusAuthenticationControls?: "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access." | "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use." | "Not Implemented" | "Not applicable – No systems in scope store or process FCI.";
 
   /**
    * What methods do you use to confirm a user’s identity before they can log in?
@@ -287,14 +246,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Username and password – The most common method; each employee has a unique login and password.", "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone.", "Smart cards / PIV cards – Physical cards employees insert or tap to log in.", "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits.", "Digital certificates – Software-based “ID cards” that prove a device or user is trusted.", "Single sign-on (SSO) – One secure login gives access to multiple company applications."
    * Required: no
    */
-  identificationAuthenticationUserAuthenticationMethods?: (
-    | "Username and password – The most common method; each employee has a unique login and password."
-    | "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone."
-    | "Smart cards / PIV cards – Physical cards employees insert or tap to log in."
-    | "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits."
-    | "Digital certificates – Software-based “ID cards” that prove a device or user is trusted."
-    | "Single sign-on (SSO) – One secure login gives access to multiple company applications."
-  )[];
+  identificationAuthenticationUserAuthenticationMethods?: ("Username and password – The most common method; each employee has a unique login and password." | "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone." | "Smart cards / PIV cards – Physical cards employees insert or tap to log in." | "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits." | "Digital certificates – Software-based “ID cards” that prove a device or user is trusted." | "Single sign-on (SSO) – One secure login gives access to multiple company applications.")[];
 
   /**
    * Notes / Evidence
@@ -344,12 +296,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Uppercase letters required", "Lowercase letters required", "Numbers required", "Special characters required"
    * Required: no
    */
-  clickAllThatApply?: (
-    | "Uppercase letters required"
-    | "Lowercase letters required"
-    | "Numbers required"
-    | "Special characters required"
-  )[];
+  clickAllThatApply?: ("Uppercase letters required" | "Lowercase letters required" | "Numbers required" | "Special characters required")[];
 
   /**
    * Notes / Evidence
@@ -369,12 +316,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Yes, for all users and systems", "Yes, for privileged accounts only", "Yes, for remote access only", "Yes, for critical systems only", "No, not implemented"
    * Required: no
    */
-  identificationAuthenticationMfaUsage?:
-    | "Yes, for all users and systems"
-    | "Yes, for privileged accounts only"
-    | "Yes, for remote access only"
-    | "Yes, for critical systems only"
-    | "No, not implemented";
+  identificationAuthenticationMfaUsage?: "Yes, for all users and systems" | "Yes, for privileged accounts only" | "Yes, for remote access only" | "Yes, for critical systems only" | "No, not implemented";
 
   /**
    * How do you handle default usernames and passwords that come with new systems or software?
@@ -384,11 +326,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Always changed before deployment – IT changes default logins before the system is ever used.", "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment.", "Users required to change on first login – The system forces a password change the first time someone logs in.", "No formal process – Default credentials may remain in place, creating a serious security risk."
    * Required: no
    */
-  identificationAuthenticationDefaultCredentialHandling?:
-    | "Always changed before deployment – IT changes default logins before the system is ever used."
-    | "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment."
-    | "Users required to change on first login – The system forces a password change the first time someone logs in."
-    | "No formal process – Default credentials may remain in place, creating a serious security risk.";
+  identificationAuthenticationDefaultCredentialHandling?: "Always changed before deployment – IT changes default logins before the system is ever used." | "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment." | "Users required to change on first login – The system forces a password change the first time someone logs in." | "No formal process – Default credentials may remain in place, creating a serious security risk.";
 
   /**
    * Number of failed attempts before lockout:
@@ -418,11 +356,7 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
    * Options: "Administrator notification sent", " Security team alerted", "Logged for review"
    * Required: no
    */
-  clickAllThatApply2?: (
-    | "Administrator notification sent"
-    | " Security team alerted"
-    | "Logged for review"
-  )[];
+  clickAllThatApply2?: ("Administrator notification sent" | " Security team alerted" | "Logged for review")[];
 
   /**
    * Notes / Evidence
@@ -456,266 +390,80 @@ export interface IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
 }
 
 /** Convert an LHC JSON response into a normalized IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses object. */
-export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(
-  input: Any,
-): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
+export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(input: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
   return {
-    identificationAuthenticationIdentificationSectionNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "608483664601")),
-    identificationAuthenticationStatusUniqueIds: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "362061549890"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationStatusUniqueIds"
-    ],
-    identificationAuthenticationEmployeeLoginIdFormat: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "139461602895"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationEmployeeLoginIdFormat"
-    ],
-    identificationAuthenticationNumberOfServiceAccounts: rt
-      .coerceOptionalNumber(rt.findLhcValueByLinkId(input, "179545641231")),
-    checkAllThatApply: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "753553198622"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "checkAllThatApply"
-    ],
-    identificationAuthenticationServiceAccountManagementNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "441172825241")),
-    identificationAuthenticationCompanyDeviceInventoryList: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "926744954268"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationCompanyDeviceInventoryList"
-      ],
-    identificationAuthenticationUserIdentityVerificationProcess: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "297397401977"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationUserIdentityVerificationProcess"
-      ],
-    identificationAuthenticationUserIdentityVerificationNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "627017348272")),
-    identificationAuthenticationDeviceCountWorkstations: rt
-      .coerceOptionalNumber(rt.findLhcValueByLinkId(input, "878410531769")),
-    identificationAuthenticationDeviceCountServers: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "361034048943"),
-    ),
-    identificationAuthenticationDeviceCountMobile: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "424090205463"),
-    ),
-    identificationAuthenticationDeviceCountNetwork: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "764441913827"),
-    ),
-    identificationAuthenticationDeviceIdentificationMethods: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "359160217347"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationDeviceIdentificationMethods"
-      ],
-    identificationAuthenticationDeviceIdentificationMethodsNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "346437919917")),
-    identificationAuthenticationIdentificationSupportingDocs: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "157280172274"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationIdentificationSupportingDocs"
-      ],
-    identificationAuthenticationIdentificationAdditionalNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "382279609009")),
-    identificationAuthenticationStatusAuthenticationControls: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "676336695824"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationStatusAuthenticationControls"
-      ],
-    identificationAuthenticationUserAuthenticationMethods: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "901079756471"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationUserAuthenticationMethods"
-      ],
-    identificationAuthenticationUserAuthenticationMethodsNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "115035657570")),
-    identificationAuthenticationPasswordMinLength: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "444552965098"),
-    ),
-    identificationAuthenticationPasswordExpirationDays: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "499668919305"),
-    ),
-    identificationAuthenticationPasswordHistoryCount: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "190124104069"),
-    ),
-    clickAllThatApply: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "404025003688"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply"
-    ],
-    identificationAuthenticationPasswordRequirementsNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "149539043632")),
-    identificationAuthenticationMfaUsage: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "928879235030"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationMfaUsage"
-    ],
-    identificationAuthenticationDefaultCredentialHandling: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "830887074055"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationDefaultCredentialHandling"
-      ],
-    identificationAuthenticationFailedAttemptsLockout: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "647413778355"),
-    ),
-    identificationAuthenticationAccountLockoutDuration: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "552155632772"),
-    ),
-    clickAllThatApply2: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "947716241721"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply2"
-    ],
-    identificationAuthenticationAuthenticationFailureHandlingNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "434988961472")),
-    identificationAuthenticationAuthenticationSupportingDocs: rt
-      .coerceOptionalString(
-        rt.findLhcValueByLinkId(input, "230111377333"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationAuthenticationSupportingDocs"
-      ],
-    identificationAuthenticationAuthenticationAdditionalNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "939036015644")),
+  identificationAuthenticationIdentificationSectionNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "608483664601")),
+  identificationAuthenticationStatusUniqueIds: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "362061549890")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationStatusUniqueIds"],
+  identificationAuthenticationEmployeeLoginIdFormat: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "139461602895")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationEmployeeLoginIdFormat"],
+  identificationAuthenticationNumberOfServiceAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "179545641231")),
+  checkAllThatApply: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "753553198622")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["checkAllThatApply"],
+  identificationAuthenticationServiceAccountManagementNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "441172825241")),
+  identificationAuthenticationCompanyDeviceInventoryList: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "926744954268")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationCompanyDeviceInventoryList"],
+  identificationAuthenticationUserIdentityVerificationProcess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "297397401977")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationUserIdentityVerificationProcess"],
+  identificationAuthenticationUserIdentityVerificationNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "627017348272")),
+  identificationAuthenticationDeviceCountWorkstations: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "878410531769")),
+  identificationAuthenticationDeviceCountServers: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "361034048943")),
+  identificationAuthenticationDeviceCountMobile: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "424090205463")),
+  identificationAuthenticationDeviceCountNetwork: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "764441913827")),
+  identificationAuthenticationDeviceIdentificationMethods: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "359160217347")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationDeviceIdentificationMethods"],
+  identificationAuthenticationDeviceIdentificationMethodsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "346437919917")),
+  identificationAuthenticationIdentificationSupportingDocs: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "157280172274")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationIdentificationSupportingDocs"],
+  identificationAuthenticationIdentificationAdditionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "382279609009")),
+  identificationAuthenticationStatusAuthenticationControls: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "676336695824")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationStatusAuthenticationControls"],
+  identificationAuthenticationUserAuthenticationMethods: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "901079756471")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationUserAuthenticationMethods"],
+  identificationAuthenticationUserAuthenticationMethodsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "115035657570")),
+  identificationAuthenticationPasswordMinLength: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "444552965098")),
+  identificationAuthenticationPasswordExpirationDays: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "499668919305")),
+  identificationAuthenticationPasswordHistoryCount: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "190124104069")),
+  clickAllThatApply: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "404025003688")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply"],
+  identificationAuthenticationPasswordRequirementsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "149539043632")),
+  identificationAuthenticationMfaUsage: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "928879235030")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationMfaUsage"],
+  identificationAuthenticationDefaultCredentialHandling: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "830887074055")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationDefaultCredentialHandling"],
+  identificationAuthenticationFailedAttemptsLockout: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "647413778355")),
+  identificationAuthenticationAccountLockoutDuration: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "552155632772")),
+  clickAllThatApply2: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "947716241721")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply2"],
+  identificationAuthenticationAuthenticationFailureHandlingNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "434988961472")),
+  identificationAuthenticationAuthenticationSupportingDocs: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "230111377333")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationAuthenticationSupportingDocs"],
+  identificationAuthenticationAuthenticationAdditionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "939036015644")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses object. */
-export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
+export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(qr: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses {
   return {
-    identificationAuthenticationIdentificationSectionNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "608483664601")),
-    identificationAuthenticationStatusUniqueIds: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "362061549890"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationStatusUniqueIds"
-    ],
-    identificationAuthenticationEmployeeLoginIdFormat: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "139461602895"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationEmployeeLoginIdFormat"
-    ],
-    identificationAuthenticationNumberOfServiceAccounts: rt
-      .coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "179545641231")),
-    checkAllThatApply: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "753553198622"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "checkAllThatApply"
-    ],
-    identificationAuthenticationServiceAccountManagementNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "441172825241")),
-    identificationAuthenticationCompanyDeviceInventoryList: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "926744954268"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationCompanyDeviceInventoryList"
-      ],
-    identificationAuthenticationUserIdentityVerificationProcess: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "297397401977"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationUserIdentityVerificationProcess"
-      ],
-    identificationAuthenticationUserIdentityVerificationNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "627017348272")),
-    identificationAuthenticationDeviceCountWorkstations: rt
-      .coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "878410531769")),
-    identificationAuthenticationDeviceCountServers: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "361034048943"),
-    ),
-    identificationAuthenticationDeviceCountMobile: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "424090205463"),
-    ),
-    identificationAuthenticationDeviceCountNetwork: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "764441913827"),
-    ),
-    identificationAuthenticationDeviceIdentificationMethods: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "359160217347"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationDeviceIdentificationMethods"
-      ],
-    identificationAuthenticationDeviceIdentificationMethodsNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "346437919917")),
-    identificationAuthenticationIdentificationSupportingDocs: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "157280172274"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationIdentificationSupportingDocs"
-      ],
-    identificationAuthenticationIdentificationAdditionalNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "382279609009")),
-    identificationAuthenticationStatusAuthenticationControls: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "676336695824"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationStatusAuthenticationControls"
-      ],
-    identificationAuthenticationUserAuthenticationMethods: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "901079756471"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationUserAuthenticationMethods"
-      ],
-    identificationAuthenticationUserAuthenticationMethodsNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "115035657570")),
-    identificationAuthenticationPasswordMinLength: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "444552965098"),
-    ),
-    identificationAuthenticationPasswordExpirationDays: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "499668919305"),
-    ),
-    identificationAuthenticationPasswordHistoryCount: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "190124104069"),
-    ),
-    clickAllThatApply: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "404025003688"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply"
-    ],
-    identificationAuthenticationPasswordRequirementsNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "149539043632")),
-    identificationAuthenticationMfaUsage: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "928879235030"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "identificationAuthenticationMfaUsage"
-    ],
-    identificationAuthenticationDefaultCredentialHandling: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "830887074055"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationDefaultCredentialHandling"
-      ],
-    identificationAuthenticationFailedAttemptsLockout: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "647413778355"),
-    ),
-    identificationAuthenticationAccountLockoutDuration: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "552155632772"),
-    ),
-    clickAllThatApply2: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "947716241721"),
-    ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-      "clickAllThatApply2"
-    ],
-    identificationAuthenticationAuthenticationFailureHandlingNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "434988961472")),
-    identificationAuthenticationAuthenticationSupportingDocs: rt
-      .coerceOptionalString(
-        rt.findQrAnswerByLinkId(qr, "230111377333"),
-      ) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses[
-        "identificationAuthenticationAuthenticationSupportingDocs"
-      ],
-    identificationAuthenticationAuthenticationAdditionalNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "939036015644")),
+  identificationAuthenticationIdentificationSectionNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "608483664601")),
+  identificationAuthenticationStatusUniqueIds: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "362061549890")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationStatusUniqueIds"],
+  identificationAuthenticationEmployeeLoginIdFormat: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "139461602895")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationEmployeeLoginIdFormat"],
+  identificationAuthenticationNumberOfServiceAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "179545641231")),
+  checkAllThatApply: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "753553198622")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["checkAllThatApply"],
+  identificationAuthenticationServiceAccountManagementNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "441172825241")),
+  identificationAuthenticationCompanyDeviceInventoryList: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "926744954268")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationCompanyDeviceInventoryList"],
+  identificationAuthenticationUserIdentityVerificationProcess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "297397401977")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationUserIdentityVerificationProcess"],
+  identificationAuthenticationUserIdentityVerificationNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "627017348272")),
+  identificationAuthenticationDeviceCountWorkstations: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "878410531769")),
+  identificationAuthenticationDeviceCountServers: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "361034048943")),
+  identificationAuthenticationDeviceCountMobile: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "424090205463")),
+  identificationAuthenticationDeviceCountNetwork: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "764441913827")),
+  identificationAuthenticationDeviceIdentificationMethods: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "359160217347")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationDeviceIdentificationMethods"],
+  identificationAuthenticationDeviceIdentificationMethodsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "346437919917")),
+  identificationAuthenticationIdentificationSupportingDocs: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "157280172274")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationIdentificationSupportingDocs"],
+  identificationAuthenticationIdentificationAdditionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "382279609009")),
+  identificationAuthenticationStatusAuthenticationControls: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "676336695824")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationStatusAuthenticationControls"],
+  identificationAuthenticationUserAuthenticationMethods: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "901079756471")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationUserAuthenticationMethods"],
+  identificationAuthenticationUserAuthenticationMethodsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "115035657570")),
+  identificationAuthenticationPasswordMinLength: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "444552965098")),
+  identificationAuthenticationPasswordExpirationDays: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "499668919305")),
+  identificationAuthenticationPasswordHistoryCount: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "190124104069")),
+  clickAllThatApply: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "404025003688")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply"],
+  identificationAuthenticationPasswordRequirementsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "149539043632")),
+  identificationAuthenticationMfaUsage: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "928879235030")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationMfaUsage"],
+  identificationAuthenticationDefaultCredentialHandling: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "830887074055")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationDefaultCredentialHandling"],
+  identificationAuthenticationFailedAttemptsLockout: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "647413778355")),
+  identificationAuthenticationAccountLockoutDuration: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "552155632772")),
+  clickAllThatApply2: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "947716241721")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["clickAllThatApply2"],
+  identificationAuthenticationAuthenticationFailureHandlingNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "434988961472")),
+  identificationAuthenticationAuthenticationSupportingDocs: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "230111377333")) as IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses["identificationAuthenticationAuthenticationSupportingDocs"],
+  identificationAuthenticationAuthenticationAdditionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "939036015644")),
   };
 }
 
@@ -740,46 +488,22 @@ export function identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesF
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-  constructor(
-    readonly value:
-      IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses,
-  ) {}
+  constructor(readonly value: IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(
-      identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
+    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
-    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(
-      identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter {
+    return new IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInterpreter(identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    >;
-  } {
-    const missing: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
-    const req: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> } {
+    const missing: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
+    const req: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -800,55 +524,13 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    >;
+    missingRequired: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses>;
   } {
-    const req: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
-    const all: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [
-      "identificationAuthenticationIdentificationSectionNotes",
-      "identificationAuthenticationStatusUniqueIds",
-      "identificationAuthenticationEmployeeLoginIdFormat",
-      "identificationAuthenticationNumberOfServiceAccounts",
-      "checkAllThatApply",
-      "identificationAuthenticationServiceAccountManagementNotes",
-      "identificationAuthenticationCompanyDeviceInventoryList",
-      "identificationAuthenticationUserIdentityVerificationProcess",
-      "identificationAuthenticationUserIdentityVerificationNotes",
-      "identificationAuthenticationDeviceCountWorkstations",
-      "identificationAuthenticationDeviceCountServers",
-      "identificationAuthenticationDeviceCountMobile",
-      "identificationAuthenticationDeviceCountNetwork",
-      "identificationAuthenticationDeviceIdentificationMethods",
-      "identificationAuthenticationDeviceIdentificationMethodsNotes",
-      "identificationAuthenticationIdentificationSupportingDocs",
-      "identificationAuthenticationIdentificationAdditionalNotes",
-      "identificationAuthenticationStatusAuthenticationControls",
-      "identificationAuthenticationUserAuthenticationMethods",
-      "identificationAuthenticationUserAuthenticationMethodsNotes",
-      "identificationAuthenticationPasswordMinLength",
-      "identificationAuthenticationPasswordExpirationDays",
-      "identificationAuthenticationPasswordHistoryCount",
-      "clickAllThatApply",
-      "identificationAuthenticationPasswordRequirementsNotes",
-      "identificationAuthenticationMfaUsage",
-      "identificationAuthenticationDefaultCredentialHandling",
-      "identificationAuthenticationFailedAttemptsLockout",
-      "identificationAuthenticationAccountLockoutDuration",
-      "clickAllThatApply2",
-      "identificationAuthenticationAuthenticationFailureHandlingNotes",
-      "identificationAuthenticationAuthenticationSupportingDocs",
-      "identificationAuthenticationAuthenticationAdditionalNotes",
-    ];
+    const req: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
+    const all: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = ["identificationAuthenticationIdentificationSectionNotes", "identificationAuthenticationStatusUniqueIds", "identificationAuthenticationEmployeeLoginIdFormat", "identificationAuthenticationNumberOfServiceAccounts", "checkAllThatApply", "identificationAuthenticationServiceAccountManagementNotes", "identificationAuthenticationCompanyDeviceInventoryList", "identificationAuthenticationUserIdentityVerificationProcess", "identificationAuthenticationUserIdentityVerificationNotes", "identificationAuthenticationDeviceCountWorkstations", "identificationAuthenticationDeviceCountServers", "identificationAuthenticationDeviceCountMobile", "identificationAuthenticationDeviceCountNetwork", "identificationAuthenticationDeviceIdentificationMethods", "identificationAuthenticationDeviceIdentificationMethodsNotes", "identificationAuthenticationIdentificationSupportingDocs", "identificationAuthenticationIdentificationAdditionalNotes", "identificationAuthenticationStatusAuthenticationControls", "identificationAuthenticationUserAuthenticationMethods", "identificationAuthenticationUserAuthenticationMethodsNotes", "identificationAuthenticationPasswordMinLength", "identificationAuthenticationPasswordExpirationDays", "identificationAuthenticationPasswordHistoryCount", "clickAllThatApply", "identificationAuthenticationPasswordRequirementsNotes", "identificationAuthenticationMfaUsage", "identificationAuthenticationDefaultCredentialHandling", "identificationAuthenticationFailedAttemptsLockout", "identificationAuthenticationAccountLockoutDuration", "clickAllThatApply2", "identificationAuthenticationAuthenticationFailureHandlingNotes", "identificationAuthenticationAuthenticationSupportingDocs", "identificationAuthenticationAuthenticationAdditionalNotes"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses
-    > = [];
+    const missingReq: Array<keyof IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -861,8 +543,7 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
     }
 
     return {
-      formTitle:
-        "Identification Authentication Verify Identities Of Users And Processes",
+      formTitle: "Identification Authentication Verify Identities Of Users And Processes",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -872,4 +553,1857 @@ export class IdentificationAuthenticationVerifyIdentitiesOfUsersAndProcessesInte
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const identificationAuthenticationVerifyIdentitiesOfUsersAndProcessesSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Identification Authentication Verify Identities Of Users And Processes",
+  "status": "draft",
+  "description": "Verify identities of users and processes",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "608483664601",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-section-notes",
+              "display": "Identification Section Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "374872344921",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "281929303054",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-unique-ids-notes",
+                  "display": "Status Unique Ids Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "281929303054_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "362061549890",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-unique-ids",
+              "display": "Status Unique Ids"
+            }
+          ],
+          "text": "What is the status of making sure all employees, devices, and automated tools that use your systems have unique IDs so you can tell them apart?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – Every employee has their own login, devices are uniquely identified, and automated tools are tracked."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Most users/devices have unique IDs, but some accounts are still shared or not clearly identified."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not implemented – Users or devices share accounts, or there is no way to uniquely identify who/what is accessing systems."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "243749447566",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-employee-login-id-format-notes",
+                  "display": "Employee Login Id Format Notes"
+                }
+              ],
+              "text": "Notes / Evidence:",
+              "item": [
+                {
+                  "linkId": "243749447566_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "139461602895",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-employee-login-id-format",
+              "display": "Employee Login Id Format"
+            }
+          ],
+          "text": "What format do you use to create employee login IDs?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": " First name + last name (john.smith)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " First initial + last name (jsmith)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " Employee ID numbers (EMP001234)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " Department codes + names (IT-jsmith)"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter number"
+                }
+              ],
+              "linkId": "179545641231",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-number-of-service-accounts",
+                  "display": "Number Of Service Accounts"
+                }
+              ],
+              "text": "Number of service accounts (special logins used by software or automated tools, not people):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "753553198622",
+              "text": "Check all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": " Database services"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Web applications"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Backup processes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Monitoring/logging services"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Security scanning tools"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "441172825241",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-service-account-management-notes",
+                  "display": "Service Account Management Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "441172825241_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "item": [
+                {
+                  "type": "text",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    }
+                  ],
+                  "linkId": "279054233268",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "identification-authentication-company-device-inventory-list-notes",
+                      "display": "Company Device Inventory List Notes"
+                    }
+                  ],
+                  "text": "Notes / Evidence ",
+                  "item": [
+                    {
+                      "linkId": "279054233268_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "926744954268",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-company-device-inventory-list",
+                  "display": "Company Device Inventory List"
+                }
+              ],
+              "text": "Do you keep a list or spreadsheet of all company devices (computers, phones, servers, etc.) that connect to your systems?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "297397401977",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-process",
+                  "display": "User Identity Verification Process"
+                }
+              ],
+              "text": "How do you verify a person’s identity before giving them access to company systems?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "HR verification with employee records"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manager approval with written authorization"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Background check completion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Photo identification verification"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "627017348272",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-user-identity-verification-notes",
+                  "display": "User Identity Verification Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "627017348272_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "446911811643_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Service Accounts</i></span> are special logins used by software or automated tools, not people. Keep them limited to only what’s necessary and review them regularly to prevent misuse. </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "446911811643",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-service-account-management",
+              "display": "Service Account Management"
+            }
+          ],
+          "text": "Service Account Management"
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "linkId": "878410531769",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-workstations",
+                  "display": "Device Count Workstations"
+                }
+              ],
+              "text": "Workstations/laptops:"
+            },
+            {
+              "type": "integer",
+              "linkId": "361034048943",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-servers",
+                  "display": "Device Count Servers"
+                }
+              ],
+              "text": "Servers:"
+            },
+            {
+              "type": "integer",
+              "linkId": "424090205463",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-mobile",
+                  "display": "Device Count Mobile"
+                }
+              ],
+              "text": "Mobile devices:"
+            },
+            {
+              "type": "integer",
+              "linkId": "764441913827",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-device-count-network",
+                  "display": "Device Count Network"
+                }
+              ],
+              "text": "Network devices:"
+            },
+            {
+              "linkId": "543189099428_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Device Inventory</i></span> tracks every device that connects to your systems — like laptops, desktops, and phones. This helps ensure only approved, secure devices are used for work that involves government contract information. </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "543189099428",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-inventory",
+              "display": "Device Inventory"
+            }
+          ],
+          "text": "Device Inventory"
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "359160217347",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods",
+              "display": "Device Identification Methods"
+            }
+          ],
+          "text": "Every computer, phone, or server should have a unique identifier so you know exactly which device is connecting. How do you uniquely identify each device that connects to your systems?",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "MAC addresses"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "IP addresses (static)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Computer/device names"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Asset tag numbers"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Serial numbers"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Certificates/digital signatures"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "346437919917",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-device-identification-methods-notes",
+              "display": "Device Identification Methods Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "598954279320",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "876744570203",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-identification-supporting-docs-notes",
+                  "display": "Identification Supporting Docs Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "534094311747",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/variable",
+              "valueExpression": {
+                "name": "weight",
+                "language": "text/fhirpath",
+                "expression": "1",
+                "extension": [
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/expression-editor-variable-type",
+                    "valueString": "simple"
+                  },
+                  {
+                    "url": "http://lhcforms.nlm.nih.gov/fhirExt/simple-syntax",
+                    "valueString": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "157280172274",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-supporting-docs",
+              "display": "Identification Supporting Docs"
+            }
+          ],
+          "text": "Supporting Documentation",
+          "repeats": false,
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                  "valueDecimal": 100
+                }
+              ],
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "linkId": "382279609009",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-identification-additional-notes",
+              "display": "Identification Additional Notes"
+            }
+          ],
+          "text": "Additional Notes"
+        },
+        {
+          "linkId": "228228158249_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Identification (IA)</span></i> requires assigning a unique ID to every user and device so that access to systems and Federal Contract Information (FCI) can always be linked to a specific, authorized individual.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Unique User IDs:</b> Each employee or contractor must have their own login account.<br>\\n  &bull; &nbsp; <b>No Shared Accounts:</b> Prevents confusion and makes activity traceable.<br>\\n  &bull; &nbsp; <b>Device Identification:</b> Computers, phones, and servers should also have unique identifiers.<br>\\n  &bull; &nbsp; <b>Account Lifecycle:</b> Add new IDs only when needed and remove them promptly when no longer in use.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "228228158249",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-identification-overview",
+          "display": "Identification Overview"
+        }
+      ],
+      "text": "IA.L1-B.1.V - Identification"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "linkId": "440326396427",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-status-authentication-controls-notes",
+                  "display": "Status Authentication Controls Notes"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "type": "text",
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "440326396427_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "676336695824",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-status-authentication-controls",
+              "display": "Status Authentication Controls"
+            }
+          ],
+          "text": "What is the current status of the controls that verify that users and devices are who they say they are before giving them access?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – Every user has a unique login and password (no shared accounts), default passwords are replaced, and all devices are authenticated before access."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Most users and devices are verified, but some shared or default accounts/devices are still in use."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not Implemented"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not applicable – No systems in scope store or process FCI."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "901079756471",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods",
+              "display": "User Authentication Methods"
+            }
+          ],
+          "text": "What methods do you use to confirm a user’s identity before they can log in?",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Username and password – The most common method; each employee has a unique login and password."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Multi-factor authentication (MFA) – Requires two or more proofs, such as a password plus a code texted to your phone."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Smart cards / PIV cards – Physical cards employees insert or tap to log in."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Biometric authentication – Uses fingerprints, facial recognition, or other personal traits."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Digital certificates – Software-based “ID cards” that prove a device or user is trusted."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Single sign-on (SSO) – One secure login gives access to multiple company applications."
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "115035657570",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-user-authentication-methods-notes",
+              "display": "User Authentication Methods Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "115035657570_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "8"
+                }
+              ],
+              "linkId": "444552965098",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-min-length",
+                  "display": "Password Min Length"
+                }
+              ],
+              "text": "Minimum length (characters):"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "90"
+                }
+              ],
+              "linkId": "499668919305",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-expiration-days",
+                  "display": "Password Expiration Days"
+                }
+              ],
+              "text": "Password expiration (days):"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "5"
+                }
+              ],
+              "linkId": "190124104069",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-history-count",
+                  "display": "Password History Count"
+                }
+              ],
+              "text": "Password history (passwords remembered):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "404025003688",
+              "text": "Click all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Uppercase letters required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Lowercase letters required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Numbers required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Special characters required"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "149539043632",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-password-requirements-notes",
+                  "display": "Password Requirements Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "149539043632_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "459655669415_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Password Requirements</span></i> define the rules for creating strong passwords so accounts are harder to guess or break.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Length:</b> Require a minimum of 8–12 characters (longer is stronger).<br>\\n  &bull; &nbsp; <b>Complexity:</b> Use a mix of uppercase, lowercase, numbers, and symbols.<br>\\n  &bull; &nbsp; <b>Uniqueness:</b> Do not reuse old or common passwords.<br>\\n  &bull; &nbsp; <b>Protection:</b> Never share passwords or store them in plain text.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "459655669415",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-password-requirements",
+              "display": "Password Requirements"
+            }
+          ],
+          "text": "Password Requirements"
+        },
+        {
+          "linkId": "928879235030",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-mfa-usage",
+              "display": "Mfa Usage"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "choice",
+          "text": "Multi-factor authentication (MFA) means using more than one proof of identity before someone can log in. For example, a password plus a code texted to your phone, or a password plus a fingerprint scan. Do you use MFA?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes, for all users and systems"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for privileged accounts only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for remote access only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Yes, for critical systems only"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No, not implemented"
+              }
+            }
+          ],
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "496212946934",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-mfa-usage-notes",
+                  "display": "Mfa Usage Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "496212946934_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "273984680811",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-default-credential-handling-notes",
+                  "display": "Default Credential Handling Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "273984680811_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "830887074055",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-default-credential-handling",
+              "display": "Default Credential Handling"
+            }
+          ],
+          "text": "How do you handle default usernames and passwords that come with new systems or software?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Always changed before deployment – IT changes default logins before the system is ever used."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Changed during initial configuration – Defaults are replaced when the system is set up, but not necessarily before deployment."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Users required to change on first login – The system forces a password change the first time someone logs in."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No formal process – Default credentials may remain in place, creating a serious security risk."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "341175611920",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-failure-handling",
+              "display": "Authentication Failure Handling"
+            }
+          ],
+          "type": "group",
+          "text": "Authentication Failure Handling",
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "3"
+                }
+              ],
+              "linkId": "647413778355",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-failed-attempts-lockout",
+                  "display": "Failed Attempts Lockout"
+                }
+              ],
+              "text": "Number of failed attempts before lockout:"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "30"
+                }
+              ],
+              "linkId": "552155632772",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-account-lockout-duration",
+                  "display": "Account Lockout Duration"
+                }
+              ],
+              "text": "Account lockout duration (minutes):"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "947716241721",
+              "text": "Click all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Administrator notification sent"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Security team alerted"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Logged for review"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "434988961472",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-failure-handling-notes",
+                  "display": "Authentication Failure Handling Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "434988961472_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "341175611920_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Authentication Failure Handling</span></i> defines what happens when someone enters the wrong login credentials multiple times. This prevents attackers from guessing passwords repeatedly.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Account Lockout:</b> Lock accounts after a set number of failed attempts.<br>\\n  &bull; &nbsp; <b>Timed Delay:</b> Add a waiting period before more login attempts are allowed.<br>\\n  &bull; &nbsp; <b>Alerts:</b> Notify administrators if repeated failures occur.<br>\\n  &bull; &nbsp; <b>Reset Process:</b> Provide a secure method for users to unlock or reset their accounts.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "116846260787",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "identification-authentication-authentication-supporting-docs-notes",
+                  "display": "Authentication Supporting Docs Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "116846260787_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "230111377333",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-supporting-docs",
+              "display": "Authentication Supporting Docs"
+            }
+          ],
+          "text": "Supporting Documentation",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Any additional notes, remediation plans, or implementation challenges..."
+            }
+          ],
+          "linkId": "939036015644",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "identification-authentication-authentication-additional-notes",
+              "display": "Authentication Additional Notes"
+            }
+          ],
+          "text": "Additional Notes"
+        },
+        {
+          "linkId": "865372145224_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Authentication (IA)</span></i> ensures that users prove their identity before accessing company systems or Federal Contract Information (FCI). This prevents unauthorized access, even if someone knows a username.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Passwords:</b> Require strong, unique passwords that are not shared between accounts.<br>\\n  &bull; &nbsp; <b>Multi-Factor Authentication (MFA):</b> Add extra steps like codes, apps, or tokens for sensitive systems.<br>\\n  &bull; &nbsp; <b>Session Controls:</b> Lock accounts after failed login attempts and log users out after inactivity.<br>\\n  &bull; &nbsp; <b>Account Security:</b> Change default credentials and disable unused accounts.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "865372145224",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "identification-authentication-authentication-overview",
+          "display": "Authentication Overview"
+        }
+      ],
+      "text": "IA.L1-B.1.VI - Authentication"
+    }
+  ]
+}
+`;

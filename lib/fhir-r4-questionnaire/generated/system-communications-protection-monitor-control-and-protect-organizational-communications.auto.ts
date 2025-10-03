@@ -10,25 +10,16 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "System & Communications Protection (Monitor, control, and protect organizational communications)",
-    filename:
-      "system-communications-protection-monitor-control-and-protect-organizational-communications.auto.ts",
-    titleCamel:
-      "`systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
-    titlePascal:
-      "`SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
-    titleKebab:
-      "`system-communications-protection-monitor-control-and-protect-organizational-communications`",
-    lhcFormResponseAdapterFnName:
-      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource",
-  };
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsModuleSignature: rt.ModuleSignature = {
+    title: "System & Communications Protection (Monitor, control, and protect organizational communications)",
+    filename: "system-communications-protection-monitor-control-and-protect-organizational-communications.auto.ts",
+    titleCamel: "`systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
+    titlePascal: "`SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications`",
+    titleKebab: "`system-communications-protection-monitor-control-and-protect-organizational-communications`",
+    lhcFormResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -37,50 +28,36 @@ type Any = any;
  * - Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds =
-  {
-    systemCommunicationsProtectionFrontGateMonitorControl: "998940326541",
-    systemCommunicationsProtectionStatusNetworkPerimeterSecurity:
-      "954433842901",
-    systemCommunicationProtectionNetworkNotesEvidence: "494412529555",
-    systemCommunicationsProtectionNetworkDiagram: "979372224491",
-    systemCommunicationProtectionNetworkDiagramNotesEvidence: "353406656082",
-    systemCommunicationsProtectionProtectNetworkOutsideWorld: "591770672887",
-    systemCommunicationsProtectionProtectSensitiveAreasNetwork: "930792706809",
-    systemCommunicationsProtectionFirewallManufacturerModel: "843201435494",
-    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion:
-      "706452201694",
-    systemCommunicationsProtectionDefaultDenyPolicy: "949755108024",
-    systemCommunicationsProtectionSystemCommunicationProtectionComments:
-      "156526970162",
-    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols:
-      "963088071424",
-    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols:
-      "122305830447",
-    systemCommunicationsProtectionMonitorTrafficCrossing: "847131102373",
-    systemCommunicationProtectionMonitoringNotesEvidence: "305967020301",
-    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes:
-      "500229418620",
-    systemCommunicationsProtectionDemilitarizedZonePublicSystems:
-      "556770566326",
-    systemCommunicationsProtectionSeparatingPublicSystems: "274150359667",
-    systemCommunicationProtectionSeparatePublicSystemNotesEvidence:
-      "496638290461",
-    systemCommunicationsProtectionAccessibleSystemComponentsOperate:
-      "956471776047",
-    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence:
-      "272791116387",
-    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated:
-      "517448335213",
-    systemCommunicationProtectionNetworkSeparationNotesEvidence: "299978179191",
-    systemCommunicationsProtectionPreventUnauthorizedAccessPublic:
-      "634425708590",
-    systemCommunicationProtectionAccessControlNotesEvidence: "845777456178",
-    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork:
-      "536378863536",
-    systemCommunicationProtectionPublicNetworkNotesEvidence: "122899280845",
-    systemCommunicationProtectionPublicNetworkAdditionalNotes: "388464619346",
-  } as const;
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLinkIds = {
+  systemCommunicationsProtectionFrontGateMonitorControl: "998940326541",
+  systemCommunicationsProtectionStatusNetworkPerimeterSecurity: "954433842901",
+  systemCommunicationProtectionNetworkNotesEvidence: "494412529555",
+  systemCommunicationsProtectionNetworkDiagram: "979372224491",
+  systemCommunicationProtectionNetworkDiagramNotesEvidence: "353406656082",
+  systemCommunicationsProtectionProtectNetworkOutsideWorld: "591770672887",
+  systemCommunicationsProtectionProtectSensitiveAreasNetwork: "930792706809",
+  systemCommunicationsProtectionFirewallManufacturerModel: "843201435494",
+  systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: "706452201694",
+  systemCommunicationsProtectionDefaultDenyPolicy: "949755108024",
+  systemCommunicationsProtectionSystemCommunicationProtectionComments: "156526970162",
+  systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: "963088071424",
+  systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: "122305830447",
+  systemCommunicationsProtectionMonitorTrafficCrossing: "847131102373",
+  systemCommunicationProtectionMonitoringNotesEvidence: "305967020301",
+  systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: "500229418620",
+  systemCommunicationsProtectionDemilitarizedZonePublicSystems: "556770566326",
+  systemCommunicationsProtectionSeparatingPublicSystems: "274150359667",
+  systemCommunicationProtectionSeparatePublicSystemNotesEvidence: "496638290461",
+  systemCommunicationsProtectionAccessibleSystemComponentsOperate: "956471776047",
+  systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: "272791116387",
+  systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: "517448335213",
+  systemCommunicationProtectionNetworkSeparationNotesEvidence: "299978179191",
+  systemCommunicationsProtectionPreventUnauthorizedAccessPublic: "634425708590",
+  systemCommunicationProtectionAccessControlNotesEvidence: "845777456178",
+  systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: "536378863536",
+  systemCommunicationProtectionPublicNetworkNotesEvidence: "122899280845",
+  systemCommunicationProtectionPublicNetworkAdditionalNotes: "388464619346"
+} as const;
 
 /** Normalized view of "System & Communications Protection (Monitor, control, and protect organizational communications)" answers. */
 export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
@@ -103,7 +80,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionStatusNetworkPerimeterSecurity: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 494412529555
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -122,7 +99,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionNetworkDiagram?: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 353406656082
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -219,16 +196,10 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
    * Options: "Firewall logs and analysis", "Intrusion detection/prevention systems", "Network monitoring tools", "SIEM system integration", "Manual log review"
    * Required: no
    */
-  systemCommunicationsProtectionMonitorTrafficCrossing?: (
-    | "Firewall logs and analysis"
-    | "Intrusion detection/prevention systems"
-    | "Network monitoring tools"
-    | "SIEM system integration"
-    | "Manual log review"
-  )[];
+  systemCommunicationsProtectionMonitorTrafficCrossing?: ("Firewall logs and analysis" | "Intrusion detection/prevention systems" | "Network monitoring tools" | "SIEM system integration" | "Manual log review")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 305967020301
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -266,7 +237,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionSeparatingPublicSystems: string;
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 496638290461
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -285,7 +256,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionAccessibleSystemComponentsOperate?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 272791116387
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -304,7 +275,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 299978179191
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -323,7 +294,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionPreventUnauthorizedAccessPublic?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 845777456178
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -342,7 +313,7 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
   systemCommunicationsProtectionMonitorActivityPublicFacingNetwork?: string[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 122899280845
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -363,182 +334,70 @@ export interface SystemCommunicationsProtectionMonitorControlAndProtectOrganizat
 }
 
 /** Convert an LHC JSON response into a normalized SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications object. */
-export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(
-  input: Any,
-): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
+export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(input: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
   return {
-    systemCommunicationsProtectionFrontGateMonitorControl: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "998940326541")),
-    systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt
-      .coerceString(rt.findLhcValueByLinkId(input, "954433842901")),
-    systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "494412529555"),
-    ),
-    systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "979372224491"),
-    ),
-    systemCommunicationProtectionNetworkDiagramNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "353406656082")),
-    systemCommunicationsProtectionProtectNetworkOutsideWorld: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "591770672887")),
-    systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "930792706809")),
-    systemCommunicationsProtectionFirewallManufacturerModel: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "843201435494")),
-    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "706452201694")),
-    systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "949755108024"),
-    ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-      "systemCommunicationsProtectionDefaultDenyPolicy"
-    ],
-    systemCommunicationsProtectionSystemCommunicationProtectionComments: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "156526970162")),
-    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "963088071424")),
-    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "122305830447")),
-    systemCommunicationsProtectionMonitorTrafficCrossing: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "847131102373"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionMonitorTrafficCrossing"
-      ],
-    systemCommunicationProtectionMonitoringNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "305967020301")),
-    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "500229418620")),
-    systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "556770566326")),
-    systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(
-      rt.findLhcValueByLinkId(input, "274150359667"),
-    ),
-    systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "496638290461")),
-    systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "956471776047"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionAccessibleSystemComponentsOperate"
-      ],
-    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "272791116387")),
-    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "517448335213"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"
-      ],
-    systemCommunicationProtectionNetworkSeparationNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "299978179191")),
-    systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "634425708590"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionPreventUnauthorizedAccessPublic"
-      ],
-    systemCommunicationProtectionAccessControlNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "845777456178")),
-    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt
-      .coerceOptionalStringArray(
-        rt.findLhcValueByLinkId(input, "536378863536"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"
-      ],
-    systemCommunicationProtectionPublicNetworkNotesEvidence: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "122899280845")),
-    systemCommunicationProtectionPublicNetworkAdditionalNotes: rt
-      .coerceOptionalString(rt.findLhcValueByLinkId(input, "388464619346")),
+  systemCommunicationsProtectionFrontGateMonitorControl: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "998940326541")),
+  systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt.coerceString(rt.findLhcValueByLinkId(input, "954433842901")),
+  systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "494412529555")),
+  systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "979372224491")),
+  systemCommunicationProtectionNetworkDiagramNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "353406656082")),
+  systemCommunicationsProtectionProtectNetworkOutsideWorld: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "591770672887")),
+  systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "930792706809")),
+  systemCommunicationsProtectionFirewallManufacturerModel: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "843201435494")),
+  systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "706452201694")),
+  systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "949755108024")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionDefaultDenyPolicy"],
+  systemCommunicationsProtectionSystemCommunicationProtectionComments: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "156526970162")),
+  systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "963088071424")),
+  systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "122305830447")),
+  systemCommunicationsProtectionMonitorTrafficCrossing: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "847131102373")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionMonitorTrafficCrossing"],
+  systemCommunicationProtectionMonitoringNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "305967020301")),
+  systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "500229418620")),
+  systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "556770566326")),
+  systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(rt.findLhcValueByLinkId(input, "274150359667")),
+  systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "496638290461")),
+  systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "956471776047")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionAccessibleSystemComponentsOperate"],
+  systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "272791116387")),
+  systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "517448335213")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"],
+  systemCommunicationProtectionNetworkSeparationNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "299978179191")),
+  systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "634425708590")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionPreventUnauthorizedAccessPublic"],
+  systemCommunicationProtectionAccessControlNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "845777456178")),
+  systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "536378863536")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"],
+  systemCommunicationProtectionPublicNetworkNotesEvidence: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "122899280845")),
+  systemCommunicationProtectionPublicNetworkAdditionalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "388464619346")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications object. */
-export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
+export function systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(qr: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications {
   return {
-    systemCommunicationsProtectionFrontGateMonitorControl: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "998940326541")),
-    systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt
-      .coerceString(rt.findQrAnswerByLinkId(qr, "954433842901")),
-    systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "494412529555"),
-    ),
-    systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "979372224491"),
-    ),
-    systemCommunicationProtectionNetworkDiagramNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "353406656082")),
-    systemCommunicationsProtectionProtectNetworkOutsideWorld: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "591770672887")),
-    systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "930792706809")),
-    systemCommunicationsProtectionFirewallManufacturerModel: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "843201435494")),
-    systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "706452201694")),
-    systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "949755108024"),
-    ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-      "systemCommunicationsProtectionDefaultDenyPolicy"
-    ],
-    systemCommunicationsProtectionSystemCommunicationProtectionComments: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "156526970162")),
-    systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "963088071424")),
-    systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122305830447")),
-    systemCommunicationsProtectionMonitorTrafficCrossing: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "847131102373"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionMonitorTrafficCrossing"
-      ],
-    systemCommunicationProtectionMonitoringNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "305967020301")),
-    systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "500229418620")),
-    systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "556770566326")),
-    systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(
-      rt.findQrAnswerByLinkId(qr, "274150359667"),
-    ),
-    systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "496638290461")),
-    systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "956471776047"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionAccessibleSystemComponentsOperate"
-      ],
-    systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "272791116387")),
-    systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "517448335213"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"
-      ],
-    systemCommunicationProtectionNetworkSeparationNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "299978179191")),
-    systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "634425708590"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionPreventUnauthorizedAccessPublic"
-      ],
-    systemCommunicationProtectionAccessControlNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "845777456178")),
-    systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt
-      .coerceOptionalStringArray(
-        rt.findQrAnswersByLinkId(qr, "536378863536"),
-      ) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications[
-        "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"
-      ],
-    systemCommunicationProtectionPublicNetworkNotesEvidence: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122899280845")),
-    systemCommunicationProtectionPublicNetworkAdditionalNotes: rt
-      .coerceOptionalString(rt.findQrAnswerByLinkId(qr, "388464619346")),
+  systemCommunicationsProtectionFrontGateMonitorControl: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "998940326541")),
+  systemCommunicationsProtectionStatusNetworkPerimeterSecurity: rt.coerceString(rt.findQrAnswerByLinkId(qr, "954433842901")),
+  systemCommunicationProtectionNetworkNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "494412529555")),
+  systemCommunicationsProtectionNetworkDiagram: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "979372224491")),
+  systemCommunicationProtectionNetworkDiagramNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "353406656082")),
+  systemCommunicationsProtectionProtectNetworkOutsideWorld: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "591770672887")),
+  systemCommunicationsProtectionProtectSensitiveAreasNetwork: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "930792706809")),
+  systemCommunicationsProtectionFirewallManufacturerModel: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "843201435494")),
+  systemCommunicationsProtectionFirewallSoftwareFirmwareVersion: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "706452201694")),
+  systemCommunicationsProtectionDefaultDenyPolicy: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "949755108024")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionDefaultDenyPolicy"],
+  systemCommunicationsProtectionSystemCommunicationProtectionComments: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "156526970162")),
+  systemCommunicationsProtectionExplicitlyAllowedServicesProtocols: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "963088071424")),
+  systemCommunicationsProtectionExplicitlyDeniedServicesProtocols: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122305830447")),
+  systemCommunicationsProtectionMonitorTrafficCrossing: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "847131102373")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionMonitorTrafficCrossing"],
+  systemCommunicationProtectionMonitoringNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "305967020301")),
+  systemCommunicationsBoundaryProtectionProtectionAdditionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "500229418620")),
+  systemCommunicationsProtectionDemilitarizedZonePublicSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "556770566326")),
+  systemCommunicationsProtectionSeparatingPublicSystems: rt.coerceString(rt.findQrAnswerByLinkId(qr, "274150359667")),
+  systemCommunicationProtectionSeparatePublicSystemNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "496638290461")),
+  systemCommunicationsProtectionAccessibleSystemComponentsOperate: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "956471776047")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionAccessibleSystemComponentsOperate"],
+  systemCommunicationProtectionPublicAccessibleSystemNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "272791116387")),
+  systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "517448335213")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated"],
+  systemCommunicationProtectionNetworkSeparationNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "299978179191")),
+  systemCommunicationsProtectionPreventUnauthorizedAccessPublic: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "634425708590")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionPreventUnauthorizedAccessPublic"],
+  systemCommunicationProtectionAccessControlNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "845777456178")),
+  systemCommunicationsProtectionMonitorActivityPublicFacingNetwork: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "536378863536")) as SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications["systemCommunicationsProtectionMonitorActivityPublicFacingNetwork"],
+  systemCommunicationProtectionPublicNetworkNotesEvidence: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "122899280845")),
+  systemCommunicationProtectionPublicNetworkAdditionalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "388464619346")),
   };
 }
 
@@ -563,49 +422,22 @@ export function systemCommunicationsProtectionMonitorControlAndProtectOrganizati
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-  constructor(
-    readonly value:
-      SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications,
-  ) {}
+  constructor(readonly value: SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(
-      systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
+    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
-    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(
-      systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter {
+    return new SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsInterpreter(systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    >;
-  } {
-    const missing: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    > = [];
-    const req: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    > = [
-      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
-      "systemCommunicationsProtectionSeparatingPublicSystems",
-    ];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> } {
+    const missing: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = [];
+    const req: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["systemCommunicationsProtectionStatusNetworkPerimeterSecurity", "systemCommunicationsProtectionSeparatingPublicSystems"];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -626,53 +458,13 @@ export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationa
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    >;
+    missingRequired: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications>;
   } {
-    const req: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    > = [
-      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
-      "systemCommunicationsProtectionSeparatingPublicSystems",
-    ];
-    const all: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    > = [
-      "systemCommunicationsProtectionFrontGateMonitorControl",
-      "systemCommunicationsProtectionStatusNetworkPerimeterSecurity",
-      "systemCommunicationProtectionNetworkNotesEvidence",
-      "systemCommunicationsProtectionNetworkDiagram",
-      "systemCommunicationProtectionNetworkDiagramNotesEvidence",
-      "systemCommunicationsProtectionProtectNetworkOutsideWorld",
-      "systemCommunicationsProtectionProtectSensitiveAreasNetwork",
-      "systemCommunicationsProtectionFirewallManufacturerModel",
-      "systemCommunicationsProtectionFirewallSoftwareFirmwareVersion",
-      "systemCommunicationsProtectionDefaultDenyPolicy",
-      "systemCommunicationsProtectionSystemCommunicationProtectionComments",
-      "systemCommunicationsProtectionExplicitlyAllowedServicesProtocols",
-      "systemCommunicationsProtectionExplicitlyDeniedServicesProtocols",
-      "systemCommunicationsProtectionMonitorTrafficCrossing",
-      "systemCommunicationProtectionMonitoringNotesEvidence",
-      "systemCommunicationsBoundaryProtectionProtectionAdditionalNotes",
-      "systemCommunicationsProtectionDemilitarizedZonePublicSystems",
-      "systemCommunicationsProtectionSeparatingPublicSystems",
-      "systemCommunicationProtectionSeparatePublicSystemNotesEvidence",
-      "systemCommunicationsProtectionAccessibleSystemComponentsOperate",
-      "systemCommunicationProtectionPublicAccessibleSystemNotesEvidence",
-      "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated",
-      "systemCommunicationProtectionNetworkSeparationNotesEvidence",
-      "systemCommunicationsProtectionPreventUnauthorizedAccessPublic",
-      "systemCommunicationProtectionAccessControlNotesEvidence",
-      "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork",
-      "systemCommunicationProtectionPublicNetworkNotesEvidence",
-      "systemCommunicationProtectionPublicNetworkAdditionalNotes",
-    ];
+    const req: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["systemCommunicationsProtectionStatusNetworkPerimeterSecurity", "systemCommunicationsProtectionSeparatingPublicSystems"];
+    const all: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = ["systemCommunicationsProtectionFrontGateMonitorControl", "systemCommunicationsProtectionStatusNetworkPerimeterSecurity", "systemCommunicationProtectionNetworkNotesEvidence", "systemCommunicationsProtectionNetworkDiagram", "systemCommunicationProtectionNetworkDiagramNotesEvidence", "systemCommunicationsProtectionProtectNetworkOutsideWorld", "systemCommunicationsProtectionProtectSensitiveAreasNetwork", "systemCommunicationsProtectionFirewallManufacturerModel", "systemCommunicationsProtectionFirewallSoftwareFirmwareVersion", "systemCommunicationsProtectionDefaultDenyPolicy", "systemCommunicationsProtectionSystemCommunicationProtectionComments", "systemCommunicationsProtectionExplicitlyAllowedServicesProtocols", "systemCommunicationsProtectionExplicitlyDeniedServicesProtocols", "systemCommunicationsProtectionMonitorTrafficCrossing", "systemCommunicationProtectionMonitoringNotesEvidence", "systemCommunicationsBoundaryProtectionProtectionAdditionalNotes", "systemCommunicationsProtectionDemilitarizedZonePublicSystems", "systemCommunicationsProtectionSeparatingPublicSystems", "systemCommunicationProtectionSeparatePublicSystemNotesEvidence", "systemCommunicationsProtectionAccessibleSystemComponentsOperate", "systemCommunicationProtectionPublicAccessibleSystemNotesEvidence", "systemCommunicationsProtectionPubliclyAccessibleSystemsSeparated", "systemCommunicationProtectionNetworkSeparationNotesEvidence", "systemCommunicationsProtectionPreventUnauthorizedAccessPublic", "systemCommunicationProtectionAccessControlNotesEvidence", "systemCommunicationsProtectionMonitorActivityPublicFacingNetwork", "systemCommunicationProtectionPublicNetworkNotesEvidence", "systemCommunicationProtectionPublicNetworkAdditionalNotes"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications
-    > = [];
+    const missingReq: Array<keyof SystemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunications> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -685,8 +477,7 @@ export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationa
     }
 
     return {
-      formTitle:
-        "System & Communications Protection (Monitor, control, and protect organizational communications)",
+      formTitle: "System & Communications Protection (Monitor, control, and protect organizational communications)",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -696,4 +487,1636 @@ export class SystemCommunicationsProtectionMonitorControlAndProtectOrganizationa
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const systemCommunicationsProtectionMonitorControlAndProtectOrganizationalCommunicationsSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "System & Communications Protection (Monitor, control, and protect organizational communications)",
+  "status": "draft",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "display",
+          "linkId": "998940326541",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-front-gate-monitor-control",
+              "display": "Front Gate Monitor Control"
+            }
+          ],
+          "text": "Your company’s computer network needs a ‘front gate’ that monitors and protects traffic going in and out. This means using tools like firewalls (to block unwanted traffic), intrusion detection (to spot suspicious activity), and rules that control what data can flow where."
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "954433842901",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-status-network-perimeter-security",
+              "display": "Status Network Perimeter Security"
+            }
+          ],
+          "text": "What is the status of your network perimeter security (tools that control and monitor data entering or leaving your systems)?",
+          "required": true,
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully implemented – We use firewalls and monitoring tools to control all traffic in and out of the network, and they are actively maintained."
+            },
+            {
+              "valueString": "Partially implemented – Some protections (like a firewall) are in place, but monitoring or other controls are missing or incomplete."
+            },
+            {
+              "valueString": "Not implemented – There are no firewalls or monitoring tools protecting the network."
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "494412529555",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communication-protection-network-notes-evidence",
+              "display": "System Communication Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "494412529555_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "979372224491",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-network-diagram",
+              "display": "Network Diagram"
+            }
+          ],
+          "text": "Do you have a network diagram showing system boundaries, key components, and data flows?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Yes"
+            },
+            {
+              "valueString": "No"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "353406656082",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communication-protection-network-diagram-notes-evidence",
+              "display": "System Communication Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "353406656082_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Include hardware models, firmware versions and their primary functions.  e.g., Cisco ASA 5515-X v9.12.3 - Primary perimeter firewall, Palo Alto PA-220 v10.1.2 - Branch office firewall."
+                }
+              ],
+              "linkId": "591770672887",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-protect-network-outside-world",
+                  "display": "Protect Network Outside World"
+                }
+              ],
+              "text": "What systems protect the edge of your network from the outside world (e.g., internet traffic)?",
+              "item": [
+                {
+                  "linkId": "591770672887_helpText",
+                  "type": "display",
+                  "text": "These are the tools and devices that sit at the network perimeter — like firewalls, secure gateways, or VPNs — and decide what data can come in or go out. They act as the first line of defense against hackers and unauthorized access.",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Include components that separate development, test and production environments or create internal segmentation. eg., Internal VLAN switches, host-based firewalls,  Network ACLs."
+                }
+              ],
+              "linkId": "930792706809",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-protect-sensitive-areas-network",
+                  "display": "Protect Sensitive Areas Network"
+                }
+              ],
+              "text": "What systems protect sensitive areas inside your network from the rest of the company?",
+              "item": [
+                {
+                  "linkId": "930792706809_helpText",
+                  "type": "display",
+                  "text": "Internal boundaries separate your most important systems from the rest of your network. For example, you may keep development systems isolated from production systems, or restrict access between employee laptops and servers holding Federal Contract Information (FCI). This limits damage if an attacker or insider gets into one part of the network.",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "861774438513_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Clearly define the limits of your information systems to identify what needs protection and control.\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "861774438513",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-system-boundary-definition",
+              "display": "System Boundary Definition"
+            }
+          ],
+          "text": "1. System Boundary Definition",
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "e.g., Cisco ASA 5500, Palo Alto PA-220"
+                }
+              ],
+              "linkId": "843201435494",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-firewall-manufacturer-model",
+                  "display": "Firewall Manufacturer Model"
+                }
+              ],
+              "text": "Firewall Manufacturer/Model",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "843201435494_helpText",
+                  "type": "display",
+                  "text": "e.g., Cisco ASA 5500, Palo Alto PA-220",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "e.g., v9.12.3"
+                }
+              ],
+              "linkId": "706452201694",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-firewall-software-firmware-version",
+                  "display": "Firewall Software Firmware Version"
+                }
+              ],
+              "text": "Firewall Software/Firmware Version",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "706452201694_helpText",
+                  "type": "display",
+                  "text": "e.g., v9.12.3",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "949755108024",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-default-deny-policy",
+                  "display": "Default Deny Policy"
+                }
+              ],
+              "text": "Default deny policy is implemented (traffic is denied by default unless explicitly permitted)",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Yes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Type your comments here..."
+                }
+              ],
+              "linkId": "156526970162",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-system-communication-protection-comments",
+                  "display": "System Communication Protection Comments"
+                }
+              ],
+              "text": "Type your comments here..."
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)"
+                }
+              ],
+              "linkId": "963088071424",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-explicitly-allowed-services-protocols",
+                  "display": "Explicitly Allowed Services Protocols"
+                }
+              ],
+              "text": "Explicitly Allowed Services/Protocols",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "963088071424_helpText",
+                  "type": "display",
+                  "text": "e.g., HTTPS (TCP/443), SSH (TCP/22), DNS (UDP/53)",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)"
+                }
+              ],
+              "linkId": "122305830447",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-explicitly-denied-services-protocols",
+                  "display": "Explicitly Denied Services Protocols"
+                }
+              ],
+              "text": "Explicitly Denied Services/Protocols",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "122305830447_helpText",
+                  "type": "display",
+                  "text": "e.g., Telnet (TCP/23), FTP (TCP/21), HTTP (TCP/80)",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "835757897200_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Set up and manage firewalls to control and monitor incoming and outgoing network traffic based on security rules.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "835757897200",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-firewall-configuration",
+              "display": "Firewall Configuration"
+            }
+          ],
+          "text": "2. Firewall Configuration"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "847131102373",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-monitor-traffic-crossing",
+                  "display": "Monitor Traffic Crossing"
+                }
+              ],
+              "text": "How do you monitor traffic crossing into or out of your company’s network?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Firewall logs and analysis"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Intrusion detection/prevention systems"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Network monitoring tools"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "SIEM system integration"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Manual log review"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "847131102373_helpText",
+                  "type": "display",
+                  "text": "Monitoring at system boundaries means tracking the flow of data into and out of your network. This helps you spot unusual activity, such as unauthorized access attempts or large data transfers, using tools like firewalls, intrusion detection systems, or log reviews.",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "305967020301",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communication-protection-monitoring-notes-evidence",
+                  "display": "System Communication Protection Notes Evidences"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "305967020301_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "434121826556_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Establish continuous monitoring to detect and respond to security events within systems and communications.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "434121826556",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-monitoring-implementation",
+              "display": "Monitoring Implementation"
+            }
+          ],
+          "text": "3. Monitoring Implementation"
+        },
+        {
+          "item": [
+            {
+              "type": "group",
+              "linkId": "863216296552",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-compliance-documentation-review",
+                  "display": "Compliance Documentation Review"
+                }
+              ],
+              "text": "Note: Ensure these documents are readily available with your other compliance documentation for review",
+              "item": [
+                {
+                  "linkId": "635455682907",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "List your supporting documentation and ensure these documents are available with your other compliance documentation\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "637351242740",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "List your supporting documentation and ensure these documents are available with your other compliance documentation\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "952590202831",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-boundary-supporting-documentation",
+              "display": "Supporting Documentation"
+            }
+          ],
+          "text": "Supporting Documentation"
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "500229418620",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-boundary-protection-protection-additional-notes",
+              "display": "Additional Notes"
+            }
+          ],
+          "text": "Additional Notes"
+        },
+        {
+          "linkId": "617514452468_helpText",
+          "type": "display",
+          "text": "Monitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "617514452468",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-communications-protection-boundary-protection",
+          "display": "Boundary Protection"
+        }
+      ],
+      "text": "SC.L1-B.1.X – Boundary Protection"
+    },
+    {
+      "item": [
+        {
+          "type": "display",
+          "linkId": "556770566326",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-demilitarized-zone-public-systems",
+              "display": "Demilitarized Zone Public Systems"
+            }
+          ],
+          "text": "Set up a Demilitarized Zone (DMZ) or other Demilitarized Zone area for public systems. This ensures that public-facing tools are isolated from sensitive internal systems that store government contract data."
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "274150359667",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-separating-public-systems",
+              "display": "Separating Public Systems"
+            }
+          ],
+          "text": "What is the status of separating public systems (like websites or portals) from your internal network?",
+          "required": true,
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueString": "Fully implemented – Public systems are kept on their own network (DMZ or subnetwork) and fully isolated from internal systems."
+            },
+            {
+              "valueString": "Partially implemented – Some separation exists, but not all public systems are isolated."
+            },
+            {
+              "valueString": "Not implemented – Public systems are on the same network as internal systems, with no separation."
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "496638290461",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communication-protection-separate-public-system-notes-evidence",
+              "display": "System Communication Protection Notes Evidence"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "496638290461_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "956471776047",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-accessible-system-components-operate",
+                  "display": "Accessible System Components Operate"
+                }
+              ],
+              "text": "What publicly accessible system components does your organization operate?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Web servers"
+                },
+                {
+                  "valueString": "Email servers (public-facing)"
+                },
+                {
+                  "valueString": "DNS servers"
+                },
+                {
+                  "valueString": " FTP servers"
+                },
+                {
+                  "valueString": "VPN gateways"
+                },
+                {
+                  "valueString": "Remote access servers"
+                },
+                {
+                  "valueString": "API gateways"
+                },
+                {
+                  "valueString": "No publicly accessible components"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "272791116387",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communication-protection-public-accessible-system-notes- evidence",
+                  "display": "System Communication Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "272791116387_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "194546217130_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Identify and manage system components like web servers, email servers, and public applications that are accessible to external users\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "194546217130",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-publicly-accessible-system-components",
+              "display": "Publicly Accessible System Components"
+            }
+          ],
+          "text": "1. Publicly Accessible System Components"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "517448335213",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-publicly-accessible-systems-separated",
+                  "display": "Publicly Accessible Systems Separated"
+                }
+              ],
+              "text": "How are publicly accessible systems separated from internal networks?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Demilitarized Zone (DMZ) implementation"
+                },
+                {
+                  "valueString": "Virtual LAN (VLAN) segmentation"
+                },
+                {
+                  "valueString": "Physical network separation"
+                },
+                {
+                  "valueString": "Firewall rules and access control lists"
+                },
+                {
+                  "valueString": "Cloud-based isolation and separation"
+                },
+                {
+                  "valueString": "Proxy servers and reverse proxies"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "299978179191",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communication-protection-network-separation-notes- evidence",
+                  "display": "System Communication Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence "
+            },
+            {
+              "linkId": "560463506575_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Implement measures to separate and segment networks to limit unauthorized access and contain potential security breaches.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "560463506575",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-network-separation-implementation",
+              "display": "Network Separation Implementation"
+            }
+          ],
+          "text": "2. Network Separation Implementation"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "634425708590",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-prevent-unauthorized-access-public",
+                  "display": "Prevent Unauthorized Access Public"
+                }
+              ],
+              "text": "What controls prevent unauthorized access from public networks to internal networks?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": " Default deny policies (all traffic blocked unless explicitly allowed)"
+                },
+                {
+                  "valueString": "Stateful firewall inspection"
+                },
+                {
+                  "valueString": "Application-level proxy filtering"
+                },
+                {
+                  "valueString": " Intrusion detection and prevention systems"
+                },
+                {
+                  "valueString": "Continuous network monitoring and logging"
+                },
+                {
+                  "valueString": "Strong authentication for any allowed connections"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "845777456178",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communication-protection-access-control-notes-evidence",
+                  "display": "System Communication Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "845777456178_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "126262667735_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Control and restrict communication between networks to prevent unauthorized access and data transfer.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "126262667735",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-access-control-between-networks",
+              "display": "Access Control Between Networks"
+            }
+          ],
+          "text": "3. Access Control Between Networks"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "536378863536",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-monitor-activity-public-facing-network",
+                  "display": "Monitor Activity Public Facing Network"
+                }
+              ],
+              "text": "How do you monitor activity in your public-facing network segments?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueString": "Security Information and Event Management (SIEM) system"
+                },
+                {
+                  "valueString": "Network monitoring tools and dashboards"
+                },
+                {
+                  "valueString": " Automated log analysis and alerting"
+                },
+                {
+                  "valueString": " Regular vulnerability scanning"
+                },
+                {
+                  "valueString": "Periodic penetration testing"
+                },
+                {
+                  "valueString": "Manual log review and analysis"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "122899280845",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communication-protection-public-network-notes- evidence",
+                  "display": "System Communication Protection Notes Evidence"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "122899280845_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "414442892901_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Continuously monitor demilitarized zones (DMZ) and public networks to detect and respond to potential security threats.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "414442892901",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-DMZ-public-network-monitoring",
+              "display": "DMZ Public Network Monitoring"
+            }
+          ],
+          "text": "4. DMZ/Public Network Monitoring"
+        },
+        {
+          "item": [
+            {
+              "type": "group",
+              "linkId": "215151024524",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "system-communications-protection-readily-available-compliance-documentation",
+                  "display": "Readily Available compliance Documentation"
+                }
+              ],
+              "text": "Note: Ensure these documents are readily available with your other compliance documentation for review",
+              "item": [
+                {
+                  "linkId": "756478939445",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "List your supporting documentation and ensure these documents are available with your other compliance documentation\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "433860110163",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "List your supporting documentation and ensure these documents are available with your other compliance documentation\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "712969806317",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communications-protection-supporting-documentation",
+              "display": "Supporting Documentation"
+            }
+          ],
+          "text": " Supporting Documentation"
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "388464619346",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "system-communication-protection-public-network-additional notes",
+              "display": "System Communication Protection Additional notes"
+            }
+          ],
+          "text": "Additional Notes"
+        },
+        {
+          "linkId": "587208645662_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Public-Facing Systems</i></span> — like websites or customer portals — should be kept on their own network segment, apart from your internal company systems. This prevents outsiders from using public systems as a back door. </p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "587208645662",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "system-communications-protection-separate-public-systems-internal-networks",
+          "display": "Separate Public Systems Internal Networks"
+        }
+      ],
+      "text": "SC.L1-B.1.X – Separate Public Systems from Internal Networks"
+    }
+  ]
+}
+`;

@@ -10,25 +10,16 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "Access Control Limit Information System Access To Authorized Users And Processes",
-    filename:
-      "access-control-limit-information-system-access-to-authorized-users-and-processes.auto.ts",
-    titleCamel:
-      "`accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
-    titlePascal:
-      "`AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
-    titleKebab:
-      "`access-control-limit-information-system-access-to-authorized-users-and-processes`",
-    lhcFormResponseAdapterFnName:
-      "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource",
-  };
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesModuleSignature: rt.ModuleSignature = {
+    title: "Access Control Limit Information System Access To Authorized Users And Processes",
+    filename: "access-control-limit-information-system-access-to-authorized-users-and-processes.auto.ts",
+    titleCamel: "`accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
+    titlePascal: "`AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses`",
+    titleKebab: "`access-control-limit-information-system-access-to-authorized-users-and-processes`",
+    lhcFormResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -37,49 +28,48 @@ type Any = any;
  * - This control makes sure only the right people, the allowed tools and services they use, and approved company devices should be able to get into your systems.
  */
 /** Map of normalized property names to their source `linkId`. */
-export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds =
-  {
-    accessControlPolicyExists: "744146359806",
-    accessControlPolicyElementsItems: "669545773690",
-    accessControlPolicyElementsItemsNotes: "687383539343",
-    accessControlCurrentAccounts: "182548770364",
-    accessControlCountActiveAccounts: "927965645729",
-    accessControlCountInactiveAccounts: "903940962912",
-    accessControlCountServiceAccounts: "338820008158",
-    accessControlCountSharedAccounts: "673437974050",
-    accessControlLeastPrivilegeStatus: "368418823104",
-    accessControlLeastPrivilegeStatusNotes: "650863308787",
-    accessControlAccountLifecycleProcess: "341135397442",
-    accessControlAccountLifecycleProcessNotes: "700016005983",
-    accessControlAccountReviewFrequencyQuestion: "563546854643",
-    accessControlAccountReviewFrequencyNotes: "469989997039",
-    accessControlLeastPrivilegeTransactionStatus: "316234331937",
-    accessControlLeastPrivilegeTransactionStatusNotes: "983575859757",
-    accessControlLimitEmployeeActions: "589002798804",
-    accessControlLimitEmployeeActionsNotes: "635610218995",
-    accessControlRoleLimitedActions: "525896610609",
-    accessControlRoleLimitedActionsNotes: "524794183862",
-    accessControlSensitiveActionApprovalProcess: "859148329958",
-    accessControlSensitiveActionApprovalNotes: "988634546235",
-    accessControlExternalConnectionsStatus: "358071855489",
-    accessControlExternalConnectionsStatusNotes: "108304278260",
-    accessControlExternalSystemTypes: "261758300502",
-    accessControlExternalSystemTypesNotes: "681710464598",
-    accessControlExternalSystemSafetyCheck: "495111707033",
-    accessControlExternalSystemSafetyCheckNotes: "895273053564",
-    accessControlConnectionLimitationsList: "597499672942",
-    accessControlConnectionLimitationsNotes: "197339830339",
-    accessControlPublicInfoProcessStatus: "260717222110",
-    accessControlPublicInfoProcessStatusNotes: "813842964343",
-    accessControlPublicSystemsList: "660159010455",
-    accessControlPublicSystemsListNotes: "252003749158",
-    accessControlFciPostingPreventionProcess: "229261839700",
-    accessControlFciPostingPreventionNotes: "633971923340",
-    accessControlAuthorizedPublicSystems: "624223914711",
-    accessControlAuthorizedPersonnelCount: "374839487767",
-    accessControlAuthorizedPersonnelDepts: "177243885107",
-    accessControlAuthorizedPersonnelNotes: "163760226494",
-  } as const;
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLinkIds = {
+  accessControlPolicyExists: "744146359806",
+  accessControlPolicyElementsItems: "669545773690",
+  accessControlPolicyElementsItemsNotes: "687383539343",
+  accessControlCurrentAccounts: "182548770364",
+  accessControlCountActiveAccounts: "927965645729",
+  accessControlCountInactiveAccounts: "903940962912",
+  accessControlCountServiceAccounts: "338820008158",
+  accessControlCountSharedAccounts: "673437974050",
+  accessControlLeastPrivilegeStatus: "368418823104",
+  accessControlLeastPrivilegeStatusNotes: "650863308787",
+  accessControlAccountLifecycleProcess: "341135397442",
+  accessControlAccountLifecycleProcessNotes: "700016005983",
+  accessControlAccountReviewFrequencyQuestion: "563546854643",
+  accessControlAccountReviewFrequencyNotes: "469989997039",
+  accessControlLeastPrivilegeTransactionStatus: "316234331937",
+  accessControlLeastPrivilegeTransactionStatusNotes: "983575859757",
+  accessControlLimitEmployeeActions: "589002798804",
+  accessControlLimitEmployeeActionsNotes: "635610218995",
+  accessControlRoleLimitedActions: "525896610609",
+  accessControlRoleLimitedActionsNotes: "524794183862",
+  accessControlSensitiveActionApprovalProcess: "859148329958",
+  accessControlSensitiveActionApprovalNotes: "988634546235",
+  accessControlExternalConnectionsStatus: "358071855489",
+  accessControlExternalConnectionsStatusNotes: "108304278260",
+  accessControlExternalSystemTypes: "261758300502",
+  accessControlExternalSystemTypesNotes: "681710464598",
+  accessControlExternalSystemSafetyCheck: "495111707033",
+  accessControlExternalSystemSafetyCheckNotes: "895273053564",
+  accessControlConnectionLimitationsList: "597499672942",
+  accessControlConnectionLimitationsNotes: "197339830339",
+  accessControlPublicInfoProcessStatus: "260717222110",
+  accessControlPublicInfoProcessStatusNotes: "813842964343",
+  accessControlPublicSystemsList: "660159010455",
+  accessControlPublicSystemsListNotes: "252003749158",
+  accessControlFciPostingPreventionProcess: "229261839700",
+  accessControlFciPostingPreventionNotes: "633971923340",
+  accessControlAuthorizedPublicSystems: "624223914711",
+  accessControlAuthorizedPersonnelCount: "374839487767",
+  accessControlAuthorizedPersonnelDepts: "177243885107",
+  accessControlAuthorizedPersonnelNotes: "163760226494"
+} as const;
 
 /** Normalized view of "Access Control Limit Information System Access To Authorized Users And Processes" answers. */
 export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
@@ -101,12 +91,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Purpose, scope, roles, and responsibilities", "Management commitment", "Coordination among organizational entities", "Compliance requirements"
    * Required: no
    */
-  accessControlPolicyElementsItems?: (
-    | "Purpose, scope, roles, and responsibilities"
-    | "Management commitment"
-    | "Coordination among organizational entities"
-    | "Compliance requirements"
-  )[];
+  accessControlPolicyElementsItems?: ("Purpose, scope, roles, and responsibilities" | "Management commitment" | "Coordination among organizational entities" | "Compliance requirements")[];
 
   /**
    * Notes / Evidence
@@ -119,7 +104,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
   accessControlPolicyElementsItemsNotes?: string;
 
   /**
-   * How many accounts are currently in your systems?
+   * How many accounts are currently in your systems? 
    * linkId: 182548770364
    * FHIR type: display
    * Section: AC.L1-B.1.I - Authorized Access Control > User Account Registry
@@ -171,10 +156,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully implemented across all systems", "Partially implemented", "Not implemented"
    * Required: no
    */
-  accessControlLeastPrivilegeStatus?:
-    | "Fully implemented across all systems"
-    | "Partially implemented"
-    | "Not implemented";
+  accessControlLeastPrivilegeStatus?: "Fully implemented across all systems" | "Partially implemented" | "Not implemented";
 
   /**
    * Notes / Evidence
@@ -194,12 +176,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "We use an automated system that creates and removes access for us.", "We handle it manually, but require manager approval before access is given.", "Our HR system is connected, so access changes automatically when people join or leave.", "We regularly review who has access and confirm it’s still correct."
    * Required: no
    */
-  accessControlAccountLifecycleProcess?: (
-    | "We use an automated system that creates and removes access for us."
-    | "We handle it manually, but require manager approval before access is given."
-    | "Our HR system is connected, so access changes automatically when people join or leave."
-    | "We regularly review who has access and confirm it’s still correct."
-  )[];
+  accessControlAccountLifecycleProcess?: ("We use an automated system that creates and removes access for us." | "We handle it manually, but require manager approval before access is given." | "Our HR system is connected, so access changes automatically when people join or leave." | "We regularly review who has access and confirm it’s still correct.")[];
 
   /**
    * Notes / Evidence
@@ -219,11 +196,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Monthly", " Quarterly", "Annually", "Other (specify):"
    * Required: no
    */
-  accessControlAccountReviewFrequencyQuestion?:
-    | "Monthly"
-    | " Quarterly"
-    | "Annually"
-    | "Other (specify):";
+  accessControlAccountReviewFrequencyQuestion?: "Monthly" | " Quarterly" | "Annually" | "Other (specify):";
 
   /**
    * Notes / Evidence
@@ -243,14 +216,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully implemented – access is role-based and regularly reviewed.", "Partially implemented – some roles limited, others still too broad.", "Not implemented – all users have broad access.", "Not applicable – no sensitive transactions in scope."
    * Required: no
    */
-  accessControlLeastPrivilegeTransactionStatus?:
-    | "Fully implemented – access is role-based and regularly reviewed."
-    | "Partially implemented – some roles limited, others still too broad."
-    | "Not implemented – all users have broad access."
-    | "Not applicable – no sensitive transactions in scope.";
+  accessControlLeastPrivilegeTransactionStatus?: "Fully implemented – access is role-based and regularly reviewed." | "Partially implemented – some roles limited, others still too broad." | "Not implemented – all users have broad access." | "Not applicable – no sensitive transactions in scope.";
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 983575859757
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -267,15 +236,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "By job role (e.g., managers vs. staff have different access).", "By type of action (e.g., can read data but not edit or delete it).", "By application (e.g., only certain people can use a given tool).", "By time (e.g., access only during work hours).", "By location (e.g., access only from the office or approved networks)."
    * Required: no
    */
-  accessControlLimitEmployeeActions?:
-    | "By job role (e.g., managers vs. staff have different access)."
-    | "By type of action (e.g., can read data but not edit or delete it)."
-    | "By application (e.g., only certain people can use a given tool)."
-    | "By time (e.g., access only during work hours)."
-    | "By location (e.g., access only from the office or approved networks).";
+  accessControlLimitEmployeeActions?: "By job role (e.g., managers vs. staff have different access)." | "By type of action (e.g., can read data but not edit or delete it)." | "By application (e.g., only certain people can use a given tool)." | "By time (e.g., access only during work hours)." | "By location (e.g., access only from the office or approved networks).";
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 635610218995
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -292,16 +256,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Administrative functions (user management, system configuration)", "Financial transactions and approvals", "Data export and bulk download functions", "Report generation and access", "System-level commands and utilities"
    * Required: no
    */
-  accessControlRoleLimitedActions?: (
-    | "Administrative functions (user management, system configuration)"
-    | "Financial transactions and approvals"
-    | "Data export and bulk download functions"
-    | "Report generation and access"
-    | "System-level commands and utilities"
-  )[];
+  accessControlRoleLimitedActions?: ("Administrative functions (user management, system configuration)" | "Financial transactions and approvals" | "Data export and bulk download functions" | "Report generation and access" | "System-level commands and utilities")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 524794183862
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -318,15 +276,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Manager approval required", "Two-person authorization", "Automated business rules and limits", "No special authorization required"
    * Required: no
    */
-  accessControlSensitiveActionApprovalProcess?: (
-    | "Manager approval required"
-    | "Two-person authorization"
-    | "Automated business rules and limits"
-    | "No special authorization required"
-  )[];
+  accessControlSensitiveActionApprovalProcess?: ("Manager approval required" | "Two-person authorization" | "Automated business rules and limits" | "No special authorization required")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 988634546235
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -343,14 +296,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully implemented – Only approved external systems can connect; all activity is monitored.", "Partially implemented – Some external connections are controlled, but gaps remain.", "Not implemented – Any system or device can connect without restriction.", "Not applicable – No external systems connect to the environment in scope."
    * Required: no
    */
-  accessControlExternalConnectionsStatus?:
-    | "Fully implemented – Only approved external systems can connect; all activity is monitored."
-    | "Partially implemented – Some external connections are controlled, but gaps remain."
-    | "Not implemented – Any system or device can connect without restriction."
-    | "Not applicable – No external systems connect to the environment in scope.";
+  accessControlExternalConnectionsStatus?: "Fully implemented – Only approved external systems can connect; all activity is monitored." | "Partially implemented – Some external connections are controlled, but gaps remain." | "Not implemented – Any system or device can connect without restriction." | "Not applicable – No external systems connect to the environment in scope.";
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 108304278260
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -367,18 +316,10 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Cloud services – e.g., Microsoft 365, Google Workspace, Dropbox, Salesforce.", "Business partner networks – e.g., joint project portals, shared databases.", "Vendor/supplier systems – e.g., ERP integrations, supplier ordering platforms.", "Government systems and portals – e.g., DoD contractor portals, SAM.gov, PIEE.", "Personal devices (BYOD) – e.g., employees’ personal laptops, phones, or tablets.", "Remote access systems – e.g., VPN, Citrix, Microsoft RDP.", "No external connections – We keep all systems completely internal."
    * Required: no
    */
-  accessControlExternalSystemTypes?: (
-    | "Cloud services – e.g., Microsoft 365, Google Workspace, Dropbox, Salesforce."
-    | "Business partner networks – e.g., joint project portals, shared databases."
-    | "Vendor/supplier systems – e.g., ERP integrations, supplier ordering platforms."
-    | "Government systems and portals – e.g., DoD contractor portals, SAM.gov, PIEE."
-    | "Personal devices (BYOD) – e.g., employees’ personal laptops, phones, or tablets."
-    | "Remote access systems – e.g., VPN, Citrix, Microsoft RDP."
-    | "No external connections – We keep all systems completely internal."
-  )[];
+  accessControlExternalSystemTypes?: ("Cloud services – e.g., Microsoft 365, Google Workspace, Dropbox, Salesforce." | "Business partner networks – e.g., joint project portals, shared databases." | "Vendor/supplier systems – e.g., ERP integrations, supplier ordering platforms." | "Government systems and portals – e.g., DoD contractor portals, SAM.gov, PIEE." | "Personal devices (BYOD) – e.g., employees’ personal laptops, phones, or tablets." | "Remote access systems – e.g., VPN, Citrix, Microsoft RDP." | "No external connections – We keep all systems completely internal.")[];
 
   /**
-   * Notes / Evidence
+   * Notes / Evidence 
    * linkId: 681710464598
    * FHIR type: string
    * Entry format: Enter notes or supporting evidence, if any
@@ -395,13 +336,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "We use digital certificates and PKI to prove identity.", "We require VPN logins with authentication before allowing access.", "We set firewall rules or restrict by IP address so only approved connections get through.", "We use signed agreements with partners/vendors that spell out security requirements.", "We continuously monitor and log external connections to spot suspicious activity."
    * Required: no
    */
-  accessControlExternalSystemSafetyCheck?: (
-    | "We use digital certificates and PKI to prove identity."
-    | "We require VPN logins with authentication before allowing access."
-    | "We set firewall rules or restrict by IP address so only approved connections get through."
-    | "We use signed agreements with partners/vendors that spell out security requirements."
-    | "We continuously monitor and log external connections to spot suspicious activity."
-  )[];
+  accessControlExternalSystemSafetyCheck?: ("We use digital certificates and PKI to prove identity." | "We require VPN logins with authentication before allowing access." | "We set firewall rules or restrict by IP address so only approved connections get through." | "We use signed agreements with partners/vendors that spell out security requirements." | "We continuously monitor and log external connections to spot suspicious activity.")[];
 
   /**
    * Notes / Evidence
@@ -421,13 +356,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Time-based access restrictions", "Restrictions on data types that can be shared", "Limited to specific user groups", "Management approval required for each connection", "Comprehensive audit trails and logging"
    * Required: no
    */
-  accessControlConnectionLimitationsList?: (
-    | "Time-based access restrictions"
-    | "Restrictions on data types that can be shared"
-    | "Limited to specific user groups"
-    | "Management approval required for each connection"
-    | "Comprehensive audit trails and logging"
-  )[];
+  accessControlConnectionLimitationsList?: ("Time-based access restrictions" | "Restrictions on data types that can be shared" | "Limited to specific user groups" | "Management approval required for each connection" | "Comprehensive audit trails and logging")[];
 
   /**
    * Notes / Evidence
@@ -447,10 +376,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Fully implemented – We have a written approval process, only authorized staff can post, and we review/remove public content regularly.", "Partially implemented – Some controls are in place (e.g., only certain staff can post), but no formal review or monitoring.", "Not implemented – Anyone can post content publicly without checks, and there is no process for review."
    * Required: no
    */
-  accessControlPublicInfoProcessStatus?:
-    | "Fully implemented – We have a written approval process, only authorized staff can post, and we review/remove public content regularly."
-    | "Partially implemented – Some controls are in place (e.g., only certain staff can post), but no formal review or monitoring."
-    | "Not implemented – Anyone can post content publicly without checks, and there is no process for review.";
+  accessControlPublicInfoProcessStatus?: "Fully implemented – We have a written approval process, only authorized staff can post, and we review/remove public content regularly." | "Partially implemented – Some controls are in place (e.g., only certain staff can post), but no formal review or monitoring." | "Not implemented – Anyone can post content publicly without checks, and there is no process for review.";
 
   /**
    * Notes / Evidence
@@ -470,14 +396,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Company website", " Social media accounts", "Customer portals or self-service systems", "Corporate blog or news site", "Public forums or discussion boards", "No publicly accessible systems"
    * Required: no
    */
-  accessControlPublicSystemsList?: (
-    | "Company website"
-    | " Social media accounts"
-    | "Customer portals or self-service systems"
-    | "Corporate blog or news site"
-    | "Public forums or discussion boards"
-    | "No publicly accessible systems"
-  )[];
+  accessControlPublicSystemsList?: ("Company website" | " Social media accounts" | "Customer portals or self-service systems" | "Corporate blog or news site" | "Public forums or discussion boards" | "No publicly accessible systems")[];
 
   /**
    * Notes / Evidence
@@ -497,13 +416,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Pre-publication review and approval process", "Designated reviewers trained to identify FCI", "Automated content scanning for sensitive information", "Periodic audits of published content", "Procedures for rapid removal of inappropriate content"
    * Required: no
    */
-  accessControlFciPostingPreventionProcess?: (
-    | "Pre-publication review and approval process"
-    | "Designated reviewers trained to identify FCI"
-    | "Automated content scanning for sensitive information"
-    | "Periodic audits of published content"
-    | "Procedures for rapid removal of inappropriate content"
-  )[];
+  accessControlFciPostingPreventionProcess?: ("Pre-publication review and approval process" | "Designated reviewers trained to identify FCI" | "Automated content scanning for sensitive information" | "Periodic audits of published content" | "Procedures for rapid removal of inappropriate content")[];
 
   /**
    * Notes / Evidence
@@ -541,12 +454,7 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
    * Options: "Marketing department", "Communications/PR team", "Executive leadership", "IT administrators"
    * Required: no
    */
-  accessControlAuthorizedPersonnelDepts?: (
-    | "Marketing department"
-    | "Communications/PR team"
-    | "Executive leadership"
-    | "IT administrators"
-  )[];
+  accessControlAuthorizedPersonnelDepts?: ("Marketing department" | "Communications/PR team" | "Executive leadership" | "IT administrators")[];
 
   /**
    * Notes / Evidence
@@ -560,326 +468,94 @@ export interface AccessControlLimitInformationSystemAccessToAuthorizedUsersAndPr
 }
 
 /** Convert an LHC JSON response into a normalized AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses object. */
-export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(
-  input: Any,
-): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
+export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(input: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
   return {
-    accessControlPolicyExists: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "744146359806"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPolicyExists"
-    ],
-    accessControlPolicyElementsItems: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "669545773690"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPolicyElementsItems"
-    ],
-    accessControlPolicyElementsItemsNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "687383539343"),
-    ),
-    accessControlCurrentAccounts: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "182548770364"),
-    ),
-    accessControlCountActiveAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "927965645729"),
-    ),
-    accessControlCountInactiveAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "903940962912"),
-    ),
-    accessControlCountServiceAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "338820008158"),
-    ),
-    accessControlCountSharedAccounts: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "673437974050"),
-    ),
-    accessControlLeastPrivilegeStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "368418823104"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLeastPrivilegeStatus"
-    ],
-    accessControlLeastPrivilegeStatusNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "650863308787"),
-    ),
-    accessControlAccountLifecycleProcess: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "341135397442"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAccountLifecycleProcess"
-    ],
-    accessControlAccountLifecycleProcessNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "700016005983"),
-    ),
-    accessControlAccountReviewFrequencyQuestion: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "563546854643"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAccountReviewFrequencyQuestion"
-    ],
-    accessControlAccountReviewFrequencyNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "469989997039"),
-    ),
-    accessControlLeastPrivilegeTransactionStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "316234331937"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLeastPrivilegeTransactionStatus"
-    ],
-    accessControlLeastPrivilegeTransactionStatusNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "983575859757"),
-    ),
-    accessControlLimitEmployeeActions: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "589002798804"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLimitEmployeeActions"
-    ],
-    accessControlLimitEmployeeActionsNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "635610218995"),
-    ),
-    accessControlRoleLimitedActions: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "525896610609"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlRoleLimitedActions"
-    ],
-    accessControlRoleLimitedActionsNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "524794183862"),
-    ),
-    accessControlSensitiveActionApprovalProcess: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "859148329958"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlSensitiveActionApprovalProcess"
-    ],
-    accessControlSensitiveActionApprovalNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "988634546235"),
-    ),
-    accessControlExternalConnectionsStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "358071855489"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalConnectionsStatus"
-    ],
-    accessControlExternalConnectionsStatusNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "108304278260"),
-    ),
-    accessControlExternalSystemTypes: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "261758300502"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalSystemTypes"
-    ],
-    accessControlExternalSystemTypesNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "681710464598"),
-    ),
-    accessControlExternalSystemSafetyCheck: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "495111707033"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalSystemSafetyCheck"
-    ],
-    accessControlExternalSystemSafetyCheckNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "895273053564"),
-    ),
-    accessControlConnectionLimitationsList: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "597499672942"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlConnectionLimitationsList"
-    ],
-    accessControlConnectionLimitationsNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "197339830339"),
-    ),
-    accessControlPublicInfoProcessStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "260717222110"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPublicInfoProcessStatus"
-    ],
-    accessControlPublicInfoProcessStatusNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "813842964343"),
-    ),
-    accessControlPublicSystemsList: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "660159010455"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPublicSystemsList"
-    ],
-    accessControlPublicSystemsListNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "252003749158"),
-    ),
-    accessControlFciPostingPreventionProcess: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "229261839700"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlFciPostingPreventionProcess"
-    ],
-    accessControlFciPostingPreventionNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "633971923340"),
-    ),
-    accessControlAuthorizedPublicSystems: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "624223914711"),
-    ),
-    accessControlAuthorizedPersonnelCount: rt.coerceOptionalNumber(
-      rt.findLhcValueByLinkId(input, "374839487767"),
-    ),
-    accessControlAuthorizedPersonnelDepts: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "177243885107"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAuthorizedPersonnelDepts"
-    ],
-    accessControlAuthorizedPersonnelNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "163760226494"),
-    ),
+  accessControlPolicyExists: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "744146359806")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPolicyExists"],
+  accessControlPolicyElementsItems: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "669545773690")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPolicyElementsItems"],
+  accessControlPolicyElementsItemsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "687383539343")),
+  accessControlCurrentAccounts: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "182548770364")),
+  accessControlCountActiveAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "927965645729")),
+  accessControlCountInactiveAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "903940962912")),
+  accessControlCountServiceAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "338820008158")),
+  accessControlCountSharedAccounts: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "673437974050")),
+  accessControlLeastPrivilegeStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "368418823104")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLeastPrivilegeStatus"],
+  accessControlLeastPrivilegeStatusNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "650863308787")),
+  accessControlAccountLifecycleProcess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "341135397442")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAccountLifecycleProcess"],
+  accessControlAccountLifecycleProcessNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "700016005983")),
+  accessControlAccountReviewFrequencyQuestion: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "563546854643")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAccountReviewFrequencyQuestion"],
+  accessControlAccountReviewFrequencyNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "469989997039")),
+  accessControlLeastPrivilegeTransactionStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "316234331937")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLeastPrivilegeTransactionStatus"],
+  accessControlLeastPrivilegeTransactionStatusNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "983575859757")),
+  accessControlLimitEmployeeActions: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "589002798804")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLimitEmployeeActions"],
+  accessControlLimitEmployeeActionsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "635610218995")),
+  accessControlRoleLimitedActions: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "525896610609")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlRoleLimitedActions"],
+  accessControlRoleLimitedActionsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "524794183862")),
+  accessControlSensitiveActionApprovalProcess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "859148329958")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlSensitiveActionApprovalProcess"],
+  accessControlSensitiveActionApprovalNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "988634546235")),
+  accessControlExternalConnectionsStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "358071855489")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalConnectionsStatus"],
+  accessControlExternalConnectionsStatusNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "108304278260")),
+  accessControlExternalSystemTypes: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "261758300502")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalSystemTypes"],
+  accessControlExternalSystemTypesNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "681710464598")),
+  accessControlExternalSystemSafetyCheck: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "495111707033")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalSystemSafetyCheck"],
+  accessControlExternalSystemSafetyCheckNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "895273053564")),
+  accessControlConnectionLimitationsList: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "597499672942")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlConnectionLimitationsList"],
+  accessControlConnectionLimitationsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "197339830339")),
+  accessControlPublicInfoProcessStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "260717222110")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPublicInfoProcessStatus"],
+  accessControlPublicInfoProcessStatusNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "813842964343")),
+  accessControlPublicSystemsList: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "660159010455")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPublicSystemsList"],
+  accessControlPublicSystemsListNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "252003749158")),
+  accessControlFciPostingPreventionProcess: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "229261839700")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlFciPostingPreventionProcess"],
+  accessControlFciPostingPreventionNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "633971923340")),
+  accessControlAuthorizedPublicSystems: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "624223914711")),
+  accessControlAuthorizedPersonnelCount: rt.coerceOptionalNumber(rt.findLhcValueByLinkId(input, "374839487767")),
+  accessControlAuthorizedPersonnelDepts: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "177243885107")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAuthorizedPersonnelDepts"],
+  accessControlAuthorizedPersonnelNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "163760226494")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses object. */
-export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
+export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(qr: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses {
   return {
-    accessControlPolicyExists: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "744146359806"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPolicyExists"
-    ],
-    accessControlPolicyElementsItems: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "669545773690"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPolicyElementsItems"
-    ],
-    accessControlPolicyElementsItemsNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "687383539343"),
-    ),
-    accessControlCurrentAccounts: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "182548770364"),
-    ),
-    accessControlCountActiveAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "927965645729"),
-    ),
-    accessControlCountInactiveAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "903940962912"),
-    ),
-    accessControlCountServiceAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "338820008158"),
-    ),
-    accessControlCountSharedAccounts: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "673437974050"),
-    ),
-    accessControlLeastPrivilegeStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "368418823104"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLeastPrivilegeStatus"
-    ],
-    accessControlLeastPrivilegeStatusNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "650863308787"),
-    ),
-    accessControlAccountLifecycleProcess: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "341135397442"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAccountLifecycleProcess"
-    ],
-    accessControlAccountLifecycleProcessNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "700016005983"),
-    ),
-    accessControlAccountReviewFrequencyQuestion: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "563546854643"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAccountReviewFrequencyQuestion"
-    ],
-    accessControlAccountReviewFrequencyNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "469989997039"),
-    ),
-    accessControlLeastPrivilegeTransactionStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "316234331937"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLeastPrivilegeTransactionStatus"
-    ],
-    accessControlLeastPrivilegeTransactionStatusNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "983575859757"),
-    ),
-    accessControlLimitEmployeeActions: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "589002798804"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlLimitEmployeeActions"
-    ],
-    accessControlLimitEmployeeActionsNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "635610218995"),
-    ),
-    accessControlRoleLimitedActions: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "525896610609"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlRoleLimitedActions"
-    ],
-    accessControlRoleLimitedActionsNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "524794183862"),
-    ),
-    accessControlSensitiveActionApprovalProcess: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "859148329958"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlSensitiveActionApprovalProcess"
-    ],
-    accessControlSensitiveActionApprovalNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "988634546235"),
-    ),
-    accessControlExternalConnectionsStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "358071855489"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalConnectionsStatus"
-    ],
-    accessControlExternalConnectionsStatusNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "108304278260"),
-    ),
-    accessControlExternalSystemTypes: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "261758300502"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalSystemTypes"
-    ],
-    accessControlExternalSystemTypesNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "681710464598"),
-    ),
-    accessControlExternalSystemSafetyCheck: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "495111707033"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlExternalSystemSafetyCheck"
-    ],
-    accessControlExternalSystemSafetyCheckNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "895273053564"),
-    ),
-    accessControlConnectionLimitationsList: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "597499672942"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlConnectionLimitationsList"
-    ],
-    accessControlConnectionLimitationsNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "197339830339"),
-    ),
-    accessControlPublicInfoProcessStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "260717222110"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPublicInfoProcessStatus"
-    ],
-    accessControlPublicInfoProcessStatusNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "813842964343"),
-    ),
-    accessControlPublicSystemsList: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "660159010455"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlPublicSystemsList"
-    ],
-    accessControlPublicSystemsListNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "252003749158"),
-    ),
-    accessControlFciPostingPreventionProcess: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "229261839700"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlFciPostingPreventionProcess"
-    ],
-    accessControlFciPostingPreventionNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "633971923340"),
-    ),
-    accessControlAuthorizedPublicSystems: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "624223914711"),
-    ),
-    accessControlAuthorizedPersonnelCount: rt.coerceOptionalNumber(
-      rt.findQrAnswerByLinkId(qr, "374839487767"),
-    ),
-    accessControlAuthorizedPersonnelDepts: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "177243885107"),
-    ) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses[
-      "accessControlAuthorizedPersonnelDepts"
-    ],
-    accessControlAuthorizedPersonnelNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "163760226494"),
-    ),
+  accessControlPolicyExists: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "744146359806")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPolicyExists"],
+  accessControlPolicyElementsItems: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "669545773690")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPolicyElementsItems"],
+  accessControlPolicyElementsItemsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "687383539343")),
+  accessControlCurrentAccounts: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "182548770364")),
+  accessControlCountActiveAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "927965645729")),
+  accessControlCountInactiveAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "903940962912")),
+  accessControlCountServiceAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "338820008158")),
+  accessControlCountSharedAccounts: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "673437974050")),
+  accessControlLeastPrivilegeStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "368418823104")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLeastPrivilegeStatus"],
+  accessControlLeastPrivilegeStatusNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "650863308787")),
+  accessControlAccountLifecycleProcess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "341135397442")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAccountLifecycleProcess"],
+  accessControlAccountLifecycleProcessNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "700016005983")),
+  accessControlAccountReviewFrequencyQuestion: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "563546854643")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAccountReviewFrequencyQuestion"],
+  accessControlAccountReviewFrequencyNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "469989997039")),
+  accessControlLeastPrivilegeTransactionStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "316234331937")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLeastPrivilegeTransactionStatus"],
+  accessControlLeastPrivilegeTransactionStatusNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "983575859757")),
+  accessControlLimitEmployeeActions: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "589002798804")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlLimitEmployeeActions"],
+  accessControlLimitEmployeeActionsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "635610218995")),
+  accessControlRoleLimitedActions: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "525896610609")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlRoleLimitedActions"],
+  accessControlRoleLimitedActionsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "524794183862")),
+  accessControlSensitiveActionApprovalProcess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "859148329958")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlSensitiveActionApprovalProcess"],
+  accessControlSensitiveActionApprovalNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "988634546235")),
+  accessControlExternalConnectionsStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "358071855489")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalConnectionsStatus"],
+  accessControlExternalConnectionsStatusNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "108304278260")),
+  accessControlExternalSystemTypes: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "261758300502")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalSystemTypes"],
+  accessControlExternalSystemTypesNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "681710464598")),
+  accessControlExternalSystemSafetyCheck: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "495111707033")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlExternalSystemSafetyCheck"],
+  accessControlExternalSystemSafetyCheckNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "895273053564")),
+  accessControlConnectionLimitationsList: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "597499672942")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlConnectionLimitationsList"],
+  accessControlConnectionLimitationsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "197339830339")),
+  accessControlPublicInfoProcessStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "260717222110")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPublicInfoProcessStatus"],
+  accessControlPublicInfoProcessStatusNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "813842964343")),
+  accessControlPublicSystemsList: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "660159010455")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlPublicSystemsList"],
+  accessControlPublicSystemsListNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "252003749158")),
+  accessControlFciPostingPreventionProcess: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "229261839700")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlFciPostingPreventionProcess"],
+  accessControlFciPostingPreventionNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "633971923340")),
+  accessControlAuthorizedPublicSystems: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "624223914711")),
+  accessControlAuthorizedPersonnelCount: rt.coerceOptionalNumber(rt.findQrAnswerByLinkId(qr, "374839487767")),
+  accessControlAuthorizedPersonnelDepts: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "177243885107")) as AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses["accessControlAuthorizedPersonnelDepts"],
+  accessControlAuthorizedPersonnelNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "163760226494")),
   };
 }
 
@@ -904,46 +580,22 @@ export function accessControlLimitInformationSystemAccessToAuthorizedUsersAndPro
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-  constructor(
-    readonly value:
-      AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses,
-  ) {}
+  constructor(readonly value: AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(
-      accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
+    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
-    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(
-      accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter {
+    return new AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesInterpreter(accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    >;
-  } {
-    const missing: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
-    const req: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> } {
+    const missing: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
+    const req: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -964,62 +616,13 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    >;
+    missingRequired: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses>;
   } {
-    const req: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
-    const all: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [
-      "accessControlPolicyExists",
-      "accessControlPolicyElementsItems",
-      "accessControlPolicyElementsItemsNotes",
-      "accessControlCurrentAccounts",
-      "accessControlCountActiveAccounts",
-      "accessControlCountInactiveAccounts",
-      "accessControlCountServiceAccounts",
-      "accessControlCountSharedAccounts",
-      "accessControlLeastPrivilegeStatus",
-      "accessControlLeastPrivilegeStatusNotes",
-      "accessControlAccountLifecycleProcess",
-      "accessControlAccountLifecycleProcessNotes",
-      "accessControlAccountReviewFrequencyQuestion",
-      "accessControlAccountReviewFrequencyNotes",
-      "accessControlLeastPrivilegeTransactionStatus",
-      "accessControlLeastPrivilegeTransactionStatusNotes",
-      "accessControlLimitEmployeeActions",
-      "accessControlLimitEmployeeActionsNotes",
-      "accessControlRoleLimitedActions",
-      "accessControlRoleLimitedActionsNotes",
-      "accessControlSensitiveActionApprovalProcess",
-      "accessControlSensitiveActionApprovalNotes",
-      "accessControlExternalConnectionsStatus",
-      "accessControlExternalConnectionsStatusNotes",
-      "accessControlExternalSystemTypes",
-      "accessControlExternalSystemTypesNotes",
-      "accessControlExternalSystemSafetyCheck",
-      "accessControlExternalSystemSafetyCheckNotes",
-      "accessControlConnectionLimitationsList",
-      "accessControlConnectionLimitationsNotes",
-      "accessControlPublicInfoProcessStatus",
-      "accessControlPublicInfoProcessStatusNotes",
-      "accessControlPublicSystemsList",
-      "accessControlPublicSystemsListNotes",
-      "accessControlFciPostingPreventionProcess",
-      "accessControlFciPostingPreventionNotes",
-      "accessControlAuthorizedPublicSystems",
-      "accessControlAuthorizedPersonnelCount",
-      "accessControlAuthorizedPersonnelDepts",
-      "accessControlAuthorizedPersonnelNotes",
-    ];
+    const req: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
+    const all: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = ["accessControlPolicyExists", "accessControlPolicyElementsItems", "accessControlPolicyElementsItemsNotes", "accessControlCurrentAccounts", "accessControlCountActiveAccounts", "accessControlCountInactiveAccounts", "accessControlCountServiceAccounts", "accessControlCountSharedAccounts", "accessControlLeastPrivilegeStatus", "accessControlLeastPrivilegeStatusNotes", "accessControlAccountLifecycleProcess", "accessControlAccountLifecycleProcessNotes", "accessControlAccountReviewFrequencyQuestion", "accessControlAccountReviewFrequencyNotes", "accessControlLeastPrivilegeTransactionStatus", "accessControlLeastPrivilegeTransactionStatusNotes", "accessControlLimitEmployeeActions", "accessControlLimitEmployeeActionsNotes", "accessControlRoleLimitedActions", "accessControlRoleLimitedActionsNotes", "accessControlSensitiveActionApprovalProcess", "accessControlSensitiveActionApprovalNotes", "accessControlExternalConnectionsStatus", "accessControlExternalConnectionsStatusNotes", "accessControlExternalSystemTypes", "accessControlExternalSystemTypesNotes", "accessControlExternalSystemSafetyCheck", "accessControlExternalSystemSafetyCheckNotes", "accessControlConnectionLimitationsList", "accessControlConnectionLimitationsNotes", "accessControlPublicInfoProcessStatus", "accessControlPublicInfoProcessStatusNotes", "accessControlPublicSystemsList", "accessControlPublicSystemsListNotes", "accessControlFciPostingPreventionProcess", "accessControlFciPostingPreventionNotes", "accessControlAuthorizedPublicSystems", "accessControlAuthorizedPersonnelCount", "accessControlAuthorizedPersonnelDepts", "accessControlAuthorizedPersonnelNotes"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses
-    > = [];
+    const missingReq: Array<keyof AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProcesses> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -1032,8 +635,7 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
     }
 
     return {
-      formTitle:
-        "Access Control Limit Information System Access To Authorized Users And Processes",
+      formTitle: "Access Control Limit Information System Access To Authorized Users And Processes",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -1043,4 +645,2957 @@ export class AccessControlLimitInformationSystemAccessToAuthorizedUsersAndProces
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const accessControlLimitInformationSystemAccessToAuthorizedUsersAndProcessesSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Access Control Limit Information System Access To Authorized Users And Processes",
+  "status": "draft",
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "text-box",
+                        "display": "Text Box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "599842914392",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-policy-exists-notes",
+                  "display": "Access Control Policy Exists Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "599842914392_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "184584712182",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-system-access-limit-status",
+                  "display": "System Access Limit Status"
+                }
+              ],
+              "text": "Have you limited system access to only approved people, devices, and tools? What is the current status?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Fully implemented – Only authorized employees, devices, and apps can log in."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Partially implemented – Some access is restricted, but gaps remain."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Not implemented – Anyone with the link or device can get in without checks."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Not applicable – No systems in scope hold sensitive contract data."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "text-box",
+                        "display": "Text Box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "571308050421",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-system-access-limit-status-notes",
+                  "display": "System Access Limit Status Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "936044723551",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "744146359806_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Access Control Policy</i></span> is a written, approved document that explains who is allowed to use company systems, what devices can connect, and what access they have. </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "744146359806",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-policy-exists",
+              "display": "Access Control Policy Exists"
+            }
+          ],
+          "text": "Do you have an Access Control Policy?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " No"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "669545773690",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-policy-elements-items",
+                  "display": "Policy Elements Items"
+                }
+              ],
+              "text": "Does your documented access control policy address these items?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Purpose, scope, roles, and responsibilities"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Management commitment"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Coordination among organizational entities"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Compliance requirements"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "669545773690_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Access Control Policy</i></span> is a written, approved document that explains who is allowed to use company systems, what devices can connect, and what access they have. </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "687383539343",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-policy-elements-items-notes",
+                  "display": "Policy Elements Items Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "687383539343_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "480722725067_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n<span style=\\\"color: #003366;\\\"><i>Access Control Policy Elements</i></span> defines the official \\\"rulebook\\\" for managing a user's access rights throughout their time with the company. It covers the entire lifecycle of access, from start to finish.\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Defining Permissions (Who & What):</b> Sets clear rules for who is allowed to access what data. For example, a salesperson can see customer records, but not HR files.<br>\\n  &bull; &nbsp; <b>Granting Access (How it's given):</b> The formal process for giving a user new permissions, which typically requires approval from their manager.<br>\\n  &bull; &nbsp; <b>Reviewing Access (How it's checked):</b> The process for regularly checking user permissions to ensure they are still necessary for their current job role.<br>\\n  &bull; &nbsp; <b>Revoking Access (How it's removed):</b> The process for promptly and completely removing a user's permissions when they leave the company or change jobs.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "480722725067",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-policy-elements-group",
+              "display": "Policy Elements Group"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Access Control Policy Elements",
+          "enableWhen": [
+            {
+              "question": "744146359806",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "enableBehavior": "all"
+        },
+        {
+          "item": [
+            {
+              "type": "display",
+              "linkId": "182548770364",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-current-accounts",
+                  "display": "Current-Accounts"
+                }
+              ],
+              "text": "How many accounts are currently in your systems? ",
+              "item": [
+                {
+                  "linkId": "182548770364_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Account</i></span> means any login that can access your company’s systems — whether it belongs to an employee, a former employee, or even a software tool. Tracking the total number of accounts helps ensure only the right people and tools have access. </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "linkId": "927965645729",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-count-active-accounts",
+                  "display": "Count Active Accounts"
+                }
+              ],
+              "text": "Active user accounts:",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "927965645729_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "These are the logins for people currently working in your company who can access your systems. Each employee should have their own unique account."
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "linkId": "903940962912",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-count-inactive-accounts",
+                  "display": "Count Inactive Accounts"
+                }
+              ],
+              "text": "Inactive/disabled user accounts:",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "903940962912_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Inactive Accounts</i></span> are logins that no longer work — for example, when an employee leaves or changes roles. They should be turned off quickly so old accounts don’t become a back door. </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "linkId": "338820008158",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-count-service-accounts",
+                  "display": "Count Service Accounts"
+                }
+              ],
+              "text": "Service accounts:",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "338820008158_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Service Accounts</i></span> are special logins used by software or automated tools, not people. For example, a program that runs nightly backups may need its own account. They still need to be tracked and secured. </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 100
+                }
+              ],
+              "linkId": "673437974050",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-count-shared-accounts",
+                  "display": "Count Shared Accounts"
+                }
+              ],
+              "text": "Shared accounts:",
+              "repeats": false,
+              "item": [
+                {
+                  "linkId": "673437974050_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Shared Accounts</i></span> are logins with passwords that multiple people use. They are risky because you can’t tell who did what. Best practice is for everyone to have their own account instead of sharing. </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "217670863053_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<div>\\nMaintain a detailed and up-to-date record of all user accounts, including their access levels and status\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "217670863053",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-user-account-registry-group",
+              "display": "User Account Registry Group"
+            }
+          ],
+          "prefix": "2.",
+          "text": "User Account Registry"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "368418823104",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-least-privilege-status",
+                  "display": "Least Privilege Status"
+                }
+              ],
+              "text": "The ‘least privilege’ rule means staff should have only the level of system access their role requires (and no more). Where in your systems do you apply this rule?",
+              "repeats": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Fully implemented across all systems"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Partially implemented"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Not implemented"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "text-box",
+                        "display": "Text Box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "650863308787",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-least-privilege-status-notes",
+                  "display": "Least Privilege Status Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "650863308787_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "159744780603_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Grant users and systems only the minimum access necessary to perform their tasks.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "159744780603",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-least-privilege-group",
+              "display": "Least Privilege Group"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Principle of Least Privilege Implementation"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "341135397442",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-account-lifecycle-process",
+                  "display": "Account Lifecycle Process"
+                }
+              ],
+              "text": "How do you add, change, and remove employee access to company systems?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "We use an automated system that creates and removes access for us."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We handle it manually, but require manager approval before access is given."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Our HR system is connected, so access changes automatically when people join or leave."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We regularly review who has access and confirm it’s still correct."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "text-box",
+                        "display": "Text Box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "700016005983",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-account-lifecycle-process-notes",
+                  "display": "Account Lifecycle Process Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "700016005983_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "item": [
+                {
+                  "linkId": "563546854643",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "access-control-account-review-frequency-question",
+                      "display": "Account Review Frequency Question"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "radio-button",
+                            "display": "Radio Button"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "type": "choice",
+                  "text": "How frequently are user accounts reviewed for validity and appropriate access?",
+                  "repeats": false,
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "Monthly"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": " Quarterly"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Annually"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Other (specify):"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "469989997039",
+                  "code": [
+                    {
+                      "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                      "code": "access-control-account-review-frequency-notes",
+                      "display": "Account Review Frequency Notes"
+                    }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                      "valueString": "Enter notes or supporting evidence, if any"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "text-box",
+                            "display": "Text Box"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "type": "string",
+                  "text": "Notes / Evidence",
+                  "item": [
+                    {
+                      "linkId": "469989997039_helpText",
+                      "type": "display",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                            "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                          }
+                        ]
+                      },
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "linkId": "789082578732_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "Regularly review user accounts to verify access is still appropriate and remove or adjust accounts as needed.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "type": "group",
+              "linkId": "789082578732",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-account-review-group",
+                  "display": "Account Review Group"
+                }
+              ],
+              "text": "Account Review Frequency"
+            },
+            {
+              "linkId": "589953648417_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Establish and follow formal procedures to manage user accounts throughout their lifecycle\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "589953648417",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-account-management-group",
+              "display": "Account Management Group"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Account Management Processes"
+        },
+        {
+          "linkId": "461149605484_helpText",
+          "type": "display",
+          "text": "This control makes sure only the right people, the allowed tools and services they use, and approved company devices should be able to get into your systems.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "461149605484",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "access-control-authorized-access-control",
+          "display": "Authorized Access Control"
+        }
+      ],
+      "text": "AC.L1-B.1.I - Authorized Access Control"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "316234331937",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-least-privilege-transaction-status",
+              "display": "Least Privilege Transaction Status"
+            }
+          ],
+          "text": "What is the status of least privilege implementation (making sure employees only have access to the specific actions their role requires, for example, read vs. edit vs. approve)?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – access is role-based and regularly reviewed."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – some roles limited, others still too broad."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not implemented – all users have broad access."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not applicable – no sensitive transactions in scope."
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "text-box",
+                    "display": "Text Box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "983575859757",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-least-privilege-transaction-status-notes",
+              "display": "Least Privilege Transaction Status Notes"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "983575859757_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "589002798804",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-limit-employee-actions",
+                  "display": "Limit Employee Actions"
+                }
+              ],
+              "text": "How do you limit employees to only the system actions their job requires?",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "By job role (e.g., managers vs. staff have different access)."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "By type of action (e.g., can read data but not edit or delete it)."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "By application (e.g., only certain people can use a given tool)."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "By time (e.g., access only during work hours)."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "By location (e.g., access only from the office or approved networks)."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "635610218995",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-limit-employee-actions-notes",
+                  "display": "Limit Employee Actions Notes"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "635610218995_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "899089109837_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Implement controls to monitor and regulate transactions, ensuring only authorized actions are performed within systems and applications.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "899089109837",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-transaction-control-group",
+              "display": "Transaction Control Group"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Transaction Control Implementation"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "525896610609",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-role-limited-actions",
+                  "display": "Role Limited Actions"
+                }
+              ],
+              "text": "What actions are limited to certain job roles (e.g., only managers can approve, staff can only view)?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Administrative functions (user management, system configuration)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Financial transactions and approvals"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Data export and bulk download functions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Report generation and access"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "System-level commands and utilities"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "524794183862",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-role-limited-actions-notes",
+                  "display": "Role Limited Actions Notes"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "524794183862_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "561249826496_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Limit system functions and capabilities based on user roles to ensure individuals can only perform actions necessary for their job responsibilities.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "561249826496",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-function-restrictions-group",
+              "display": "Function Restrictions Group"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Function Restrictions by Role"
+        },
+        {
+          "linkId": "338456195634",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-transaction-auth-group",
+              "display": "Transaction Auth Group"
+            }
+          ],
+          "type": "group",
+          "prefix": "3.",
+          "text": "Transaction Authorization Requirements",
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "859148329958",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-sensitive-action-approval-process",
+                  "display": "Sensitive Action Approval Process"
+                }
+              ],
+              "text": "How do you make sure sensitive actions (like payments or data changes) get proper approval before they happen?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Manager approval required"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Two-person authorization"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automated business rules and limits"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No special authorization required"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "988634546235",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-sensitive-action-approval-notes",
+                  "display": "Sensitive Action Approval Notes"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "988634546235_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "338456195634_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Require formal approval before critical transactions are executed to prevent unauthorized or fraudulent activities.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "700726342337_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "It’s not enough to control who can log in — you also need to control what they can do once inside. Each person should only be able to carry out the tasks their role requires. For example, reading vs editing invoices, viewing vs deleting customer data.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "700726342337",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "access-control-transaction-function-control",
+          "display": "Transaction Function Control"
+        }
+      ],
+      "text": "AC.L1-B.1.II - Transaction & Function Control"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "358071855489",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-external-connections-status",
+              "display": "External Connections Status"
+            }
+          ],
+          "text": "What is the status of your controls over outside connections (internet, cloud tools, personal devices)?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – Only approved external systems can connect; all activity is monitored."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Some external connections are controlled, but gaps remain."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not implemented – Any system or device can connect without restriction."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not applicable – No external systems connect to the environment in scope."
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "108304278260",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-external-connections-status-notes",
+              "display": "External Connections Status Notes"
+            }
+          ],
+          "text": "Notes / Evidence ",
+          "item": [
+            {
+              "linkId": "108304278260_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "118413869969",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-external-systems-group",
+              "display": "External Systems Group"
+            }
+          ],
+          "type": "group",
+          "prefix": "1.",
+          "text": " External System Connections",
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "261758300502",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-external-system-types",
+                  "display": "External System Types"
+                }
+              ],
+              "text": "What kinds of outside systems or devices connect to your company’s network or data? (Think about email, file sharing, partner portals, or employee devices.)",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Cloud services – e.g., Microsoft 365, Google Workspace, Dropbox, Salesforce."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Business partner networks – e.g., joint project portals, shared databases."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Vendor/supplier systems – e.g., ERP integrations, supplier ordering platforms."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Government systems and portals – e.g., DoD contractor portals, SAM.gov, PIEE."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Personal devices (BYOD) – e.g., employees’ personal laptops, phones, or tablets."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Remote access systems – e.g., VPN, Citrix, Microsoft RDP."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No external connections – We keep all systems completely internal."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "681710464598",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-external-system-types-notes",
+                  "display": "External System Types Notes"
+                }
+              ],
+              "text": "Notes / Evidence ",
+              "item": [
+                {
+                  "linkId": "681710464598_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "118413869969_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Manage and secure connections to external systems to protect your network from unauthorized access and data breaches.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "495111707033",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-external-system-safety-check",
+                  "display": "External System Safety Check"
+                }
+              ],
+              "text": "How do you check that outside systems and devices are safe before they connect to your network?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "We use digital certificates and PKI to prove identity."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We require VPN logins with authentication before allowing access."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We set firewall rules or restrict by IP address so only approved connections get through."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We use signed agreements with partners/vendors that spell out security requirements."
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "We continuously monitor and log external connections to spot suspicious activity."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "895273053564",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-external-system-safety-check-notes",
+                  "display": "External System Safety Check Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "895273053564_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "397995568740_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>External System Authentication</i></span> requires confirming that an outside system or device is really what it claims to be and meets your security standards before allowing it to connect to your network. Examples include requiring a secure login, using VPN or certificates, or checking that the device is company-approved. </p>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "397995568740",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-connection-verification-group",
+              "display": "Connection Verification Group"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Connection Verification Methods"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "597499672942",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-connection-limitations-list",
+                  "display": "Connection Limitations List"
+                }
+              ],
+              "text": "What limitations are placed on external connections?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Time-based access restrictions"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Restrictions on data types that can be shared"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Limited to specific user groups"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Management approval required for each connection"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Comprehensive audit trails and logging"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "197339830339",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-connection-limitations-notes",
+                  "display": "Connection Limitations Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "197339830339_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "354025378477_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Define and enforce restrictions on external connections to minimize exposure and reduce security risks.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "354025378477",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-connection-limitations-group",
+              "display": "Connection Limitations Group"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Connection Control Limitations"
+        },
+        {
+          "linkId": "293091353060_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "External connections are any links between your company’s systems and outside systems — like the public internet, cloud services, vendor platforms, or even employees’ personal laptops and phones. These need to be controlled so sensitive contract data isn’t exposed.</p>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "293091353060",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "access-control-external-connections",
+          "display": "External Connections"
+        }
+      ],
+      "text": "AC.L1-B.1.III - External Connections"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "260717222110",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-public-info-process-status",
+              "display": "Public Info Process Status"
+            }
+          ],
+          "text": "What's the status of your process to make sure sensitive contract information (FCI) isn’t accidentally posted on your website, social media, or other public systems?",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully implemented – We have a written approval process, only authorized staff can post, and we review/remove public content regularly."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially implemented – Some controls are in place (e.g., only certain staff can post), but no formal review or monitoring."
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Not implemented – Anyone can post content publicly without checks, and there is no process for review."
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "260717222110_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Federal Contract Information (FCI)</i></span> is any information your company gets from the U.S. government under a contract that isn’t meant for the public. For example, it could be contract details, project schedules, or technical requirements. It does not include information the government makes public (like what you see on official websites). </p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "813842964343",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-public-info-process-status-notes",
+              "display": "Public Info Process Status Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "813842964343_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "660159010455",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-public-systems-list",
+                  "display": "Public Systems List"
+                }
+              ],
+              "text": "What publicly accessible systems does your organization operate?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Company website"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": " Social media accounts"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Customer portals or self-service systems"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Corporate blog or news site"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Public forums or discussion boards"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "No publicly accessible systems"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "252003749158",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-public-systems-list-notes",
+                  "display": "Public Systems List Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "252003749158_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "501427838641_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Secure and monitor systems that are accessible to the public to prevent unauthorized access and data leakage.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "501427838641",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-public-systems-group",
+              "display": "Public Systems Group"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Publicly Accessible Systems"
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "229261839700",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-fci-posting-prevention-process",
+                  "display": "Fci Posting Prevention Process"
+                }
+              ],
+              "text": "How do you ensure FCI (Federal Contract Information) is not posted on public systems?",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Pre-publication review and approval process"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Designated reviewers trained to identify FCI"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Automated content scanning for sensitive information"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Periodic audits of published content"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Procedures for rapid removal of inappropriate content"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "linkId": "229261839700_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p style=\\\"margin-bottom: 0px;\\\"> <span style=\\\"color: #003366;\\\"><i>Federal Contract Information (FCI)</i></span> is any information your company gets from the U.S. government under a contract that isn’t meant for the public. For example, it could be contract details, project schedules, or technical requirements. It does not include information the government makes public (like what you see on official websites). </p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "633971923340",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-fci-posting-prevention-notes",
+                  "display": "Fci Posting Prevention Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "633971923340_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "786703783052_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Establish regular procedures to review and validate information before it is published or shared\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "786703783052",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-content-review-group",
+              "display": "Content Review Group"
+            }
+          ],
+          "prefix": "2.",
+          "text": "Content Review Process"
+        },
+        {
+          "item": [
+            {
+              "type": "display",
+              "linkId": "624223914711",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-authorized-public-systems",
+                  "display": "Authorized-Public-Systems"
+                }
+              ],
+              "text": "Who is authorized to post content to public systems?"
+            },
+            {
+              "type": "integer",
+              "linkId": "374839487767",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-authorized-personnel-count",
+                  "display": "Authorized Personnel Count"
+                }
+              ],
+              "text": "Number of authorized personnel:",
+              "repeats": false
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "177243885107",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-authorized-personnel-depts",
+                  "display": "Authorized Personnel Depts"
+                }
+              ],
+              "text": "Choose all that apply:",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Marketing department"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Communications/PR team"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Executive leadership"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "IT administrators"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+                  "valueString": "Enter notes or supporting evidence, if any"
+                }
+              ],
+              "linkId": "163760226494",
+              "code": [
+                {
+                  "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+                  "code": "access-control-authorized-personnel-notes",
+                  "display": "Authorized Personnel Notes"
+                }
+              ],
+              "text": "Notes / Evidence",
+              "item": [
+                {
+                  "linkId": "163760226494_helpText",
+                  "type": "display",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                        "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                      }
+                    ]
+                  },
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "linkId": "815496752107_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Designate and control who is allowed to publish or distribute organizational information.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "815496752107",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "access-control-authorized-personnel-group",
+              "display": "Authorized Personnel Group"
+            }
+          ],
+          "prefix": "3.",
+          "text": "Authorized Publishing Personnel"
+        },
+        {
+          "linkId": "942841103790_helpText",
+          "type": "display",
+          "_text": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                "valueString": "Control information posted or processed on publicly accessible information systems.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n<span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+              }
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "942841103790",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "access-control-control-public-info",
+          "display": "Control Public Info"
+        }
+      ],
+      "text": "AC.L1-B.1.IV - Control Public Information"
+    }
+  ]
+}
+`;

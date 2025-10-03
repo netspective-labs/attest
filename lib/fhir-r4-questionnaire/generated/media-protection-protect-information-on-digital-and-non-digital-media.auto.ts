@@ -10,25 +10,16 @@ import * as rt from "../r4q-runtime.ts";
 
 // this is the module signature, used by importers to identify the module
 // using r4q-runtime.ts `moduleSignature` function
-export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaModuleSignature:
-  rt.ModuleSignature = {
-    title:
-      "Media Protection Protect Information On Digital And Non Digital Media",
-    filename:
-      "media-protection-protect-information-on-digital-and-non-digital-media.auto.ts",
-    titleCamel:
-      "`mediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
-    titlePascal:
-      "`MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
-    titleKebab:
-      "`media-protection-protect-information-on-digital-and-non-digital-media`",
-    lhcFormResponseAdapterFnName:
-      "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter",
-    fhirQuestionnaireResponseAdapterFnName:
-      "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter",
-    sourceTextConstName:
-      "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource",
-  };
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaModuleSignature: rt.ModuleSignature = {
+    title: "Media Protection Protect Information On Digital And Non Digital Media",
+    filename: "media-protection-protect-information-on-digital-and-non-digital-media.auto.ts",
+    titleCamel: "`mediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
+    titlePascal: "`MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia`",
+    titleKebab: "`media-protection-protect-information-on-digital-and-non-digital-media`",
+    lhcFormResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter",
+    fhirQuestionnaireResponseAdapterFnName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter",
+    sourceTextConstName: "mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource",
+}
 
 // deno-lint-ignore no-explicit-any
 type Any = any;
@@ -38,15 +29,14 @@ type Any = any;
  * - Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse
  */
 /** Map of normalized property names to their source `linkId`. */
-export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds =
-  {
-    mediaProtectionMediaDisposalPolicy: "957584520694",
-    mediaProtectionMediaDisposalPolicyNotes: "256250807567",
-    mediaProtectionImplementationStatus: "272642906092",
-    mediaProtectionImplementationStatusNotes: "806966265807",
-    mediaProtectionMediaDisposalPolicyElements: "698818405059",
-    mediaProtectionMediaDisposalPolicyElementsNotes: "686200078306",
-  } as const;
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLinkIds = {
+  mediaProtectionMediaDisposalPolicy: "957584520694",
+  mediaProtectionMediaDisposalPolicyNotes: "256250807567",
+  mediaProtectionImplementationStatus: "272642906092",
+  mediaProtectionImplementationStatusNotes: "806966265807",
+  mediaProtectionMediaDisposalPolicyElements: "698818405059",
+  mediaProtectionMediaDisposalPolicyElementsNotes: "686200078306"
+} as const;
 
 /** Normalized view of "Media Protection Protect Information On Digital And Non Digital Media" answers. */
 export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
@@ -78,10 +68,7 @@ export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
    * Options: "Fully Implemented", "Partially Implemented", " Not Implemented"
    * Required: no
    */
-  mediaProtectionImplementationStatus?:
-    | "Fully Implemented"
-    | "Partially Implemented"
-    | " Not Implemented";
+  mediaProtectionImplementationStatus?: "Fully Implemented" | "Partially Implemented" | " Not Implemented";
 
   /**
    * Notes / Evidence
@@ -101,16 +88,7 @@ export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
    * Options: "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))", "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)", "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)", "Destruction methods by media type (Specific destruction methods appropriate for each media type)", "Verification requirements (Procedures to verify sanitization or destruction was successful)", "Documentation requirements (Required records of sanitization and destruction activities)", "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)", "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
    * Required: no
    */
-  mediaProtectionMediaDisposalPolicyElements?: (
-    | "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
-    | "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
-    | "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
-    | "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
-    | "Verification requirements (Procedures to verify sanitization or destruction was successful)"
-    | "Documentation requirements (Required records of sanitization and destruction activities)"
-    | "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
-    | "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
-  )[];
+  mediaProtectionMediaDisposalPolicyElements?: ("Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))" | "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)" | "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)" | "Destruction methods by media type (Specific destruction methods appropriate for each media type)" | "Verification requirements (Procedures to verify sanitization or destruction was successful)" | "Documentation requirements (Required records of sanitization and destruction activities)" | "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)" | "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)")[];
 
   /**
    * Notes / Evidence
@@ -124,66 +102,26 @@ export interface MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
 }
 
 /** Convert an LHC JSON response into a normalized MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia object. */
-export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(
-  input: Any,
-): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
+export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(input: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
   return {
-    mediaProtectionMediaDisposalPolicy: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "957584520694"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionMediaDisposalPolicy"
-    ],
-    mediaProtectionMediaDisposalPolicyNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "256250807567"),
-    ),
-    mediaProtectionImplementationStatus: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "272642906092"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionImplementationStatus"
-    ],
-    mediaProtectionImplementationStatusNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "806966265807"),
-    ),
-    mediaProtectionMediaDisposalPolicyElements: rt.coerceOptionalStringArray(
-      rt.findLhcValueByLinkId(input, "698818405059"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionMediaDisposalPolicyElements"
-    ],
-    mediaProtectionMediaDisposalPolicyElementsNotes: rt.coerceOptionalString(
-      rt.findLhcValueByLinkId(input, "686200078306"),
-    ),
+  mediaProtectionMediaDisposalPolicy: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "957584520694")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionMediaDisposalPolicy"],
+  mediaProtectionMediaDisposalPolicyNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "256250807567")),
+  mediaProtectionImplementationStatus: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "272642906092")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionImplementationStatus"],
+  mediaProtectionImplementationStatusNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "806966265807")),
+  mediaProtectionMediaDisposalPolicyElements: rt.coerceOptionalStringArray(rt.findLhcValueByLinkId(input, "698818405059")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionMediaDisposalPolicyElements"],
+  mediaProtectionMediaDisposalPolicyElementsNotes: rt.coerceOptionalString(rt.findLhcValueByLinkId(input, "686200078306")),
   };
 }
 
 /** Convert a FHIR QuestionnaireResponse into a normalized MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia object. */
-export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(
-  qr: Any,
-): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
+export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(qr: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia {
   return {
-    mediaProtectionMediaDisposalPolicy: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "957584520694"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionMediaDisposalPolicy"
-    ],
-    mediaProtectionMediaDisposalPolicyNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "256250807567"),
-    ),
-    mediaProtectionImplementationStatus: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "272642906092"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionImplementationStatus"
-    ],
-    mediaProtectionImplementationStatusNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "806966265807"),
-    ),
-    mediaProtectionMediaDisposalPolicyElements: rt.coerceOptionalStringArray(
-      rt.findQrAnswersByLinkId(qr, "698818405059"),
-    ) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia[
-      "mediaProtectionMediaDisposalPolicyElements"
-    ],
-    mediaProtectionMediaDisposalPolicyElementsNotes: rt.coerceOptionalString(
-      rt.findQrAnswerByLinkId(qr, "686200078306"),
-    ),
+  mediaProtectionMediaDisposalPolicy: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "957584520694")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionMediaDisposalPolicy"],
+  mediaProtectionMediaDisposalPolicyNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "256250807567")),
+  mediaProtectionImplementationStatus: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "272642906092")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionImplementationStatus"],
+  mediaProtectionImplementationStatusNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "806966265807")),
+  mediaProtectionMediaDisposalPolicyElements: rt.coerceOptionalStringArray(rt.findQrAnswersByLinkId(qr, "698818405059")) as MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia["mediaProtectionMediaDisposalPolicyElements"],
+  mediaProtectionMediaDisposalPolicyElementsNotes: rt.coerceOptionalString(rt.findQrAnswerByLinkId(qr, "686200078306")),
   };
 }
 
@@ -208,46 +146,22 @@ export function mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhir
  * compliance engines, or plain TypeScript/JavaScript functions as needed.
  */
 export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-  constructor(
-    readonly value:
-      MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia,
-  ) {}
+  constructor(readonly value: MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia) {}
 
   /** Factory: build from LHC JSON. */
-  static fromLhcFormResponse(
-    input: Any,
-  ): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(
-      mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(
-        input,
-      ),
-    );
+  static fromLhcFormResponse(input: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
+    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaLhcFormResponseAdapter(input));
   }
 
   /** Factory: build from FHIR QuestionnaireResponse. */
-  static fromQuestionnaireResponse(
-    qr: Any,
-  ): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
-    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(
-      mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(
-        qr,
-      ),
-    );
+  static fromQuestionnaireResponse(qr: Any): MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter {
+    return new MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpreter(mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaFhirQuestionnaireResponseAdapter(qr));
   }
 
   /** Check required fields and report any missing or blank. */
-  validateRequiredFields(): {
-    ok: boolean;
-    missing: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    >;
-  } {
-    const missing: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
-    const req: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
+  validateRequiredFields(): { ok: boolean; missing: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> } {
+    const missing: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
+    const req: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (rt.isBlank(v)) missing.push(k);
@@ -268,28 +182,13 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
     totalRequired: number;
     totalFilled: number;
     totalFields: number;
-    missingRequired: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    >;
+    missingRequired: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia>;
   } {
-    const req: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
-    const all: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [
-      "mediaProtectionMediaDisposalPolicy",
-      "mediaProtectionMediaDisposalPolicyNotes",
-      "mediaProtectionImplementationStatus",
-      "mediaProtectionImplementationStatusNotes",
-      "mediaProtectionMediaDisposalPolicyElements",
-      "mediaProtectionMediaDisposalPolicyElementsNotes",
-    ];
+    const req: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
+    const all: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = ["mediaProtectionMediaDisposalPolicy", "mediaProtectionMediaDisposalPolicyNotes", "mediaProtectionImplementationStatus", "mediaProtectionImplementationStatusNotes", "mediaProtectionMediaDisposalPolicyElements", "mediaProtectionMediaDisposalPolicyElementsNotes"];
 
     let reqFilled = 0;
-    const missingReq: Array<
-      keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia
-    > = [];
+    const missingReq: Array<keyof MediaProtectionProtectInformationOnDigitalAndNonDigitalMedia> = [];
     for (const k of req) {
       const v = (this.value as Any)[k];
       if (!rt.isBlank(v)) reqFilled++;
@@ -302,8 +201,7 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
     }
 
     return {
-      formTitle:
-        "Media Protection Protect Information On Digital And Non Digital Media",
+      formTitle: "Media Protection Protect Information On Digital And Non Digital Media",
       requiredCovered: req.length ? reqFilled / req.length : 1,
       totalRequired: req.length,
       totalFilled,
@@ -313,4 +211,463 @@ export class MediaProtectionProtectInformationOnDigitalAndNonDigitalMediaInterpr
   }
 }
 
-/** FYI: No source request **/
+/** The original source */
+export const mediaProtectionProtectInformationOnDigitalAndNonDigitalMediaSource = `
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "title": "Media Protection Protect Information On Digital And Non Digital Media",
+  "status": "draft",
+  "description": "Protect information on digital and non-digital media",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "957584520694",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy",
+              "display": "Media Disposal Policy"
+            }
+          ],
+          "text": "Do you have a written policy for safely disposing of devices and media (like laptops, phones, hard drives, CDs, or paper) that contain Federal Contract Information (FCI)? (This is called a Media Disposal Policy.)",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "No"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "957584520694_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p style=\\\"margin-bottom: 0px;\\\">\\n  <i><span style=\\\"color: #003366;\\\">Media Disposal Policy</span></i> defines how information system media containing Federal Contract Information (FCI) is handled when it is no longer needed. A proper policy should cover:\\n</p>\\n\\n<div style=\\\"margin-top: -50px; padding-left: 20px; line-height: 1.5;\\\">\\n  &bull; &nbsp; <b>Sanitization:</b> Wiping or clearing digital storage (like USB drives or hard disks) before reuse.<br>\\n  &bull; &nbsp; <b>Destruction:</b> Shredding, incinerating, or otherwise rendering unreadable media that is being discarded.<br>\\n  &bull; &nbsp; <b>Documentation:</b> Keeping records of how and when media was disposed of.<br>\\n  &bull; &nbsp; <b>Responsibility:</b> Assigning staff or teams accountable for secure disposal.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "256250807567",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-notes",
+              "display": "Media Disposal Policy Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "item": [
+            {
+              "linkId": "256250807567_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "272642906092",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-implementation-status",
+              "display": "Implementation Status"
+            }
+          ],
+          "text": "Implementation Status",
+          "enableWhen": [
+            {
+              "question": "957584520694",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Fully Implemented"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partially Implemented"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": " Not Implemented"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "806966265807",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-implementation-status-notes",
+              "display": "Implementation Status Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "enableWhen": [
+            {
+              "question": "957584520694",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "806966265807_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "linkId": "393852162334",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-policy-elements",
+              "display": "Policy Elements"
+            }
+          ],
+          "prefix": "1.",
+          "text": "Policy Elements",
+          "enableWhen": [
+            {
+              "question": "957584520694",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "393852162334_helpText",
+              "type": "display",
+              "text": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "Define and document policies for handling, storing, and disposing of media to prevent unauthorized access and data loss.\\n</div>\\n\\n<p style=\\\"margin-top: -50px;\\\">\\n  <span style=\\\"color: #003366;\\\">If you require assistance at any point, please utilize the “<b><i>Ask AI</i></b>” feature or contact a member of the Opsfolio CaaS team for expert support.</span>\\n</p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "698818405059",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-elements",
+              "display": "Media Disposal Policy Elements"
+            }
+          ],
+          "text": "Confirm that your media disposal policy includes the following elements (click all that apply):",
+          "enableWhen": [
+            {
+              "question": "957584520694",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Types of media covered by policy (Policy defines all types of media that may contain FCI (hard drives, SSDs, USB drives, etc.))"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Identification methods for FCI-containing media (Procedures for identifying media that contains or may contain FCI)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Sanitization methods by media type (Specific sanitization methods appropriate for each media type)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Destruction methods by media type (Specific destruction methods appropriate for each media type)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Verification requirements (Procedures to verify sanitization or destruction was successful)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Documentation requirements (Required records of sanitization and destruction activities)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Roles and responsibilities (Designation of who is responsible for each aspect of media disposal)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Compliance with relevant standards (References to NIST SP 800-88 or other applicable standards)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "Enter notes or supporting evidence, if any"
+            }
+          ],
+          "linkId": "686200078306",
+          "code": [
+            {
+              "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+              "code": "media-protection-media-disposal-policy-elements-notes",
+              "display": "Media Disposal Policy Elements Notes"
+            }
+          ],
+          "text": "Notes / Evidence",
+          "enableWhen": [
+            {
+              "question": "957584520694",
+              "operator": "=",
+              "answerCoding": {
+                "display": "Yes"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "686200078306_helpText",
+              "type": "display",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-xhtml",
+                    "valueString": "<p><span style=\\\"color: #003366;\\\"><i>Provide details, explanations, or supporting documentation for your responses including links to drives or repositories where evidence is stored.</i></span></p>"
+                  }
+                ]
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "609511072752_helpText",
+          "type": "display",
+          "text": "Practice: Sanitize or destroy information system media containing Federal Contract Information before disposal or release for reuse",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "609511072752",
+      "code": [
+        {
+          "system": "opsfolio/LHCform/CMMC-Level1-Questionnaire",
+          "code": "media-protection-overview",
+          "display": "Media Protection Overview"
+        }
+      ],
+      "text": "MP.L1-B.1.VII - MEDIA PROTECTION (MP) - 1 PRACTICE"
+    }
+  ]
+}
+`;

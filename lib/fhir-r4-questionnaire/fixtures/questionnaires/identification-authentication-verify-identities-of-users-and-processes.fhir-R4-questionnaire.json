@@ -5,7 +5,7 @@
       "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
     ]
   },
-  "title": "Identification & Authentication",
+  "title": "Identification Authentication Verify Identities Of Users And Processes",
   "status": "draft",
   "description": "Verify identities of users and processes",
   "item": [

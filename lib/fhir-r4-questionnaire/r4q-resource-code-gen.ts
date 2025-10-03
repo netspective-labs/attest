@@ -18,6 +18,9 @@ import {
   toPascalCase,
 } from "./r4q-runtime.ts";
 
+// deno-lint-ignore no-explicit-any
+type Any = any;
+
 /** Left-pad each line in a string by `n` two-space indents. */
 export function indent(s: string, n = 1): string {
   const pad = "  ".repeat(n);
@@ -119,14 +122,12 @@ export function renderInterface(
       : "";
     const entryFmt = f.entryFormat ? `\n * Entry format: ${f.entryFormat}` : "";
     const choiceInfo = f.choiceLiterals?.length
-      ? `\n * Options: ${
-        f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
+      ? `\n * Options: ${f.choiceLiterals.map((s) => JSON.stringify(s)).join(", ")
       }`
       : "";
     const req = f.required ? "\n * Required: yes" : "\n * Required: no";
-    const doc = `/**\n * ${
-      f.text ?? "(no label)"
-    }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
+    const doc = `/**\n * ${f.text ?? "(no label)"
+      }\n * linkId: ${f.linkId}\n * FHIR type: ${f.fhirType}${entryFmt}${secTrail}${choiceInfo}${req}\n */`;
     const optional = f.required ? "" : "?";
     return `${doc}\n${f.propName}${optional}: ${f.tsType};`;
   }).join("\n\n");
@@ -332,9 +333,40 @@ export class ${className} {
 }
 
 export function renderSource(q: FhirQuestionnaire, titleCamel: string): string {
-  return `/** The original source */\nexport const ${titleCamel}Source = \`${
-    JSON.stringify(q, null, 2)
-  }\`;`;
+  // Function to escape any inner quotes and control characters properly
+  const escapeString = (str: string): string => {
+    // Use JSON.stringify to escape the string properly
+    return JSON.stringify(str).slice(1, -1);  // Slice off the leading and trailing quotes added by JSON.stringify
+  };
+
+  // Deep copy the FHIR object and apply escapeString to all string fields
+  const deepCopyWithEscapedStrings = (obj: Any): Any => {
+    if (typeof obj === 'string') {
+      return escapeString(obj);
+    }
+
+    if (Array.isArray(obj)) {
+      return obj.map(deepCopyWithEscapedStrings);
+    }
+
+    if (obj && typeof obj === 'object') {
+      const newObj: Any = {};
+      for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          newObj[key] = deepCopyWithEscapedStrings(obj[key]);
+        }
+      }
+      return newObj;
+    }
+
+    return obj;
+  };
+
+  // Process the questionnaire object and ensure correct escaping of strings
+  const escapedQuestionnaire = deepCopyWithEscapedStrings(q);
+
+  // Return the final source string with proper escaping
+  return `/** The original source */\nexport const ${titleCamel}Source = \`\n${JSON.stringify(escapedQuestionnaire, null, 2)}\n\`;`;
 }
 
 export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
@@ -343,8 +375,7 @@ export async function readJsonFile<T = unknown>(filePath: string): Promise<T> {
     return JSON.parse(text) as T;
   } catch (e) {
     throw new Error(
-      `Failed to read/parse JSON at ${filePath}: ${
-        e instanceof Error ? e.message : String(e)
+      `Failed to read/parse JSON at ${filePath}: ${e instanceof Error ? e.message : String(e)
       }`,
     );
   }
@@ -372,7 +403,7 @@ function computeCommonImportPathFor(outFile: string): string {
 
 /** Ensure directory exists. */
 async function ensureDir(dir: string) {
-  await Deno.mkdir(dir, { recursive: true }).catch(() => {});
+  await Deno.mkdir(dir, { recursive: true }).catch(() => { });
 }
 
 /* ========================================================================== *
@@ -442,8 +473,8 @@ export async function generateTsCodeForQuestionnaire(
     if (!q || q.resourceType !== "Questionnaire") {
       return new Error(
         `Not a FHIR Questionnaire (resourceType="${
-          // deno-lint-ignore no-explicit-any
-          (q as any)?.resourceType}")`,
+        // deno-lint-ignore no-explicit-any
+        (q as any)?.resourceType}")`,
       );
     }
 
